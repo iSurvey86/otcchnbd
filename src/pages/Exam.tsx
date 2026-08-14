@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
+import { QuotaHint } from '../components/QuotaHint'
+import { useAuth } from '../context/AuthContext'
 import {
   EXAM,
   formatTime,
@@ -33,6 +35,7 @@ function readSession(): Session | null {
 }
 
 export function Exam({ onFinish }: Props) {
+  const { tryRecordAnswer, notifyExamStarted, notifyExamSubmitted } = useAuth()
   const [session, setSession] = useState<Session | null>(() => readSession())
   const [index, setIndex] = useState(0)
   const [remaining, setRemaining] = useState(
@@ -40,8 +43,10 @@ export function Exam({ onFinish }: Props) {
   )
   const sessionRef = useRef(session)
   const finishing = useRef(false)
+  const trackRef = useRef({ tryRecordAnswer, notifyExamStarted, notifyExamSubmitted })
 
   sessionRef.current = session
+  trackRef.current = { tryRecordAnswer, notifyExamStarted, notifyExamSubmitted }
 
   const paper = useMemo(
     () => (session ? questionsByIds(session.questionIds) : []),
@@ -71,6 +76,15 @@ export function Exam({ onFinish }: Props) {
     }
     saveAttempt(attempt)
     sessionStorage.removeItem(SESSION_KEY)
+    trackRef.current.notifyExamSubmitted({
+      attemptId: attempt.id,
+      score: attempt.score,
+      lawScore: attempt.lawScore,
+      skillScore: attempt.skillScore,
+      correctCount: attempt.correctCount,
+      passed: attempt.passed,
+      timedOut,
+    })
     onFinish(attempt.id)
   }
 
@@ -95,6 +109,7 @@ export function Exam({ onFinish }: Props) {
   }, [session?.startedAt])
 
   function start() {
+    if (!trackRef.current.notifyExamStarted()) return
     finishing.current = false
     const picked = pickExamQuestions()
     const next: Session = {
@@ -117,15 +132,18 @@ export function Exam({ onFinish }: Props) {
       <section className="panel">
         <p className="kicker">Thi thử sát hạch</p>
         <h2>40 câu · 45 phút · đạt ≥ 80% từng phần</h2>
-        <p className="lead">
+        <p className="lead justified">
           Đề được rút ngẫu nhiên từ ngân hàng: 16 câu Kiến thức pháp luật và 24
           câu Kinh nghiệm nghề nghiệp. Đạt khi Kiến thức pháp luật ≥ 32/40 và
           Kinh nghiệm nghề nghiệp ≥ 48/60. Bạn có thể đánh dấu câu để xem lại.
           Hết giờ bài thi sẽ được nộp tự động.
         </p>
-        <button className="btn primary" onClick={start}>
-          Bắt đầu làm bài
-        </button>
+        <QuotaHint />
+        <div className="cta-right">
+          <button className="btn primary" onClick={start}>
+            Bắt đầu làm bài
+          </button>
+        </div>
       </section>
     )
   }
@@ -207,6 +225,18 @@ export function Exam({ onFinish }: Props) {
             total={paper.length}
             choice={answer.choice}
             onChoose={(choice) => {
+              const wasEmpty = session.answers[index]?.choice === null
+              if (
+                wasEmpty &&
+                !tryRecordAnswer({
+                  questionId: current.id,
+                  section: current.section,
+                  topicId: current.topic,
+                  mode: 'exam',
+                })
+              ) {
+                return
+              }
               const answers = session.answers.map((item, i) =>
                 i === index ? { ...item, choice } : item,
               )

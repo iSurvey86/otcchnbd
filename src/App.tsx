@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Layout } from './components/Layout'
+import { LoginModal } from './components/LoginModal'
+import { Admin } from './pages/Admin'
 import { Exam } from './pages/Exam'
 import { History } from './pages/History'
 import { Home } from './pages/Home'
@@ -23,6 +25,8 @@ export default function App() {
         <Result attemptId={view.attemptId} onNavigate={setView} />
       ) : null}
       {view.name === 'history' ? <History onNavigate={setView} /> : null}
+      {view.name === 'admin' ? <Admin /> : null}
+      <LoginModal />
     </Layout>
   )
 }

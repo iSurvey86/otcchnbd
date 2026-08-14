@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return signedIn() && (
+        request.auth.token.email == 'minhphuong.npsc@gmail.com'
+        || (
+          exists(/databases/$(database)/documents/meta/config)
+          && get(/databases/$(database)/documents/meta/config).data.adminEmails.hasAny([request.auth.token.email])
+        )
+      );
+    }
+
+    match /meta/{docId} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+      allow read: if isAdmin();
+    }
+
+    match /logs/{id} {
+      allow create: if signedIn()
+        && request.resource.data.uid == request.auth.uid;
+      allow read: if isAdmin()
+        || (signedIn() && resource.data.uid == request.auth.uid);
+    }
+  }
+}

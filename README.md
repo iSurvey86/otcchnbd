@@ -18,3 +18,19 @@ npm run dev
 ```
 
 Mở địa chỉ Vite in ra (thường là `http://localhost:5173`).
+
+Chưa cấu hình Firebase thì app vẫn chạy: khách được ôn/thi không giới hạn, nút đăng nhập báo chưa cấu hình.
+
+## Đăng nhập Google và thống kê (giai đoạn thử nghiệm)
+
+Giai đoạn đầu: khách được **15 câu miễn phí** (ôn tập hoặc thi thử). Hết hạn mức thì bắt đăng nhập Google. **Sau khi đăng nhập vẫn miễn phí** để thu thập thống kê; thu phí làm sau.
+
+1. Tạo project trên [Firebase Console](https://console.firebase.google.com/).
+2. Bật **Authentication → Google**.
+3. Tạo **Firestore** (production mode), dán nội dung `firestore.rules` rồi Publish.
+4. (Tuỳ chọn) Document `meta/config` field `adminEmails` kiểu array nếu muốn thêm admin khác. Gmail `minhphuong.npsc@gmail.com` đã gắn sẵn trong `firestore.rules`.
+5. Authentication → Settings → **Authorized domains**: `localhost` và domain Vercel.
+6. Copy file `.env.example` thành `.env.local`, điền khóa web app.
+7. Restart `npm run dev`. Đăng nhập Google bằng `minhphuong.npsc@gmail.com` để thấy nút **Quản lý**.
+
+Trên Vercel, khai báo cùng các biến `VITE_*` trong Project Settings → Environment Variables.

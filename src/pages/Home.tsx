@@ -1,3 +1,4 @@
+import { QuotaHint } from '../components/QuotaHint'
 import { QUESTIONS } from '../data/questions'
 import { TOPICS } from '../data/topics'
 import { countByTopic } from '../data/questions'
@@ -64,9 +65,11 @@ export function Home({ onNavigate }: Props) {
         </div>
       </section>
 
+      <QuotaHint />
+
       <div className="section-head">
         <h2>Ôn theo chuyên đề</h2>
-        <button className="btn ghost" onClick={() => onNavigate({ name: 'practice' })}>
+        <button className="btn amber compact" onClick={() => onNavigate({ name: 'practice' })}>
           Ôn tất cả
         </button>
       </div>

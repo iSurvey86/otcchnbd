@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
+import { QuotaHint } from '../components/QuotaHint'
+import { useAuth } from '../context/AuthContext'
 import { questionsByTopic } from '../data/questions'
 import { TOPICS } from '../data/topics'
 import { shuffle } from '../lib/exam'
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export function Practice({ topicId }: Props) {
+  const { tryRecordAnswer } = useAuth()
   const pool = useMemo(() => shuffle(questionsByTopic(topicId)), [topicId])
   const [index, setIndex] = useState(0)
   const [choice, setChoice] = useState<number | null>(null)
@@ -63,6 +66,7 @@ export function Practice({ topicId }: Props) {
           Đúng {correct} · Còn {pool.length - index - (revealed ? 1 : 0)} câu
         </span>
       </div>
+      <QuotaHint />
       <div className="progress">
         <span style={{ width: `${((index + (revealed ? 1 : 0)) / pool.length) * 100}%` }} />
       </div>
@@ -75,6 +79,16 @@ export function Practice({ topicId }: Props) {
           revealed={revealed}
           onChoose={(next) => {
             if (choice !== null) return
+            if (
+              !tryRecordAnswer({
+                questionId: question.id,
+                section: question.section,
+                topicId: question.topic,
+                mode: 'practice',
+              })
+            ) {
+              return
+            }
             setChoice(next)
             if (next === question.answer) setCorrect((n) => n + 1)
           }}

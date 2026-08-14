@@ -63,3 +63,4 @@ export type AppView =
   | { name: 'exam' }
   | { name: 'result'; attemptId: string }
   | { name: 'history' }
+  | { name: 'admin' }
