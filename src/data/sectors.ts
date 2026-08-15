@@ -13,7 +13,7 @@ export const SECTORS: Sector[] = [
   {
     id: 'do-dac-ban-do',
     title: 'Đo đạc và Bản đồ',
-    blurb: 'Ôn thi Chứng chỉ hành nghề Đo đạc và Bản đồ — ngân hàng câu hỏi biên soạn theo Quyết định 308/QĐ-ĐĐBĐVN ngày 29/12/2020.',
+    blurb: 'Ôn thi Chứng chỉ hành nghề Đo đạc và Bản đồ – ngân hàng câu hỏi biên soạn theo Quyết định 308/QĐ-ĐĐBĐVN ngày 29/12/2020.',
     open: true,
     visible: true,
   },
@@ -21,7 +21,7 @@ export const SECTORS: Sector[] = [
     id: 'xay-dung',
     title: 'Xây dựng',
     blurb:
-      'Ôn thi Chứng chỉ hành nghề hoạt động xây dựng — ngân hàng theo Quyết định 163/QĐ-BXD ngày 18/02/2025. Chọn hạng và chuyên ngành để ôn / thi thử.',
+      'Ôn thi Chứng chỉ hành nghề Hoạt động xây dựng – ngân hàng câu hỏi theo Quyết định 163/QĐ-BXD ngày 18/02/2025. Chọn hạng và chuyên ngành để ôn, thi thử.',
     open: true,
     visible: true,
   },

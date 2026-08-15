@@ -47,6 +47,6 @@ export const TOPICS: Topic[] = [
     id: 'chat-luong-de-an',
     section: 'kinh-nghiem',
     title: 'Đề án, CSDL & chất lượng',
-    blurb: 'Thiết kế kỹ thuật — dự toán, GIS, kiểm tra chất lượng sản phẩm.',
+    blurb: 'Thiết kế kỹ thuật – dự toán, GIS, kiểm tra chất lượng sản phẩm.',
   },
 ]

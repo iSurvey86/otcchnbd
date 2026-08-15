@@ -42,7 +42,7 @@ function asDate(value: { toDate?: () => Date } | Date | null | undefined): Date 
 }
 
 function formatWhen(value: Date | null): string {
-  return value ? value.toLocaleString('vi-VN') : '—'
+  return value ? value.toLocaleString('vi-VN') : '–'
 }
 
 export function Admin() {
@@ -201,8 +201,8 @@ export function Admin() {
               <tbody>
                 {users.map((row) => (
                   <tr key={row.uid}>
-                    <td>{row.email ?? '—'}</td>
-                    <td>{row.displayName ?? '—'}</td>
+                    <td>{row.email ?? '–'}</td>
+                    <td>{row.displayName ?? '–'}</td>
                     <td>{row.loginCount}</td>
                     <td>{row.answerCount}</td>
                     <td>{row.examCount}</td>
@@ -231,7 +231,7 @@ export function Admin() {
                 {logs.map((row) => (
                   <tr key={row.id}>
                     <td>{formatWhen(row.createdAt)}</td>
-                    <td>{row.email ?? '—'}</td>
+                    <td>{row.email ?? '–'}</td>
                     <td>{EVENT_LABEL[row.event] ?? row.event}</td>
                     <td className="muted">
                       {row.mode ? `${row.mode}` : ''}

@@ -91,7 +91,7 @@ export function getXdTrack(trackId: string): XdTrackMeta | undefined {
 export function xdTrackLabel(trackId: string): string {
   const track = getXdTrack(trackId)
   if (!track) return 'Xây dựng'
-  return `${track.title} — Hạng ${track.hang}`
+  return `${track.title} – Hạng ${track.hang}`
 }
 
 export function openXdQuestionTotal(): number {

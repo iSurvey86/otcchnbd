@@ -85,7 +85,7 @@ export function xdSourceNote(trackId: string): string {
   const source = cached?.source ?? SOURCE_FALLBACK
   const track = getXdTrack(trackId)
   if (!track) return source
-  return `${source} — ${track.title}, Hạng ${track.hang}.`
+  return `${source} – ${track.title}, Hạng ${track.hang}.`
 }
 
 export function allXdQuestions(): Question[] {

@@ -70,14 +70,14 @@ export function Home({ scope, onNavigate }: Props) {
             <p className="exam-desc">
               {scope.sector === 'xay-dung' ? (
                 <>
-                  Theo Nghị định 217/2026/NĐ-CP: {totalQ} câu / {exam.minutes} phút —{' '}
+                  Theo Nghị định 217/2026/NĐ-CP: {totalQ} câu / {exam.minutes} phút –{' '}
                   {exam.lawCount} câu {lawSectionLabel(scope)} ({lawMax} điểm) và{' '}
                   {exam.skillCount} câu {skillSectionLabel(scope)} ({skillMax} điểm).{' '}
                   {examPassSummary(exam)}.
                 </>
               ) : (
                 <>
-                  Đề thi thử: {totalQ} câu / {exam.minutes} phút — {exam.skillCount} câu{' '}
+                  Đề thi thử: {totalQ} câu / {exam.minutes} phút – {exam.skillCount} câu{' '}
                   {skillSectionLabel(scope)} ({skillMax} điểm) và {exam.lawCount} câu{' '}
                   {lawSectionLabel(scope)} ({lawMax} điểm). {examPassSummary(exam)}.
                 </>

@@ -8,7 +8,7 @@ import type {
   UserAnswer,
 } from '../types'
 
-/** Đo đạc và Bản đồ — khung sát hạch hiện dùng trên app. */
+/** Đo đạc và Bản đồ – khung sát hạch hiện dùng trên app. */
 export const EXAM_DO_DAC: ExamConfig = {
   lawCount: 16,
   skillCount: 24,
@@ -19,7 +19,7 @@ export const EXAM_DO_DAC: ExamConfig = {
 }
 
 /**
- * Xây dựng — Nghị định 217/2026/NĐ-CP (Điều 90 khoản 4).
+ * Xây dựng – Nghị định 217/2026/NĐ-CP (Điều 90 khoản 4).
  * 30 câu / 30 phút · 10 pháp luật + 20 chuyên môn · 1 điểm/câu.
  * Đạt: PL ≥ 7/10 và tổng ≥ 21/30.
  */
@@ -71,7 +71,7 @@ export function isSectionPassed(
 ): boolean {
   if (config.passMode === 'law-and-total') {
     if (section === 'phap-luat') return score >= (config.lawPassMin ?? 0)
-    // Chuyên môn không có ngưỡng riêng — chỉ xét qua tổng điểm.
+    // Chuyên môn không có ngưỡng riêng – chỉ xét qua tổng điểm.
     return true
   }
   return score >= sectionPassMark(max, config)

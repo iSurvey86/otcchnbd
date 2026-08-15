@@ -82,7 +82,7 @@ export function Certificate({ attempt, passed, scope }: Props) {
       )
       const text = passed
         ? `${attempt.candidateName} đã đạt bài thi thử ${title} trên onthicchn.org`
-        : `${attempt.candidateName} vừa thi thử ${attempt.correctCount}/${totalQ} câu đúng — đang rèn luyện thêm trên onthicchn.org`
+        : `${attempt.candidateName} vừa thi thử ${attempt.correctCount}/${totalQ} câu đúng – đang rèn luyện thêm trên onthicchn.org`
       if (navigator.canShare?.({ files: [file] })) {
         await navigator.share({
           title: passed ? 'Chứng nhận thi thử sát hạch' : 'Phiếu luyện tập thi thử',
@@ -128,7 +128,7 @@ export function Certificate({ attempt, passed, scope }: Props) {
               <p className="certificate-awarded">Chứng nhận trao cho</p>
               <p className="certificate-name">{attempt.candidateName}</p>
               <p className="certificate-body">
-                Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} — {totalQ} câu /{' '}
+                Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} – {totalQ} câu /{' '}
                 {exam.minutes} phút. {examPassSummary(exam)}.
               </p>
             </>
@@ -140,7 +140,7 @@ export function Certificate({ attempt, passed, scope }: Props) {
               <p className="certificate-name">{attempt.candidateName}</p>
               <p className="certificate-body">
                 Vừa hoàn thành một đề thi thử Chứng chỉ hành nghề {title}.
-                Đúng <strong>{attempt.correctCount}/{totalQ}</strong> câu — chưa đạt lần
+                Đúng <strong>{attempt.correctCount}/{totalQ}</strong> câu – chưa đạt lần
                 này, nhưng mỗi lần làm là thêm một bước gần đích. Cùng ôn tiếp nhé!
               </p>
             </>
@@ -178,8 +178,8 @@ export function Certificate({ attempt, passed, scope }: Props) {
           </div>
           <p className="certificate-disclaimer">
             {passed
-              ? 'Chứng nhận luyện đề trên onthicchn.org — không thay thế chứng chỉ do cơ quan nhà nước cấp.'
-              : 'Phiếu luyện tập trên onthicchn.org — ghi nhận nỗ lực ôn thi, không phải kết quả sát hạch chính thức.'}
+              ? 'Chứng nhận luyện đề trên onthicchn.org – không thay thế chứng chỉ do cơ quan nhà nước cấp.'
+              : 'Phiếu luyện tập trên onthicchn.org – ghi nhận nỗ lực ôn thi, không phải kết quả sát hạch chính thức.'}
           </p>
         </div>
       </article>

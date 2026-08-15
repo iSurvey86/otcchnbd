@@ -111,7 +111,6 @@ function AuthBar({
     useAuth()
 
   if (!isConfigured) return null
-  if ((view.name === 'catalog' || view.name === 'xd-browse') && !user) return null
 
   if (!user) {
     return (

@@ -32,7 +32,7 @@
   box-sizing: border-box;
 }
 
-/* Bàn tay khi hover — biết chỗ nào bấm được */
+/* Bàn tay khi hover – biết chỗ nào bấm được */
 button:not(:disabled),
 a[href],
 summary,
@@ -68,7 +68,7 @@ body {
     var(--paper);
 }
 
-/* Đường đồng mức thưa, rất mờ — không át nội dung */
+/* Đường đồng mức thưa, rất mờ – không át nội dung */
 body::before {
   content: '';
   position: fixed;
@@ -747,6 +747,9 @@ body::before {
   color: var(--ink-soft);
   line-height: 1.6;
   font-size: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 100%;
 }
 
 .sector-card-open:hover {
@@ -797,6 +800,55 @@ body::before {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 0;
+}
+
+/* 3 hạng = 3 pastel; nhóm lĩnh vực theo hạng đang chọn – không xám/đen/ghi */
+.xd-chip {
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease;
+  box-shadow: none;
+}
+
+.xd-chip:hover {
+  transform: translateY(-1px);
+}
+
+.xd-chip-i {
+  --chip: #7eb8a8;
+  --chip-soft: #e4f4ef;
+  --chip-ink: #1a6b5a;
+  background: var(--chip-soft);
+  border: 1.5px solid var(--chip);
+  color: var(--chip-ink);
+}
+
+.xd-chip-ii {
+  --chip: #e0a878;
+  --chip-soft: #fef0e4;
+  --chip-ink: #9a5a28;
+  background: var(--chip-soft);
+  border: 1.5px solid var(--chip);
+  color: var(--chip-ink);
+}
+
+.xd-chip-iii {
+  --chip: #7eafd4;
+  --chip-soft: #e6f2fa;
+  --chip-ink: #1f5f8a;
+  background: var(--chip-soft);
+  border: 1.5px solid var(--chip);
+  color: var(--chip-ink);
+}
+
+.xd-chip.is-active {
+  background: var(--chip);
+  border-color: var(--chip);
+  color: #fffdf9;
 }
 
 @media (max-width: 720px) {

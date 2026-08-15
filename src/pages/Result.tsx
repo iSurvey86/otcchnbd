@@ -75,8 +75,8 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
                   ? 'Đạt yêu cầu (NĐ 217)'
                   : 'Đạt yêu cầu (mỗi phần ≥ 80%)'
                 : exam.passMode === 'law-and-total'
-                  ? `Chưa đạt — cần PL ≥ ${exam.lawPassMin}/${lawMax} và tổng ≥ ${exam.totalPassMin}/${totalMax}`
-                  : 'Chưa đạt — cần ≥ 80% từng phần'}
+                  ? `Chưa đạt – cần PL ≥ ${exam.lawPassMin}/${lawMax} và tổng ≥ ${exam.totalPassMin}/${totalMax}`
+                  : 'Chưa đạt – cần ≥ 80% từng phần'}
             </h2>
             <p className="lead">
               Đúng {attempt.correctCount}/{paper.length} câu · Thời gian{' '}
@@ -163,10 +163,10 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
       <section className="exam-print-sheet" aria-label="Đề thi thử để in">
         <header className="exam-print-head">
           <p className="exam-print-brand">onthicchn.org · Ôn thi sát hạch</p>
-          <h1>Đề thi thử — {sectorTitle(resultScope)}</h1>
+          <h1>Đề thi thử – {sectorTitle(resultScope)}</h1>
           <div className="exam-print-meta">
             <span>
-              Thí sinh: <strong>{attempt.candidateName ?? '—'}</strong>
+              Thí sinh: <strong>{attempt.candidateName ?? '–'}</strong>
             </span>
             <span>
               Kết quả:{' '}

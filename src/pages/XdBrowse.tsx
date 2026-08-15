@@ -6,9 +6,16 @@ interface Props {
   onNavigate: (view: AppView) => void
 }
 
+function hangTone(hang: HangId): 'i' | 'ii' | 'iii' {
+  if (hang === 'I') return 'i'
+  if (hang === 'II') return 'ii'
+  return 'iii'
+}
+
 export function XdBrowse({ onNavigate }: Props) {
   const [hang, setHang] = useState<HangId>('I')
   const [group, setGroup] = useState<XdGroupId | 'all'>('all')
+  const tone = hangTone(hang)
 
   const fields = useMemo(() => {
     return XD_FIELDS.filter((f) => group === 'all' || f.group === group)
@@ -26,16 +33,19 @@ export function XdBrowse({ onNavigate }: Props) {
           <div className="xd-browse-col">
             <p className="kicker">Hạng chứng chỉ</p>
             <div className="xd-hang-row">
-              {XD_HANGS.map((h) => (
-                <button
-                  key={h}
-                  type="button"
-                  className={hang === h ? 'btn copper compact' : 'btn ghost compact'}
-                  onClick={() => setHang(h)}
-                >
-                  Hạng {h}
-                </button>
-              ))}
+              {XD_HANGS.map((h) => {
+                const active = hang === h
+                return (
+                  <button
+                    key={h}
+                    type="button"
+                    className={`xd-chip xd-chip-${hangTone(h)}${active ? ' is-active' : ''}`}
+                    onClick={() => setHang(h)}
+                  >
+                    Hạng {h}
+                  </button>
+                )
+              })}
             </div>
           </div>
           <div className="xd-browse-col">
@@ -43,7 +53,7 @@ export function XdBrowse({ onNavigate }: Props) {
             <div className="xd-hang-row">
               <button
                 type="button"
-                className={group === 'all' ? 'btn copper compact' : 'btn ghost compact'}
+                className={`xd-chip xd-chip-${tone}${group === 'all' ? ' is-active' : ''}`}
                 onClick={() => setGroup('all')}
               >
                 Tất cả
@@ -52,7 +62,7 @@ export function XdBrowse({ onNavigate }: Props) {
                 <button
                   key={g.id}
                   type="button"
-                  className={group === g.id ? 'btn copper compact' : 'btn ghost compact'}
+                  className={`xd-chip xd-chip-${tone}${group === g.id ? ' is-active' : ''}`}
                   onClick={() => setGroup(g.id)}
                 >
                   {g.title}
@@ -64,7 +74,7 @@ export function XdBrowse({ onNavigate }: Props) {
       </section>
 
       <div className="section-head">
-        <h2>Chuyên ngành — Hạng {hang}</h2>
+        <h2>Chuyên ngành – Hạng {hang}</h2>
       </div>
       <div className="topic-grid">
         {fields.map((field) => {
