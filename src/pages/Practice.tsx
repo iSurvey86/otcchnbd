@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
-import { QuotaHint } from '../components/QuotaHint'
 import { useAuth } from '../context/AuthContext'
 import { questionsByTopicForScope, topicsForScope } from '../lib/bank'
 import { shuffle } from '../lib/exam'
@@ -69,7 +68,6 @@ export function Practice({ scope, topicId }: Props) {
           Đúng {correct} · Còn {pool.length - index - (revealed ? 1 : 0)} câu
         </span>
       </div>
-      <QuotaHint />
       <div className="progress">
         <span style={{ width: `${((index + (revealed ? 1 : 0)) / pool.length) * 100}%` }} />
       </div>

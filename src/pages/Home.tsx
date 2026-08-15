@@ -1,4 +1,3 @@
-import { QuotaHint } from '../components/QuotaHint'
 import {
   countByTopicForScope,
   lawSectionLabel,
@@ -8,6 +7,13 @@ import {
   sourceNoteForScope,
   topicsForScope,
 } from '../lib/bank'
+import {
+  examConfigFor,
+  examPassSummary,
+  examQuestionCount,
+  examTotalMax,
+  sectionMax,
+} from '../lib/exam'
 import type { AppView, StudyScope } from '../types'
 
 interface Props {
@@ -18,18 +24,17 @@ interface Props {
 export function Home({ scope, onNavigate }: Props) {
   const questions = questionsForScope(scope)
   const topics = topicsForScope(scope)
+  const exam = examConfigFor(scope)
+  const totalQ = examQuestionCount(exam)
+  const totalMax = examTotalMax(exam)
+  const lawMax = sectionMax('phap-luat', exam)
+  const skillMax = sectionMax('kinh-nghiem', exam)
   const lawCount = questions.filter((q) => q.section === 'phap-luat').length
   const skillCount = questions.filter((q) => q.section === 'kinh-nghiem').length
   const title = sectorTitle(scope)
-  const backView: AppView =
-    scope.sector === 'xay-dung' ? { name: 'xd-browse' } : { name: 'catalog' }
-  const backLabel = scope.sector === 'xay-dung' ? '← Chọn hạng / chuyên ngành' : '← Chọn ngành'
 
   return (
     <>
-      <button className="text-link back-link" onClick={() => onNavigate(backView)}>
-        {backLabel}
-      </button>
       <section className="hero">
         <div className="panel intro-panel">
           <p className="kicker">Luyện đề sát hạch</p>
@@ -63,14 +68,29 @@ export function Home({ scope, onNavigate }: Props) {
             </p>
             <h2 className="exam-heading">Thi thử</h2>
             <p className="exam-desc">
-              Đề thi thử: 40 câu / 45 phút — 24 câu {skillSectionLabel(scope)} (60
-              điểm) và 16 câu {lawSectionLabel(scope)} (40 điểm). Đạt khi mỗi phần ≥
-              80%: pháp luật ≥ 32/40, chuyên môn / nghề nghiệp ≥ 48/60.
+              {scope.sector === 'xay-dung' ? (
+                <>
+                  Theo Nghị định 217/2026/NĐ-CP: {totalQ} câu / {exam.minutes} phút —{' '}
+                  {exam.lawCount} câu {lawSectionLabel(scope)} ({lawMax} điểm) và{' '}
+                  {exam.skillCount} câu {skillSectionLabel(scope)} ({skillMax} điểm).{' '}
+                  {examPassSummary(exam)}.
+                </>
+              ) : (
+                <>
+                  Đề thi thử: {totalQ} câu / {exam.minutes} phút — {exam.skillCount} câu{' '}
+                  {skillSectionLabel(scope)} ({skillMax} điểm) và {exam.lawCount} câu{' '}
+                  {lawSectionLabel(scope)} ({lawMax} điểm). {examPassSummary(exam)}.
+                </>
+              )}
             </p>
             <div className="exam-meta">
-              <span className="chip">40 câu</span>
-              <span className="chip">45 phút</span>
-              <span className="chip">Đạt ≥ 80% từng phần</span>
+              <span className="chip">{totalQ} câu</span>
+              <span className="chip">{exam.minutes} phút</span>
+              <span className="chip">
+                {exam.passMode === 'law-and-total'
+                  ? `Đạt ≥ ${exam.totalPassMin}/${totalMax}`
+                  : 'Đạt ≥ 80% từng phần'}
+              </span>
             </div>
           </div>
           <button
@@ -81,8 +101,6 @@ export function Home({ scope, onNavigate }: Props) {
           </button>
         </div>
       </section>
-
-      <QuotaHint />
 
       <div className="section-head">
         <h2>Ôn theo chuyên đề</h2>

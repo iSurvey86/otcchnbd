@@ -1,5 +1,5 @@
 import { sectorTitle } from '../lib/bank'
-import { formatTime, isExamPassed } from '../lib/exam'
+import { examConfigFor, examTotalMax, formatTime, isExamPassed } from '../lib/exam'
 import { loadAttempts } from '../lib/storage'
 import type { AppView, StudyScope } from '../types'
 
@@ -32,6 +32,9 @@ export function History({ scope, onNavigate }: Props) {
               sector: item.sector ?? 'do-dac-ban-do',
               trackId: item.trackId,
             }
+            const exam = examConfigFor(itemScope)
+            const totalMax = examTotalMax(exam)
+            const passed = isExamPassed(item.lawScore, item.skillScore, exam)
             return (
               <button
                 key={item.id}
@@ -51,18 +54,11 @@ export function History({ scope, onNavigate }: Props) {
                   <div className="muted">
                     {item.candidateName ? `${item.candidateName} · ` : ''}
                     {formatTime(item.durationSec)} · {item.correctCount}/
-                    {item.questionIds.length || 40} câu
+                    {item.questionIds.length || exam.lawCount + exam.skillCount} câu
                   </div>
                 </span>
-                <span
-                  className={
-                    isExamPassed(item.lawScore, item.skillScore) ? 'pass' : 'fail'
-                  }
-                >
-                  {item.score} điểm{' '}
-                  {isExamPassed(item.lawScore, item.skillScore)
-                    ? '· Đạt'
-                    : '· Chưa đạt'}
+                <span className={passed ? 'pass' : 'fail'}>
+                  {item.score}/{totalMax} điểm {passed ? '· Đạt' : '· Chưa đạt'}
                 </span>
               </button>
             )

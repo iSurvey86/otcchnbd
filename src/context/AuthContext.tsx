@@ -11,6 +11,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from 'react'
@@ -82,6 +83,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const remaining = user ? GUEST_LIMIT : guestRemaining(guestAnswered)
   const canUnlimited = Boolean(user) || !isFirebaseConfigured
+  const quotaPromptedRef = useRef(false)
 
   const openLogin = useCallback((message?: string) => {
     setLoginMessage(message ?? LOGIN_COPY.default)
@@ -91,6 +93,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       void logEvent(user, 'paywall_hit', { reason: message ?? LOGIN_COPY.default })
     }
   }, [user])
+
+  // Hết 15 câu miễn phí → tự mở hộp đăng nhập (một lần cho đến khi đăng nhập / còn hạn).
+  useEffect(() => {
+    if (loading || user || !isFirebaseConfigured) {
+      if (user) quotaPromptedRef.current = false
+      return
+    }
+    if (guestRemaining(guestAnswered) > 0) {
+      quotaPromptedRef.current = false
+      return
+    }
+    if (quotaPromptedRef.current || loginOpen) return
+    quotaPromptedRef.current = true
+    openLogin(LOGIN_COPY.quota)
+  }, [guestAnswered, loading, loginOpen, openLogin, user])
 
   const closeLogin = useCallback(() => {
     setLoginOpen(false)
@@ -144,12 +161,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const tryRecordAnswer = useCallback(
     (meta: AnswerMeta) => {
-      if (!canUnlimited && guestRemaining(guestAnswered) <= 0) {
+      // Read storage directly so rapid answers cannot bypass the guest limit.
+      const answered = readGuestAnswered()
+      if (!canUnlimited && guestRemaining(answered) <= 0) {
         openLogin(LOGIN_COPY.quota)
         return false
       }
       if (!user && isFirebaseConfigured) {
-        const next = guestAnswered + 1
+        const next = answered + 1
         writeGuestAnswered(next)
         setGuestAnswered(next)
       }
@@ -164,17 +183,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
       return true
     },
-    [canUnlimited, guestAnswered, openLogin, user],
+    [canUnlimited, openLogin, user],
   )
 
   const notifyExamStarted = useCallback(() => {
-    if (!canUnlimited && guestRemaining(guestAnswered) <= 0) {
+    const answered = readGuestAnswered()
+    if (!canUnlimited && guestRemaining(answered) <= 0) {
       openLogin(LOGIN_COPY.exam)
       return false
     }
     if (user) void logEvent(user, 'exam_started')
     return true
-  }, [canUnlimited, guestAnswered, openLogin, user])
+  }, [canUnlimited, openLogin, user])
 
   const notifyExamSubmitted = useCallback(
     (meta: ExamSubmitMeta) => {

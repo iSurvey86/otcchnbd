@@ -1,7 +1,13 @@
 import { useRef, useState } from 'react'
 import html2canvas from 'html2canvas'
 import { lawSectionLabel, sectorTitle, skillSectionLabel } from '../lib/bank'
-import { sectionMax } from '../lib/exam'
+import {
+  examConfigFor,
+  examPassSummary,
+  examQuestionCount,
+  examTotalMax,
+  sectionMax,
+} from '../lib/exam'
 import type { ExamAttempt, StudyScope } from '../types'
 
 interface Props {
@@ -13,9 +19,11 @@ interface Props {
 export function Certificate({ attempt, passed, scope }: Props) {
   const cardRef = useRef<HTMLElement>(null)
   const [saving, setSaving] = useState(false)
-  const lawMax = sectionMax('phap-luat')
-  const skillMax = sectionMax('kinh-nghiem')
-  const totalQ = attempt.questionIds.length || 40
+  const exam = examConfigFor(scope)
+  const lawMax = sectionMax('phap-luat', exam)
+  const skillMax = sectionMax('kinh-nghiem', exam)
+  const totalMax = examTotalMax(exam)
+  const totalQ = attempt.questionIds.length || examQuestionCount(exam)
   const title = sectorTitle(scope)
   const code = `OTC-${attempt.id.slice(0, 8).toUpperCase()}`
   const dateLabel = new Date(attempt.finishedAt).toLocaleDateString('vi-VN', {
@@ -120,8 +128,8 @@ export function Certificate({ attempt, passed, scope }: Props) {
               <p className="certificate-awarded">Chứng nhận trao cho</p>
               <p className="certificate-name">{attempt.candidateName}</p>
               <p className="certificate-body">
-                Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} — 40 câu /
-                45 phút, đạt yêu cầu mỗi phần ≥ 80%.
+                Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} — {totalQ} câu /{' '}
+                {exam.minutes} phút. {examPassSummary(exam)}.
               </p>
             </>
           ) : (
@@ -140,16 +148,22 @@ export function Certificate({ attempt, passed, scope }: Props) {
 
           <div className="certificate-scores">
             <div>
-              <b>{attempt.lawScore}/{lawMax}</b>
+              <b>
+                {attempt.lawScore}/{lawMax}
+              </b>
               <span>{lawSectionLabel(scope)}</span>
             </div>
             <div>
-              <b>{attempt.skillScore}/{skillMax}</b>
+              <b>
+                {attempt.skillScore}/{skillMax}
+              </b>
               <span>{skillSectionLabel(scope)}</span>
             </div>
             <div>
               <b>
-                {passed ? `${attempt.score}/100` : `${attempt.correctCount}/${totalQ}`}
+                {passed
+                  ? `${attempt.score}/${totalMax}`
+                  : `${attempt.correctCount}/${totalQ}`}
               </b>
               <span>{passed ? 'Tổng điểm' : 'Câu đúng'}</span>
             </div>
@@ -171,7 +185,12 @@ export function Certificate({ attempt, passed, scope }: Props) {
       </article>
 
       <div className="actions certificate-actions">
-        <button className="btn primary" type="button" onClick={() => void downloadPng()} disabled={saving}>
+        <button
+          className="btn primary"
+          type="button"
+          onClick={() => void downloadPng()}
+          disabled={saving}
+        >
           {saving ? 'Đang tạo ảnh…' : 'Tải ảnh PNG'}
         </button>
         <button className="btn copper" type="button" onClick={() => void share()}>

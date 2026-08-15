@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { ConfirmDialog } from '../components/ConfirmDialog'
 import { QuestionCard } from '../components/QuestionCard'
-import { QuotaHint } from '../components/QuotaHint'
 import { useAuth } from '../context/AuthContext'
 import { lawSectionLabel, questionsForScope, skillSectionLabel } from '../lib/bank'
 import {
-  EXAM,
+  examConfigFor,
+  examPassSummary,
+  examQuestionCount,
   formatTime,
   pickExamQuestions,
   questionsByIds,
@@ -68,6 +69,8 @@ function isValidName(name: string): boolean {
 
 export function Exam({ scope, onFinish }: Props) {
   const pool = useMemo(() => questionsForScope(scope), [scope])
+  const exam = useMemo(() => examConfigFor(scope), [scope])
+  const totalQ = examQuestionCount(exam)
   const storageKey = scopeStorageKey(scope)
   const { tryRecordAnswer, notifyExamStarted, notifyExamSubmitted } = useAuth()
   const [session, setSession] = useState<Session | null>(() => readSession(scope))
@@ -78,7 +81,7 @@ export function Exam({ scope, onFinish }: Props) {
   const [confirmKind, setConfirmKind] = useState<'submit' | 'reset' | null>(null)
   const [index, setIndex] = useState(0)
   const [remaining, setRemaining] = useState(
-    () => readSession(scope)?.remaining ?? EXAM.minutes * 60,
+    () => readSession(scope)?.remaining ?? exam.minutes * 60,
   )
   const sessionRef = useRef(session)
   const finishing = useRef(false)
@@ -103,7 +106,7 @@ export function Exam({ scope, onFinish }: Props) {
     const current = sessionRef.current
     if (!current || finishing.current) return
     finishing.current = true
-    const scored = scoreAttempt(current.questionIds, current.answers, pool)
+    const scored = scoreAttempt(current.questionIds, current.answers, pool, exam)
     const attempt: ExamAttempt = {
       id: crypto.randomUUID(),
       candidateName: current.candidateName,
@@ -111,7 +114,7 @@ export function Exam({ scope, onFinish }: Props) {
       trackId: scope.trackId,
       startedAt: current.startedAt,
       finishedAt: new Date().toISOString(),
-      durationSec: EXAM.minutes * 60 - Math.max(0, current.remaining),
+      durationSec: exam.minutes * 60 - Math.max(0, current.remaining),
       timedOut,
       answers: current.answers,
       questionIds: current.questionIds,
@@ -163,7 +166,7 @@ export function Exam({ scope, onFinish }: Props) {
     localStorage.setItem(NAME_KEY, name)
     setCandidateName(name)
     finishing.current = false
-    const picked = pickExamQuestions(pool)
+    const picked = pickExamQuestions(pool, exam)
     const next: Session = {
       candidateName: name,
       questionIds: picked.map((q) => q.id),
@@ -173,7 +176,7 @@ export function Exam({ scope, onFinish }: Props) {
         flagged: false,
       })),
       startedAt: new Date().toISOString(),
-      remaining: EXAM.minutes * 60,
+      remaining: exam.minutes * 60,
       scopeKey: storageKey,
     }
     persist(next)
@@ -185,14 +188,20 @@ export function Exam({ scope, onFinish }: Props) {
     return (
       <section className="panel">
         <p className="kicker">Thi thử sát hạch</p>
-        <h2>40 câu · 45 phút · đạt ≥ 80% từng phần</h2>
+        <h2>
+          {totalQ} câu · {exam.minutes} phút ·{' '}
+          {exam.passMode === 'law-and-total'
+            ? `đạt PL ≥ ${exam.lawPassMin}/${exam.lawCount} và tổng ≥ ${exam.totalPassMin}/${totalQ}`
+            : 'đạt ≥ 80% từng phần'}
+        </h2>
         <p className="lead justified">
-          Đề được rút ngẫu nhiên từ ngân hàng: 16 câu {lawSectionLabel(scope)} và 24
-          câu {skillSectionLabel(scope)}. Đạt khi pháp luật ≥ 32/40 và{' '}
-          {skillSectionLabel(scope).toLowerCase()} ≥ 48/60. Bạn có thể đánh dấu câu để
-          xem lại. Hết giờ bài thi sẽ được nộp tự động.
+          Đề được rút ngẫu nhiên từ ngân hàng: {exam.lawCount} câu{' '}
+          {lawSectionLabel(scope)} và {exam.skillCount} câu {skillSectionLabel(scope)}.
+          {exam.passMode === 'law-and-total'
+            ? ` Theo Nghị định 217/2026/NĐ-CP: ${examPassSummary(exam)}.`
+            : ` ${examPassSummary(exam)}.`}{' '}
+          Bạn có thể đánh dấu câu để xem lại. Hết giờ bài thi sẽ được nộp tự động.
         </p>
-        <QuotaHint />
         <form className="exam-start-form" onSubmit={start}>
           <p className="kicker">Trước khi làm bài</p>
           <label className="exam-name-field">
@@ -287,7 +296,6 @@ export function Exam({ scope, onFinish }: Props) {
           <div className="answer-progress-ring">
             <span>
               <b>{paper.length ? Math.round((filled / paper.length) * 100) : 0}%</b>
-              <small>đã làm</small>
             </span>
           </div>
         </div>

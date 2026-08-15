@@ -36,7 +36,11 @@ export interface ExamConfig {
   skillCount: number
   minutes: number
   pointsPerQuestion: number
-  passPercent: number
+  /** per-section-percent = đo đạc; law-and-total = xây dựng NĐ 217 */
+  passMode: 'per-section-percent' | 'law-and-total'
+  passPercent?: number
+  lawPassMin?: number
+  totalPassMin?: number
 }
 
 export interface UserAnswer {

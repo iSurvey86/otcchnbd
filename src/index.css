@@ -32,6 +32,28 @@
   box-sizing: border-box;
 }
 
+/* Bàn tay khi hover — biết chỗ nào bấm được */
+button:not(:disabled),
+a[href],
+summary,
+.btn:not(:disabled),
+.text-link,
+.brand,
+.option:not(:disabled),
+.topic-card:not(.topic-card-soon),
+.sector-card-open,
+.history-item,
+.admin-tabs button,
+.nav-pills button {
+  cursor: pointer;
+}
+
+button:disabled,
+.btn:disabled,
+.option:disabled {
+  cursor: not-allowed;
+}
+
 html,
 body,
 #root {
@@ -72,6 +94,20 @@ body::before {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 28px;
+}
+
+.topbar-lead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  flex: 1;
+}
+
+.topbar-back {
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand {
@@ -426,24 +462,17 @@ body::before {
   height: 86px;
   border-radius: 50%;
   background: var(--card);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 1.15;
 }
 
 .answer-progress-ring b {
-  display: block;
   font-size: 22px;
+  line-height: 1;
   color: var(--forest);
-}
-
-.answer-progress-ring small {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
 }
 
 .timer {
@@ -748,6 +777,10 @@ body::before {
   margin: 0 0 14px;
 }
 
+.topbar .back-link {
+  margin: 0;
+}
+
 .xd-browse-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -824,31 +857,6 @@ body::before {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 13px;
-}
-
-.quota-hint {
-  margin: 0 0 16px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.55;
-  color: #7a3b0e;
-  background: #ffe3b8;
-  border: 1px solid #f0b45a;
-  border-radius: 12px;
-  padding: 10px 14px;
-}
-
-.quota-hint-empty {
-  color: #7a1f12;
-  background: #fde4d8;
-  border-color: #e39a6e;
-}
-
-.quota-hint .text-link {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .text-link {
@@ -1001,6 +1009,24 @@ body::before {
     align-items: stretch;
     gap: 12px;
     margin-bottom: 16px;
+  }
+
+  .topbar-lead {
+    width: 100%;
+    flex: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .topbar-back {
+    margin-left: auto;
+    text-align: right;
+    white-space: normal;
+    max-width: 46%;
+    line-height: 1.35;
+    font-size: 13px;
+    padding-top: 2px;
   }
 
   .brand strong {
@@ -1385,5 +1411,141 @@ body::before {
   .certificate-meta {
     justify-content: center;
     text-align: center;
+  }
+}
+
+/* Print / PDF đề thi thử */
+.exam-print-sheet {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 14mm 12mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+
+  .topbar,
+  .no-print,
+  .exam-print-screen-only,
+  .LoginModal,
+  .login-modal,
+  .confirm-dialog {
+    display: none !important;
+  }
+
+  .app-shell {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .exam-print-sheet {
+    display: block !important;
+  }
+
+  .exam-print-head {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #222;
+  }
+
+  .exam-print-brand {
+    margin: 0 0 4px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .exam-print-head h1 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #111;
+  }
+
+  .exam-print-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .exam-print-note {
+    margin: 0;
+    font-size: 11px;
+    color: #444;
+  }
+
+  .exam-print-q {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .exam-print-q-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  .exam-print-prompt {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+
+  .exam-print-options {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .exam-print-options li {
+    margin: 0 0 4px;
+    padding: 2px 0;
+  }
+
+  .exam-print-options li.is-correct {
+    color: #0b5c3b;
+    font-weight: 700;
+  }
+
+  .exam-print-options li.is-wrong {
+    color: #9b1c1c;
+  }
+
+  .exam-print-explain {
+    margin: 8px 0 0;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  .pass {
+    color: #0b5c3b !important;
+  }
+
+  .fail {
+    color: #9b1c1c !important;
   }
 }

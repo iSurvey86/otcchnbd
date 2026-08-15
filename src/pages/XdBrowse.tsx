@@ -16,9 +16,6 @@ export function XdBrowse({ onNavigate }: Props) {
 
   return (
     <>
-      <button className="text-link back-link" onClick={() => onNavigate({ name: 'catalog' })}>
-        ← Chọn ngành
-      </button>
       <div className="catalog-head">
         <h1>Xây dựng</h1>
         <p className="catalog-sub">Chọn hạng và chuyên ngành</p>
