@@ -14,7 +14,7 @@ export function Catalog({ onNavigate }: Props) {
         <p className="catalog-sub">Chọn ngành</p>
       </div>
       <div className="sector-grid">
-        {SECTORS.map((sector) => {
+        {SECTORS.filter((sector) => sector.visible).map((sector) => {
           if (!sector.open) {
             return (
               <div key={sector.id} className="sector-card sector-card-soon">
