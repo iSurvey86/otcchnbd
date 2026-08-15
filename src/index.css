@@ -637,12 +637,96 @@ a {
   text-align: center;
 }
 
+.catalog-head {
+  text-align: center;
+  margin: 12px 0 32px;
+}
+
+.catalog-head h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 44px);
+  color: var(--forest);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.catalog-sub {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sector-card {
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  color: inherit;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sector-card h2 {
+  margin: 10px 0 10px;
+  font-size: 26px;
+  color: var(--forest);
+}
+
+.sector-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.sector-card-open:hover {
+  border-color: var(--moss);
+}
+
+.sector-card-soon {
+  cursor: default;
+  opacity: 0.78;
+  background: var(--paper-2);
+}
+
+.sector-card-soon .badge {
+  background: #efe4c8;
+  color: var(--warn);
+}
+
+.sector-cta {
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--copper);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 14px;
+}
+
 .auth-bar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .auth-note {
@@ -878,7 +962,8 @@ a {
   .hero,
   .quiz-layout,
   .result-hero,
-  .topic-grid {
+  .topic-grid,
+  .sector-grid {
     grid-template-columns: 1fr;
   }
 
@@ -917,6 +1002,7 @@ a {
   .auth-bar {
     justify-content: space-between;
     width: 100%;
+    margin-left: 0;
   }
 
   .user-name {

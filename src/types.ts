@@ -57,10 +57,23 @@ export interface ExamAttempt {
   passed: boolean
 }
 
+export type SectorId = 'do-dac-ban-do' | 'xay-dung'
+
 export type AppView =
+  | { name: 'catalog' }
   | { name: 'home' }
   | { name: 'practice'; topicId?: TopicId }
   | { name: 'exam' }
   | { name: 'result'; attemptId: string }
   | { name: 'history' }
   | { name: 'admin' }
+
+export function isDoDacView(view: AppView): boolean {
+  return (
+    view.name === 'home' ||
+    view.name === 'practice' ||
+    view.name === 'exam' ||
+    view.name === 'result' ||
+    view.name === 'history'
+  )
+}

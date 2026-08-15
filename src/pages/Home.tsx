@@ -14,6 +14,9 @@ export function Home({ onNavigate }: Props) {
 
   return (
     <>
+      <button className="text-link back-link" onClick={() => onNavigate({ name: 'catalog' })}>
+        ← Chọn ngành
+      </button>
       <section className="hero">
         <div className="panel intro-panel">
           <p className="kicker">Luyện đề sát hạch</p>

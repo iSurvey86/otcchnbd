@@ -4,7 +4,7 @@ export const TOPICS: Topic[] = [
   {
     id: 'luat-chung',
     section: 'phap-luat',
-    title: 'Luật đo đạc và bản đồ',
+    title: 'Luật Đo đạc và Bản đồ',
     blurb: 'Khái niệm, nguyên tắc, hành vi bị cấm, phân loại hoạt động cơ bản và chuyên ngành.',
   },
   {
