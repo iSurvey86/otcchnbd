@@ -787,8 +787,18 @@ body::before {
 .xd-browse-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 28px;
+  gap: 20px 0;
   align-items: start;
+}
+
+.xd-browse-col:first-child {
+  padding-right: 28px;
+  border-right: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+}
+
+.xd-browse-col:last-child {
+  padding-left: 28px;
+  text-align: left;
 }
 
 .xd-browse-col .kicker {
@@ -800,6 +810,21 @@ body::before {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 0;
+}
+
+/* CTA nhóm lĩnh vực: 1 hàng, căn phải; tiêu đề vẫn căn trái */
+.xd-browse-col:last-child .xd-hang-row {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.xd-browse-col:last-child .xd-chip {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 8px 12px;
 }
 
 /* 3 hạng = 3 pastel; nhóm lĩnh vực theo hạng đang chọn – không xám/đen/ghi */
@@ -854,6 +879,24 @@ body::before {
 @media (max-width: 720px) {
   .xd-browse-cols {
     grid-template-columns: 1fr;
+  }
+
+  .xd-browse-col:first-child {
+    padding-right: 0;
+    padding-bottom: 16px;
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+  }
+
+  .xd-browse-col:last-child {
+    padding-left: 0;
+    padding-top: 4px;
+    text-align: left;
+  }
+
+  .xd-browse-col:last-child .xd-hang-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
