@@ -140,7 +140,12 @@ function AuthBar({
         )}
         <span className="user-name">{user.displayName ?? user.email}</span>
       </span>
-      <button className="btn ghost compact" onClick={() => void signOutUser()}>
+      <button
+        className="btn ghost compact"
+        onClick={() => {
+          void signOutUser().finally(() => onNavigate({ name: 'catalog' }))
+        }}
+      >
         Đăng xuất
       </button>
     </div>

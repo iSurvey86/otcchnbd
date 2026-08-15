@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Layout } from './components/Layout'
 import { LoginModal } from './components/LoginModal'
 import { TrackBankGate } from './components/TrackBankGate'
+import { useAuth } from './context/AuthContext'
 import { Admin } from './pages/Admin'
 import { Catalog } from './pages/Catalog'
 import { Exam } from './pages/Exam'
@@ -14,6 +15,15 @@ import type { AppView } from './types'
 
 export default function App() {
   const [view, setView] = useState<AppView>({ name: 'catalog' })
+  const { user, isAdmin, loading } = useAuth()
+
+  // Thoát trang quản lý khi đăng xuất / không còn quyền admin
+  useEffect(() => {
+    if (loading) return
+    if (view.name === 'admin' && (!user || !isAdmin)) {
+      setView({ name: 'catalog' })
+    }
+  }, [view.name, user, isAdmin, loading])
 
   return (
     <Layout view={view} onNavigate={setView}>
