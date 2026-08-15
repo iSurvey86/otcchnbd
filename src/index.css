@@ -407,8 +407,10 @@ body::before {
 }
 
 .topic-card .count {
+  display: block;
+  text-align: right;
   color: var(--copper);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 
