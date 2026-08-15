@@ -1,4 +1,5 @@
 import { QUESTIONS } from '../data/questions'
+import { findQuestionsByIds } from './bank'
 import type {
   ExamAttempt,
   ExamConfig,
@@ -45,30 +46,34 @@ export function shuffle<T>(items: T[]): T[] {
   return next
 }
 
-export function pickExamQuestions(): Question[] {
-  const law = shuffle(QUESTIONS.filter((q) => q.section === 'phap-luat'))
-  const skill = shuffle(QUESTIONS.filter((q) => q.section === 'kinh-nghiem'))
+export function pickExamQuestions(pool: Question[] = QUESTIONS): Question[] {
+  const law = shuffle(pool.filter((q) => q.section === 'phap-luat'))
+  const skill = shuffle(pool.filter((q) => q.section === 'kinh-nghiem'))
   return [
     ...law.slice(0, EXAM.lawCount),
     ...skill.slice(0, EXAM.skillCount),
   ]
 }
 
-export function questionsByIds(ids: string[]): Question[] {
-  const map = new Map(QUESTIONS.map((q) => [q.id, q]))
-  return ids
-    .map((id) => map.get(id))
-    .filter((q): q is Question => Boolean(q))
+export function questionsByIds(ids: string[], pool?: Question[]): Question[] {
+  if (pool) {
+    const map = new Map(pool.map((q) => [q.id, q]))
+    return ids
+      .map((id) => map.get(id))
+      .filter((q): q is Question => Boolean(q))
+  }
+  return findQuestionsByIds(ids)
 }
 
 export function scoreAttempt(
   questionIds: string[],
   answers: UserAnswer[],
+  pool?: Question[],
 ): Pick<
   ExamAttempt,
   'score' | 'lawScore' | 'skillScore' | 'correctCount' | 'passed'
 > {
-  const questions = questionsByIds(questionIds)
+  const questions = questionsByIds(questionIds, pool)
   const choiceById = new Map(answers.map((a) => [a.questionId, a.choice]))
   let lawScore = 0
   let skillScore = 0

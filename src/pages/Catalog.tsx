@@ -1,5 +1,6 @@
 import { QUESTIONS } from '../data/questions'
 import { SECTORS } from '../data/sectors'
+import { openXdQuestionTotal } from '../data/xd/tracks'
 import type { AppView } from '../types'
 
 interface Props {
@@ -24,16 +25,32 @@ export function Catalog({ onNavigate }: Props) {
               </div>
             )
           }
+
+          const badge =
+            sector.id === 'do-dac-ban-do'
+              ? `${QUESTIONS.length} câu`
+              : `${openXdQuestionTotal()} câu`
+
           return (
             <button
               key={sector.id}
               className="sector-card sector-card-open"
-              onClick={() => onNavigate({ name: 'home' })}
+              onClick={() =>
+                onNavigate(
+                  sector.id === 'xay-dung'
+                    ? { name: 'xd-browse' }
+                    : { name: 'home', scope: { sector: 'do-dac-ban-do' } },
+                )
+              }
             >
-              <span className="badge">{QUESTIONS.length} câu</span>
+              <span className="badge">{badge}</span>
               <h2>{sector.title}</h2>
               <p>{sector.blurb}</p>
-              <span className="sector-cta">Vào ôn và thi thử</span>
+              <span className="sector-cta">
+                {sector.id === 'xay-dung'
+                  ? 'Chọn hạng và chuyên ngành'
+                  : 'Vào ôn và thi thử'}
+              </span>
             </button>
           )
         })}

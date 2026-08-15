@@ -1,0 +1,1085 @@
+{
+  "totalMissing": 118,
+  "tracks": [
+    {
+      "trackId": "xd-1.2-hang-i",
+      "title": "Khảo sát địa chất công trình",
+      "hang": "I",
+      "fieldCode": "1.2",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            10
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-2-hang-i",
+      "title": "Thiết kế quy hoạch xây dựng",
+      "hang": "I",
+      "fieldCode": "2",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            153,
+            154
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 167,
+          "max": 169
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.2-hang-i",
+      "title": "Công trình khai thác mỏ",
+      "hang": "I",
+      "fieldCode": "3.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            27,
+            35
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 54,
+          "max": 56
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.3-hang-i",
+      "title": "Đường bộ",
+      "hang": "I",
+      "fieldCode": "3.3",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            52
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 80,
+          "max": 81
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.4-hang-i",
+      "title": "Đường sắt",
+      "hang": "I",
+      "fieldCode": "3.4",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.5-hang-i",
+      "title": "Cầu – Hầm",
+      "hang": "I",
+      "fieldCode": "3.5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.6-hang-i",
+      "title": "Đường thủy nội địa – Hàng hải",
+      "hang": "I",
+      "fieldCode": "3.6",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.8-hang-i",
+      "title": "Cấp nước – thoát nước",
+      "hang": "I",
+      "fieldCode": "3.8",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            80
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 89,
+          "max": 90
+        },
+        "Chuyên môn": {
+          "missing": [
+            10,
+            55
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 55,
+          "max": 57
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.9-hang-i",
+      "title": "Xử lý chất thải rắn",
+      "hang": "I",
+      "fieldCode": "3.9",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.10-hang-i",
+      "title": "Cơ–điện: Hệ thống điện",
+      "hang": "I",
+      "fieldCode": "3.10",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            27
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 76,
+          "max": 77
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.11-hang-i",
+      "title": "Cơ–điện: Cấp–thoát nước công trình",
+      "hang": "I",
+      "fieldCode": "3.11",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            8
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 50,
+          "max": 51
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.12-hang-i",
+      "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+      "hang": "I",
+      "fieldCode": "3.12",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.1-hang-i",
+      "title": "Giám sát công tác xây dựng công trình",
+      "hang": "I",
+      "fieldCode": "4.1",
+      "kinds": {
+        "Pháp luật riêng": {
+          "missing": [
+            48,
+            64
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 66,
+          "max": 68
+        },
+        "Chuyên môn": {
+          "missing": [
+            91,
+            135,
+            178,
+            199,
+            201,
+            432
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 481,
+          "max": 487
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.2-hang-i",
+      "title": "Giám sát lắp đặt thiết bị công trình",
+      "hang": "I",
+      "fieldCode": "4.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            124
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 133,
+          "max": 134
+        }
+      }
+    },
+    {
+      "trackId": "xd-5-hang-i",
+      "title": "Định giá xây dựng",
+      "hang": "I",
+      "fieldCode": "5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            78
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 87,
+          "max": 88
+        },
+        "Pháp luật riêng": {
+          "missing": [
+            41
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 50,
+          "max": 51
+        },
+        "Chuyên môn": {
+          "missing": [
+            42
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 51,
+          "max": 52
+        }
+      }
+    },
+    {
+      "trackId": "xd-2-hang-ii",
+      "title": "Thiết kế quy hoạch xây dựng",
+      "hang": "II",
+      "fieldCode": "2",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            44,
+            178,
+            180,
+            181
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 190,
+          "max": 194
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.1-hang-ii",
+      "title": "Kết cấu công trình",
+      "hang": "II",
+      "fieldCode": "3.1",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            29
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 109,
+          "max": 110
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.2-hang-ii",
+      "title": "Công trình khai thác mỏ",
+      "hang": "II",
+      "fieldCode": "3.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            16,
+            24
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 43,
+          "max": 45
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.3-hang-ii",
+      "title": "Đường bộ",
+      "hang": "II",
+      "fieldCode": "3.3",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            28,
+            52
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 79,
+          "max": 81
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.4-hang-ii",
+      "title": "Đường sắt",
+      "hang": "II",
+      "fieldCode": "3.4",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.5-hang-ii",
+      "title": "Cầu – Hầm",
+      "hang": "II",
+      "fieldCode": "3.5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.6-hang-ii",
+      "title": "Đường thủy nội địa – Hàng hải",
+      "hang": "II",
+      "fieldCode": "3.6",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            5,
+            49
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 77,
+          "max": 79
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.7-hang-ii",
+      "title": "Thủy lợi, đê điều",
+      "hang": "II",
+      "fieldCode": "3.7",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            34,
+            40
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 162,
+          "max": 164
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.8-hang-ii",
+      "title": "Cấp nước – thoát nước",
+      "hang": "II",
+      "fieldCode": "3.8",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            80
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 89,
+          "max": 90
+        },
+        "Chuyên môn": {
+          "missing": [
+            9,
+            50
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 50,
+          "max": 52
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.9-hang-ii",
+      "title": "Xử lý chất thải rắn",
+      "hang": "II",
+      "fieldCode": "3.9",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.10-hang-ii",
+      "title": "Cơ–điện: Hệ thống điện",
+      "hang": "II",
+      "fieldCode": "3.10",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.11-hang-ii",
+      "title": "Cơ–điện: Cấp–thoát nước công trình",
+      "hang": "II",
+      "fieldCode": "3.11",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.12-hang-ii",
+      "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+      "hang": "II",
+      "fieldCode": "3.12",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.1-hang-ii",
+      "title": "Giám sát công tác xây dựng công trình",
+      "hang": "II",
+      "fieldCode": "4.1",
+      "kinds": {
+        "Pháp luật riêng": {
+          "missing": [
+            18,
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 125,
+          "max": 127
+        },
+        "Chuyên môn": {
+          "missing": [
+            90,
+            134,
+            177,
+            198,
+            200,
+            431
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 480,
+          "max": 486
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.2-hang-ii",
+      "title": "Giám sát lắp đặt thiết bị công trình",
+      "hang": "II",
+      "fieldCode": "4.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            76
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        }
+      }
+    },
+    {
+      "trackId": "xd-5-hang-ii",
+      "title": "Định giá xây dựng",
+      "hang": "II",
+      "fieldCode": "5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            78
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 87,
+          "max": 88
+        },
+        "Pháp luật riêng": {
+          "missing": [
+            41
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 50,
+          "max": 51
+        }
+      }
+    },
+    {
+      "trackId": "xd-1.1-hang-iii",
+      "title": "Khảo sát địa hình",
+      "hang": "III",
+      "fieldCode": "1.1",
+      "kinds": {
+        "Pháp luật riêng": {
+          "missing": [
+            8,
+            24
+          ],
+          "dups": [
+            15,
+            17
+          ],
+          "outliers": [],
+          "count": 28,
+          "max": 30
+        }
+      }
+    },
+    {
+      "trackId": "xd-1.2-hang-iii",
+      "title": "Khảo sát địa chất công trình",
+      "hang": "III",
+      "fieldCode": "1.2",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            18
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 87,
+          "max": 88
+        }
+      }
+    },
+    {
+      "trackId": "xd-2-hang-iii",
+      "title": "Thiết kế quy hoạch xây dựng",
+      "hang": "III",
+      "fieldCode": "2",
+      "kinds": {
+        "Chuyên môn": {
+          "missing": [
+            47
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 183,
+          "max": 184
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.2-hang-iii",
+      "title": "Công trình khai thác mỏ",
+      "hang": "III",
+      "fieldCode": "3.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            16,
+            24
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 43,
+          "max": 45
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.3-hang-iii",
+      "title": "Đường bộ",
+      "hang": "III",
+      "fieldCode": "3.3",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            54
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 82,
+          "max": 83
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.4-hang-iii",
+      "title": "Đường sắt",
+      "hang": "III",
+      "fieldCode": "3.4",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.5-hang-iii",
+      "title": "Cầu – Hầm",
+      "hang": "III",
+      "fieldCode": "3.5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.6-hang-iii",
+      "title": "Đường thủy nội địa – Hàng hải",
+      "hang": "III",
+      "fieldCode": "3.6",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        },
+        "Chuyên môn": {
+          "missing": [
+            11,
+            20,
+            26,
+            36,
+            47,
+            55
+          ],
+          "dups": [],
+          "outliers": [
+            252,
+            253,
+            254,
+            255,
+            256,
+            257
+          ],
+          "count": 50,
+          "max": 56
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.7-hang-iii",
+      "title": "Thủy lợi, đê điều",
+      "hang": "III",
+      "fieldCode": "3.7",
+      "kinds": {
+        "Pháp luật riêng": {
+          "missing": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 34,
+          "max": 42
+        },
+        "Chuyên môn": {
+          "missing": [
+            16,
+            21,
+            23,
+            55
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 152,
+          "max": 156
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.8-hang-iii",
+      "title": "Cấp nước – thoát nước",
+      "hang": "III",
+      "fieldCode": "3.8",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            80
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 89,
+          "max": 90
+        },
+        "Chuyên môn": {
+          "missing": [
+            9,
+            49
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 49,
+          "max": 51
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.9-hang-iii",
+      "title": "Xử lý chất thải rắn",
+      "hang": "III",
+      "fieldCode": "3.9",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            76
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 84,
+          "max": 85
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.10-hang-iii",
+      "title": "Cơ–điện: Hệ thống điện",
+      "hang": "III",
+      "fieldCode": "3.10",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 85,
+          "max": 86
+        },
+        "Chuyên môn": {
+          "missing": [
+            20,
+            22
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 75,
+          "max": 77
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.11-hang-iii",
+      "title": "Cơ–điện: Cấp–thoát nước công trình",
+      "hang": "III",
+      "fieldCode": "3.11",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            76
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 84,
+          "max": 85
+        }
+      }
+    },
+    {
+      "trackId": "xd-3.12-hang-iii",
+      "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+      "hang": "III",
+      "fieldCode": "3.12",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            76
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 84,
+          "max": 85
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.1-hang-iii",
+      "title": "Giám sát công tác xây dựng công trình",
+      "hang": "III",
+      "fieldCode": "4.1",
+      "kinds": {
+        "Pháp luật riêng": {
+          "missing": [
+            42
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 68,
+          "max": 69
+        },
+        "Chuyên môn": {
+          "missing": [
+            91,
+            135,
+            178,
+            199,
+            201,
+            432
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 481,
+          "max": 487
+        }
+      }
+    },
+    {
+      "trackId": "xd-4.2-hang-iii",
+      "title": "Giám sát lắp đặt thiết bị công trình",
+      "hang": "III",
+      "fieldCode": "4.2",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            77
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 86,
+          "max": 87
+        }
+      }
+    },
+    {
+      "trackId": "xd-5-hang-iii",
+      "title": "Định giá xây dựng",
+      "hang": "III",
+      "fieldCode": "5",
+      "kinds": {
+        "Pháp luật chung": {
+          "missing": [
+            78
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 87,
+          "max": 88
+        },
+        "Pháp luật riêng": {
+          "missing": [
+            41
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 50,
+          "max": 51
+        },
+        "Chuyên môn": {
+          "missing": [
+            86
+          ],
+          "dups": [],
+          "outliers": [],
+          "count": 94,
+          "max": 95
+        }
+      }
+    }
+  ]
+}

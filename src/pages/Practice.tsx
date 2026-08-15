@@ -2,24 +2,27 @@ import { useMemo, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
 import { QuotaHint } from '../components/QuotaHint'
 import { useAuth } from '../context/AuthContext'
-import { questionsByTopic } from '../data/questions'
-import { TOPICS } from '../data/topics'
+import { questionsByTopicForScope, topicsForScope } from '../lib/bank'
 import { shuffle } from '../lib/exam'
-import type { TopicId } from '../types'
+import type { StudyScope, TopicId } from '../types'
 
 interface Props {
+  scope: StudyScope
   topicId?: TopicId
 }
 
-export function Practice({ topicId }: Props) {
+export function Practice({ scope, topicId }: Props) {
   const { tryRecordAnswer } = useAuth()
-  const pool = useMemo(() => shuffle(questionsByTopic(topicId)), [topicId])
+  const pool = useMemo(
+    () => shuffle(questionsByTopicForScope(scope, topicId)),
+    [scope, topicId],
+  )
   const [index, setIndex] = useState(0)
   const [choice, setChoice] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
   const [done, setDone] = useState(false)
 
-  const topic = TOPICS.find((t) => t.id === topicId)
+  const topic = topicsForScope(scope).find((t) => t.id === topicId)
   const question = pool[index]
   const revealed = choice !== null
 
@@ -90,7 +93,7 @@ export function Practice({ topicId }: Props) {
               return
             }
             setChoice(next)
-            if (next === question.answer) setCorrect((n) => n + 1)
+            if (next === question.answer) setCorrect((c) => c + 1)
           }}
         />
       ) : null}

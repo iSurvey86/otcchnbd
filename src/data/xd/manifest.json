@@ -1,0 +1,401 @@
+{
+  "xd-1.1-hang-i": {
+    "file": "1.1-hang-i.json",
+    "count": 192,
+    "title": "Khảo sát địa hình",
+    "fieldCode": "1.1",
+    "hang": "I"
+  },
+  "xd-1.2-hang-i": {
+    "file": "1.2-hang-i.json",
+    "count": 203,
+    "title": "Khảo sát địa chất công trình",
+    "fieldCode": "1.2",
+    "hang": "I"
+  },
+  "xd-2-hang-i": {
+    "file": "2-hang-i.json",
+    "count": 290,
+    "title": "Thiết kế quy hoạch xây dựng",
+    "fieldCode": "2",
+    "hang": "I"
+  },
+  "xd-3.1-hang-i": {
+    "file": "3.1-hang-i.json",
+    "count": 270,
+    "title": "Kết cấu công trình",
+    "fieldCode": "3.1",
+    "hang": "I"
+  },
+  "xd-3.2-hang-i": {
+    "file": "3.2-hang-i.json",
+    "count": 174,
+    "title": "Công trình khai thác mỏ",
+    "fieldCode": "3.2",
+    "hang": "I"
+  },
+  "xd-3.3-hang-i": {
+    "file": "3.3-hang-i.json",
+    "count": 196,
+    "title": "Đường bộ",
+    "fieldCode": "3.3",
+    "hang": "I"
+  },
+  "xd-3.4-hang-i": {
+    "file": "3.4-hang-i.json",
+    "count": 192,
+    "title": "Đường sắt",
+    "fieldCode": "3.4",
+    "hang": "I"
+  },
+  "xd-3.5-hang-i": {
+    "file": "3.5-hang-i.json",
+    "count": 224,
+    "title": "Cầu – Hầm",
+    "fieldCode": "3.5",
+    "hang": "I"
+  },
+  "xd-3.6-hang-i": {
+    "file": "3.6-hang-i.json",
+    "count": 192,
+    "title": "Đường thủy nội địa – Hàng hải",
+    "fieldCode": "3.6",
+    "hang": "I"
+  },
+  "xd-3.7-hang-i": {
+    "file": "3.7-hang-i.json",
+    "count": 353,
+    "title": "Thủy lợi, đê điều",
+    "fieldCode": "3.7",
+    "hang": "I"
+  },
+  "xd-3.8-hang-i": {
+    "file": "3.8-hang-i.json",
+    "count": 186,
+    "title": "Cấp nước – thoát nước",
+    "fieldCode": "3.8",
+    "hang": "I"
+  },
+  "xd-3.9-hang-i": {
+    "file": "3.9-hang-i.json",
+    "count": 148,
+    "title": "Xử lý chất thải rắn",
+    "fieldCode": "3.9",
+    "hang": "I"
+  },
+  "xd-3.10-hang-i": {
+    "file": "3.10-hang-i.json",
+    "count": 203,
+    "title": "Cơ–điện: Hệ thống điện",
+    "fieldCode": "3.10",
+    "hang": "I"
+  },
+  "xd-3.11-hang-i": {
+    "file": "3.11-hang-i.json",
+    "count": 170,
+    "title": "Cơ–điện: Cấp–thoát nước công trình",
+    "fieldCode": "3.11",
+    "hang": "I"
+  },
+  "xd-3.12-hang-i": {
+    "file": "3.12-hang-i.json",
+    "count": 190,
+    "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+    "fieldCode": "3.12",
+    "hang": "I"
+  },
+  "xd-4.1-hang-i": {
+    "file": "4.1-hang-i.json",
+    "count": 681,
+    "title": "Giám sát công tác xây dựng công trình",
+    "fieldCode": "4.1",
+    "hang": "I"
+  },
+  "xd-4.2-hang-i": {
+    "file": "4.2-hang-i.json",
+    "count": 214,
+    "title": "Giám sát lắp đặt thiết bị công trình",
+    "fieldCode": "4.2",
+    "hang": "I"
+  },
+  "xd-5-hang-i": {
+    "file": "5-hang-i.json",
+    "count": 188,
+    "title": "Định giá xây dựng",
+    "fieldCode": "5",
+    "hang": "I"
+  },
+  "xd-6-hang-i": {
+    "file": "6-hang-i.json",
+    "count": 275,
+    "title": "Quản lý dự án đầu tư xây dựng",
+    "fieldCode": "6",
+    "hang": "I"
+  },
+  "xd-1.1-hang-ii": {
+    "file": "1.1-hang-ii.json",
+    "count": 195,
+    "title": "Khảo sát địa hình",
+    "fieldCode": "1.1",
+    "hang": "II"
+  },
+  "xd-1.2-hang-ii": {
+    "file": "1.2-hang-ii.json",
+    "count": 202,
+    "title": "Khảo sát địa chất công trình",
+    "fieldCode": "1.2",
+    "hang": "II"
+  },
+  "xd-2-hang-ii": {
+    "file": "2-hang-ii.json",
+    "count": 320,
+    "title": "Thiết kế quy hoạch xây dựng",
+    "fieldCode": "2",
+    "hang": "II"
+  },
+  "xd-3.1-hang-ii": {
+    "file": "3.1-hang-ii.json",
+    "count": 231,
+    "title": "Kết cấu công trình",
+    "fieldCode": "3.1",
+    "hang": "II"
+  },
+  "xd-3.2-hang-ii": {
+    "file": "3.2-hang-ii.json",
+    "count": 163,
+    "title": "Công trình khai thác mỏ",
+    "fieldCode": "3.2",
+    "hang": "II"
+  },
+  "xd-3.3-hang-ii": {
+    "file": "3.3-hang-ii.json",
+    "count": 195,
+    "title": "Đường bộ",
+    "fieldCode": "3.3",
+    "hang": "II"
+  },
+  "xd-3.4-hang-ii": {
+    "file": "3.4-hang-ii.json",
+    "count": 192,
+    "title": "Đường sắt",
+    "fieldCode": "3.4",
+    "hang": "II"
+  },
+  "xd-3.5-hang-ii": {
+    "file": "3.5-hang-ii.json",
+    "count": 221,
+    "title": "Cầu – Hầm",
+    "fieldCode": "3.5",
+    "hang": "II"
+  },
+  "xd-3.6-hang-ii": {
+    "file": "3.6-hang-ii.json",
+    "count": 197,
+    "title": "Đường thủy nội địa – Hàng hải",
+    "fieldCode": "3.6",
+    "hang": "II"
+  },
+  "xd-3.7-hang-ii": {
+    "file": "3.7-hang-ii.json",
+    "count": 299,
+    "title": "Thủy lợi, đê điều",
+    "fieldCode": "3.7",
+    "hang": "II"
+  },
+  "xd-3.8-hang-ii": {
+    "file": "3.8-hang-ii.json",
+    "count": 178,
+    "title": "Cấp nước – thoát nước",
+    "fieldCode": "3.8",
+    "hang": "II"
+  },
+  "xd-3.9-hang-ii": {
+    "file": "3.9-hang-ii.json",
+    "count": 146,
+    "title": "Xử lý chất thải rắn",
+    "fieldCode": "3.9",
+    "hang": "II"
+  },
+  "xd-3.10-hang-ii": {
+    "file": "3.10-hang-ii.json",
+    "count": 201,
+    "title": "Cơ–điện: Hệ thống điện",
+    "fieldCode": "3.10",
+    "hang": "II"
+  },
+  "xd-3.11-hang-ii": {
+    "file": "3.11-hang-ii.json",
+    "count": 168,
+    "title": "Cơ–điện: Cấp–thoát nước công trình",
+    "fieldCode": "3.11",
+    "hang": "II"
+  },
+  "xd-3.12-hang-ii": {
+    "file": "3.12-hang-ii.json",
+    "count": 190,
+    "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+    "fieldCode": "3.12",
+    "hang": "II"
+  },
+  "xd-4.1-hang-ii": {
+    "file": "4.1-hang-ii.json",
+    "count": 692,
+    "title": "Giám sát công tác xây dựng công trình",
+    "fieldCode": "4.1",
+    "hang": "II"
+  },
+  "xd-4.2-hang-ii": {
+    "file": "4.2-hang-ii.json",
+    "count": 166,
+    "title": "Giám sát lắp đặt thiết bị công trình",
+    "fieldCode": "4.2",
+    "hang": "II"
+  },
+  "xd-5-hang-ii": {
+    "file": "5-hang-ii.json",
+    "count": 194,
+    "title": "Định giá xây dựng",
+    "fieldCode": "5",
+    "hang": "II"
+  },
+  "xd-6-hang-ii": {
+    "file": "6-hang-ii.json",
+    "count": 303,
+    "title": "Quản lý dự án đầu tư xây dựng",
+    "fieldCode": "6",
+    "hang": "II"
+  },
+  "xd-1.1-hang-iii": {
+    "file": "1.1-hang-iii.json",
+    "count": 189,
+    "title": "Khảo sát địa hình",
+    "fieldCode": "1.1",
+    "hang": "III"
+  },
+  "xd-1.2-hang-iii": {
+    "file": "1.2-hang-iii.json",
+    "count": 204,
+    "title": "Khảo sát địa chất công trình",
+    "fieldCode": "1.2",
+    "hang": "III"
+  },
+  "xd-2-hang-iii": {
+    "file": "2-hang-iii.json",
+    "count": 309,
+    "title": "Thiết kế quy hoạch xây dựng",
+    "fieldCode": "2",
+    "hang": "III"
+  },
+  "xd-3.1-hang-iii": {
+    "file": "3.1-hang-iii.json",
+    "count": 226,
+    "title": "Kết cấu công trình",
+    "fieldCode": "3.1",
+    "hang": "III"
+  },
+  "xd-3.2-hang-iii": {
+    "file": "3.2-hang-iii.json",
+    "count": 163,
+    "title": "Công trình khai thác mỏ",
+    "fieldCode": "3.2",
+    "hang": "III"
+  },
+  "xd-3.3-hang-iii": {
+    "file": "3.3-hang-iii.json",
+    "count": 198,
+    "title": "Đường bộ",
+    "fieldCode": "3.3",
+    "hang": "III"
+  },
+  "xd-3.4-hang-iii": {
+    "file": "3.4-hang-iii.json",
+    "count": 192,
+    "title": "Đường sắt",
+    "fieldCode": "3.4",
+    "hang": "III"
+  },
+  "xd-3.5-hang-iii": {
+    "file": "3.5-hang-iii.json",
+    "count": 220,
+    "title": "Cầu – Hầm",
+    "fieldCode": "3.5",
+    "hang": "III"
+  },
+  "xd-3.6-hang-iii": {
+    "file": "3.6-hang-iii.json",
+    "count": 176,
+    "title": "Đường thủy nội địa – Hàng hải",
+    "fieldCode": "3.6",
+    "hang": "III"
+  },
+  "xd-3.7-hang-iii": {
+    "file": "3.7-hang-iii.json",
+    "count": 273,
+    "title": "Thủy lợi, đê điều",
+    "fieldCode": "3.7",
+    "hang": "III"
+  },
+  "xd-3.8-hang-iii": {
+    "file": "3.8-hang-iii.json",
+    "count": 172,
+    "title": "Cấp nước – thoát nước",
+    "fieldCode": "3.8",
+    "hang": "III"
+  },
+  "xd-3.9-hang-iii": {
+    "file": "3.9-hang-iii.json",
+    "count": 141,
+    "title": "Xử lý chất thải rắn",
+    "fieldCode": "3.9",
+    "hang": "III"
+  },
+  "xd-3.10-hang-iii": {
+    "file": "3.10-hang-iii.json",
+    "count": 192,
+    "title": "Cơ–điện: Hệ thống điện",
+    "fieldCode": "3.10",
+    "hang": "III"
+  },
+  "xd-3.11-hang-iii": {
+    "file": "3.11-hang-iii.json",
+    "count": 165,
+    "title": "Cơ–điện: Cấp–thoát nước công trình",
+    "fieldCode": "3.11",
+    "hang": "III"
+  },
+  "xd-3.12-hang-iii": {
+    "file": "3.12-hang-iii.json",
+    "count": 187,
+    "title": "Cơ–điện: Thông gió – cấp thoát nhiệt",
+    "fieldCode": "3.12",
+    "hang": "III"
+  },
+  "xd-4.1-hang-iii": {
+    "file": "4.1-hang-iii.json",
+    "count": 637,
+    "title": "Giám sát công tác xây dựng công trình",
+    "fieldCode": "4.1",
+    "hang": "III"
+  },
+  "xd-4.2-hang-iii": {
+    "file": "4.2-hang-iii.json",
+    "count": 167,
+    "title": "Giám sát lắp đặt thiết bị công trình",
+    "fieldCode": "4.2",
+    "hang": "III"
+  },
+  "xd-5-hang-iii": {
+    "file": "5-hang-iii.json",
+    "count": 231,
+    "title": "Định giá xây dựng",
+    "fieldCode": "5",
+    "hang": "III"
+  },
+  "xd-6-hang-iii": {
+    "file": "6-hang-iii.json",
+    "count": 374,
+    "title": "Quản lý dự án đầu tư xây dựng",
+    "fieldCode": "6",
+    "hang": "III"
+  }
+}

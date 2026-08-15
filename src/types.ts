@@ -9,6 +9,9 @@ export type TopicId =
   | 'do-truc-tiep'
   | 'anh-vien-tham'
   | 'chat-luong-de-an'
+  | 'pl-chung'
+  | 'pl-rieng'
+  | 'chuyen-mon'
 
 export interface Topic {
   id: TopicId
@@ -42,8 +45,28 @@ export interface UserAnswer {
   flagged: boolean
 }
 
+export type SectorId = 'do-dac-ban-do' | 'xay-dung'
+
+export type HangId = 'I' | 'II' | 'III'
+
+export type XdGroupId =
+  | 'khao-sat'
+  | 'thiet-ke'
+  | 'giam-sat'
+  | 'dinh-gia'
+  | 'quan-ly-du-an'
+
+export interface StudyScope {
+  sector: SectorId
+  /** Required when sector is xay-dung */
+  trackId?: string
+}
+
 export interface ExamAttempt {
   id: string
+  candidateName?: string
+  sector?: SectorId
+  trackId?: string
   startedAt: string
   finishedAt: string
   durationSec: number
@@ -57,18 +80,17 @@ export interface ExamAttempt {
   passed: boolean
 }
 
-export type SectorId = 'do-dac-ban-do' | 'xay-dung'
-
 export type AppView =
   | { name: 'catalog' }
-  | { name: 'home' }
-  | { name: 'practice'; topicId?: TopicId }
-  | { name: 'exam' }
-  | { name: 'result'; attemptId: string }
-  | { name: 'history' }
+  | { name: 'xd-browse' }
+  | { name: 'home'; scope: StudyScope }
+  | { name: 'practice'; scope: StudyScope; topicId?: TopicId }
+  | { name: 'exam'; scope: StudyScope }
+  | { name: 'result'; scope: StudyScope; attemptId: string }
+  | { name: 'history'; scope: StudyScope }
   | { name: 'admin' }
 
-export function isDoDacView(view: AppView): boolean {
+export function isStudyView(view: AppView): boolean {
   return (
     view.name === 'home' ||
     view.name === 'practice' ||
@@ -76,4 +98,22 @@ export function isDoDacView(view: AppView): boolean {
     view.name === 'result' ||
     view.name === 'history'
   )
+}
+
+export function getViewScope(view: AppView): StudyScope | null {
+  if (
+    view.name === 'home' ||
+    view.name === 'practice' ||
+    view.name === 'exam' ||
+    view.name === 'result' ||
+    view.name === 'history'
+  ) {
+    return view.scope
+  }
+  return null
+}
+
+/** @deprecated use isStudyView */
+export function isDoDacView(view: AppView): boolean {
+  return isStudyView(view)
 }

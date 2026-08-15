@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { useAuth } from '../context/AuthContext'
-import { isDoDacView, type AppView } from '../types'
+import { getViewScope, isStudyView, type AppView } from '../types'
 
 interface Props {
   view: AppView
@@ -9,7 +9,8 @@ interface Props {
 }
 
 export function Layout({ view, onNavigate, children }: Props) {
-  const showDoDacNav = isDoDacView(view)
+  const scope = getViewScope(view)
+  const showStudyNav = isStudyView(view) && scope
 
   return (
     <div className="app-shell">
@@ -21,38 +22,54 @@ export function Layout({ view, onNavigate, children }: Props) {
             <strong>Chứng chỉ hành nghề</strong>
           </span>
         </button>
-        {showDoDacNav ? (
+        {showStudyNav && scope ? (
           <nav className="nav-pills">
-            <button
-              className={view.name === 'home' ? 'active' : ''}
-              onClick={() => onNavigate({ name: 'home' })}
+            <NavButton
+              active={view.name === 'home'}
+              onClick={() => onNavigate({ name: 'home', scope })}
             >
               Trang chủ
-            </button>
-            <button
-              className={view.name === 'practice' ? 'active' : ''}
-              onClick={() => onNavigate({ name: 'practice' })}
+            </NavButton>
+            <NavButton
+              active={view.name === 'practice'}
+              onClick={() => onNavigate({ name: 'practice', scope })}
             >
               Ôn tập
-            </button>
-            <button
-              className={view.name === 'exam' ? 'active' : ''}
-              onClick={() => onNavigate({ name: 'exam' })}
+            </NavButton>
+            <NavButton
+              active={view.name === 'exam'}
+              onClick={() => onNavigate({ name: 'exam', scope })}
             >
               Thi thử
-            </button>
-            <button
-              className={view.name === 'history' ? 'active' : ''}
-              onClick={() => onNavigate({ name: 'history' })}
+            </NavButton>
+            <NavButton
+              active={view.name === 'history'}
+              onClick={() => onNavigate({ name: 'history', scope })}
             >
               Lịch sử
-            </button>
+            </NavButton>
           </nav>
         ) : null}
         <AuthBar view={view} onNavigate={onNavigate} />
       </header>
       {children}
     </div>
+  )
+}
+
+function NavButton({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean
+  onClick: () => void
+  children: ReactNode
+}) {
+  return (
+    <button className={active ? 'active' : ''} onClick={onClick}>
+      {children}
+    </button>
   )
 }
 
@@ -67,7 +84,7 @@ function AuthBar({
     useAuth()
 
   if (!isConfigured) return null
-  if (view.name === 'catalog' && !user) return null
+  if ((view.name === 'catalog' || view.name === 'xd-browse') && !user) return null
 
   if (!user) {
     return (

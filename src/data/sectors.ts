@@ -20,8 +20,9 @@ export const SECTORS: Sector[] = [
   {
     id: 'xay-dung',
     title: 'Xây dựng',
-    blurb: 'Chứng chỉ hành nghề xây dựng. Ngân hàng câu hỏi đang biên soạn.',
-    open: false,
-    visible: false,
+    blurb:
+      'Ôn thi Chứng chỉ hành nghề hoạt động xây dựng — ngân hàng theo Quyết định 163/QĐ-BXD ngày 18/02/2025. Chọn hạng và chuyên ngành để ôn / thi thử.',
+    open: true,
+    visible: true,
   },
 ]
