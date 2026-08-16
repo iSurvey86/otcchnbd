@@ -43,19 +43,28 @@ export function Home({ scope, onNavigate }: Props) {
             <span>Cấp chứng chỉ hành nghề</span>
             <span>{title}</span>
           </h1>
-          <div className="stats">
+          <div className={`stats${scope.sector === 'dau-thau' ? ' stats-dt' : ''}`}>
             <div className="stat stat-bank">
               <b>{questions.length}</b>
               <span>Ngân hàng câu hỏi</span>
             </div>
-            <div className="stat stat-law">
-              <b>{lawCount}</b>
-              <span>{lawSectionLabel(scope)}</span>
-            </div>
-            <div className="stat stat-skill">
-              <b>{skillCount}</b>
-              <span>{skillSectionLabel(scope)}</span>
-            </div>
+            {scope.sector === 'dau-thau' ? (
+              <div className="stat stat-skill">
+                <b>{skillCount}</b>
+                <span>{skillSectionLabel(scope)}</span>
+              </div>
+            ) : (
+              <>
+                <div className="stat stat-law">
+                  <b>{lawCount}</b>
+                  <span>{lawSectionLabel(scope)}</span>
+                </div>
+                <div className="stat stat-skill">
+                  <b>{skillCount}</b>
+                  <span>{skillSectionLabel(scope)}</span>
+                </div>
+              </>
+            )}
           </div>
           <p className="source-note">
             <span>{sourceNoteForScope(scope)}</span>
@@ -75,6 +84,12 @@ export function Home({ scope, onNavigate }: Props) {
                   {exam.skillCount} câu {skillSectionLabel(scope)} ({skillMax} điểm).{' '}
                   {examPassSummary(exam)}.
                 </>
+              ) : scope.sector === 'dau-thau' ? (
+                <>
+                  Thi theo lô NVCM: {totalQ} câu / {exam.minutes} phút – toàn bộ câu trong
+                  lô ({skillMax} điểm). {examPassSummary(exam)}. Ghi chú giải thích sẽ
+                  bổ sung dần theo từng lô.
+                </>
               ) : (
                 <>
                   Đề thi thử: {totalQ} câu / {exam.minutes} phút – {exam.skillCount} câu{' '}
@@ -89,7 +104,9 @@ export function Home({ scope, onNavigate }: Props) {
               <span className="chip">
                 {exam.passMode === 'law-and-total'
                   ? `Đạt ≥ ${exam.totalPassMin}/${totalMax}`
-                  : 'Đạt ≥ 80% từng phần'}
+                  : scope.sector === 'dau-thau'
+                    ? `Đạt ≥ ${exam.passPercent}%`
+                    : 'Đạt ≥ 80% từng phần'}
               </span>
             </div>
           </div>

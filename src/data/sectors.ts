@@ -25,4 +25,12 @@ export const SECTORS: Sector[] = [
     open: true,
     visible: true,
   },
+  {
+    id: 'dau-thau',
+    title: 'Đấu thầu',
+    blurb:
+      'Ôn thi nghiệp vụ chuyên môn đấu thầu – ngân hàng 390 câu NVCM. Chọn từng lô khoảng 20 câu để ôn và thi thử.',
+    open: true,
+    visible: true,
+  },
 ]

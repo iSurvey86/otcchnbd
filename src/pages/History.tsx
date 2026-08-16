@@ -13,6 +13,9 @@ export function History({ scope, onNavigate }: Props) {
     if (scope.sector === 'xay-dung') {
       return item.sector === 'xay-dung' && item.trackId === scope.trackId
     }
+    if (scope.sector === 'dau-thau') {
+      return item.sector === 'dau-thau' && item.trackId === scope.trackId
+    }
     return !item.sector || item.sector === 'do-dac-ban-do'
   })
 

@@ -1,4 +1,6 @@
+import { ExplanationBody } from './ExplanationBody'
 import { letter } from '../lib/exam'
+import { normalizeLegalCaps } from '../lib/legalCite'
 import type { Question } from '../types'
 
 interface Props {
@@ -55,9 +57,26 @@ export function QuestionCard({
       </div>
       {revealed ? (
         <div className="explain">
-          <strong>Giải thích.</strong> {question.explanation}
-          <div className="muted" style={{ marginTop: 8 }}>
-            Nguồn: {question.source}
+          <strong className="explain-title">Giải thích</strong>
+          {question.explanation ? (
+            <ExplanationBody text={question.explanation} />
+          ) : (
+            <div className="explain-body muted">Chưa có giải thích chi tiết cho câu này.</div>
+          )}
+          <div className="explain-foot">
+            <div className="explain-source muted">
+              Nguồn: {normalizeLegalCaps(question.source)}
+            </div>
+            <button
+              type="button"
+              className="explain-feedback explain-callout"
+              title="Góp ý về đáp án hoặc giải thích (sẽ mở form sau)"
+              onClick={() => {
+                /* Phase sau: mở form phản hồi theo câu hỏi */
+              }}
+            >
+              <span className="explain-callout-text">Phản hồi / Góp ý</span>
+            </button>
           </div>
         </div>
       ) : null}

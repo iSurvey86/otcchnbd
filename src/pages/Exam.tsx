@@ -30,9 +30,9 @@ interface Session {
 }
 
 function scopeStorageKey(scope: StudyScope): string {
-  return scope.sector === 'xay-dung'
-    ? `xd:${scope.trackId ?? ''}`
-    : 'do-dac'
+  if (scope.sector === 'xay-dung') return `xd:${scope.trackId ?? ''}`
+  if (scope.sector === 'dau-thau') return `dt:${scope.trackId ?? ''}`
+  return 'do-dac'
 }
 
 function sessionKey(scope: StudyScope): string {

@@ -282,6 +282,10 @@ body::before {
   gap: 10px;
 }
 
+.stats-dt {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .stat {
   border-radius: 14px;
   padding: 14px;
@@ -592,14 +596,159 @@ body::before {
 
 .explain {
   margin-top: 16px;
-  padding: 14px 16px;
+  padding: 14px 16px 12px;
   border-radius: 14px;
   background: #f7f1e3;
   border: 1px dashed var(--copper);
+  position: relative;
+}
+
+.explain-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--copper);
+  font-size: 15px;
 }
 
 .explain strong {
   color: var(--copper);
+}
+
+.explain-body {
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.explain-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.explain-section {
+  margin: 0;
+}
+
+.explain-h {
+  margin: 0 0 3px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.35;
+}
+
+.explain-indent {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.explain-p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.explain-p:last-child {
+  margin-bottom: 0;
+}
+
+.explain-list {
+  margin: 0;
+  padding-left: 1.85rem;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.explain-list li {
+  margin: 0 0 3px;
+  padding-left: 2px;
+}
+
+.explain-list li:last-child {
+  margin-bottom: 0;
+}
+
+.explain-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.explain-source {
+  margin: 0;
+  padding-bottom: 4px;
+  font-size: 13px;
+  flex: 1;
+  min-width: 0;
+}
+
+.explain-feedback.explain-callout {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 2px 6px 0;
+  padding: 8px 14px 10px;
+  border-radius: 14px;
+  border: 1.5px solid color-mix(in srgb, var(--copper) 55%, #c4a574);
+  background: #fffdf8;
+  color: var(--copper);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(181, 122, 60, 0.12);
+}
+
+.explain-callout-text {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Đuôi callout (bong bóng chữ bo góc) hướng vào nội dung */
+.explain-feedback.explain-callout::before,
+.explain-feedback.explain-callout::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.explain-feedback.explain-callout::before {
+  border-width: 8px 7px 0 7px;
+  border-color: color-mix(in srgb, var(--copper) 55%, #c4a574) transparent transparent
+    transparent;
+  bottom: -8px;
+}
+
+.explain-feedback.explain-callout::after {
+  border-width: 7px 6px 0 6px;
+  border-color: #fffdf8 transparent transparent transparent;
+  bottom: -6px;
+  left: 15px;
+}
+
+.explain-feedback.explain-callout:hover {
+  background: #fff6e8;
+  border-color: var(--copper);
+  box-shadow: 0 6px 14px rgba(181, 122, 60, 0.16);
+}
+
+.explain-feedback.explain-callout:hover::after {
+  border-color: #fff6e8 transparent transparent transparent;
+}
+
+.explain-feedback.explain-callout:hover::before {
+  border-color: var(--copper) transparent transparent transparent;
 }
 
 .actions {
@@ -767,6 +916,165 @@ body::before {
 .sector-card-soon .badge {
   background: #efe4c8;
   color: var(--warn);
+}
+
+/* Đấu thầu – KPI lot cards (cặp màu + bóng 3D) */
+.kpi-lot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 8px 0 28px;
+}
+
+.kpi-lot-card {
+  text-align: left;
+  background: #fff;
+  border: 1px solid rgba(20, 34, 31, 0.06);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 168px;
+  border-top: 3px solid var(--kpi, var(--moss));
+  box-shadow:
+    0 10px 25px -5px rgba(20, 34, 31, 0.12),
+    0 8px 10px -6px rgba(20, 34, 31, 0.08);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.kpi-lot-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 32px -8px rgba(20, 34, 31, 0.16),
+    0 10px 14px -8px rgba(20, 34, 31, 0.1);
+}
+
+.kpi-lot-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.kpi-lot-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--kpi, var(--moss));
+}
+
+.kpi-lot-pill {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: #f3f1ec;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.kpi-lot-body h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--kpi-ink, var(--forest));
+}
+
+.kpi-lot-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.kpi-lot-meta {
+  margin-top: 6px !important;
+  font-weight: 600;
+  color: var(--kpi-ink, var(--forest-2)) !important;
+}
+
+.kpi-lot-foot {
+  margin-top: auto;
+}
+
+.kpi-lot-cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kpi, var(--moss));
+}
+
+.kpi-pair-0 {
+  --kpi: #2f8f7f;
+  --kpi-ink: #1a6b5a;
+  background: linear-gradient(180deg, #f3fbf8 0%, #fff 42%);
+}
+.kpi-pair-1 {
+  --kpi: #6b5cae;
+  --kpi-ink: #43367a;
+  background: linear-gradient(180deg, #f5f3fb 0%, #fff 42%);
+}
+.kpi-pair-2 {
+  --kpi: #3b82b8;
+  --kpi-ink: #1f5f8a;
+  background: linear-gradient(180deg, #f0f7fc 0%, #fff 42%);
+}
+.kpi-pair-3 {
+  --kpi: #d0893a;
+  --kpi-ink: #8a5a12;
+  background: linear-gradient(180deg, #fff7ec 0%, #fff 42%);
+}
+.kpi-pair-4 {
+  --kpi: #2a9d8f;
+  --kpi-ink: #1b6b62;
+  background: linear-gradient(180deg, #eefaf8 0%, #fff 42%);
+}
+.kpi-pair-5 {
+  --kpi: #c45c7a;
+  --kpi-ink: #8a3350;
+  background: linear-gradient(180deg, #fdf2f5 0%, #fff 42%);
+}
+.kpi-pair-6 {
+  --kpi: #4f7cac;
+  --kpi-ink: #2f5278;
+  background: linear-gradient(180deg, #f1f6fb 0%, #fff 42%);
+}
+.kpi-pair-7 {
+  --kpi: #b57a3c;
+  --kpi-ink: #7a4e22;
+  background: linear-gradient(180deg, #fbf4ea 0%, #fff 42%);
+}
+.kpi-pair-8 {
+  --kpi: #3d8b6e;
+  --kpi-ink: #245a47;
+  background: linear-gradient(180deg, #eef8f3 0%, #fff 42%);
+}
+.kpi-pair-9 {
+  --kpi: #5b6abf;
+  --kpi-ink: #3a458c;
+  background: linear-gradient(180deg, #f2f3fb 0%, #fff 42%);
+}
+
+@media (max-width: 640px) {
+  .kpi-lot-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .kpi-lot-card {
+    min-height: 150px;
+    padding: 14px;
+  }
 }
 
 .sector-cta {

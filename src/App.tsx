@@ -5,6 +5,7 @@ import { TrackBankGate } from './components/TrackBankGate'
 import { useAuth } from './context/AuthContext'
 import { Admin } from './pages/Admin'
 import { Catalog } from './pages/Catalog'
+import { DtBrowse } from './pages/DtBrowse'
 import { Exam } from './pages/Exam'
 import { History } from './pages/History'
 import { Home } from './pages/Home'
@@ -29,6 +30,7 @@ export default function App() {
     <Layout view={view} onNavigate={setView}>
       {view.name === 'catalog' ? <Catalog onNavigate={setView} /> : null}
       {view.name === 'xd-browse' ? <XdBrowse onNavigate={setView} /> : null}
+      {view.name === 'dt-browse' ? <DtBrowse onNavigate={setView} /> : null}
       {view.name === 'home' ? (
         <TrackBankGate scope={view.scope}>
           <Home scope={view.scope} onNavigate={setView} />

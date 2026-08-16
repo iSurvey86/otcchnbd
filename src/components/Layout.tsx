@@ -9,7 +9,7 @@ interface Props {
 }
 
 function backNavFor(view: AppView): { label: string; target: AppView } | null {
-  if (view.name === 'xd-browse') {
+  if (view.name === 'xd-browse' || view.name === 'dt-browse') {
     return { label: '← Chọn ngành', target: { name: 'catalog' } }
   }
   const scope = getViewScope(view)
@@ -18,6 +18,12 @@ function backNavFor(view: AppView): { label: string; target: AppView } | null {
     return {
       label: '← Chọn hạng / chuyên ngành',
       target: { name: 'xd-browse' },
+    }
+  }
+  if (scope.sector === 'dau-thau') {
+    return {
+      label: '← Chọn lô câu hỏi',
+      target: { name: 'dt-browse' },
     }
   }
   return { label: '← Chọn ngành', target: { name: 'catalog' } }

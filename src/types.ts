@@ -12,6 +12,7 @@ export type TopicId =
   | 'pl-chung'
   | 'pl-rieng'
   | 'chuyen-mon'
+  | 'dt-nvcm'
 
 export interface Topic {
   id: TopicId
@@ -49,7 +50,7 @@ export interface UserAnswer {
   flagged: boolean
 }
 
-export type SectorId = 'do-dac-ban-do' | 'xay-dung'
+export type SectorId = 'do-dac-ban-do' | 'xay-dung' | 'dau-thau'
 
 export type HangId = 'I' | 'II' | 'III'
 
@@ -62,7 +63,7 @@ export type XdGroupId =
 
 export interface StudyScope {
   sector: SectorId
-  /** Required when sector is xay-dung */
+  /** Required when sector is xay-dung (track) or dau-thau (lot) */
   trackId?: string
 }
 
@@ -87,6 +88,7 @@ export interface ExamAttempt {
 export type AppView =
   | { name: 'catalog' }
   | { name: 'xd-browse' }
+  | { name: 'dt-browse' }
   | { name: 'home'; scope: StudyScope }
   | { name: 'practice'; scope: StudyScope; topicId?: TopicId }
   | { name: 'exam'; scope: StudyScope }

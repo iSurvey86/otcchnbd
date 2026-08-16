@@ -1,4 +1,5 @@
 import { QUESTIONS } from '../data/questions'
+import { dtLotQuestionCount } from '../data/dt/lots'
 import { findQuestionsByIds } from './bank'
 import type {
   ExamAttempt,
@@ -33,11 +34,26 @@ export const EXAM_XAY_DUNG: ExamConfig = {
   totalPassMin: 21,
 }
 
+/** Đấu thầu NVCM – thi theo lô (toàn bộ câu trong lô). */
+export function examDauThauForLot(lotId: string | undefined): ExamConfig {
+  const n = Math.max(1, dtLotQuestionCount(lotId))
+  return {
+    lawCount: 0,
+    skillCount: n,
+    minutes: Math.max(15, Math.round(n * 1.25)),
+    pointsPerQuestion: 1,
+    passMode: 'per-section-percent',
+    passPercent: 80,
+  }
+}
+
 /** @deprecated use examConfigFor(scope) */
 export const EXAM = EXAM_DO_DAC
 
 export function examConfigFor(scope: StudyScope): ExamConfig {
-  return scope.sector === 'xay-dung' ? EXAM_XAY_DUNG : EXAM_DO_DAC
+  if (scope.sector === 'xay-dung') return EXAM_XAY_DUNG
+  if (scope.sector === 'dau-thau') return examDauThauForLot(scope.trackId)
+  return EXAM_DO_DAC
 }
 
 export function examQuestionCount(config: ExamConfig): number {
@@ -98,6 +114,14 @@ export function isExamPassed(
 export function examPassSummary(config: ExamConfig): string {
   if (config.passMode === 'law-and-total') {
     return `Đạt khi pháp luật ≥ ${config.lawPassMin}/${sectionMax('phap-luat', config)} và tổng ≥ ${config.totalPassMin}/${examTotalMax(config)}`
+  }
+  if (config.lawCount === 0) {
+    const skillMax = sectionMax('kinh-nghiem', config)
+    return `Đạt khi ≥ ${config.passPercent}%: ≥ ${sectionPassMark(skillMax, config)}/${skillMax}`
+  }
+  if (config.skillCount === 0) {
+    const lawMax = sectionMax('phap-luat', config)
+    return `Đạt khi ≥ ${config.passPercent}%: ≥ ${sectionPassMark(lawMax, config)}/${lawMax}`
   }
   const lawMax = sectionMax('phap-luat', config)
   const skillMax = sectionMax('kinh-nghiem', config)
