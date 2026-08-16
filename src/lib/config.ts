@@ -5,7 +5,7 @@ const DEFAULT_ADMINS = ['minhphuong.npsc@gmail.com']
 export const ADMIN_EMAILS = Array.from(
   new Set([
     ...DEFAULT_ADMINS,
-    ...(import.meta.env.VITE_ADMIN_EMAILS ?? '')
+    ...(process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
       .split(',')
       .map((item) => item.trim().toLowerCase())
       .filter(Boolean),

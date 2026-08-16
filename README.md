@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-Mở địa chỉ Vite in ra (thường là `http://localhost:5173`).
+Mở địa chỉ Next.js in ra (thường là `http://localhost:3000`).
 
 Chưa cấu hình Firebase thì app vẫn chạy: khách được ôn/thi không giới hạn, nút đăng nhập báo chưa cấu hình.
 
@@ -33,4 +33,4 @@ Giai đoạn đầu: khách được **15 câu miễn phí** (ôn tập hoặc t
 6. Copy file `.env.example` thành `.env.local`, điền khóa web app.
 7. Restart `npm run dev`. Đăng nhập Google bằng `minhphuong.npsc@gmail.com` để thấy nút **Quản lý**.
 
-Trên Vercel, khai báo cùng các biến `VITE_*` trong Project Settings → Environment Variables.
+Trên Vercel, khai báo cùng các biến `NEXT_PUBLIC_*` trong Project Settings → Environment Variables.

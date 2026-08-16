@@ -27,6 +27,13 @@ function sectorCta(id: SectorId): string {
   return 'Vào ôn và thi thử'
 }
 
+/** Mỗi ngành một tông màu (kiểu KPI workflow ksnpsc). */
+function sectorTone(id: SectorId): string {
+  if (id === 'xay-dung') return 'sector-tone-sky'
+  if (id === 'dau-thau') return 'sector-tone-amber'
+  return 'sector-tone-teal'
+}
+
 export function Catalog({ onNavigate }: Props) {
   return (
     <>
@@ -36,9 +43,15 @@ export function Catalog({ onNavigate }: Props) {
       </div>
       <div className="sector-grid">
         {SECTORS.filter((sector) => sector.visible).map((sector) => {
+          const tone = sectorTone(sector.id)
+
           if (!sector.open) {
             return (
-              <div key={sector.id} className="sector-card sector-card-soon">
+              <div
+                key={sector.id}
+                className={`sector-card sector-card-soon ${tone}`}
+              >
+                <span className="sector-card-bar" aria-hidden />
                 <span className="badge">Sắp mở</span>
                 <h2>{sector.title}</h2>
                 <p>{sector.blurb}</p>
@@ -49,9 +62,11 @@ export function Catalog({ onNavigate }: Props) {
           return (
             <button
               key={sector.id}
-              className="sector-card sector-card-open"
+              type="button"
+              className={`sector-card sector-card-open ${tone}`}
               onClick={() => onNavigate(sectorTarget(sector.id))}
             >
+              <span className="sector-card-bar" aria-hidden />
               <span className="badge">{sectorBadge(sector.id)}</span>
               <h2>{sector.title}</h2>
               <p>{sector.blurb}</p>

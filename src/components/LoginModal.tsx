@@ -21,9 +21,9 @@ export function LoginModal() {
         aria-labelledby="login-title"
         onClick={(e) => e.stopPropagation()}
       >
-        <p className="kicker">Tài khoản</p>
-        <h2 id="login-title">Đăng nhập Google</h2>
-        <p className="lead">{loginMessage}</p>
+        <h2 id="login-title" className="login-modal-msg">
+          {loginMessage}
+        </h2>
         {isConfigured ? (
           <button
             className="btn google-btn"

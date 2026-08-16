@@ -1,3 +1,5 @@
+'use client'
+
 import type { ReactNode } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { getViewScope, isStudyView, type AppView } from '../types'

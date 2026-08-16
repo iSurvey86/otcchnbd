@@ -1,5 +1,5 @@
 import type { Question, TopicId } from '../../types'
-import { getXdTrack } from './tracks'
+import { getXdTrack, XD_TRACKS } from './tracks'
 
 export interface XdBankFile {
   trackId: string
@@ -12,13 +12,10 @@ export interface XdBankFile {
 
 const SOURCE_FALLBACK = 'Quyết định 163/QĐ-BXD ngày 18/02/2025'
 
-/** Vite code-splits every bank JSON (excludes manifest). */
-const modules = import.meta.glob(['./*-hang-*.json'])
-
-function trackFilePath(trackId: string): string | null {
+function trackFileName(trackId: string): string | null {
   const m = /^xd-(.+)-hang-(i{1,3})$/i.exec(trackId)
   if (!m) return null
-  return `./${m[1]}-hang-${m[2].toLowerCase()}.json`
+  return `${m[1]}-hang-${m[2].toLowerCase()}.json`
 }
 
 const cache = new Map<string, XdBankFile>()
@@ -29,9 +26,10 @@ function asBank(mod: unknown): XdBankFile {
   return (raw.default ?? raw) as XdBankFile
 }
 
+const knownTrackIds = new Set(XD_TRACKS.map((t) => t.id))
+
 export function hasXdLoader(trackId: string): boolean {
-  const path = trackFilePath(trackId)
-  return Boolean(path && modules[path])
+  return knownTrackIds.has(trackId) && Boolean(trackFileName(trackId))
 }
 
 export function getCachedXdBank(trackId: string): XdBankFile | undefined {
@@ -49,16 +47,18 @@ export async function loadXdBank(trackId: string): Promise<XdBankFile | null> {
   const pending = inflight.get(trackId)
   if (pending) return pending
 
-  const path = trackFilePath(trackId)
-  const loader = path ? modules[path] : undefined
-  if (!loader) return null
+  const file = trackFileName(trackId)
+  if (!file) return null
 
-  const task = loader()
+  const task = import(
+    /* webpackInclude: /[\w.-]+-hang-(i|ii|iii)\.json$/ */
+    `./${file}`
+  )
     .then((mod) => {
-      const file = asBank(mod)
-      cache.set(trackId, file)
+      const bank = asBank(mod)
+      cache.set(trackId, bank)
       inflight.delete(trackId)
-      return file
+      return bank
     })
     .catch((err) => {
       inflight.delete(trackId)

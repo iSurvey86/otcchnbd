@@ -45,21 +45,25 @@ export function Home({ scope, onNavigate }: Props) {
           </h1>
           <div className={`stats${scope.sector === 'dau-thau' ? ' stats-dt' : ''}`}>
             <div className="stat stat-bank">
+              <span className="stat-bar" aria-hidden />
               <b>{questions.length}</b>
               <span>Ngân hàng câu hỏi</span>
             </div>
             {scope.sector === 'dau-thau' ? (
               <div className="stat stat-skill">
+                <span className="stat-bar" aria-hidden />
                 <b>{skillCount}</b>
                 <span>{skillSectionLabel(scope)}</span>
               </div>
             ) : (
               <>
                 <div className="stat stat-law">
+                  <span className="stat-bar" aria-hidden />
                   <b>{lawCount}</b>
                   <span>{lawSectionLabel(scope)}</span>
                 </div>
                 <div className="stat stat-skill">
+                  <span className="stat-bar" aria-hidden />
                   <b>{skillCount}</b>
                   <span>{skillSectionLabel(scope)}</span>
                 </div>
@@ -129,12 +133,14 @@ export function Home({ scope, onNavigate }: Props) {
         </button>
       </div>
       <div className="topic-grid">
-        {topics.map((topic) => (
+        {topics.map((topic, index) => (
           <button
             key={topic.id}
-            className="topic-card"
+            type="button"
+            className={`topic-card topic-tone-${index % 8}`}
             onClick={() => onNavigate({ name: 'practice', scope, topicId: topic.id })}
           >
+            <span className="topic-card-bar" aria-hidden />
             <span className="count">{countByTopicForScope(scope, topic.id)} câu</span>
             <h3>{topic.title}</h3>
             <p>{topic.blurb}</p>
