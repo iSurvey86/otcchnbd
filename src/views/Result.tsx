@@ -242,6 +242,7 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
               total={paper.length}
               choice={choiceById.get(question.id) ?? null}
               revealed
+              scope={scope}
               onChoose={() => undefined}
             />
           </div>

@@ -1,7 +1,11 @@
+'use client'
+
+import { useState } from 'react'
+import { FeedbackModal } from './FeedbackModal'
 import { ExplanationBody } from './ExplanationBody'
 import { letter } from '../lib/exam'
 import { normalizeLegalCaps } from '../lib/legalCite'
-import type { Question } from '../types'
+import type { Question, StudyScope } from '../types'
 
 interface Props {
   question: Question
@@ -10,6 +14,7 @@ interface Props {
   choice: number | null
   revealed?: boolean
   onChoose: (choice: number) => void
+  scope?: StudyScope
 }
 
 export function QuestionCard({
@@ -19,7 +24,10 @@ export function QuestionCard({
   choice,
   revealed = false,
   onChoose,
+  scope,
 }: Props) {
+  const [feedbackOpen, setFeedbackOpen] = useState(false)
+
   return (
     <article className="panel q-card">
       <div className="badge-row">
@@ -70,16 +78,21 @@ export function QuestionCard({
             <button
               type="button"
               className="explain-feedback explain-callout"
-              title="Góp ý về đáp án hoặc giải thích (sẽ mở form sau)"
-              onClick={() => {
-                /* Phase sau: mở form phản hồi theo câu hỏi */
-              }}
+              title="Góp ý về đáp án hoặc giải thích"
+              onClick={() => setFeedbackOpen(true)}
             >
               <span className="explain-callout-text">Phản hồi / Góp ý</span>
             </button>
           </div>
         </div>
       ) : null}
+      <FeedbackModal
+        open={feedbackOpen}
+        question={question}
+        sector={scope?.sector}
+        trackId={scope?.trackId}
+        onClose={() => setFeedbackOpen(false)}
+      />
     </article>
   )
 }

@@ -78,6 +78,7 @@ export function Practice({ scope, topicId }: Props) {
           total={pool.length}
           choice={choice}
           revealed={revealed}
+          scope={scope}
           onChoose={(next) => {
             if (choice !== null) return
             if (

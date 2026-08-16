@@ -308,6 +308,7 @@ export function Exam({ scope, onFinish }: Props) {
             index={index}
             total={paper.length}
             choice={answer.choice}
+            scope={scope}
             onChoose={(choice) => {
               const wasEmpty = session.answers[index]?.choice === null
               if (

@@ -19,7 +19,7 @@ import {
 } from 'react'
 import { bumpUserStat, logEvent, upsertUser } from '../lib/analytics'
 import { GUEST_LIMIT, isAdminEmail, LOGIN_COPY } from '../lib/config'
-import { getFirebase, isFirebaseConfigured } from '../lib/firebase'
+import { getFirebaseAuth, isFirebaseConfigured } from '../lib/firebase'
 import { guestRemaining, readGuestAnswered, writeGuestAnswered } from '../lib/quota'
 
 export interface AnswerMeta {
@@ -72,12 +72,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [authError, setAuthError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fb = getFirebase()
-    if (!fb) {
+    const auth = getFirebaseAuth()
+    if (!auth) {
       setLoading(false)
       return
     }
-    return onAuthStateChanged(fb.auth, (next) => {
+    return onAuthStateChanged(auth, (next) => {
       setUser(next)
       setLoading(false)
     })
@@ -117,8 +117,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const signInGoogle = useCallback(async () => {
-    const fb = getFirebase()
-    if (!fb) {
+    const auth = getFirebaseAuth()
+    if (!auth) {
       setAuthError('Chưa cấu hình Firebase. Xem README để lấy khóa dự án.')
       return
     }
@@ -126,7 +126,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setAuthError(null)
     try {
       const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup(fb.auth, provider)
+      const result = await signInWithPopup(auth, provider)
       await upsertUser(result.user)
       await logEvent(result.user, 'login', {
         guestAnswersBeforeLogin: readGuestAnswered(),
@@ -155,10 +155,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const signOutUser = useCallback(async () => {
-    const fb = getFirebase()
-    if (!fb) return
+    const auth = getFirebaseAuth()
+    if (!auth) return
     await logEvent(user, 'logout')
-    await signOut(fb.auth)
+    await signOut(auth)
   }, [user])
 
   const tryRecordAnswer = useCallback(
@@ -181,7 +181,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           topicId: meta.topicId,
           mode: meta.mode,
         })
-        void bumpUserStat(user.uid, 'answerCount')
+        void bumpUserStat(user.uid, 'answerCount', user)
       }
       return true
     },
@@ -210,7 +210,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         passed: meta.passed,
         timedOut: meta.timedOut,
       })
-      void bumpUserStat(user.uid, 'examCount')
+      void bumpUserStat(user.uid, 'examCount', user)
     },
     [user],
   )

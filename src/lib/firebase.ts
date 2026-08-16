@@ -1,6 +1,5 @@
 import { initializeApp, type FirebaseApp } from 'firebase/app'
 import { getAuth, type Auth } from 'firebase/auth'
-import { getFirestore, type Firestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: String(process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? '').trim(),
@@ -19,15 +18,19 @@ export const isFirebaseConfigured = Boolean(
 
 let app: FirebaseApp | null = null
 let auth: Auth | null = null
-let db: Firestore | null = null
 
-export function getFirebase(): { auth: Auth; db: Firestore } | null {
+/** Firebase Auth only (data → Supabase). */
+export function getFirebaseAuth(): Auth | null {
   if (!isFirebaseConfigured) return null
   if (!app) {
     app = initializeApp(firebaseConfig)
     auth = getAuth(app)
-    db = getFirestore(app)
   }
-  if (!auth || !db) return null
-  return { auth, db }
+  return auth
+}
+
+/** @deprecated use getFirebaseAuth */
+export function getFirebase(): { auth: Auth } | null {
+  const a = getFirebaseAuth()
+  return a ? { auth: a } : null
 }
