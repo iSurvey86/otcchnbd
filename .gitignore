@@ -1,5 +1,5 @@
-# Logs
-logs
+# Logs (thư mục gốc thôi — không chặn src/app/api/logs)
+/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
