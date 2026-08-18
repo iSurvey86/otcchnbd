@@ -201,6 +201,10 @@ body::before {
   margin-bottom: 28px;
 }
 
+.hero-single {
+  grid-template-columns: 1fr;
+}
+
 .panel {
   background: var(--card);
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -420,6 +424,28 @@ body::before {
   justify-content: space-between;
   gap: 8px;
   margin: 18px 0 24px;
+}
+
+.exam-card-center {
+  text-align: center;
+  align-items: center;
+}
+
+.exam-card-center .kicker {
+  text-align: center;
+}
+
+.exam-card-center p.exam-desc {
+  text-align: center;
+  text-justify: auto;
+}
+
+.exam-card-center .exam-meta {
+  justify-content: center;
+}
+
+.exam-card-center .btn {
+  width: min(100%, 360px);
 }
 
 .chip {
@@ -1844,6 +1870,7 @@ body::before {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  font-weight: 400;
 }
 
 .admin-table th,
@@ -1854,18 +1881,57 @@ body::before {
   vertical-align: top;
 }
 
+.admin-table-logs {
+  font-weight: 300;
+}
+
+.admin-table-logs th,
+.admin-table-logs td {
+  vertical-align: middle;
+}
+
 .admin-table-logs thead th {
   background: #1e3a5f;
   color: #fff;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   border-bottom: 0;
+  text-align: center;
+}
+
+.admin-table-logs strong,
+.admin-table-logs .admin-action,
+.admin-table-logs .admin-chip {
+  font-weight: 400;
 }
 
 .admin-table-logs tbody tr:nth-child(even) {
   background: #f8fafc;
+}
+
+.admin-table-logs .admin-col-actor,
+.admin-table-logs .admin-col-action {
+  text-align: center;
+}
+
+.admin-detail-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-q-prompt {
+  color: var(--ink);
+}
+
+.admin-result-ok {
+  color: #166534;
+}
+
+.admin-result-bad {
+  color: #b91c1c;
 }
 
 .admin-cell-sub {
@@ -1879,8 +1945,8 @@ body::before {
 .admin-chip {
   display: inline-block;
   font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .module-xac_thuc { color: #4f46e5; }
@@ -1897,6 +1963,7 @@ body::before {
 .action-login { color: #2563eb; }
 .action-logout { color: #64748b; }
 .action-answer { color: #0f766e; }
+.action-practice { color: #0e7490; }
 .action-exam_start,
 .action-exam_submit { color: #c2410c; }
 .action-paywall { color: #b45309; }
@@ -1906,9 +1973,8 @@ body::before {
   font-size: 13px;
   line-height: 1.45;
   color: var(--ink-soft);
-  max-width: 420px;
-  text-align: justify;
-  text-justify: inter-word;
+  max-width: 640px;
+  text-align: left;
 }
 
 .admin-status {
@@ -1916,7 +1982,7 @@ body::before {
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .status-moi { background: #fef3c7; color: #92400e; }
@@ -1970,6 +2036,23 @@ body::before {
   line-height: 1.5;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.feedback-kicker {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--forest-2);
+}
+
+.feedback-modal-message {
+  background: var(--ok-bg);
+  color: var(--ink);
+  border: 1px solid #b7ddc4;
+  text-align: left;
+  text-justify: auto;
 }
 
 .feedback-label {

@@ -1,5 +1,6 @@
 import type { Question, TopicId } from '../../types'
-import { getDtLot } from './lots'
+import { dtDocGroupOf, dtRandCount, isDtDocGroup } from './groups'
+import { readDtWrongIds } from '../../lib/dtPractice'
 
 export interface DtBankFile {
   id: string
@@ -47,20 +48,27 @@ export async function loadDtBank(): Promise<DtBankFile | null> {
   return inflight
 }
 
-export function dtQuestions(lotId: string): Question[] {
-  const lot = getDtLot(lotId)
-  if (!lot || !cache) return []
-  return cache.questions.filter((q) => q.stt >= lot.sttFrom && q.stt <= lot.sttTo)
+export function dtQuestions(_lotId?: string): Question[] {
+  return allDtQuestions()
 }
 
-export function dtQuestionsByTopic(lotId: string, topicId?: TopicId): Question[] {
-  const all = dtQuestions(lotId)
-  if (!topicId) return all
-  return all.filter((q) => q.topic === topicId)
+export function dtQuestionsByTopic(_lotId: string, topicId?: TopicId): Question[] {
+  const all = allDtQuestions()
+  if (!topicId || topicId === 'dt-nvcm') return all
+  if (topicId === 'dt-sai') {
+    const wrong = new Set(readDtWrongIds())
+    return all.filter((q) => wrong.has(q.id))
+  }
+  const rand = dtRandCount(topicId)
+  if (rand != null) return all.slice()
+  if (isDtDocGroup(topicId)) {
+    return all.filter((q) => dtDocGroupOf(q.source) === topicId)
+  }
+  return all
 }
 
-export function dtCountByTopic(lotId: string, topicId: TopicId): number {
-  return dtQuestions(lotId).filter((q) => q.topic === topicId).length
+export function dtCountByTopic(_lotId: string, topicId: TopicId): number {
+  return dtQuestionsByTopic('', topicId).length
 }
 
 export function dtSourceNote(): string {
@@ -68,7 +76,8 @@ export function dtSourceNote(): string {
 }
 
 export function allDtQuestions(): Question[] {
-  return cache?.questions ?? []
+  const rows = cache?.questions ?? []
+  return rows.slice().sort((a, b) => a.stt - b.stt)
 }
 
 export function openDtQuestionTotal(): number {

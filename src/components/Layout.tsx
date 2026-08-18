@@ -24,7 +24,7 @@ function backNavFor(view: AppView): { label: string; target: AppView } | null {
   }
   if (scope.sector === 'dau-thau') {
     return {
-      label: '← Chọn lô câu hỏi',
+      label: '← Đấu thầu',
       target: { name: 'dt-browse' },
     }
   }
@@ -60,8 +60,17 @@ export function Layout({ view, onNavigate, children }: Props) {
         {showStudyNav && scope ? (
           <nav className="nav-pills">
             <NavButton
-              active={view.name === 'home'}
-              onClick={() => onNavigate({ name: 'home', scope })}
+              active={
+                view.name === 'home' ||
+                (scope.sector === 'dau-thau' && view.name === 'dt-browse')
+              }
+              onClick={() =>
+                onNavigate(
+                  scope.sector === 'dau-thau'
+                    ? { name: 'dt-browse' }
+                    : { name: 'home', scope },
+                )
+              }
             >
               Trang chủ
             </NavButton>

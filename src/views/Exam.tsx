@@ -5,14 +5,18 @@ import { useAuth } from '../context/AuthContext'
 import { lawSectionLabel, questionsForScope, skillSectionLabel } from '../lib/bank'
 import {
   examConfigFor,
+  examPassMark,
   examPassSummary,
   examQuestionCount,
+  examTotalMax,
+  formatExamScore,
   formatTime,
   pickExamQuestions,
   questionsByIds,
   scoreAttempt,
 } from '../lib/exam'
 import { saveAttempt } from '../lib/storage'
+import { addDtWrongIds } from '../lib/dtPractice'
 import type { ExamAttempt, StudyScope, UserAnswer } from '../types'
 
 interface Props {
@@ -31,7 +35,7 @@ interface Session {
 
 function scopeStorageKey(scope: StudyScope): string {
   if (scope.sector === 'xay-dung') return `xd:${scope.trackId ?? ''}`
-  if (scope.sector === 'dau-thau') return `dt:${scope.trackId ?? ''}`
+  if (scope.sector === 'dau-thau') return 'dt'
   return 'do-dac'
 }
 
@@ -121,6 +125,13 @@ export function Exam({ scope, onFinish }: Props) {
       ...scored,
     }
     saveAttempt(attempt)
+    if (scope.sector === 'dau-thau') {
+      const choiceById = new Map(current.answers.map((a) => [a.questionId, a.choice]))
+      const wrong = questionsByIds(current.questionIds, pool)
+        .filter((q) => choiceById.get(q.id) !== q.answer)
+        .map((q) => q.id)
+      addDtWrongIds(wrong)
+    }
     sessionStorage.removeItem(sessionKey(scope))
     trackRef.current.notifyExamSubmitted({
       attemptId: attempt.id,
@@ -128,8 +139,13 @@ export function Exam({ scope, onFinish }: Props) {
       lawScore: attempt.lawScore,
       skillScore: attempt.skillScore,
       correctCount: attempt.correctCount,
+      questionCount: totalQ,
+      totalMax: examTotalMax(exam),
+      passMark: examPassMark(exam),
       passed: attempt.passed,
       timedOut,
+      sector: scope.sector,
+      trackId: scope.trackId,
     })
     onFinish(attempt.id)
   }
@@ -162,7 +178,10 @@ export function Exam({ scope, onFinish }: Props) {
       return
     }
     setNameError(null)
-    if (!trackRef.current.notifyExamStarted()) return
+    if (!trackRef.current.notifyExamStarted({
+      sector: scope.sector,
+      trackId: scope.trackId ?? null,
+    })) return
     localStorage.setItem(NAME_KEY, name)
     setCandidateName(name)
     finishing.current = false
@@ -192,15 +211,27 @@ export function Exam({ scope, onFinish }: Props) {
           {totalQ} câu · {exam.minutes} phút ·{' '}
           {exam.passMode === 'law-and-total'
             ? `đạt PL ≥ ${exam.lawPassMin}/${exam.lawCount} và tổng ≥ ${exam.totalPassMin}/${totalQ}`
-            : 'đạt ≥ 80% từng phần'}
+            : scope.sector === 'dau-thau'
+              ? 'đạt ≥ 50/100 điểm'
+              : 'đạt ≥ 80% từng phần'}
         </h2>
         <p className="lead justified">
-          Đề được rút ngẫu nhiên từ ngân hàng: {exam.lawCount} câu{' '}
-          {lawSectionLabel(scope)} và {exam.skillCount} câu {skillSectionLabel(scope)}.
-          {exam.passMode === 'law-and-total'
-            ? ` Theo Nghị định 217/2026/NĐ-CP: ${examPassSummary(exam)}.`
-            : ` ${examPassSummary(exam)}.`}{' '}
-          Bạn có thể đánh dấu câu để xem lại. Hết giờ bài thi sẽ được nộp tự động.
+          {scope.sector === 'dau-thau' ? (
+            <>
+              Đề {totalQ} câu rút ngẫu nhiên từ ngân hàng NVCM, không trùng trong đề.
+              Thang 100 điểm ({formatExamScore(exam.pointsPerQuestion)} điểm/câu).{' '}
+              {examPassSummary(exam)}. Hết giờ bài thi sẽ được nộp tự động.
+            </>
+          ) : (
+            <>
+              Đề được rút ngẫu nhiên từ ngân hàng: {exam.lawCount} câu{' '}
+              {lawSectionLabel(scope)} và {exam.skillCount} câu {skillSectionLabel(scope)}.
+              {exam.passMode === 'law-and-total'
+                ? ` Theo Nghị định 217/2026/NĐ-CP: ${examPassSummary(exam)}.`
+                : ` ${examPassSummary(exam)}.`}{' '}
+              Bạn có thể đánh dấu câu để xem lại. Hết giờ bài thi sẽ được nộp tự động.
+            </>
+          )}
         </p>
         <form className="exam-start-form" onSubmit={start}>
           <p className="kicker">Trước khi làm bài</p>
@@ -312,12 +343,22 @@ export function Exam({ scope, onFinish }: Props) {
             onChoose={(choice) => {
               const wasEmpty = session.answers[index]?.choice === null
               if (
-                wasEmpty &&
                 !tryRecordAnswer({
                   questionId: current.id,
                   section: current.section,
                   topicId: current.topic,
                   mode: 'exam',
+                  correct: choice === current.answer,
+                  choice,
+                  answer: current.answer,
+                  prompt: current.prompt,
+                  choiceText: current.options[choice],
+                  answerText: current.options[current.answer],
+                  sector: scope.sector,
+                  trackId: scope.trackId,
+                  index,
+                  total: paper.length,
+                  countTowardQuota: wasEmpty,
                 })
               ) {
                 return

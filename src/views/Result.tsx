@@ -3,8 +3,10 @@ import { QuestionCard } from '../components/QuestionCard'
 import { lawSectionLabel, sectorTitle, skillSectionLabel } from '../lib/bank'
 import {
   examConfigFor,
+  examGradeLabel,
   examPassSummary,
   examTotalMax,
+  formatExamScore,
   formatTime,
   isExamPassed,
   isSectionPassed,
@@ -70,13 +72,17 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
           <div>
             <p className="kicker">Kết quả sát hạch thử</p>
             <h2 className={passed ? 'pass' : 'fail'}>
-              {passed
-                ? exam.passMode === 'law-and-total'
-                  ? 'Đạt yêu cầu (NĐ 217)'
-                  : 'Đạt yêu cầu (mỗi phần ≥ 80%)'
-                : exam.passMode === 'law-and-total'
-                  ? `Chưa đạt – cần PL ≥ ${exam.lawPassMin}/${lawMax} và tổng ≥ ${exam.totalPassMin}/${totalMax}`
-                  : 'Chưa đạt – cần ≥ 80% từng phần'}
+              {scope.sector === 'dau-thau' || resultScope.sector === 'dau-thau'
+                ? passed
+                  ? `Đạt · ${examGradeLabel(attempt.score, totalMax)}`
+                  : `Không đạt · ${examGradeLabel(attempt.score, totalMax)} (cần ≥ 50/100)`
+                : passed
+                  ? exam.passMode === 'law-and-total'
+                    ? 'Đạt yêu cầu (NĐ 217)'
+                    : 'Đạt yêu cầu (mỗi phần ≥ 80%)'
+                  : exam.passMode === 'law-and-total'
+                    ? `Chưa đạt – cần PL ≥ ${exam.lawPassMin}/${lawMax} và tổng ≥ ${exam.totalPassMin}/${totalMax}`
+                    : 'Chưa đạt – cần ≥ 80% từng phần'}
             </h2>
             <p className="lead">
               Đúng {attempt.correctCount}/{paper.length} câu · Thời gian{' '}
@@ -85,16 +91,18 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
               {examPassSummary(exam)}.
             </p>
             <div className="stats">
-              <div className="stat">
-                <b className={lawPassed ? 'pass' : 'fail'}>{attempt.lawScore}</b>
-                <span>
-                  {lawSectionLabel(resultScope)} / {lawMax} ·{' '}
-                  {lawPassed ? 'Đạt' : 'Chưa đạt'}
-                  {exam.passMode === 'law-and-total'
-                    ? ` (≥ ${exam.lawPassMin})`
-                    : ''}
-                </span>
-              </div>
+              {exam.lawCount > 0 ? (
+                <div className="stat">
+                  <b className={lawPassed ? 'pass' : 'fail'}>{formatExamScore(attempt.lawScore)}</b>
+                  <span>
+                    {lawSectionLabel(resultScope)} / {formatExamScore(lawMax)} ·{' '}
+                    {lawPassed ? 'Đạt' : 'Chưa đạt'}
+                    {exam.passMode === 'law-and-total'
+                      ? ` (≥ ${exam.lawPassMin})`
+                      : ''}
+                  </span>
+                </div>
+              ) : null}
               <div className="stat">
                 <b className={
                   exam.passMode === 'law-and-total'
@@ -103,22 +111,24 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
                       ? 'pass'
                       : 'fail'
                 }>
-                  {attempt.skillScore}
+                  {formatExamScore(attempt.skillScore)}
                 </b>
                 <span>
-                  {skillSectionLabel(resultScope)} / {skillMax}
+                  {skillSectionLabel(resultScope)} / {formatExamScore(skillMax)}
                   {exam.passMode === 'law-and-total'
                     ? ' · không có ngưỡng riêng'
                     : ` · ${skillPassed ? 'Đạt' : 'Chưa đạt'}`}
                 </span>
               </div>
               <div className="stat">
-                <b className={passed ? 'pass' : 'fail'}>{attempt.score}</b>
+                <b className={passed ? 'pass' : 'fail'}>{formatExamScore(attempt.score)}</b>
                 <span>
-                  tổng / {totalMax}
+                  tổng / {formatExamScore(totalMax)}
                   {exam.passMode === 'law-and-total'
                     ? ` · ≥ ${exam.totalPassMin}`
-                    : ''}
+                    : resultScope.sector === 'dau-thau'
+                      ? ` · ${examGradeLabel(attempt.score, totalMax)}`
+                      : ''}
                 </span>
               </div>
             </div>

@@ -90,9 +90,8 @@ export function Home({ scope, onNavigate }: Props) {
                 </>
               ) : scope.sector === 'dau-thau' ? (
                 <>
-                  Thi theo lô NVCM: {totalQ} câu / {exam.minutes} phút – toàn bộ câu trong
-                  lô ({skillMax} điểm). {examPassSummary(exam)}. Ghi chú giải thích sẽ
-                  bổ sung dần theo từng lô.
+                  Theo Thông báo 1891/TB-QLĐT: {totalQ} câu / {exam.minutes} phút /
+                  100 điểm, rút từ ngân hàng NVCM. {examPassSummary(exam)}.
                 </>
               ) : (
                 <>
@@ -109,7 +108,7 @@ export function Home({ scope, onNavigate }: Props) {
                 {exam.passMode === 'law-and-total'
                   ? `Đạt ≥ ${exam.totalPassMin}/${totalMax}`
                   : scope.sector === 'dau-thau'
-                    ? `Đạt ≥ ${exam.passPercent}%`
+                    ? 'Đạt ≥ 50/100'
                     : 'Đạt ≥ 80% từng phần'}
               </span>
             </div>

@@ -28,6 +28,19 @@ export interface AnswerMeta {
   section: string
   topicId: string
   mode: 'practice' | 'exam'
+  correct: boolean
+  choice: number
+  answer: number
+  prompt: string
+  choiceText?: string
+  answerText?: string
+  sector?: string
+  trackId?: string
+  topicTitle?: string
+  index?: number
+  total?: number
+  /** false = đổi đáp án thi thử, vẫn ghi log nhưng không tính hạn khách */
+  countTowardQuota?: boolean
 }
 
 export interface ExamSubmitMeta {
@@ -36,8 +49,22 @@ export interface ExamSubmitMeta {
   lawScore: number
   skillScore: number
   correctCount: number
+  questionCount: number
+  totalMax: number
+  passMark: number
   passed: boolean
   timedOut: boolean
+  sector?: string
+  trackId?: string
+}
+
+export interface PracticeSessionMeta {
+  topicId?: string | null
+  topicTitle?: string | null
+  sector?: string
+  trackId?: string | null
+  correct?: number
+  total?: number
 }
 
 interface AuthContextValue {
@@ -59,7 +86,9 @@ interface AuthContextValue {
   openLogin: (message?: string) => void
   closeLogin: () => void
   tryRecordAnswer: (meta: AnswerMeta) => boolean
-  notifyExamStarted: () => boolean
+  notifyPracticeStarted: (meta: PracticeSessionMeta) => void
+  notifyPracticeFinished: (meta: PracticeSessionMeta) => void
+  notifyExamStarted: (meta?: PracticeSessionMeta) => boolean
   notifyExamSubmitted: (meta: ExamSubmitMeta) => void
 }
 
@@ -255,13 +284,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const tryRecordAnswer = useCallback(
     (meta: AnswerMeta) => {
-      // Read storage directly so rapid answers cannot bypass the guest limit.
+      const countQuota = meta.countTowardQuota !== false
       const answered = readGuestAnswered()
-      if (!canUnlimited && guestRemaining(answered) <= 0) {
+      if (countQuota && !canUnlimited && guestRemaining(answered) <= 0) {
         openLogin(LOGIN_COPY.quota)
         return false
       }
-      if (!user && isFirebaseConfigured) {
+      if (countQuota && !user && isFirebaseConfigured) {
         const next = answered + 1
         writeGuestAnswered(next)
         setGuestAnswered(next)
@@ -272,35 +301,91 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           section: meta.section,
           topicId: meta.topicId,
           mode: meta.mode,
+          passed: meta.correct,
+          prompt: meta.prompt.slice(0, 180),
+          choice: meta.choice,
+          answer: meta.answer,
+          choiceText: (meta.choiceText ?? '').slice(0, 120) || null,
+          answerText: (meta.answerText ?? '').slice(0, 120) || null,
+          sector: meta.sector ?? null,
+          trackId: meta.trackId ?? null,
+          topicTitle: meta.topicTitle ?? null,
+          index: meta.index ?? null,
+          total: meta.total ?? null,
         })
-        void bumpUserStat(user.uid, 'answerCount', user)
+        if (countQuota) void bumpUserStat(user.uid, 'answerCount', user)
       }
       return true
     },
     [canUnlimited, openLogin, user],
   )
 
-  const notifyExamStarted = useCallback(() => {
-    const answered = readGuestAnswered()
-    if (!canUnlimited && guestRemaining(answered) <= 0) {
-      openLogin(LOGIN_COPY.exam)
-      return false
-    }
-    if (user) void logEvent(user, 'exam_started')
-    return true
-  }, [canUnlimited, openLogin, user])
+  const notifyPracticeStarted = useCallback(
+    (meta: PracticeSessionMeta) => {
+      if (!user) return
+      void logEvent(user, 'practice_started', {
+        mode: 'practice',
+        topicId: meta.topicId ?? null,
+        topicTitle: meta.topicTitle ?? null,
+        sector: meta.sector ?? null,
+        trackId: meta.trackId ?? null,
+      })
+    },
+    [user],
+  )
+
+  const notifyPracticeFinished = useCallback(
+    (meta: PracticeSessionMeta) => {
+      if (!user) return
+      void logEvent(user, 'practice_finished', {
+        mode: 'practice',
+        topicId: meta.topicId ?? null,
+        topicTitle: meta.topicTitle ?? null,
+        sector: meta.sector ?? null,
+        trackId: meta.trackId ?? null,
+        score: meta.correct ?? null,
+        total: meta.total ?? null,
+      })
+    },
+    [user],
+  )
+
+  const notifyExamStarted = useCallback(
+    (meta?: PracticeSessionMeta) => {
+      const answered = readGuestAnswered()
+      if (!canUnlimited && guestRemaining(answered) <= 0) {
+        openLogin(LOGIN_COPY.exam)
+        return false
+      }
+      if (user) {
+        void logEvent(user, 'exam_started', {
+          mode: 'exam',
+          sector: meta?.sector ?? null,
+          trackId: meta?.trackId ?? null,
+        })
+      }
+      return true
+    },
+    [canUnlimited, openLogin, user],
+  )
 
   const notifyExamSubmitted = useCallback(
     (meta: ExamSubmitMeta) => {
       if (!user) return
       void logEvent(user, 'exam_submitted', {
         attemptId: meta.attemptId,
+        mode: 'exam',
         score: meta.score,
         lawScore: meta.lawScore,
         skillScore: meta.skillScore,
         correctCount: meta.correctCount,
+        questionCount: meta.questionCount,
+        totalMax: meta.totalMax,
+        passMark: meta.passMark,
         passed: meta.passed,
         timedOut: meta.timedOut,
+        sector: meta.sector ?? null,
+        trackId: meta.trackId ?? null,
       })
       void bumpUserStat(user.uid, 'examCount', user)
     },
@@ -327,6 +412,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       openLogin,
       closeLogin,
       tryRecordAnswer,
+      notifyPracticeStarted,
+      notifyPracticeFinished,
       notifyExamStarted,
       notifyExamSubmitted,
     }),
@@ -338,6 +425,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       loading,
       loginMessage,
       loginOpen,
+      notifyPracticeStarted,
+      notifyPracticeFinished,
       notifyExamStarted,
       notifyExamSubmitted,
       openLogin,

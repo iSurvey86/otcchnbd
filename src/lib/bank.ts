@@ -3,11 +3,9 @@ import { TOPICS } from '../data/topics'
 import {
   allDtQuestions,
   dtCountByTopic,
-  dtQuestions,
   dtQuestionsByTopic,
   dtSourceNote,
 } from '../data/dt/questions'
-import { dtLotLabel } from '../data/dt/lots'
 import { DT_TOPICS } from '../data/dt/topics'
 import {
   allXdQuestions,
@@ -22,7 +20,7 @@ import type { Question, StudyScope, Topic, TopicId } from '../types'
 
 export function scopeKey(scope: StudyScope): string {
   if (scope.sector === 'xay-dung') return `xd:${scope.trackId ?? ''}`
-  if (scope.sector === 'dau-thau') return `dt:${scope.trackId ?? ''}`
+  if (scope.sector === 'dau-thau') return 'dt'
   return 'do-dac'
 }
 
@@ -30,8 +28,8 @@ export function questionsForScope(scope: StudyScope): Question[] {
   if (scope.sector === 'xay-dung' && scope.trackId) {
     return xdQuestions(scope.trackId)
   }
-  if (scope.sector === 'dau-thau' && scope.trackId) {
-    return dtQuestions(scope.trackId)
+  if (scope.sector === 'dau-thau') {
+    return allDtQuestions()
   }
   return QUESTIONS
 }
@@ -43,8 +41,8 @@ export function questionsByTopicForScope(
   if (scope.sector === 'xay-dung' && scope.trackId) {
     return xdQuestionsByTopic(scope.trackId, topicId)
   }
-  if (scope.sector === 'dau-thau' && scope.trackId) {
-    return dtQuestionsByTopic(scope.trackId, topicId)
+  if (scope.sector === 'dau-thau') {
+    return dtQuestionsByTopic(scope.trackId ?? '', topicId)
   }
   return questionsByTopic(topicId)
 }
@@ -59,8 +57,8 @@ export function countByTopicForScope(scope: StudyScope, topicId: TopicId): numbe
   if (scope.sector === 'xay-dung' && scope.trackId) {
     return xdCountByTopic(scope.trackId, topicId)
   }
-  if (scope.sector === 'dau-thau' && scope.trackId) {
-    return dtCountByTopic(scope.trackId, topicId)
+  if (scope.sector === 'dau-thau') {
+    return dtCountByTopic(scope.trackId ?? '', topicId)
   }
   return countByTopic(topicId)
 }
@@ -69,10 +67,7 @@ export function sectorTitle(scope: StudyScope): string {
   if (scope.sector === 'xay-dung' && scope.trackId) {
     return `Xây dựng · ${xdTrackLabel(scope.trackId)}`
   }
-  if (scope.sector === 'dau-thau' && scope.trackId) {
-    return `Đấu thầu · ${dtLotLabel(scope.trackId)}`
-  }
-  if (scope.sector === 'dau-thau') return 'Đấu thầu'
+  if (scope.sector === 'dau-thau') return 'Đấu thầu · NVCM'
   return 'Đo đạc và Bản đồ'
 }
 
@@ -84,7 +79,7 @@ export function skillSectionLabel(scope: StudyScope): string {
 
 export function lawSectionLabel(scope: StudyScope): string {
   if (scope.sector === 'xay-dung') return 'Kiến thức pháp luật (chung + riêng)'
-  if (scope.sector === 'dau-thau') return 'Pháp luật (không tách trong lô)'
+  if (scope.sector === 'dau-thau') return 'NVCM đấu thầu'
   return 'Kiến thức pháp luật'
 }
 

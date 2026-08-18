@@ -34,7 +34,20 @@ export const EXAM_XAY_DUNG: ExamConfig = {
   totalPassMin: 21,
 }
 
-/** Đấu thầu NVCM – thi theo lô (toàn bộ câu trong lô). */
+/**
+ * Đấu thầu NVCM – Thông báo 1891/TB-QLĐT: 70 câu / 60 phút / 100 điểm.
+ * Đạt ≥ 50% tổng điểm (Điều 20 Thông tư 02/2024/TT-BKHĐT).
+ */
+export const EXAM_DAU_THAU: ExamConfig = {
+  lawCount: 0,
+  skillCount: 70,
+  minutes: 60,
+  pointsPerQuestion: 100 / 70,
+  passMode: 'per-section-percent',
+  passPercent: 50,
+}
+
+/** Đề lô cũ (trước khi chuyển 70 câu) — dùng đọc lịch sử. */
 export function examDauThauForLot(lotId: string | undefined): ExamConfig {
   const n = Math.max(1, dtLotQuestionCount(lotId))
   return {
@@ -52,8 +65,21 @@ export const EXAM = EXAM_DO_DAC
 
 export function examConfigFor(scope: StudyScope): ExamConfig {
   if (scope.sector === 'xay-dung') return EXAM_XAY_DUNG
-  if (scope.sector === 'dau-thau') return examDauThauForLot(scope.trackId)
+  if (scope.sector === 'dau-thau') {
+    if (scope.trackId?.startsWith('dt-lo-')) return examDauThauForLot(scope.trackId)
+    return EXAM_DAU_THAU
+  }
   return EXAM_DO_DAC
+}
+
+export function examGradeLabel(score: number, totalMax: number): string {
+  if (totalMax <= 0) return 'Không đạt'
+  const p = score / totalMax
+  if (p > 0.9) return 'Xuất sắc'
+  if (p >= 0.8) return 'Giỏi'
+  if (p >= 0.6) return 'Khá'
+  if (p >= 0.5) return 'Trung bình'
+  return 'Không đạt'
 }
 
 export function examQuestionCount(config: ExamConfig): number {
@@ -61,7 +87,20 @@ export function examQuestionCount(config: ExamConfig): number {
 }
 
 export function examTotalMax(config: ExamConfig): number {
-  return examQuestionCount(config) * config.pointsPerQuestion
+  const raw = examQuestionCount(config) * config.pointsPerQuestion
+  return Math.round(raw * 10) / 10
+}
+
+export function formatExamScore(value: number): string {
+  return value.toLocaleString('vi-VN', { maximumFractionDigits: 1 })
+}
+
+/** Ngưỡng điểm tổng để coi là đạt (hiển thị nhật ký). */
+export function examPassMark(config: ExamConfig): number {
+  if (config.passMode === 'law-and-total') {
+    return config.totalPassMin ?? examTotalMax(config)
+  }
+  return (examTotalMax(config) * (config.passPercent ?? 80)) / 100
 }
 
 export function sectionMax(
@@ -143,6 +182,12 @@ export function pickExamQuestions(
   pool: Question[] = QUESTIONS,
   config: ExamConfig = EXAM_DO_DAC,
 ): Question[] {
+  if (config.lawCount === 0) {
+    return shuffle(pool).slice(0, config.skillCount)
+  }
+  if (config.skillCount === 0) {
+    return shuffle(pool).slice(0, config.lawCount)
+  }
   const law = shuffle(pool.filter((q) => q.section === 'phap-luat'))
   const skill = shuffle(pool.filter((q) => q.section === 'kinh-nghiem'))
   return [
@@ -185,13 +230,15 @@ export function scoreAttempt(
     }
   }
 
-  const score = lawScore + skillScore
+  const lawRounded = Math.round(lawScore * 10) / 10
+  const skillRounded = Math.round(skillScore * 10) / 10
+  const score = Math.round((lawRounded + skillRounded) * 10) / 10
   return {
     score,
-    lawScore,
-    skillScore,
+    lawScore: lawRounded,
+    skillScore: skillRounded,
     correctCount,
-    passed: isExamPassed(lawScore, skillScore, config),
+    passed: isExamPassed(lawRounded, skillRounded, config),
   }
 }
 

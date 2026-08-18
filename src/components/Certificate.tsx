@@ -147,12 +147,14 @@ export function Certificate({ attempt, passed, scope }: Props) {
           )}
 
           <div className="certificate-scores">
-            <div>
-              <b>
-                {attempt.lawScore}/{lawMax}
-              </b>
-              <span>{lawSectionLabel(scope)}</span>
-            </div>
+            {exam.lawCount > 0 ? (
+              <div>
+                <b>
+                  {attempt.lawScore}/{lawMax}
+                </b>
+                <span>{lawSectionLabel(scope)}</span>
+              </div>
+            ) : null}
             <div>
               <b>
                 {attempt.skillScore}/{skillMax}

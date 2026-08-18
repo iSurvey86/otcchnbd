@@ -1,11 +1,11 @@
-import type { AppView, SectorId, StudyScope, TopicId } from '../types'
+import type { AppView, StudyScope, TopicId } from '../types'
 
 export function scopeBasePath(scope: StudyScope): string {
   if (scope.sector === 'do-dac-ban-do') return '/do-dac-ban-do'
   if (scope.sector === 'xay-dung') {
     return scope.trackId ? `/xay-dung/${encodeURIComponent(scope.trackId)}` : '/xay-dung'
   }
-  return scope.trackId ? `/dau-thau/${encodeURIComponent(scope.trackId)}` : '/dau-thau'
+  return '/dau-thau'
 }
 
 export function pathForView(view: AppView): string {
@@ -35,10 +35,6 @@ export function pathForView(view: AppView): string {
       return _exhaustive
     }
   }
-}
-
-function isSector(value: string): value is SectorId {
-  return value === 'do-dac-ban-do' || value === 'xay-dung' || value === 'dau-thau'
 }
 
 function studyView(
@@ -76,16 +72,23 @@ export function viewFromPath(
     return studyView({ sector: 'do-dac-ban-do' }, doDac[1], doDac[2], topicId)
   }
 
-  // /xay-dung/:trackId[/...] or /dau-thau/:trackId[/...]
+  // /dau-thau[/practice|exam|history|result/:id] — không còn lô
+  const dauThau = path.match(/^\/dau-thau(?:\/(practice|exam|history|result)(?:\/([^/]+))?)?$/)
+  if (dauThau) {
+    if (!dauThau[1]) return { name: 'dt-browse' }
+    return studyView({ sector: 'dau-thau' }, dauThau[1], dauThau[2], topicId)
+  }
+
+  // /xay-dung/:trackId[/...]
   const tracked = path.match(
-    /^\/(xay-dung|dau-thau)\/([^/]+)(?:\/(practice|exam|history|result)(?:\/([^/]+))?)?$/,
+    /^\/xay-dung\/([^/]+)(?:\/(practice|exam|history|result)(?:\/([^/]+))?)?$/,
   )
-  if (tracked && isSector(tracked[1])) {
+  if (tracked) {
     const scope: StudyScope = {
-      sector: tracked[1],
-      trackId: decodeURIComponent(tracked[2]),
+      sector: 'xay-dung',
+      trackId: decodeURIComponent(tracked[1]),
     }
-    return studyView(scope, tracked[3], tracked[4], topicId)
+    return studyView(scope, tracked[2], tracked[3], topicId)
   }
 
   return { name: 'catalog' }

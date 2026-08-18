@@ -5,6 +5,8 @@ export type LogEvent =
   | 'login'
   | 'logout'
   | 'question_answered'
+  | 'practice_started'
+  | 'practice_finished'
   | 'exam_started'
   | 'exam_submitted'
   | 'paywall_hit'

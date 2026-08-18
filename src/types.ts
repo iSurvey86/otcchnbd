@@ -13,6 +13,15 @@ export type TopicId =
   | 'pl-rieng'
   | 'chuyen-mon'
   | 'dt-nvcm'
+  | 'dt-luat'
+  | 'dt-nd214'
+  | 'dt-tt79'
+  | 'dt-hon-hop'
+  | 'dt-khac'
+  | 'dt-sai'
+  | 'dt-rand-10'
+  | 'dt-rand-20'
+  | 'dt-rand-30'
 
 export interface Topic {
   id: TopicId
@@ -63,7 +72,7 @@ export type XdGroupId =
 
 export interface StudyScope {
   sector: SectorId
-  /** Required when sector is xay-dung (track) or dau-thau (lot) */
+  /** Required when sector is xay-dung (track) */
   trackId?: string
 }
 

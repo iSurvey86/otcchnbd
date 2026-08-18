@@ -23,7 +23,7 @@ function sectorTarget(id: SectorId): AppView {
 
 function sectorCta(id: SectorId): string {
   if (id === 'xay-dung') return 'Chọn hạng và chuyên ngành'
-  if (id === 'dau-thau') return 'Chọn lô câu hỏi'
+  if (id === 'dau-thau') return 'Ôn và thi thử'
   return 'Vào ôn và thi thử'
 }
 

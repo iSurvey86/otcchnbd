@@ -29,7 +29,7 @@ export const SECTORS: Sector[] = [
     id: 'dau-thau',
     title: 'Đấu thầu',
     blurb:
-      'Ôn thi nghiệp vụ chuyên môn đấu thầu – ngân hàng 390 câu NVCM. Chọn từng lô khoảng 20 câu để ôn và thi thử.',
+      'Ôn thi nghiệp vụ chuyên môn đấu thầu – ngân hàng 390 câu NVCM. Thi thử 70 câu / 60 phút / 100 điểm; ôn theo văn bản pháp lý.',
     open: true,
     visible: true,
   },
