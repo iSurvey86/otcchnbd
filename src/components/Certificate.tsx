@@ -3,9 +3,11 @@ import html2canvas from 'html2canvas'
 import { lawSectionLabel, sectorTitle, skillSectionLabel } from '../lib/bank'
 import {
   examConfigFor,
+  examGradeLabel,
   examPassSummary,
   examQuestionCount,
   examTotalMax,
+  formatExamScore,
   sectionMax,
 } from '../lib/exam'
 import type { ExamAttempt, StudyScope } from '../types'
@@ -25,6 +27,7 @@ export function Certificate({ attempt, passed, scope }: Props) {
   const totalMax = examTotalMax(exam)
   const totalQ = attempt.questionIds.length || examQuestionCount(exam)
   const title = sectorTitle(scope)
+  const grade = examGradeLabel(attempt.score, totalMax)
   const code = `OTC-${attempt.id.slice(0, 8).toUpperCase()}`
   const dateLabel = new Date(attempt.finishedAt).toLocaleDateString('vi-VN', {
     day: '2-digit',
@@ -37,12 +40,21 @@ export function Certificate({ attempt, passed, scope }: Props) {
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .toLowerCase()
+  const plate = passed ? '/certificates/phoi-dat.png' : '/certificates/phoi-chua-dat.png'
+
+  const scoreBits = [
+    exam.lawCount > 0
+      ? `${lawSectionLabel(scope)} ${formatExamScore(attempt.lawScore)}/${formatExamScore(lawMax)}`
+      : null,
+    `${skillSectionLabel(scope)} ${formatExamScore(attempt.skillScore)}/${formatExamScore(skillMax)}`,
+    `Tổng ${formatExamScore(attempt.score)}/${formatExamScore(totalMax)}`,
+  ].filter(Boolean)
 
   async function renderCanvas() {
     if (!cardRef.current) return null
     return html2canvas(cardRef.current, {
       scale: 2,
-      backgroundColor: passed ? '#fffdf7' : '#f7f4ec',
+      backgroundColor: '#ffffff',
       useCORS: true,
     })
   }
@@ -110,79 +122,93 @@ export function Certificate({ attempt, passed, scope }: Props) {
         className={passed ? 'certificate certificate-pass' : 'certificate certificate-practice'}
         ref={cardRef}
       >
-        <div className="certificate-ornament certificate-ornament-tl" aria-hidden />
-        <div className="certificate-ornament certificate-ornament-br" aria-hidden />
+        <img className="certificate-plate" src={plate} alt="" />
+        {!passed ? (
+          <>
+            <span className="certificate-hoa-mask" aria-hidden />
+            <div className="certificate-hoa-stack">
+              <div className="certificate-brand">
+                <span className="certificate-mark">ÔN</span>
+                <strong>ONTHICCHN.ORG</strong>
+              </div>
+              <img
+                className="certificate-hoa"
+                src="/certificates/hoa-chua-dat.png"
+                alt=""
+              />
+            </div>
+          </>
+        ) : null}
+
         <div className="certificate-inner">
-          <div className="certificate-brand">
-            <span className="certificate-mark">ÔN</span>
-            <span>
-              <small>Ôn thi sát hạch</small>
-              <strong>onthicchn.org</strong>
-            </span>
-          </div>
-
-          {passed ? (
-            <>
-              <p className="certificate-eyebrow">Chứng nhận hoàn thành</p>
-              <h3 className="certificate-title">Thi thử sát hạch trắc nghiệm</h3>
-              <p className="certificate-awarded">Chứng nhận trao cho</p>
-              <p className="certificate-name">{attempt.candidateName}</p>
-              <p className="certificate-body">
-                Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} – {totalQ} câu /{' '}
-                {exam.minutes} phút. {examPassSummary(exam)}.
-              </p>
-            </>
-          ) : (
-            <>
-              <p className="certificate-eyebrow">Phiếu ghi nhận luyện tập</p>
-              <h3 className="certificate-title">Đang rèn luyện sát hạch</h3>
-              <p className="certificate-awarded">Gửi lời động viên tới</p>
-              <p className="certificate-name">{attempt.candidateName}</p>
-              <p className="certificate-body">
-                Vừa hoàn thành một đề thi thử Chứng chỉ hành nghề {title}.
-                Đúng <strong>{attempt.correctCount}/{totalQ}</strong> câu – chưa đạt lần
-                này, nhưng mỗi lần làm là thêm một bước gần đích. Cùng ôn tiếp nhé!
-              </p>
-            </>
-          )}
-
-          <div className="certificate-scores">
-            {exam.lawCount > 0 ? (
-              <div>
-                <b>
-                  {attempt.lawScore}/{lawMax}
-                </b>
-                <span>{lawSectionLabel(scope)}</span>
+          <div className="certificate-top">
+            {passed ? (
+              <div className="certificate-brand">
+                <span className="certificate-mark">ÔN</span>
+                <strong>ONTHICCHN.ORG</strong>
               </div>
             ) : null}
-            <div>
-              <b>
-                {attempt.skillScore}/{skillMax}
-              </b>
-              <span>{skillSectionLabel(scope)}</span>
-            </div>
-            <div>
-              <b>
-                {passed
-                  ? `${attempt.score}/${totalMax}`
-                  : `${attempt.correctCount}/${totalQ}`}
-              </b>
-              <span>{passed ? 'Tổng điểm' : 'Câu đúng'}</span>
-            </div>
+            <p className="certificate-eyebrow">
+              {passed ? 'Chứng nhận' : 'Giấy ghi nhận'}
+            </p>
+            <h3 className="certificate-title">
+              {passed ? 'Thi thử sát hạch' : 'Luyện tập thi thử'}
+            </h3>
+            <p className="certificate-awarded">
+              {passed ? 'Trân trọng trao tặng' : 'Trân trọng gửi tới'}
+            </p>
           </div>
 
-          <div className="certificate-meta">
-            <span>Ngày {dateLabel}</span>
-            <span className={passed ? 'certificate-seal' : 'certificate-seal practice'}>
-              {passed ? 'ĐẠT' : 'ÔN TIẾP'}
-            </span>
-            <span>Mã {code}</span>
+          <p className="certificate-name">{attempt.candidateName}</p>
+
+          <div className="certificate-mid">
+            <p className="certificate-body">
+              {passed ? (
+                <>
+                  Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} ngày {dateLabel}.
+                  Kết quả: Đạt {formatExamScore(attempt.score)}/{formatExamScore(totalMax)} điểm
+                  ({attempt.correctCount}/{totalQ} câu đúng)
+                  {scope.sector === 'dau-thau' ? ` · xếp loại ${grade}` : ''}.
+                </>
+              ) : (
+                <>
+                  Đã hoàn thành bài thi thử Chứng chỉ hành nghề {title} ngày {dateLabel}.
+                  Kết quả: {formatExamScore(attempt.score)}/{formatExamScore(totalMax)} điểm
+                  ({attempt.correctCount}/{totalQ} câu đúng) — chưa đạt lần này.
+                </>
+              )}
+            </p>
+            <p className="certificate-body certificate-body-sub">
+              {scoreBits.join('  ·  ')}.
+            </p>
+            <p className="certificate-body certificate-body-rule">{examPassSummary(exam)}.</p>
           </div>
-          <p className="certificate-disclaimer">
-            {passed
-              ? 'Chứng nhận luyện đề trên onthicchn.org – không thay thế chứng chỉ do cơ quan nhà nước cấp.'
-              : 'Phiếu luyện tập trên onthicchn.org – ghi nhận nỗ lực ôn thi, không phải kết quả sát hạch chính thức.'}
-          </p>
+
+          <div className="certificate-foot">
+            <p className="certificate-sign-mark">Onthi CCHN</p>
+            <strong>ONTHICCHN.ORG</strong>
+            <small>Nền tảng ôn thi sát hạch</small>
+            <div className="certificate-meta">
+              <span>Ngày {dateLabel}</span>
+              <span className={passed ? 'certificate-seal' : 'certificate-seal practice'}>
+                {passed ? 'ĐẠT' : 'ÔN TIẾP'}
+              </span>
+              <span>Mã {code}</span>
+            </div>
+            <p className="certificate-disclaimer">
+              {passed ? (
+                <>
+                  Chứng nhận luyện đề trên <span>onthicchn.org</span> – không thay thế chứng
+                  chỉ do cơ quan nhà nước cấp.
+                </>
+              ) : (
+                <>
+                  Phiếu luyện tập trên <span>onthicchn.org</span> – ghi nhận nỗ lực ôn thi,
+                  không phải kết quả sát hạch chính thức.
+                </>
+              )}
+            </p>
+          </div>
         </div>
       </article>
 

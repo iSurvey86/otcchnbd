@@ -110,8 +110,9 @@ export function LoginModal() {
             ) : (
               <form className="login-email-form" onSubmit={onCodeSubmit}>
                 <p className="login-otp-hint">
-                  Đã gửi mã tới <strong>{email}</strong>. Kiểm tra hộp thư (kể cả
-                  spam).
+                  Đã gửi mã tới <strong>{email}</strong>. Chỉ nhập 6 số ở mail{' '}
+                  <strong>mới nhất</strong> — đừng bấm đường dẫn trong thư (bấm
+                  link là mã hết hạn). Kiểm tra cả hộp spam.
                 </p>
                 <label className="login-field">
                   <span>Mã 6 số</span>

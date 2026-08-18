@@ -689,6 +689,7 @@ body::before {
   font-family: 'Be Vietnam Pro', system-ui, sans-serif;
   font-size: 34px;
   color: var(--forest);
+  text-align: center;
 }
 
 .timer.warn {
@@ -2280,7 +2281,9 @@ body::before {
 .exam-name-field input {
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 12px 14px;
+  padding: 14px 14px 12px;
+  min-height: 48px;
+  line-height: 1.5;
   background: #fff;
   color: var(--ink);
   font-size: 16px;
@@ -2302,6 +2305,11 @@ body::before {
   margin: 0 0 8px;
   font-weight: 600;
   color: var(--forest);
+  text-align: center;
+}
+
+.side > .muted {
+  text-align: center;
 }
 
 .certificate-block {
@@ -2313,195 +2321,226 @@ body::before {
 }
 
 .certificate {
+  --cert-gold: #c4a35a;
+  --cert-ink: #2b2b2b;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(255, 253, 247, 0.92), rgba(255, 253, 247, 0.96)),
-    #fffdf7;
-  border: 1px solid #c9b896;
-  border-radius: 18px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  aspect-ratio: 2000 / 1414;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
   box-shadow: var(--shadow);
-  padding: 4px;
+  padding: 0;
+}
+
+.certificate-plate {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .certificate-inner {
   position: relative;
   z-index: 1;
-  border: 1.5px solid rgba(14, 61, 56, 0.35);
-  border-radius: 14px;
-  padding: 28px 28px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='280' viewBox='0 0 320 280'%3E%3Cpath fill='none' stroke='%230e3d38' stroke-width='0.7' d='M-20 60c70 8 110-28 160-8s90 40 180 12'/%3E%3Cpath fill='none' stroke='%230e3d38' stroke-width='0.55' d='M-10 140c80-18 130 22 190 6s100-30 170 8'/%3E%3Cpath fill='none' stroke='%230e3d38' stroke-width='0.5' d='M-30 220c75 14 125-20 185-4s95 28 175-10'/%3E%3C/svg%3E");
-  background-size: 320px 280px;
-  background-color: rgba(255, 253, 247, 0.88);
+  background: transparent;
+  border: 0;
+  padding: 7.5% 12% 13%;
 }
 
-.certificate-ornament {
+.certificate-hoa-mask {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  top: 20%;
+  right: 7%;
+  width: 12%;
+  height: 18%;
+  background: #fff;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
 }
 
-.certificate-ornament-tl {
-  top: -36px;
-  left: -36px;
-  background:
-    radial-gradient(circle at 70% 70%, transparent 42%, rgba(14, 61, 56, 0.14) 43% 58%, transparent 59%),
-    radial-gradient(circle at 70% 70%, transparent 58%, rgba(181, 122, 60, 0.22) 59% 72%, transparent 73%);
+.certificate-hoa-stack {
+  position: absolute;
+  top: 13%;
+  right: 3.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.certificate-ornament-br {
-  right: -36px;
-  bottom: -36px;
-  background:
-    radial-gradient(circle at 30% 30%, transparent 42%, rgba(14, 61, 56, 0.14) 43% 58%, transparent 59%),
-    radial-gradient(circle at 30% 30%, transparent 58%, rgba(181, 122, 60, 0.22) 59% 72%, transparent 73%);
+.certificate-hoa {
+  display: block;
+  width: 86px;
+  height: auto;
+}
+
+.certificate-practice .certificate-brand {
+  position: static;
+  margin: 0;
+}
+
+.certificate-top,
+.certificate-mid,
+.certificate-foot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-top {
+  flex: 0 0 auto;
+}
+
+.certificate-name {
+  display: inline-block;
+  width: auto;
+  max-width: 90%;
+  margin: 12px 0 16px;
+  padding: 0 22px 8px;
+  border-bottom: 1.5px solid var(--cert-gold);
+}
+
+.certificate-mid {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+
+.certificate-foot {
+  flex: 0 0 auto;
+  margin-top: auto;
+  gap: 2px;
 }
 
 .certificate-brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 16px;
-  color: var(--forest);
-  text-align: left;
+  margin-bottom: 4px;
+  color: var(--cert-ink);
 }
 
 .certificate-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
   background: var(--forest);
-  color: var(--gold);
+  color: var(--cert-gold);
   display: grid;
   place-items: center;
   font-weight: 700;
-  font-size: 13px;
-}
-
-.certificate-brand small {
-  display: block;
   font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
+  letter-spacing: 0.04em;
 }
 
 .certificate-brand strong {
-  font-size: 14px;
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
 }
 
 .certificate-eyebrow {
   margin: 0;
-  color: var(--copper);
-  font-size: 12px;
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-size: clamp(26px, 4.2vw, 40px);
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--cert-ink);
+  line-height: 1.05;
 }
 
 .certificate-title {
-  margin: 8px 0 18px;
-  font-size: clamp(22px, 3vw, 28px);
-  color: var(--forest);
+  margin: 2px 0 8px;
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-size: clamp(12px, 1.7vw, 15px);
+  font-weight: 400;
+  color: #5a5a5a;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.28em;
 }
 
 .certificate-awarded {
   margin: 0;
-  color: var(--muted);
-  font-size: 14px;
+  font-family: 'Playfair Display', Fraunces, serif;
+  color: var(--cert-ink);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .certificate-name {
-  margin: 8px 0 16px;
-  font-family: Fraunces, 'Be Vietnam Pro', serif;
-  font-size: clamp(28px, 5vw, 40px);
-  font-weight: 650;
-  color: var(--forest);
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-style: italic;
+  font-size: clamp(26px, 4.4vw, 38px);
+  font-weight: 700;
+  color: var(--cert-gold);
   line-height: 1.2;
 }
 
 .certificate-body {
-  margin: 0 auto 18px;
-  max-width: 52ch;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  font-size: 14px;
+  margin: 0 auto 6px;
+  max-width: 62ch;
+  color: var(--cert-ink);
+  line-height: 1.55;
+  font-size: 13px;
 }
 
-.certificate-scores {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin: 0 0 18px;
+.certificate-body-sub {
+  margin-bottom: 2px;
+  max-width: 68ch;
+  color: #5a5a5a;
+  font-size: 12px;
 }
 
-.certificate-scores div {
-  border-radius: 12px;
-  padding: 12px 8px;
+.certificate-body-rule {
+  margin: 0;
+  max-width: 68ch;
+  color: #5a5a5a;
+  font-size: 12px;
 }
 
-.certificate-pass .certificate-scores div {
-  background: rgba(229, 246, 234, 0.55);
+.certificate-sign-mark {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 0 28px 6px;
+  border-bottom: 1px solid #8a8a8a;
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cert-ink);
+  line-height: 1.15;
 }
 
-.certificate-practice {
-  border-color: #d4c4a4;
-}
-
-.certificate-practice .certificate-inner {
-  border-color: rgba(138, 90, 18, 0.28);
-  background-color: rgba(247, 244, 236, 0.92);
-}
-
-.certificate-practice .certificate-eyebrow {
-  color: var(--warn);
-}
-
-.certificate-practice .certificate-title {
-  color: #5c4a2a;
-}
-
-.certificate-practice .certificate-scores div {
-  background: rgba(255, 240, 212, 0.7);
-}
-
-.certificate-practice .certificate-scores b {
-  color: #5c4a2a;
-}
-
-.certificate-practice .certificate-scores span {
-  color: #7a5c28;
-}
-
-.certificate-seal.practice {
-  border-color: var(--warn);
-  color: var(--warn);
-  background: rgba(255, 248, 230, 0.95);
-  box-shadow: inset 0 0 0 3px rgba(138, 90, 18, 0.2);
+.certificate-foot strong {
+  font-family: 'Playfair Display', Fraunces, serif;
   font-size: 11px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  line-height: 1.2;
-  padding: 4px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  margin-top: 2px;
 }
 
-.certificate-scores b {
+.certificate-foot small {
   display: block;
-  font-size: 18px;
-  color: var(--forest);
-}
-
-.certificate-scores span {
-  display: block;
-  margin-top: 4px;
+  margin-top: 1px;
   font-size: 11px;
-  color: var(--forest-2);
-  line-height: 1.3;
+  color: #5a5a5a;
 }
 
 .certificate-meta {
@@ -2509,41 +2548,64 @@ body::before {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-  font-size: 13px;
-  color: var(--ink-soft);
+  width: min(100%, 420px);
+  margin: 8px 0 6px;
+  font-size: 12px;
+  color: #5a5a5a;
 }
 
 .certificate-seal {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
+  flex: none;
   border-radius: 50%;
-  border: 2px solid var(--copper);
-  color: var(--copper);
+  border: 2px solid var(--cert-gold);
+  color: var(--cert-gold);
   display: grid;
   place-items: center;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  background: rgba(255, 248, 238, 0.85);
-  box-shadow: inset 0 0 0 3px rgba(181, 122, 60, 0.25);
+  font-family: 'Playfair Display', Fraunces, serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: #fff;
+  box-shadow: inset 0 0 0 3px rgba(196, 163, 90, 0.28);
+}
+
+.certificate-seal.practice {
+  border-color: #b76e79;
+  color: #b76e79;
+  box-shadow: inset 0 0 0 3px rgba(183, 110, 121, 0.28);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.15;
+  padding: 4px;
 }
 
 .certificate-disclaimer {
   margin: 0;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.45;
+  width: 100%;
+  max-width: none;
+  font-family: 'Playfair Display', Fraunces, 'Be Vietnam Pro', serif;
+  font-size: 12px;
   font-style: italic;
+  font-synthesis: style;
+  color: var(--cert-ink);
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.certificate-disclaimer span {
+  color: var(--copper);
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 600;
 }
 
 @media (max-width: 860px) {
-  .certificate-inner {
-    padding: 22px 16px 18px;
-  }
-
-  .certificate-scores {
-    grid-template-columns: 1fr;
+  .certificate {
+    aspect-ratio: 2000 / 1414;
+    min-height: 0;
   }
 
   .certificate-meta {

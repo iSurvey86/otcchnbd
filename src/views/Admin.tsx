@@ -7,6 +7,7 @@ import { TOPICS } from '../data/topics'
 import { DT_TOPICS } from '../data/dt/topics'
 import { XD_TOPICS } from '../data/xd/topics'
 import { apiJson } from '../lib/apiClient'
+import { isAdminEmail } from '../lib/config'
 import type { LogEvent } from '../lib/analytics'
 import { letter, EXAM_DO_DAC, EXAM_XAY_DUNG, EXAM_DAU_THAU, examDauThauForLot, examPassMark, examQuestionCount, examTotalMax } from '../lib/exam'
 import { SECTORS } from '../data/sectors'
@@ -368,6 +369,13 @@ export function Admin() {
   const [moduleFilter, setModuleFilter] = useState('all')
   const [actionFilter, setActionFilter] = useState('all')
   const [sectorFilter, setSectorFilter] = useState('all')
+  const [hideAdmin, setHideAdmin] = useState(() => {
+    try {
+      return localStorage.getItem('otcchnbd.admin.hideAdmin') === '1'
+    } catch {
+      return false
+    }
+  })
   const [feedbackStatus, setFeedbackStatus] = useState<'all' | FeedbackStatus>('all')
   const [page, setPage] = useState(1)
   const [selectedFeedback, setSelectedFeedback] = useState<FeedbackRow | null>(null)
@@ -415,7 +423,7 @@ export function Admin() {
 
   useEffect(() => {
     setPage(1)
-  }, [tab, search, moduleFilter, actionFilter, sectorFilter, feedbackStatus])
+  }, [tab, search, moduleFilter, actionFilter, sectorFilter, feedbackStatus, hideAdmin])
 
   const filteredLogs = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -428,6 +436,7 @@ export function Admin() {
       if (moduleFilter !== 'all' && meta.module !== moduleFilter) return false
       if (actionFilter !== 'all' && meta.action !== actionFilter) return false
       if (sectorFilter !== 'all' && inferScope(row).sector !== sectorFilter) return false
+      if (hideAdmin && isAdminEmail(row.email)) return false
       if (!q) return true
       const field = linhVuc(row)
       const hay = [
@@ -447,7 +456,7 @@ export function Admin() {
         .toLowerCase()
       return hay.includes(q)
     })
-  }, [logs, search, moduleFilter, actionFilter, sectorFilter])
+  }, [logs, search, moduleFilter, actionFilter, sectorFilter, hideAdmin])
 
   const filteredFeedback = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -619,6 +628,21 @@ export function Admin() {
               <option value="PAYWALL">PAYWALL</option>
               <option value="SUBMIT">SUBMIT</option>
             </select>
+            <button
+              type="button"
+              className={hideAdmin ? 'btn copper compact' : 'btn ghost compact'}
+              onClick={() => {
+                const next = !hideAdmin
+                setHideAdmin(next)
+                try {
+                  localStorage.setItem('otcchnbd.admin.hideAdmin', next ? '1' : '0')
+                } catch {
+                  /* ignore */
+                }
+              }}
+            >
+              {hideAdmin ? 'Hiện admin' : 'Ẩn admin'}
+            </button>
           </>
         ) : (
           <select

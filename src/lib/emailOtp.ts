@@ -20,7 +20,12 @@ function authClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!.trim()
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY!.trim()
   return createClient(url, key, {
-    auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+      flowType: 'implicit',
+    },
   })
 }
 
@@ -104,18 +109,22 @@ export async function verifyEmailOtp(
     return { error: 'Chưa cấu hình Supabase.', status: 500 }
   }
 
-  const { error } = await authClient().auth.verifyOtp({
-    email,
-    token,
-    type: 'email',
-  })
-  if (error) {
-    const raw = errText(error)
-    console.error('verifyEmailOtp', error)
-    return {
-      error: `${mapOtpError(raw, 'Mã không đúng hoặc đã hết hạn.')} (${raw || 'no-detail'})`,
-      status: 401,
-    }
+  // signInWithOtp có thể phát mã kiểu email / magiclink / signup tùy cấu hình
+  // Confirm email. Thử lần lượt trong MỘT request — sai type cũng bị báo otp_expired.
+  const types = ['email', 'magiclink', 'signup'] as const
+  let lastRaw = ''
+  for (const type of types) {
+    const { error } = await authClient().auth.verifyOtp({
+      email,
+      token,
+      type,
+    })
+    if (!error) return { ok: true }
+    lastRaw = errText(error)
+    console.error('verifyEmailOtp', type, error)
   }
-  return { ok: true }
+  return {
+    error: mapOtpError(lastRaw, 'Mã không đúng hoặc đã hết hạn.'),
+    status: 401,
+  }
 }

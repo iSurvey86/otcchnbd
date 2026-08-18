@@ -5,7 +5,41 @@
 
 ---
 
+## 2026-08-18 (tối) — Chứng nhận phôi PNG + OTP local + ẩn admin
+
+### Đã làm
+
+- **Chứng nhận thi thử:** chồng chữ lên phôi `public/certificates/`. Đạt = `phoi-dat.png`; chưa đạt = `phoi-chua-dat.png` + hoa overlay. Gạch chân tên / vạch ký do CSS. Phiếu chưa đạt: khối ÔN + hoa trên nền trắng, lệch phải. Disclaimer nghiêng, chữ đậm; `onthicchn.org` màu đồng; con dấu ĐẠT / ÔN TIẾP.
+- **OTP local:** verify thử `email|magiclink|signup`; form nhắc không bấm link mail. Local đã login được (web vốn ổn).
+- **Admin nhật ký:** nút Ẩn/Hiện admin.
+- **UI:** ôn tập xem lại câu + khung thi thử căn giữa (`0ee9f68`); ô tên không cắt dấu; đồng hồ/tên căn giữa tab.
+
+### File chính
+
+| File | Vai trò |
+|------|---------|
+| `src/components/Certificate.tsx` | Chồng nội dung lên phôi |
+| `public/certificates/` | `phoi-dat.png`, `phoi-chua-dat.png`, `hoa-chua-dat.png` |
+| `src/lib/emailOtp.ts` | Verify OTP nhiều type |
+| `src/views/Admin.tsx` | Ẩn admin trong nhật ký |
+| `src/views/Practice.tsx` | Màn kết thúc ôn (đã push sớm) |
+
+### Việc tiếp
+
+- [ ] (Tuỳ) Tinh chỉnh vị trí khối hoa/logo phiếu chưa đạt nếu còn lệch phôi.
+- [ ] Gắn a–d Điều 18 khi có bảng BTC — **không** auto-tag.
+- [ ] Log cũ: không có chữ chọn A/B — chỉ log mới.
+
+### Câu mở phiên sau
+
+> Đọc HANDOFF mới nhất. Chứng nhận dùng phôi PNG (đạt vàng / chưa đạt hồng). OTP local đã ổn (verify nhiều type). Admin nhật ký có Ẩn admin. Tiếp: tinh chỉnh chứng nhận nếu cần, hoặc Điều 18 khi có bảng BTC.
+
+Chi tiết: [2026-08-18-chung-chi-otp-admin.md](./2026-08-18-chung-chi-otp-admin.md)
+
+---
+
 ## 2026-08-18 — Nhật ký admin + Đấu thầu 70/60/100 (bỏ lô)
+
 
 ### Đã làm
 
