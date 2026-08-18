@@ -1,3 +1,4 @@
+import { createClient } from '@supabase/supabase-js'
 import { getSupabaseAdmin, isSupabaseConfigured } from './supabaseAdmin'
 
 export function normalizeEmail(value: unknown): string | null {
@@ -15,39 +16,17 @@ export function normalizeOtp(value: unknown): string | null {
   return code
 }
 
-function gotrueUrl(path: string): string {
-  const base = process.env.NEXT_PUBLIC_SUPABASE_URL!.trim().replace(/\/$/, '')
-  return `${base}/auth/v1/${path}`
-}
-
-async function gotrue(
-  path: string,
-  body: Record<string, unknown>,
-): Promise<{ ok: boolean; status: number; message: string }> {
+function authClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!.trim()
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY!.trim()
-  const res = await fetch(gotrueUrl(path), {
-    method: 'POST',
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
   })
-  const json = (await res.json().catch(() => ({}))) as {
-    msg?: string
-    message?: string
-    error_description?: string
-    error?: string
-  }
-  const message =
-    json.msg || json.message || json.error_description || json.error || ''
-  return { ok: res.ok, status: res.status, message }
 }
 
-function isNotConfirmed(message: string): boolean {
-  const lower = message.toLowerCase()
-  return lower.includes('not confirmed') || lower.includes('unconfirmed')
+function errText(error: { message?: string; code?: string } | null): string {
+  if (!error) return ''
+  return [error.code, error.message].filter(Boolean).join(' ')
 }
 
 function mapOtpError(message: string, fallback: string): string {
@@ -60,16 +39,15 @@ function mapOtpError(message: string, fallback: string): string {
     lower.includes('not enabled') ||
     lower.includes('signups not allowed')
   ) {
-    return 'Chưa bật đăng nhập Email trên Supabase (Authentication → Sign In / Providers → Email).'
+    return 'Chưa bật đăng nhập Email trên Supabase.'
   }
-  if (isNotConfirmed(message)) {
-    return 'Tài khoản email này chưa được xác nhận. Tắt Confirm email trên Supabase, xóa user này trong Authentication → Users, rồi gửi mã lại.'
+  if (lower.includes('not confirmed') || lower.includes('unconfirmed')) {
+    return 'Tài khoản email chưa xác nhận. Tắt Confirm email trên Supabase, xóa user trong Authentication → Users, rồi gửi mã lại.'
   }
   if (
     lower.includes('expired') ||
-    lower.includes('invalid token') ||
-    lower.includes('token has expired') ||
-    lower.includes('invalid otp')
+    lower.includes('invalid') ||
+    lower.includes('otp_expired')
   ) {
     return 'Mã không đúng hoặc đã hết hạn. Dùng mail mới nhất, hoặc gửi lại mã.'
   }
@@ -92,20 +70,20 @@ export async function sendEmailOtp(
   if (!isSupabaseConfigured()) {
     return { error: 'Chưa cấu hình Supabase.', status: 500 }
   }
-  const result = await gotrue('otp', {
+  await confirmEmailIfUnconfirmed(email)
+  const { error } = await authClient().auth.signInWithOtp({
     email,
-    create_user: true,
+    options: { shouldCreateUser: true },
   })
-  if (!result.ok) {
+  if (error) {
+    console.error('sendEmailOtp', error)
     return {
-      error: mapOtpError(result.message, 'Không gửi được mã. Thử lại sau.'),
-      status: result.status >= 400 && result.status < 500 ? result.status : 500,
+      error: mapOtpError(errText(error), 'Không gửi được mã. Thử lại sau.'),
+      status: 400,
     }
   }
   return { ok: true }
 }
-
-const VERIFY_TYPES = ['email', 'magiclink', 'signup'] as const
 
 export async function verifyEmailOtp(
   email: string,
@@ -115,30 +93,17 @@ export async function verifyEmailOtp(
     return { error: 'Chưa cấu hình Supabase.', status: 500 }
   }
 
-  let lastMessage = ''
-  let lastStatus = 401
-
-  for (const type of VERIFY_TYPES) {
-    const result = await gotrue('verify', {
-      type,
-      email,
-      token,
-    })
-    if (result.ok) return { ok: true }
-    lastMessage = result.message
-    lastStatus = result.status
-
-    if (isNotConfirmed(result.message)) {
-      await confirmEmailIfUnconfirmed(email)
-      const retry = await gotrue('verify', { type, email, token })
-      if (retry.ok) return { ok: true }
-      lastMessage = retry.message
-      lastStatus = retry.status
+  const { error } = await authClient().auth.verifyOtp({
+    email,
+    token,
+    type: 'email',
+  })
+  if (error) {
+    console.error('verifyEmailOtp', error)
+    return {
+      error: mapOtpError(errText(error), 'Mã không đúng hoặc đã hết hạn.'),
+      status: 401,
     }
   }
-
-  return {
-    error: mapOtpError(lastMessage, 'Mã không đúng hoặc đã hết hạn.'),
-    status: lastStatus >= 400 && lastStatus < 500 ? lastStatus : 401,
-  }
+  return { ok: true }
 }
