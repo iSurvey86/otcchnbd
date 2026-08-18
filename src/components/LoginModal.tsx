@@ -63,7 +63,11 @@ export function LoginModal() {
   }
 
   const onCodeChange = (value: string) => {
-    setCode(value.replace(/\D/g, '').slice(0, 6))
+    const next = value.replace(/\D/g, '').slice(0, 6)
+    setCode(next)
+    if (next.length === 6 && !signingIn) {
+      void verifyEmailOtp(email, next)
+    }
   }
 
   return (

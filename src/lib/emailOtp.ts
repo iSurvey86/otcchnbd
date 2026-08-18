@@ -57,6 +57,11 @@ function mapOtpError(message: string, fallback: string): string {
 async function confirmEmailIfUnconfirmed(email: string): Promise<void> {
   const db = getSupabaseAdmin()
   if (!db) return
+  const created = await db.auth.admin.createUser({
+    email,
+    email_confirm: true,
+  })
+  if (!created.error) return
   const { data, error } = await db.auth.admin.listUsers({ perPage: 200 })
   if (error) return
   const user = data.users.find((item) => item.email?.toLowerCase() === email)
