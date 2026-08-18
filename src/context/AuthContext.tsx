@@ -202,7 +202,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         token?: string
       }
       if (!res.ok || !body.token) {
-        setAuthError(body.error || 'Mã không đúng hoặc đã hết hạn.')
+        setAuthError(
+          body.error ||
+            (res.status >= 500
+              ? 'Lỗi máy chủ khi đăng nhập. Thử lại sau khi web cập nhật.'
+              : 'Mã không đúng hoặc đã hết hạn.'),
+        )
         return false
       }
       const result = await signInWithCustomToken(auth, body.token)

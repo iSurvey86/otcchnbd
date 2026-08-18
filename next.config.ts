@@ -10,6 +10,7 @@ const authHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  serverExternalPackages: ['firebase-admin', 'jose', 'jwks-rsa'],
   async headers() {
     return [
       {

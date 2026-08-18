@@ -78,7 +78,13 @@ export async function sendEmailOtp(
   await confirmEmailIfUnconfirmed(email)
   const { error } = await authClient().auth.signInWithOtp({
     email,
-    options: { shouldCreateUser: true },
+    options: {
+      shouldCreateUser: true,
+      emailRedirectTo:
+        process.env.VERCEL_ENV === 'production'
+          ? 'https://onthicchn.org'
+          : 'http://localhost:3000',
+    },
   })
   if (error) {
     console.error('sendEmailOtp', error)
@@ -104,9 +110,10 @@ export async function verifyEmailOtp(
     type: 'email',
   })
   if (error) {
+    const raw = errText(error)
     console.error('verifyEmailOtp', error)
     return {
-      error: mapOtpError(errText(error), 'Mã không đúng hoặc đã hết hạn.'),
+      error: `${mapOtpError(raw, 'Mã không đúng hoặc đã hết hạn.')} (${raw || 'no-detail'})`,
       status: 401,
     }
   }

@@ -23,5 +23,9 @@
     "@types/react-dom": "^19.2.3",
     "oxlint": "^1.75.0",
     "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "jose": "4.15.9",
+    "jwks-rsa": "3.2.0"
   }
 }
