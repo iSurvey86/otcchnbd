@@ -202,7 +202,14 @@ body::before {
 }
 
 .hero-single {
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-single > .exam-card {
+  flex: none;
+  width: calc((100% - 22px) * 0.9 / 2.25);
+  max-width: 100%;
 }
 
 .panel {
@@ -428,7 +435,10 @@ body::before {
 
 .exam-card-center {
   text-align: center;
-  align-items: center;
+}
+
+.exam-card-center > div {
+  width: 100%;
 }
 
 .exam-card-center .kicker {
@@ -445,7 +455,8 @@ body::before {
 }
 
 .exam-card-center .btn {
-  width: min(100%, 360px);
+  align-self: center;
+  width: 100%;
 }
 
 .chip {
@@ -461,6 +472,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 8px 0 14px;
 }
@@ -1018,6 +1030,18 @@ body::before {
 .review-item {
   border-top: 1px solid var(--line);
   padding: 18px 0;
+}
+
+.practice-review-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.practice-review-flag {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .muted {
@@ -2185,6 +2209,10 @@ body::before {
   .result-hero,
   .topic-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-single > .exam-card {
+    width: 100%;
   }
 
   .side {

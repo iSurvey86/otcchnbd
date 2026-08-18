@@ -9,11 +9,17 @@ import {
   writeDtCursor,
 } from '../lib/dtPractice'
 import { shuffle } from '../lib/exam'
-import type { StudyScope, TopicId } from '../types'
+import type { Question, StudyScope, TopicId } from '../types'
 
 interface Props {
   scope: StudyScope
   topicId?: TopicId
+}
+
+interface PracticeAnswer {
+  question: Question
+  choice: number
+  index: number
 }
 
 export function Practice({ scope, topicId }: Props) {
@@ -34,6 +40,8 @@ export function Practice({ scope, topicId }: Props) {
   const [choice, setChoice] = useState<number | null>(null)
   const [correct, setCorrect] = useState(0)
   const [done, setDone] = useState(false)
+  const [answers, setAnswers] = useState<PracticeAnswer[]>([])
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong'>('all')
 
   const topic = topicsForScope(scope).find((t) => t.id === topicId)
   const topicTitle =
@@ -58,6 +66,22 @@ export function Practice({ scope, topicId }: Props) {
     })
   }, [notifyPracticeStarted, pool.length, scope.sector, scope.trackId, topicId, topicTitle])
 
+  function restartSession() {
+    setIndex(0)
+    setChoice(null)
+    setCorrect(0)
+    setDone(false)
+    setAnswers([])
+    setReviewFilter('all')
+    if (continueMode) writeDtCursor(0)
+    notifyPracticeStarted({
+      topicId: topicId ?? null,
+      topicTitle,
+      sector: scope.sector,
+      trackId: scope.trackId ?? null,
+    })
+  }
+
   if (pool.length === 0) {
     return (
       <div className="panel empty">
@@ -69,34 +93,83 @@ export function Practice({ scope, topicId }: Props) {
   }
 
   if (done) {
+    const sessionTotal = answers.length
+    const sessionCorrect = answers.filter((a) => a.choice === a.question.answer).length
+    const wrongCount = sessionTotal - sessionCorrect
+    const visible =
+      reviewFilter === 'wrong'
+        ? answers.filter((a) => a.choice !== a.question.answer)
+        : answers
+
     return (
-      <section className="panel">
-        <p className="kicker">Kết thúc ôn tập</p>
-        <h2>
-          {correct}/{pool.length} câu đúng
-        </h2>
-        <p className="lead">
-          {topicTitle}. Làm lại để củng cố những câu còn sai.
-        </p>
-        <button
-          className="btn primary"
-          onClick={() => {
-            setIndex(0)
-            setChoice(null)
-            setCorrect(0)
-            setDone(false)
-            if (continueMode) writeDtCursor(0)
-            notifyPracticeStarted({
-              topicId: topicId ?? null,
-              topicTitle,
-              sector: scope.sector,
-              trackId: scope.trackId ?? null,
-            })
-          }}
-        >
-          Ôn lại từ đầu
-        </button>
-      </section>
+      <>
+        <section className="panel">
+          <p className="kicker">Kết thúc ôn tập</p>
+          <h2>
+            <span className={sessionCorrect === sessionTotal ? 'pass' : ''}>
+              {sessionCorrect}/{sessionTotal}
+            </span>{' '}
+            câu đúng
+          </h2>
+          <p className="lead">
+            {topicTitle}
+            {wrongCount > 0
+              ? `. ${wrongCount} câu sai — xem lại bên dưới rồi ôn lại.`
+              : '. Không có câu sai trong phiên này.'}
+          </p>
+          <div className="actions">
+            <button className="btn primary" onClick={restartSession}>
+              Ôn lại từ đầu
+            </button>
+          </div>
+        </section>
+
+        <div className="section-head">
+          <h2>Xem lại từng câu</h2>
+          {wrongCount > 0 ? (
+            <div className="practice-review-filters">
+              <button
+                type="button"
+                className={reviewFilter === 'all' ? 'btn copper compact' : 'btn ghost compact'}
+                onClick={() => setReviewFilter('all')}
+              >
+                Tất cả ({sessionTotal})
+              </button>
+              <button
+                type="button"
+                className={reviewFilter === 'wrong' ? 'btn copper compact' : 'btn ghost compact'}
+                onClick={() => setReviewFilter('wrong')}
+              >
+                Câu sai ({wrongCount})
+              </button>
+            </div>
+          ) : null}
+        </div>
+
+        {visible.length === 0 ? (
+          <div className="panel empty">Không có câu nào trong bộ lọc này.</div>
+        ) : (
+          visible.map((item) => {
+            const ok = item.choice === item.question.answer
+            return (
+              <div key={`${item.question.id}-${item.index}`} className="review-item">
+                <p className={`practice-review-flag ${ok ? 'pass' : 'fail'}`}>
+                  {ok ? 'Đúng' : 'Sai'}
+                </p>
+                <QuestionCard
+                  question={item.question}
+                  index={item.index}
+                  total={continueMode ? pool.length : sessionTotal}
+                  choice={item.choice}
+                  revealed
+                  scope={scope}
+                  onChoose={() => undefined}
+                />
+              </div>
+            )
+          })
+        )}
+      </>
     )
   }
 
@@ -148,6 +221,7 @@ export function Practice({ scope, topicId }: Props) {
             }
             if (scope.sector === 'dau-thau') markDtPracticeAnswer(question.id, ok)
             setChoice(next)
+            setAnswers((prev) => [...prev, { question, choice: next, index }])
             if (ok) setCorrect((c) => c + 1)
           }}
         />
@@ -159,14 +233,17 @@ export function Practice({ scope, topicId }: Props) {
           onClick={() => {
             if (index + 1 >= pool.length) {
               if (continueMode) writeDtCursor(0)
+              const sessionTotal = answers.length
               notifyPracticeFinished({
                 topicId: topicId ?? null,
                 topicTitle,
                 sector: scope.sector,
                 trackId: scope.trackId ?? null,
                 correct,
-                total: pool.length,
+                total: sessionTotal,
               })
+              const wrongN = sessionTotal - correct
+              setReviewFilter(sessionTotal > 30 && wrongN > 0 ? 'wrong' : 'all')
               setDone(true)
               return
             }
