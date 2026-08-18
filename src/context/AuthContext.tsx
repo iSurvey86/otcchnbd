@@ -92,6 +92,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const quotaPromptedRef = useRef(false)
 
   const openLogin = useCallback((message?: string) => {
+    verifyingRef.current = false
     setLoginMessage(message ?? LOGIN_COPY.default)
     setAuthError(null)
     setLoginOpen(true)
@@ -210,16 +211,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         )
         return false
       }
+      if (auth.currentUser) {
+        await signOut(auth)
+      }
+      await auth.authStateReady()
       const result = await signInWithCustomToken(auth, body.token)
-      await upsertUser(result.user, 'email')
-      await logEvent(result.user, 'login', {
-        guestAnswersBeforeLogin: readGuestAnswered(),
-        method: 'email_otp',
-      })
+      await result.user.getIdToken(true)
+      try {
+        await upsertUser(result.user, 'email')
+        await logEvent(result.user, 'login', {
+          guestAnswersBeforeLogin: readGuestAnswered(),
+          method: 'email_otp',
+        })
+      } catch (logErr) {
+        console.error('otp login analytics', logErr)
+      }
       setLoginOpen(false)
       return true
-    } catch {
-      setAuthError('Không đăng nhập được. Thử lại.')
+    } catch (err) {
+      const errCode =
+        typeof err === 'object' && err && 'code' in err ? String(err.code) : ''
+      const detail =
+        typeof err === 'object' && err && 'message' in err ? String(err.message) : ''
+      setAuthError(
+        detail
+          ? `Không gắn được phiên đăng nhập (${errCode || 'firebase'}). ${detail}`
+          : 'Không đăng nhập được. Thử lại.',
+      )
       return false
     } finally {
       verifyingRef.current = false
@@ -230,6 +248,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signOutUser = useCallback(async () => {
     const auth = getFirebaseAuth()
     if (!auth) return
+    verifyingRef.current = false
     await logEvent(user, 'logout')
     await signOut(auth)
   }, [user])
