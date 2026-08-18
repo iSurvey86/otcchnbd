@@ -1,4 +1,4 @@
-import { isSupabaseConfigured } from './supabaseAdmin'
+import { getSupabaseAdmin, isSupabaseConfigured } from './supabaseAdmin'
 
 export function normalizeEmail(value: unknown): string | null {
   if (typeof value !== 'string') return null
@@ -45,26 +45,45 @@ async function gotrue(
   return { ok: res.ok, status: res.status, message }
 }
 
+function isNotConfirmed(message: string): boolean {
+  const lower = message.toLowerCase()
+  return lower.includes('not confirmed') || lower.includes('unconfirmed')
+}
+
 function mapOtpError(message: string, fallback: string): string {
   const lower = message.toLowerCase()
   if (lower.includes('rate') || lower.includes('too many')) {
-    return 'Mail thử nghiệm chỉ gửi được vài lần mỗi giờ. Đợi khoảng 1 giờ rồi gửi lại, hoặc bấm Tiếp tục với Google.'
+    return 'Gửi mã quá nhiều lần. Đợi vài phút rồi thử lại, hoặc đăng nhập Google.'
   }
   if (
     lower.includes('disabled') ||
     lower.includes('not enabled') ||
     lower.includes('signups not allowed')
   ) {
-    return 'Chưa bật đăng nhập Email trên Supabase (Authentication → Providers → Email).'
+    return 'Chưa bật đăng nhập Email trên Supabase (Authentication → Sign In / Providers → Email).'
+  }
+  if (isNotConfirmed(message)) {
+    return 'Tài khoản email này chưa được xác nhận. Tắt Confirm email trên Supabase, xóa user này trong Authentication → Users, rồi gửi mã lại.'
   }
   if (
-    lower.includes('invalid') ||
     lower.includes('expired') ||
-    lower.includes('otp')
+    lower.includes('invalid token') ||
+    lower.includes('token has expired') ||
+    lower.includes('invalid otp')
   ) {
-    return 'Mã không đúng hoặc đã hết hạn.'
+    return 'Mã không đúng hoặc đã hết hạn. Dùng mail mới nhất, hoặc gửi lại mã.'
   }
-  return fallback
+  return message.trim() || fallback
+}
+
+async function confirmEmailIfUnconfirmed(email: string): Promise<void> {
+  const db = getSupabaseAdmin()
+  if (!db) return
+  const { data, error } = await db.auth.admin.listUsers({ perPage: 200 })
+  if (error) return
+  const user = data.users.find((item) => item.email?.toLowerCase() === email)
+  if (!user || user.email_confirmed_at) return
+  await db.auth.admin.updateUserById(user.id, { email_confirm: true })
 }
 
 export async function sendEmailOtp(
@@ -86,6 +105,8 @@ export async function sendEmailOtp(
   return { ok: true }
 }
 
+const VERIFY_TYPES = ['email', 'magiclink', 'signup'] as const
+
 export async function verifyEmailOtp(
   email: string,
   token: string,
@@ -93,16 +114,31 @@ export async function verifyEmailOtp(
   if (!isSupabaseConfigured()) {
     return { error: 'Chưa cấu hình Supabase.', status: 500 }
   }
-  const result = await gotrue('verify', {
-    type: 'email',
-    email,
-    token,
-  })
-  if (!result.ok) {
-    return {
-      error: mapOtpError(result.message, 'Mã không đúng hoặc đã hết hạn.'),
-      status: 401,
+
+  let lastMessage = ''
+  let lastStatus = 401
+
+  for (const type of VERIFY_TYPES) {
+    const result = await gotrue('verify', {
+      type,
+      email,
+      token,
+    })
+    if (result.ok) return { ok: true }
+    lastMessage = result.message
+    lastStatus = result.status
+
+    if (isNotConfirmed(result.message)) {
+      await confirmEmailIfUnconfirmed(email)
+      const retry = await gotrue('verify', { type, email, token })
+      if (retry.ok) return { ok: true }
+      lastMessage = retry.message
+      lastStatus = retry.status
     }
   }
-  return { ok: true }
+
+  return {
+    error: mapOtpError(lastMessage, 'Mã không đúng hoặc đã hết hạn.'),
+    status: lastStatus >= 400 && lastStatus < 500 ? lastStatus : 401,
+  }
 }
