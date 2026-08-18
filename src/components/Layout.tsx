@@ -124,7 +124,7 @@ function AuthBar({
     return (
       <div className="auth-bar">
         <button className="btn ghost compact" onClick={() => openLogin()}>
-          Đăng nhập Google
+          Đăng nhập
         </button>
       </div>
     )

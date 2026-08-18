@@ -10,13 +10,17 @@ export type LogEvent =
   | 'paywall_hit'
   | 'feedback_submitted'
 
-export async function upsertUser(user: User): Promise<void> {
+export async function upsertUser(
+  user: User,
+  provider?: string,
+): Promise<void> {
   await apiJson('/api/user', {
     method: 'POST',
     user,
     body: JSON.stringify({
       photoURL: user.photoURL,
-      provider: user.providerData[0]?.providerId ?? 'google.com',
+      provider:
+        provider ?? user.providerData[0]?.providerId ?? 'google.com',
       bumpLogin: true,
     }),
   })

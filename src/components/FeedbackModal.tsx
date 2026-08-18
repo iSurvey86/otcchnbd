@@ -36,7 +36,7 @@ export function FeedbackModal({
       return
     }
     if (!user) {
-      openLogin('Đăng nhập Google để gửi góp ý về câu hỏi.')
+      openLogin('Đăng nhập để gửi góp ý về câu hỏi.')
       return
     }
     setSending(true)

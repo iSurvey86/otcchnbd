@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useAuth } from '../context/AuthContext'
 
 export function LoginModal() {
@@ -8,10 +9,66 @@ export function LoginModal() {
     authError,
     isConfigured,
     signInGoogle,
+    requestEmailOtp,
+    verifyEmailOtp,
     closeLogin,
   } = useAuth()
 
+  const [email, setEmail] = useState('')
+  const [code, setCode] = useState('')
+  const [step, setStep] = useState<'email' | 'code'>('email')
+  const [cooldown, setCooldown] = useState(0)
+  const codeRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (!loginOpen) {
+      setEmail('')
+      setCode('')
+      setStep('email')
+      setCooldown(0)
+    }
+  }, [loginOpen])
+
+  useEffect(() => {
+    if (cooldown <= 0) return
+    const timer = window.setTimeout(() => setCooldown((n) => n - 1), 1000)
+    return () => window.clearTimeout(timer)
+  }, [cooldown])
+
+  useEffect(() => {
+    if (step === 'code') codeRef.current?.focus()
+  }, [step])
+
   if (!loginOpen) return null
+
+  const sendCode = async () => {
+    const ok = await requestEmailOtp(email)
+    if (ok) {
+      setStep('code')
+      setCode('')
+      setCooldown(60)
+    }
+  }
+
+  const onEmailSubmit = (event: FormEvent) => {
+    event.preventDefault()
+    if (signingIn) return
+    void sendCode()
+  }
+
+  const onCodeSubmit = (event: FormEvent) => {
+    event.preventDefault()
+    if (signingIn) return
+    void verifyEmailOtp(email, code)
+  }
+
+  const onCodeChange = (value: string) => {
+    const next = value.replace(/\D/g, '').slice(0, 6)
+    setCode(next)
+    if (next.length === 6 && !signingIn) {
+      void verifyEmailOtp(email, next)
+    }
+  }
 
   return (
     <div className="modal-backdrop" onClick={closeLogin} role="presentation">
@@ -24,15 +81,97 @@ export function LoginModal() {
         <h2 id="login-title" className="login-modal-msg">
           {loginMessage}
         </h2>
+
         {isConfigured ? (
-          <button
-            className="btn google-btn"
-            onClick={() => void signInGoogle()}
-            disabled={signingIn}
-          >
-            <GoogleMark />
-            {signingIn ? 'Đang mở Google…' : 'Tiếp tục với Google'}
-          </button>
+          <>
+            {step === 'email' ? (
+              <form className="login-email-form" onSubmit={onEmailSubmit}>
+                <label className="login-field">
+                  <span>Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="ban@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={signingIn}
+                  />
+                </label>
+                <button
+                  type="submit"
+                  className="btn primary"
+                  disabled={signingIn || !email.trim()}
+                >
+                  {signingIn ? 'Đang gửi mã…' : 'Gửi mã 6 số'}
+                </button>
+              </form>
+            ) : (
+              <form className="login-email-form" onSubmit={onCodeSubmit}>
+                <p className="login-otp-hint">
+                  Đã gửi mã tới <strong>{email}</strong>. Kiểm tra hộp thư (kể cả
+                  spam).
+                </p>
+                <label className="login-field">
+                  <span>Mã 6 số</span>
+                  <input
+                    ref={codeRef}
+                    className="login-otp-input"
+                    type="text"
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
+                    pattern="[0-9]*"
+                    maxLength={6}
+                    placeholder="••••••"
+                    value={code}
+                    onChange={(e) => onCodeChange(e.target.value)}
+                    required
+                    disabled={signingIn}
+                  />
+                </label>
+                <button
+                  type="submit"
+                  className="btn primary"
+                  disabled={signingIn || code.length !== 6}
+                >
+                  {signingIn ? 'Đang đăng nhập…' : 'Đăng nhập'}
+                </button>
+                <div className="login-otp-actions">
+                  <button
+                    type="button"
+                    className="btn ghost"
+                    disabled={signingIn || cooldown > 0}
+                    onClick={() => void sendCode()}
+                  >
+                    {cooldown > 0 ? `Gửi lại (${cooldown}s)` : 'Gửi lại mã'}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn ghost"
+                    disabled={signingIn}
+                    onClick={() => {
+                      setStep('email')
+                      setCode('')
+                    }}
+                  >
+                    Đổi email
+                  </button>
+                </div>
+              </form>
+            )}
+
+            <p className="login-divider">hoặc</p>
+            <button
+              className="btn google-btn"
+              onClick={() => void signInGoogle()}
+              disabled={signingIn}
+              type="button"
+            >
+              <GoogleMark />
+              {signingIn ? 'Đang xử lý…' : 'Tiếp tục với Google'}
+            </button>
+          </>
         ) : (
           <p className="auth-error">
             Chưa cấu hình Firebase. Tạo file <code>.env.local</code> theo{' '}
@@ -40,7 +179,7 @@ export function LoginModal() {
           </p>
         )}
         {authError ? <p className="auth-error">{authError}</p> : null}
-        <button className="btn ghost" onClick={closeLogin}>
+        <button className="btn ghost" onClick={closeLogin} type="button">
           Để sau
         </button>
       </div>

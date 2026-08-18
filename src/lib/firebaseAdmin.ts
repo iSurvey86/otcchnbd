@@ -63,3 +63,52 @@ export function requireAdmin(
   }
   return null
 }
+
+function errCode(error: unknown): string {
+  return typeof error === 'object' && error && 'code' in error
+    ? String((error as { code: string }).code)
+    : ''
+}
+
+/** Tạo Firebase session cho user đã xác thực email (OTP). Cùng email Google → cùng tài khoản. */
+export async function createFirebaseTokenForEmail(
+  email: string,
+): Promise<{ token: string } | { error: string; status: number }> {
+  const app = getAdminApp()
+  if (!app) {
+    return {
+      error: 'Chưa cấu hình Firebase Admin (FIREBASE_ADMIN_*).',
+      status: 500,
+    }
+  }
+
+  const auth = getAuth(app)
+  let uid: string
+  try {
+    uid = (await auth.getUserByEmail(email)).uid
+  } catch (error) {
+    if (errCode(error) !== 'auth/user-not-found') {
+      return { error: 'Không tạo được phiên đăng nhập.', status: 500 }
+    }
+    try {
+      uid = (
+        await auth.createUser({
+          email,
+          emailVerified: true,
+          displayName: email.split('@')[0] || undefined,
+        })
+      ).uid
+    } catch (createError) {
+      if (errCode(createError) !== 'auth/email-already-exists') {
+        return { error: 'Không tạo được tài khoản.', status: 500 }
+      }
+      uid = (await auth.getUserByEmail(email)).uid
+    }
+  }
+
+  try {
+    return { token: await auth.createCustomToken(uid) }
+  } catch {
+    return { error: 'Không tạo được phiên đăng nhập.', status: 500 }
+  }
+}

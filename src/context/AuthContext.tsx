@@ -3,6 +3,7 @@
 import {
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithCustomToken,
   signInWithPopup,
   signOut,
   type User,
@@ -52,6 +53,8 @@ interface AuthContextValue {
   signingIn: boolean
   authError: string | null
   signInGoogle: () => Promise<void>
+  requestEmailOtp: (email: string) => Promise<boolean>
+  verifyEmailOtp: (email: string, code: string) => Promise<boolean>
   signOutUser: () => Promise<void>
   openLogin: (message?: string) => void
   closeLogin: () => void
@@ -70,6 +73,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loginMessage, setLoginMessage] = useState<string>(LOGIN_COPY.default)
   const [signingIn, setSigningIn] = useState(false)
   const [authError, setAuthError] = useState<string | null>(null)
+  const verifyingRef = useRef(false)
 
   useEffect(() => {
     const auth = getFirebaseAuth()
@@ -154,6 +158,70 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
+  const requestEmailOtp = useCallback(async (email: string) => {
+    setSigningIn(true)
+    setAuthError(null)
+    try {
+      const res = await fetch('/api/auth/otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      const body = (await res.json().catch(() => ({}))) as { error?: string }
+      if (!res.ok) {
+        setAuthError(body.error || 'Không gửi được mã. Thử lại sau.')
+        return false
+      }
+      return true
+    } catch {
+      setAuthError('Không kết nối được máy chủ.')
+      return false
+    } finally {
+      setSigningIn(false)
+    }
+  }, [])
+
+  const verifyEmailOtp = useCallback(async (email: string, code: string) => {
+    const auth = getFirebaseAuth()
+    if (!auth) {
+      setAuthError('Chưa cấu hình Firebase. Xem README để lấy khóa dự án.')
+      return false
+    }
+    if (verifyingRef.current) return false
+    verifyingRef.current = true
+    setSigningIn(true)
+    setAuthError(null)
+    try {
+      const res = await fetch('/api/auth/otp/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, code }),
+      })
+      const body = (await res.json().catch(() => ({}))) as {
+        error?: string
+        token?: string
+      }
+      if (!res.ok || !body.token) {
+        setAuthError(body.error || 'Mã không đúng hoặc đã hết hạn.')
+        return false
+      }
+      const result = await signInWithCustomToken(auth, body.token)
+      await upsertUser(result.user, 'email')
+      await logEvent(result.user, 'login', {
+        guestAnswersBeforeLogin: readGuestAnswered(),
+        method: 'email_otp',
+      })
+      setLoginOpen(false)
+      return true
+    } catch {
+      setAuthError('Không đăng nhập được. Thử lại.')
+      return false
+    } finally {
+      verifyingRef.current = false
+      setSigningIn(false)
+    }
+  }, [])
+
   const signOutUser = useCallback(async () => {
     const auth = getFirebaseAuth()
     if (!auth) return
@@ -229,6 +297,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       signingIn,
       authError,
       signInGoogle,
+      requestEmailOtp,
+      verifyEmailOtp,
       signOutUser,
       openLogin,
       closeLogin,
@@ -249,6 +319,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       openLogin,
       remaining,
       signInGoogle,
+      requestEmailOtp,
+      verifyEmailOtp,
       signOutUser,
       signingIn,
       tryRecordAnswer,
