@@ -1,6 +1,6 @@
 import { Certificate } from '../components/Certificate'
 import { QuestionCard } from '../components/QuestionCard'
-import { lawSectionLabel, sectorTitle, skillSectionLabel } from '../lib/bank'
+import { lawSectionLabel, questionsForScope, sectorTitle, skillSectionLabel, bankFullTitleForScope } from '../lib/bank'
 import {
   examConfigFor,
   examGradeLabel,
@@ -42,9 +42,11 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
   const resultScope: StudyScope = {
     sector: attempt.sector ?? scope.sector,
     trackId: attempt.trackId ?? scope.trackId,
+    bankId: attempt.bankId ?? scope.bankId,
   }
-  const exam = examConfigFor(resultScope)
-  const paper = questionsByIds(attempt.questionIds)
+  const pool = questionsForScope(resultScope)
+  const exam = examConfigFor(resultScope, pool.length || attempt.questionIds.length)
+  const paper = questionsByIds(attempt.questionIds, pool)
   const choiceById = new Map(attempt.answers.map((a) => [a.questionId, a.choice]))
   const lawMax = sectionMax('phap-luat', exam)
   const skillMax = sectionMax('kinh-nghiem', exam)
@@ -71,6 +73,9 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
           </div>
           <div>
             <p className="kicker">Kết quả sát hạch thử</p>
+            {bankFullTitleForScope(resultScope) ? (
+              <p className="muted dd-result-bank">{bankFullTitleForScope(resultScope)}</p>
+            ) : null}
             <h2 className={passed ? 'pass' : 'fail'}>
               {scope.sector === 'dau-thau' || resultScope.sector === 'dau-thau'
                 ? passed
@@ -79,10 +84,14 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
                 : passed
                   ? exam.passMode === 'law-and-total'
                     ? 'Đạt yêu cầu (NĐ 217)'
-                    : 'Đạt yêu cầu (mỗi phần ≥ 80%)'
+                    : exam.passMode === 'total-percent'
+                      ? 'Đạt yêu cầu (≥ 80% tổng)'
+                      : 'Đạt yêu cầu (mỗi phần ≥ 80%)'
                   : exam.passMode === 'law-and-total'
                     ? `Chưa đạt – cần PL ≥ ${exam.lawPassMin}/${lawMax} và tổng ≥ ${exam.totalPassMin}/${totalMax}`
-                    : 'Chưa đạt – cần ≥ 80% từng phần'}
+                    : exam.passMode === 'total-percent'
+                      ? 'Chưa đạt – cần ≥ 80% tổng điểm'
+                      : 'Chưa đạt – cần ≥ 80% từng phần'}
             </h2>
             <p className="lead">
               Đúng {attempt.correctCount}/{paper.length} câu · Thời gian{' '}

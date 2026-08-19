@@ -1,0 +1,3665 @@
+{
+  "bankId": "official-2019",
+  "questions": [
+    {
+      "id": "2019-pl-001",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Nội dung hoạt động đo đạc và bản đồ cơ bản không bao gồm hoạt động nào sau đây:",
+      "options": [
+        "Thành lập bản đồ địa hình quốc gia tỷ lệ 1:1.000.000",
+        "Đo đạc, thành lập bản đồ địa chính",
+        "Xây dựng hệ thống dữ liệu ảnh hàng không và hệ thống dữ liệu ảnh viễn thám",
+        "Xây dựng cơ sở dữ liệu nền địa lý quốc gia và thành lập bản đồ địa hình quốc gia tỷ lệ 1:2.000"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Đo đạc, thành lập bản đồ địa chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-002",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Hành vi nào sau đây không thuộc hành vi bị nghiêm cấm trong hoạt động đo đạc và bản đồ:",
+      "options": [
+        "Giả mạo, làm sai lệch số liệu, kết quả đo đạc và bản đồ",
+        "Phá hủy, làm hư hỏng công trình hạ tầng đo đạc",
+        "Hoạt động đo đạc và bản đồ khi không đủ điều kiện theo quy định của pháp luật",
+        "Sử dụng thông tin, dữ liệu, sản phẩm đo đạc và bản đồ không đúng mục đích"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Sử dụng thông tin, dữ liệu, sản phẩm đo đạc và bản đồ không đúng mục đích",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-003",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Cơ sở dữ liệu nền địa lý quốc gia và hệ thống bản đồ địa hình quốc gia không bao gồm tỷ lệ nào sau đây:",
+      "options": [
+        "1:2.000",
+        "1:25.000",
+        "1:200.000",
+        "1:1.000.000"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 1:200.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-004",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Bộ Tài nguyên và Môi trường có trách nhiệm nào sau đây:",
+      "options": [
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:2.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:5.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu đo đạc và bản đồ về địa giới hành chính",
+        "Đo đạc, thành lập bản đồ phục vụ lập hồ sơ địa giới hành chính các cấp"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Xây dựng, cập nhật cơ sở dữ liệu đo đạc và bản đồ về địa giới hành chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-005",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Bộ Tài nguyên và Môi trường không có trách nhiệm nào sau đây:",
+      "options": [
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia trên đất liền tỷ lệ 1:10.000",
+        "Thành lập, cập nhật hệ thống bản đồ địa hình quốc gia trên đất liền tỷ lệ 1:10.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu và bản đồ địa hình quốc gia khu vực đảo, quần đảo, bản đồ địa hình đáy biển tỷ lệ 1:10.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:2.000"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:2.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-006",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Ủy ban nhân dân cấp tỉnh không có trách nhiệm nào sau đây:",
+      "options": [
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:2.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu nền địa lý quốc gia tỷ lệ 1:5.000",
+        "Xây dựng, cập nhật cơ sở dữ liệu đo đạc và bản đồ về địa giới hành chính",
+        "Đo đạc, thành lập bản đồ phục vụ lập hồ sơ địa giới hành chính các cấp"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Xây dựng, cập nhật cơ sở dữ liệu đo đạc và bản đồ về địa giới hành chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-007",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Bản đồ hành chính không có loại nào sau đây:",
+      "options": [
+        "Bản đồ hành chính Việt Nam",
+        "Bản đồ hành chính cấp tỉnh",
+        "Bản đồ hành chính cấp huyện",
+        "Bản đồ hành chính cấp xã"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bản đồ hành chính cấp xã",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-008",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Cơ quan nào sau đây có trách nhiệm tổ chức thực hiện đo đạc, thành lập hải đồ vùng biển Việt Nam và liền kề:",
+      "options": [
+        "Bộ Quốc phòng",
+        "Bộ Giao thông vận tải",
+        "Bộ Tài nguyên và Môi trường",
+        "Bộ Nông nghiệp và Phát triển nông thôn"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bộ Quốc phòng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-009",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Cơ quan nào sau đây có trách nhiệm ban hành quy chuẩn kỹ thuật quốc gia về đo đạc, thành lập bản đồ công trình ngầm:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Bộ Xây dựng",
+        "Bộ Công thương",
+        "Ủy ban nhân dân cấp tỉnh"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bộ Xây dựng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-010",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Trách nhiệm tổ chức bảo vệ mốc đo đạc quốc gia thuộc cơ quan, tổ chức, cá nhân nào sau đây:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Ủy ban nhân dân cấp tỉnh",
+        "Chủ sử dụng đất nơi có mốc đo đạc quốc gia",
+        "Chủ đầu tư xây dựng mốc"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Ủy ban nhân dân cấp tỉnh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-011",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Ủy ban nhân dân cấp tỉnh có trách nhiệm tổ chức bảo vệ công trình hạ tầng đo đạc nào sau đây:",
+      "options": [
+        "Mốc đo đạc quốc gia",
+        "Điểm gốc đo đạc quốc gia",
+        "Trạm thu dữ liệu viễn thám quốc gia",
+        "Trạm định vị vệ tinh quốc gia"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Mốc đo đạc quốc gia",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-012",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Hành lang bảo vệ mốc đo đạc trong mạng lưới tọa độ quốc gia, mạng lưới tọa độ cơ sở chuyên ngành có bán kính là bao nhiêu mét tính từ tâm mốc?",
+      "options": [
+        "40 m",
+        "50 m",
+        "60 m",
+        "70 m"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 50 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-013",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Hành lang bảo vệ trạm định vị vệ tinh có bán kính là bao nhiêu mét tính từ tâm ăng ten thu tín hiệu vệ tinh?",
+      "options": [
+        "40 m",
+        "50 m",
+        "60 m",
+        "100 m"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 50 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-014",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Hành lang bảo vệ công trình hạ tầng đo đạc phải được xác lập khi nào?",
+      "options": [
+        "Trong quá trình xây dựng công trình hạ tầng đo đạc",
+        "Sau khi xây dựng công trình hạ tầng đo đạc",
+        "Khi bàn giao công trình hạ tầng đo đạc",
+        "Trước khi xây dựng công trình hạ tầng đo đạc"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Trong quá trình xây dựng công trình hạ tầng đo đạc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-015",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Việc di dời, phá dỡ mốc đo đạc, trạm định vị vệ tinh được thực hiện trong trường hợp nào sau đây: 4",
+      "options": [
+        "Do yêu cầu phát triển kinh tế - xã hội, đảm bảo quốc phòng, an ninh mà công trình hạ tầng đo đạc không thể tiếp tục duy trì sự tồn tại hoặc không hoạt động bình thường theo tiêu chuẩn, quy chuẩn kỹ thuật quốc gia, quy định kỹ thuật",
+        "Do ảnh hưởng của điều kiện tự nhiên, thiên tai làm mất, hư hỏng và tác động ngoại cảnh khác làm mất, hư hỏng, thay đổi vị trí mốc đo đạc",
+        "Hết hạn sử dụng, không còn giá trị sử dụng hoặc đã có công trình hạ tầng đo đạc khác thay thế",
+        "Bất kỳ trường hợp nào nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bất kỳ trường hợp nào nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-016",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Giấy phép hoạt động đo đạc và bản đồ bị thu hồi trong trường hợp nào sau đây:",
+      "options": [
+        "Tẩy xóa, sửa chữa làm sai lệch nội dung giấy phép; giả mạo nội dung trong hồ sơ đề nghị cấp giấy phép",
+        "Không thực hiện chế độ báo cáo về hoạt động đo đạc và bản đồ của tổ chức theo quy định",
+        "Thay đổi trụ sở của tổ chức ghi trong giấy phép",
+        "Thay đổi số điện thoại của tổ chức"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Tẩy xóa, sửa chữa làm sai lệch nội dung giấy phép; giả mạo nội dung trong hồ sơ đề nghị cấp giấy phép",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-017",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Nội dung nào sau đây là không có trong quy định về điều kiện của người phụ trách kỹ thuật của tổ chức được cấp giấy phép hoạt động đo đạc và bản đồ?",
+      "options": [
+        "Có trình độ từ đại học trở lên thuộc chuyên ngành về đo đạc và bản đồ",
+        "Có thời gian hoạt động thực tế ít nhất là 05 năm phù hợp với ít nhất một nội dung hoạt động đo đạc và bản đồ của tổ chức đề nghị cấp giấy phép",
+        "Không được đồng thời là người phụ trách kỹ thuật về đo đạc và bản đồ của tổ chức khác",
+        "Phải có hợp đồng lao động ít nhất là 03 năm với tổ chức đề nghị cấp giấy phép"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Phải có hợp đồng lao động ít nhất là 03 năm với tổ chức đề nghị cấp giấy phép",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-018",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Tổ chức được cấp giấy phép hoạt động đo đạc và bản đồ phải có số lượng nhân viên kỹ thuật được đào tạo về đo đạc và bản đồ tối thiểu là bao nhiêu người?",
+      "options": [
+        "Không quy định",
+        "5 người",
+        "4 người",
+        "6 người 5"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 4 người",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-019",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Nội dung nào sau đây không có trong Danh mục hoạt động đo đạc và bản đồ phải có giấy phép?",
+      "options": [
+        "Lập đề án, dự án, thiết kế kỹ thuật - dự toán nhiệm vụ đo đạc và bản đồ cơ bản, chuyên ngành",
+        "Kiểm tra chất lượng sản phẩm đo đạc và bản đồ cơ bản, chuyên ngành",
+        "Thành lập bản đồ chuyên đề",
+        "Thu nhận dữ liệu ảnh hàng không"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Thành lập bản đồ chuyên đề",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-020",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Theo quy định, hồ sơ đề nghị cấp giấy phép hoạt động đo đạc và bản đồ không bao gồm tài liệu nào sau đây:",
+      "options": [
+        "Đơn đề nghị cấp giấy phép hoạt động đo đạc và bản đồ",
+        "Quyết định quy định chức năng, nhiệm vụ hoặc Giấy chứng nhận đăng ký doanh nghiệp",
+        "Quy chế hoạt động của tổ chức",
+        "Quyết định tuyển dụng, quyết định bổ nhiệm của người phụ trách kỹ thuật"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Quy chế hoạt động của tổ chức",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-021",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Phát biểu nào sau đây không đúng về giấy phép hoạt động đo đạc và bản đồ:",
+      "options": [
+        "Nội dung được cấp bổ sung trong giấy phép hoạt động đo đạc và bản đồ có thời hạn 5 năm kể từ ngày được cấp bổ sung",
+        "Nội dung được cấp bổ sung trong giấy phép hoạt động đo đạc và bản đồ có thời hạn như thời hạn ghi trêngiấy phép đã được cấp",
+        "Giấy phép hoạt động đo đạc và bản đồ không được gia hạn sau ngày giấy phép đã được cấp hết hạn",
+        "Giấy phép hoạt động đo đạc và bản đồ có thời hạn 5 năm và được gia hạn"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Nội dung được cấp bổ sung trong giấy phép hoạt động đo đạc và bản đồ có thời hạn 5 năm kể từ ngày được cấp bổ sung",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-022",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Nội dung nào sau đây không có trong Danh mục hành nghề hoạt động đo đạc và bản đồ:",
+      "options": [
+        "Kiểm tra chất lượng sản phẩm đo đạc và bản đồ",
+        "Thành lập bản đồ hành chính",
+        "Xây dựng cơ sở dữ liệu nền địa lý quốc gia",
+        "Đo đạc, thành lập bản đồ bằng phương pháp đo trực tiếp"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Thành lập bản đồ hành chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-023",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây không đúng:",
+      "options": [
+        "Chứng chỉ hành nghề đo đạc và bản đồ có thời hạn là 05 năm; mỗi lần gia hạn là 05 năm 6",
+        "Tất cả các cá nhân đề nghị cấp chứng chỉ hành nghề đo đạc và bản đồ đều phải tham dự sát hạch cấp chứng chỉ",
+        "Mỗi chứng chỉ hành nghề đo đạc và bản đồ cấp cho một hoặc một số nội dung hành nghề theo Danh mục hành nghề đo đạc và bản đồ",
+        "Thời gian tổ chức sát hạch, xét cấp chứng chỉ hành nghề đo đạc và bản đồ được thông báo trên Cổng thông tin điện tử của cơ quan có thẩm quyền cấp chứng chỉ trước 30 ngày tổ chức sát hạch, xét cấp chứng chỉ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Tất cả các cá nhân đề nghị cấp chứng chỉ hành nghề đo đạc và bản đồ đều phải tham dự sát hạch cấp chứng chỉ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-024",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Nội dung nào sau đây không phải là quy định về điều kiện cấp chứng chỉ hành nghề đo đạc và bản đồ:",
+      "options": [
+        "Việc sát hạch thực hiện theo hình thức thi trắc nghiệm trong thời gian 45 phút",
+        "Trường hợp cá nhân được miễn sát hạch một trong hai phần sát hạch thì kết quả sát hạch phần còn lại phải đạt 80% trở lên số điểm tối đa của phần sát hạch",
+        "Giấy chứng nhận hoàn thành lớp bồi dưỡng kiến thức về hoạt động đo đạc và bản đồ",
+        "Việc sát hạch kinh nghiệm nghề nghiệp thực hiện cho từng nội dung hành nghề theo Danh mục hành nghề đo đạc và bản đồ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Giấy chứng nhận hoàn thành lớp bồi dưỡng kiến thức về hoạt động đo đạc và bản đồ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-025",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chọn đáp án không đúng: Hồ sơ đề nghị cấp chứng chỉ hành nghề đo đạc và bản đồ gửi đến cơ quan cấp chứng chỉ bằng hình thức:",
+      "options": [
+        "Qua hệ thống dịch vụ công trực tuyến",
+        "Gửi 01 bộ hồ sơ giấy bằng hình thức trực tiếp",
+        "Gửi 01 bộ hồ sơ giấy kèm theo tệp tin chứa hồ sơ bằng hình thức trực tiếp",
+        "Gửi 01 bộ hồ sơ giấy kèm theo tệp tin chứa hồ sơ qua dịch vụ bưu chính"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Gửi 01 bộ hồ sơ giấy bằng hình thức trực tiếp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-026",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Cơ quan nào sau đây có thẩm quyền sát hạch, cấp, gia hạn, cấp lại, cấp đổi, thu hồi chứng chỉ hành nghề đo đạc và bản đồ hạng I",
+      "options": [
+        "Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+        "Cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh",
+        "Cơ quan chuyên môn thuộc các bộ, ngành có hoạt động đo đạc và bản đồ 7",
+        "Bất kỳ cơ quan nào nêu tại a, b và c"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-027",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Cơ quan nào sau đây có thẩm quyền sát hạch, cấp, gia hạn, cấp lại, cấp đổi, thu hồi chứng chỉ hành nghề đo đạc và bản đồ hạng II:",
+      "options": [
+        "Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+        "Cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh",
+        "Cơ quan chuyên môn thuộc các bộ, ngành có hoạt động đo đạc và bản đồ",
+        "Bất kỳ cơ quan nào nêu tại a, b và c"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-028",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Hồ sơ đề nghị cấp giấy phép hoạt động đo đạc và bản đồ của tổ chức nào sau đây thuộc trách nhiệm thẩm định của cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh:",
+      "options": [
+        "Tổ chức đề nghị cấp giấy phép thuộc các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ quyết định thành lập",
+        "Tổng công ty do Thủ tướng Chính phủ quyết định thành lập",
+        "Doanh nhiệp tư nhân",
+        "Tổ chức thuộc tổ chức trực thuộc bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ có pháp nhân và hạch toán độc lập"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Doanh nhiệp tư nhân",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-029",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Cơ quan nào sau đây có trách nhiệm thẩm định hồ sơ đề nghị cấp giấy phép hoạt động đo đạc và bản đồ của các tổ chức thuộc các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ quyết định thành lập:",
+      "options": [
+        "Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+        "Cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh",
+        "Cơ quan chuyên môn về xây dựng thuộc Ủy ban nhân dân cấp tỉnh",
+        "Bộ chủ quản của tổ chức đề nghị cấp giấy phép"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-030",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Trong thời hạn bao nhiêu ngày làm việc, cơ quan tiếp nhận hồ sơ đề nghị cấp giấy phép hoạt động đo đạc và bản đồ phải kiểm tra hồ sơ?",
+      "options": [
+        "1 ngày",
+        "2 ngày",
+        "3 ngày 8",
+        "4 ngày"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 2 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-031",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Trong thời hạn bao nhiêu ngày trước khi giấy phép hoạt động đo đạc và bản đồ hết hạn, tổ chức có nhu cầu gia hạn giấy phép phải gửi hồ sơ đề nghị gia hạn Giấy phép đến cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ TNMT để làm thủ tục gia hạn giấy phép?",
+      "options": [
+        "30 ngày",
+        "40 ngày",
+        "50 ngày",
+        "60 ngày"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. 60 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-032",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chứng chỉ hành nghề đo đạc và bản đồ được cấp lại trong trường hợp nào sau đây:",
+      "options": [
+        "Chứng chỉ hành nghề đo đạc và bản đồ bị mất",
+        "Chứng chỉ hành nghề bị rách nát, hư hỏng không thể sử dụng được",
+        "Khi cá nhân có yêu cầu thay đổi thông tin trong chứng chỉ",
+        "Bất kỳ trường hợp nào nêu tại a, b và c"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Chứng chỉ hành nghề đo đạc và bản đồ bị mất",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-033",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chứng chỉ hành nghề đo đạc và bản đồ được cấp đổi trong các trường hợp nào sau đây:",
+      "options": [
+        "Chứng chỉ hành nghề bị rách nát, hư hỏng không thể sử dụng được hoặc khi cá nhân có yêu cầu thay đổi thông tin trong chứng chỉ",
+        "Chứng chỉ hành nghề đo đạc và bản đồ bị mất",
+        "Khi cá nhân đề nghị cấp bổ sung danh mục hành nghề",
+        "Khi cơ quan cấp chứng chỉ thay đổi tên"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Chứng chỉ hành nghề bị rách nát, hư hỏng không thể sử dụng được hoặc khi cá nhân có yêu cầu thay đổi thông tin trong chứng chỉ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-034",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Trách nhiệm hướng dẫn thể hiện đường biên giới quốc gia, chủ quyền lãnh thổ trên sản phẩm đo đạc và bản đồ, xuất bản phẩm bản đồ thuộc cơ quan nào sau đây:",
+      "options": [
+        "Bộ Ngoại giao",
+        "Bộ Quốc phòng",
+        "Bộ Tài nguyên và Môi trường",
+        "Bộ Nội vụ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-035",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Trách nhiệm công bố bộ bản đồ chuẩn biên giới quốc gia thuộc về:",
+      "options": [
+        "Bộ trưởng Bộ Ngoại giao",
+        "Thủ tướng Chính phủ",
+        "Bộ trưởng Bộ Tài nguyên và Môi trường 9",
+        "Bộ trưởng Bộ Quốc phòng"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Thủ tướng Chính phủ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-036",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Ủy ban nhân dân cấp tỉnh có trách nhiệm tổ chức thực hiện nội dung nào sau đây:",
+      "options": [
+        "Đo đạc, chỉnh lý, bổ sung bản đồ địa giới hành chính theo Nghị quyết của Quốc hội, Ủy ban Thường vụ Quốc hội về thành lập, giải thể, nhập, chia, điều chỉnh địa giới đơn vị hành chính; đo đạc, điều chỉnh địa giới đơn vị hành chính cấp tỉnh do tác động của tự nhiên và quá trình phát triển kinh tế - xã hội",
+        "Xây dựng, cập nhật cơ sở dữ liệu đo đạc và bản đồ về địa giới hành chính",
+        "Đo đạc phục vụ giải quyết tranh chấp liên quan đến địa giới đơn vị hành chính cấp huyện, cấp xã",
+        "Đo đạc phục vụ giải quyết tranh chấp liên quan đến địa giới đơn vị hành chính cấp tỉnh"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Đo đạc phục vụ giải quyết tranh chấp liên quan đến địa giới đơn vị hành chính cấp huyện, cấp xã",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-037",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Bản đồ chuẩn biên giới quốc gia không thành lập cho tỷ lệ bản đồ nào sau đây:",
+      "options": [
+        "1:1.000.000",
+        "1:1.500.000",
+        "1:2.500.000",
+        "1:3.500.000"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 1:1.500.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-038",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Xuất bản phẩm bản đồ thể hiện toàn bộ hoặc một phần các tỉnh, thành phố nào sau đây không quy định phải có bản đồ phụ thể hiện các đảo, quần đảo trực thuộc:",
+      "options": [
+        "Thành phố Đà Nẵng",
+        "Tỉnh Bà Rịa - Vũng Tàu",
+        "Tỉnh Quảng Ninh",
+        "Tỉnh Khánh Hòa"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Tỉnh Quảng Ninh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-039",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây là đúng:",
+      "options": [
+        "Đo đạc, thành lập bản đồ địa chính; thành lập bản đồ hành chính thuộc nội dung hoạt động đo đạc và bản đồ chuyên ngành",
+        "Đo đạc, thành lập bản đồ địa chính; đo đạc và bản đồ về địa giới hành chính thuộc hoạt động đo đạc và bản đồ chuyên ngành",
+        "Thành lập bản đồ hành chính; chuẩn hóa địa danh thuộc hoạt động đo đạc và bản đồ chuyên ngành",
+        "Đo đạc và bản đồ về biên giới quốc gia thuộc hoạt động đo đạc và bản đồ chuyên ngành 10"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Đo đạc, thành lập bản đồ địa chính; thành lập bản đồ hành chính thuộc nội dung hoạt động đo đạc và bản đồ chuyên ngành",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-040",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây là đúng:",
+      "options": [
+        "Đo đạc và bản đồ về biên giới quốc gia; chuẩn hóa địa danh thuộc nội dung hoạt động đo đạc và bản đồ cơ bản",
+        "Thành lập bản đồ hành chính thuộc hoạt động đo đạc và bản đồ cơ bản",
+        "Chuẩn hóa địa danh; đo đạc và bản đồ quốc phòng thuộc hoạt động đo đạc và bản đồ cơ bản",
+        "Đo đạc, thành lập bản đồ địa chính thuộc hoạt động đo đạc và bản đồ cơ bản"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Đo đạc và bản đồ về biên giới quốc gia; chuẩn hóa địa danh thuộc nội dung hoạt động đo đạc và bản đồ cơ bản",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-041",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Trong thời hạn bao nhiêu ngày kể từ ngày hoàn thành xây dựng công trình ngầm, chủ đầu tư phải nộp một bộ bản đồ số hiện trạng công trình ngầm cho UBND cấp tỉnh",
+      "options": [
+        "20 ngày",
+        "25 ngày",
+        "30 ngày",
+        "40 ngày"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 30 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-042",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Trách nhiệm ban hành quy chuẩn kỹ thuật quốc gia về đo đạc và bản đồ cơ bản thuộc cơ quan nào sau đây:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Các bộ, ngành có liên quan đến hoạt động đo đạc và bản đồ",
+        "Bộ Khoa học và Công nghệ",
+        "Bao gồm tất cả các cơ quan nêu tại a, b và c"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-043",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Trách nhiệm ban hành định mức kinh tế - kỹ thuật về đo đạc và bản đồ cơ bản thuộc cơ quan nào sau đây:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Các bộ, ngành có liên quan đến hoạt động đo đạc và bản đồ",
+        "Bộ Tài chính",
+        "Bao gồm tất cả các cơ quan nêu tại a, b và c"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-044",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Theo quy định của Chính phủ, sau thời gian bao lâu kể từ khi Luật Luật Đo đạc và bản đồ có hiệu lực thì phải hoàn thành Hệ thống số liệu các mạng lưới đo đạc quốc gia?",
+      "options": [
+        "2 năm",
+        "3 năm",
+        "4 năm",
+        "Không quy định"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 3 năm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-045",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Công trình hạ tầng đo đạc xây dựng bằng ngân sách nhà nước phải thực hiện theo quy định nào sau đây:",
+      "options": [
+        "Theo đề án, dự án, nhiệm vụ được cơ quan nhà nước có thẩm quyền phê duyệt; đảm bảo quy định của Luật Đo đạc và bản đồ",
+        "Pháp luật về đầu tư công và pháp luật có liên quan",
+        "Luật Ngân sách nhà nước 2015",
+        "Tất cả các quy định nêu tại a và b"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các quy định nêu tại a và b",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-046",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Theo quy định, công trình hạ tầng đo đạc nào sau đây không phải xây dựng quy trình vận hành:",
+      "options": [
+        "Trạm định vị vệ tinh quốc gia",
+        "Trạm thu dữ liệu viễn thám quốc gia",
+        "Trạm định vị vệ tinh chuyên ngành",
+        "Điểm gốc đo đạc quốc gia"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Điểm gốc đo đạc quốc gia",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-047",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Việc vận hành, bảo trì trạm thu dữ liệu viễn thám quốc gia, trạm thu dữ liệu viễn thám chuyên ngành được quy định tại văn bản nào sau đây:",
+      "options": [
+        "Luật Đo đạc và bản đồ",
+        "Nghị định quy định chi tiết một số điều của Luật Đo đạc và bản đồ",
+        "Nghị định về hoạt động viễn thám",
+        "Thông tư của Bộ Tài nguyên và Môi trường"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Nghị định về hoạt động viễn thám",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-048",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Chọn câu trả lời đúng: pháp luật về đo đạc và bản đồ quy định về quyền sở hữu trí tuệ đối với thông tin, dữ liệu, sản phẩm đo đạc và bản đồ như thế nào?",
+      "options": [
+        "Thông tin, dữ liệu, sản phẩm đo đạc và bản đồ được thực hiện bằng ngân sách nhà nước thuộc sở hữu toàn dân do Nhà nước đại diện chủ sở hữu.",
+        "Thông tin, dữ liệu, sản phẩm đo đạc và bản đồ được thực hiện bằng ngân sách nhà nước do cơ quan đầu tư là chủ sở hữu.",
+        "Thông tin, dữ liệu, sản phẩm đo đạc và bản đồ được thực hiện bằng ngân sách nhà nước thuộc sở hữu của đơn vị tổ chức thực hiện.",
+        "Không quy định 12"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Thông tin, dữ liệu, sản phẩm đo đạc và bản đồ được thực hiện bằng ngân sách nhà nước thuộc sở hữu toàn dân do Nhà nước đại diện chủ sở hữu.",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-049",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Theo quy định của pháp luật về đo đạc và bản đồ, trong thời hạn bao nhiêu ngày kể từ ngày nhận được kinh phí, cơ quan chuyên môn về tài nguyên và môi trường thuộc Ủy ban nhân dân cấp tỉnh phải tổ chức thực hiện việc di dời mốc đo đạc?",
+      "options": [
+        "7 ngày",
+        "10 ngày",
+        "15 ngày",
+        "20 ngày"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 10 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-050",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Cơ quan nào sau đây không có thẩm quyền quyết định việc phá dỡ công trình hạ tầng đo đạc do hết hạn sử dụng, không còn giá trị sử dụng hoặc đã có công trình hạ tầng đo đạc khác thay thế:",
+      "options": [
+        "Bộ trưởng Bộ Tài nguyên và Môi trường",
+        "Thủ trưởng cơ quan thuộc Chính phủ",
+        "Chủ tịch Ủy ban nhân dân cấp tỉnh",
+        "Chủ tịch Ủy ban nhân dân cấp huyện"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Chủ tịch Ủy ban nhân dân cấp huyện",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-051",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Trong thời hạn bao nhiêu ngày kể từ ngày được nghiệm thu cấp chủ đầu tư thì thông tin, dữ liệu, sản phẩm đo đạc và bản đồ thực hiện bằng ngân sách nhà nước phải giao nộp để lưu trữ?",
+      "options": [
+        "10 ngày",
+        "20 ngày",
+        "30 ngày",
+        "40 ngày"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 30 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-052",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Cơ quan nào sau đây có thẩm quyền quy định về miễn, giảm phí khai thác, sử dụng thông tin, dữ liệu đo đạc và bản đồ phục vụ mục đích quốc phòng, an ninh, phòng, chống thiên tai:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Bộ Tài chính",
+        "Bộ Quốc phòng",
+        "Ủy ban nhân dân cấp tỉnh"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bộ Tài chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-053",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Dữ liệu đo đạc và bản đồ nào sau đây không được cung cấp rộng rãi:",
+      "options": [
+        "Dữ liệu về địa giới hành chính",
+        "Dữ liệu về địa hình",
+        "Dữ liệu về giao thông",
+        "Dữ liệu về thủy văn"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Dữ liệu về địa hình",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-054",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Theo quy định của pháp luật về đo đạc và bản đồ, dữ liệu nào sau đây không thuộc dữ liệu khung của hạ tầng dữ liệu không gian địa lý quốc gia:",
+      "options": [
+        "Dữ liệu bản đồ chuẩn biên giới quốc gia",
+        "Dữ liệu bản đồ địa giới hành chính",
+        "Dữ liệu địa danh",
+        "Dữ liệu địa chính"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Dữ liệu địa chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-055",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Theo quy định của pháp luật về đo đạc và bản đồ, dữ liệu nào sau đây không thuộc dữ liệu khung của hạ tầng dữ liệu không gian địa lý quốc gia:",
+      "options": [
+        "Dữ liệu về hệ thống các điểm gốc đo đạc quốc gia",
+        "Dữ liệu nền địa lý quốc gia",
+        "Dữ liệu ảnh hàng không",
+        "Không bắt buộc"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Không bắt buộc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-056",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Việc đo đạc, thành lập bản đồ địa chính, xây dựng, cập nhật cơ sở dữ liệu địa chính được thực hiện theo pháp luật nào sau đây:",
+      "options": [
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về đất đai",
+        "Pháp luật về xây dựng",
+        "Cả 3 phương án đều đúng"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Pháp luật về đất đai",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-057",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Việc đo đạc, thành lập hải đồ được thực hiện theo quy định của luật nào sau đây:",
+      "options": [
+        "Luật Biển Việt Nam",
+        "Bộ Luật Hàng hải",
+        "Luật Tài nguyên, Môi trường biển và hải đảo",
+        "Luật Đo đạc và bản đồ"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Luật Đo đạc và bản đồ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-058",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Việc chuẩn hóa địa danh thực hiện theo quy định của luật nào sau đây:",
+      "options": [
+        "Luật Đo đạc và bản đồ",
+        "Luật Ngôn ngữ",
+        "Luật Tổ chức chính quyền địa phương 14",
+        "Luật Xuất bản"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Luật Đo đạc và bản đồ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-059",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Cơ quan, tổ chức nào sau đây có trách nhiệm ban hành Danh mục phương tiện đo được sử dụng trong hoạt động đo đạc và bản đồ phải được kiểm định:",
+      "options": [
+        "Bộ Tài nguyên và Môi trường",
+        "Bộ Khoa học và Công nghệ",
+        "Các cơ quan sử dụng phương tiện đo",
+        "Tổ chức cung cấp phương tiện đo"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bộ Khoa học và Công nghệ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-060",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Đường biên giới quốc gia được thể hiện trên các xuất bản phẩm bản đồ được sử dụng từ nguồn tài liệu nào sau đây:",
+      "options": [
+        "Từ bản đồ địa hình",
+        "Từ bản đồ hành chính Việt Nam",
+        "Từ bộ bản đồ chuẩn biên giới quốc gia",
+        "Do Bộ Ngoại giao cung cấp"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Từ bộ bản đồ chuẩn biên giới quốc gia",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-061",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Việc quản lý tàu bay sử dụng trong thu nhận dữ liệu ảnh hàng không được quy định của pháp luật nào sau đây:",
+      "options": [
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về hàng không dân dụng",
+        "Pháp luật về quốc phòng",
+        "Pháp luật về an ninh quốc gia"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Pháp luật về hàng không dân dụng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-062",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Cơ sở dữ liệu nền địa lý quốc gia và bản đồ địa hình quốc gia trên đất liền tỷ lệ 1:2.000 và 1:5.000 được thành lập cho khu vực nào sau đây:",
+      "options": [
+        "Đô thị, khu vực phát triển đô thị",
+        "Khu chức năng đặc thù",
+        "Khu vực cần lập quy hoạch phân khu và quy hoạch nông thôn.",
+        "Tất cả các khu vực nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các khu vực nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-063",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Cơ sở dữ liệu nền địa lý quốc gia, bản đồ địa hình quốc gia, bản đồ địa hình đáy biển tỷ lệ lớn không lập cho khu vực nào sau đây:",
+      "options": [
+        "Khu vực đảo, quần đảo",
+        "Cửa sông",
+        "Cảng biển",
+        "Thềm lục địa"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Thềm lục địa",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-064",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Việc áp dụng tiêu chuẩn, quy chuẩn kỹ thuật, quy định kỹ thuật trong hoạt động đo đạc và bản đồ phải tuân thủ theo các văn bản nào sau đây:",
+      "options": [
+        "Quy chuẩn kỹ thuật quốc gia",
+        "Tiêu chuẩn được viện dẫn trong quy chuẩn kỹ thuật hoặc văn bản quy phạm pháp luật khác có liên quan",
+        "Quy định kỹ thuật",
+        "Tất cả các quy định nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các quy định nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-065",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Việc quản lý chất lượng sản phẩm đo đạc và bản đồ được thực hiện theo quy định của pháp luật nào sau đây:",
+      "options": [
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về chất lượng sản phẩm, hàng hóa",
+        "Pháp luật về đo đạc và bản đồ; pháp luật về chất lượng sản phẩm, hàng hóa",
+        "Pháp luật về đo lường"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Pháp luật về đo đạc và bản đồ; pháp luật về chất lượng sản phẩm, hàng hóa",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-066",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phương tiện đo được sử dụng trong hoạt động đo đạc và bản đồ phải được kiểm định, hiệu chuẩn, thử nghiệm theo quy định nào sau đây:",
+      "options": [
+        "Pháp luật về đo lường",
+        "Tiêu chuẩn, quy chuẩn kỹ thuật quốc gia, quy định kỹ thuật về đo đạc và bản đồ",
+        "Tài liệu chính thức của nhà sản xuất phương tiện đo",
+        "Tất cả các quy định nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các quy định nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-067",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Phát biểu nào sau đây là không chính xác về điều kiện của tổ chức đề nghị cấp giấy phép hoạt động đo đạc và bản đồ:",
+      "options": [
+        "Là doanh nghiệp hoặc đơn vị sự nghiệp có chức năng, nhiệm vụ hoạt động đo đạc và bản đồ",
+        "Có số lượng nhân viên kỹ thuật được đào tạo về đo đạc và bản đồ đáp ứng yêu cầu thực hiện các nội dung đề nghị cấp giấy phép theo quy định của Chính phủ",
+        "Người phụ trách kỹ thuật về đo đạc và bản đồ của tổ chức phải có trình độ từ đại học trở lên phải có chứng chỉ hành nghề đo đạc và bản đồ hạng I",
+        "Có phương tiện, thiết bị, công nghệ đo đạc và bản đồ phù hợp với quy định trong định mức kinh tế - kỹ thuật đo đạc và bản đồ để thực hiện một sản phẩm đo đạc và bản đồ thuộc nội dung đề nghị cấp giấy phép 16"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Người phụ trách kỹ thuật về đo đạc và bản đồ của tổ chức phải có trình độ từ đại học trở lên phải có chứng chỉ hành nghề đo đạc và bản đồ hạng I",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-068",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Tổ chức được cấp giấy phép hoạt động đo đạc và bản đồ có thể đề nghị thay đổi các nội dung nào ghi trên giấy phép:",
+      "options": [
+        "Địa chỉ trụ sở chính, số điện thoại của doanh nghiệp",
+        "Tên doanh nghiệp",
+        "Mã số doanh nghiệp",
+        "Nội dung hoạt động đo đạc và bản đồ"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Địa chỉ trụ sở chính, số điện thoại của doanh nghiệp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-069",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chọn câu trả lời không chính xác về quy định đối với chứng chỉ hành nghề đo đạc và bản đồ",
+      "options": [
+        "Mỗi chứng chỉ hành nghề đo đạc và bản đồ cấp cho một hoặc một số nội dung hành nghề theo Danh mục hành nghề đo đạc và bản đồ",
+        "Công dân Việt Nam hành nghề đo đạc và bản đồ độc lập phải có chứng chỉ hành nghề phù hợp với công việc thực hiện",
+        "Chứng chỉ có thời hạn ít nhất là 05 năm và được gia hạn",
+        "Chứng chỉ hành nghề đo đạc và bản đồ có giá trị trong phạm vi tỉnh, thành phố trực thuộc Trung ương mà cá nhân đăng ký hộ khẩu thường trú"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Chứng chỉ hành nghề đo đạc và bản đồ có giá trị trong phạm vi tỉnh, thành phố trực thuộc Trung ương mà cá nhân đăng ký hộ khẩu thường trú",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-070",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Tổ chức, cá nhân tham gia đầu tư xây dựng và vận hành trạm thu dữ liệu dữ liệu viễn thám, trạm điều khiển vệ tinh viễn thám theo quy định của pháp luật nào sau đây:",
+      "options": [
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về đầu tư",
+        "Pháp luật về khoa học và công nghệ",
+        "Pháp luật về tài chính"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Pháp luật về đầu tư",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-071",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây là đúng:",
+      "options": [
+        "Tổ chức, cá nhân khai thác, sử dụng dữ liệu ảnh viễn thám thuộc sở hữu Nhà nước phải trả phí theo quy định của pháp luật về tài chính",
+        "Việc cung cấp thông tin, dữ liệu ảnh viễn thám, sản phẩm viễn thám theo quy định của pháp luật về hàng hóa",
+        "Tổ chức, cá nhân khai thác, sử dụng dữ liệu ảnh viễn thám thuộc sở hữu Nhà nước phải trả phí theo quy định của pháp luật về phí, lệ phí",
+        "Tổ chức, cá nhân khai thác, sử dụng dữ liệu ảnh viễn thám phải trả phí theo quy định của pháp luật về phí, lệ phí"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Tổ chức, cá nhân khai thác, sử dụng dữ liệu ảnh viễn thám thuộc sở hữu Nhà nước phải trả phí theo quy định của pháp luật về phí, lệ phí",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-072",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Theo quy định của pháp luật hiện hành, quản lý chất lượng sản phẩm viễn thám theo quy định của pháp luật nào sau đây: 17",
+      "options": [
+        "Pháp luật về đo lường",
+        "Pháp luật về chất lượng sản phẩm, hàng hóa",
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về thương mại hàng hóa và dịch vụ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Pháp luật về chất lượng sản phẩm, hàng hóa",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-073",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây là đầy đủ và chính xác:",
+      "options": [
+        "Cá nhân có hành vi vi phạm pháp luật về đo đạc và bản đồ chỉ xử lý bằng hình thức xử phạt vi phạm hành chính",
+        "Cá nhân có hành vi vi phạm pháp luật về đo đạc và bản đồ chỉ xử lý bằng hình thức xử phạt vi phạm hành chính hoặc xử lý kỷ luật",
+        "Cá nhân làm việc trong các doanh nghiệp nhà nước nếu có hành vi vi phạm pháp luật về đo đạc và bản đồ chỉ bị xử lý kỷ luật",
+        "Cá nhân có hành vi vi phạm pháp luật về đo đạc và bản đồ thì tùy theo tính chất, mức độ vi phạm mà bị xử phạt hành chính hoặc xử lý kỷ luật, bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường theo quy định của pháp luật."
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Cá nhân có hành vi vi phạm pháp luật về đo đạc và bản đồ thì tùy theo tính chất, mức độ vi phạm mà bị xử phạt hành chính hoặc xử lý kỷ luật, bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phải bồi thường theo quy định của pháp luật.",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-074",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Khi lập kế hoạch xây dựng công trình hạ tầng thu nhận dữ liệu ảnh viễn thám, chủ đầu tư không phải xin ý kiến của cơ quan nào sau đây về vị trí đặt trạm, tần số sử dụng của trạm thu dữ liệu viễn thám:",
+      "options": [
+        "Bộ Công an",
+        "Bộ Quốc phòng",
+        "Bộ Khoa học và Công nghệ",
+        "Bộ Thông tin và Truyền thông"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Bộ Khoa học và Công nghệ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-075",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Quy định hành lang bảo vệ công trình hạ tầng thu nhận dữ liệu ảnh viễn thám có bán kính là bao nhiêu mét tính từ tâm angten?",
+      "options": [
+        "50 m",
+        "100 m",
+        "150 m",
+        "200 m"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 150 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-076",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Phát biểu nào sau đây là không chính xác:",
+      "options": [
+        "Dữ liệu ảnh viễn thám là thông tin, hình ảnh đối tượng địa lý được thu nhận từ vệ tinh viễn thám",
+        "Vệ tinh viễn thám là vệ tinh nhân tạo được trang bị các bộ cảm viễn thám nhằm thu thập thông tin về các đối tượng địa lý",
+        "Siêu dữ liệu viễn thám quốc gia được công bố định kỳ 6 tháng/lần",
+        "Dữ liệu ảnh viễn thám có độ phân giải cao được cập nhật hàng năm"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Siêu dữ liệu viễn thám quốc gia được công bố định kỳ 6 tháng/lần",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-077",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Hệ thống thu nhận dữ liệu ảnh viễn thám không bao gồm thành phần nào sau đây:",
+      "options": [
+        "Vệ tinh viễn thám",
+        "Công trình hạ tầng thu nhận dữ liệu ảnh viễn thám",
+        "Hệ thống lưu trữ, xử lý ảnh viễn thám",
+        "Dữ liệu ảnh viễn thám"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Dữ liệu ảnh viễn thám",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-078",
+      "section": "phap-luat",
+      "topic": "csdl-ban-do",
+      "prompt": "Trường hợp các khu vực chưa có bản đồ chuẩn biên giới quốc gia, đường biên giới được thể hiện như thế nào?",
+      "options": [
+        "Bản đồ biên giới do Bộ Tài nguyên và Môi trường cung cấp",
+        "Bản đồ biên giới do Bộ Ngoại giao cung cấp",
+        "Bản đồ địa hình quốc gia",
+        "Bản đồ hành chính"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bản đồ biên giới do Bộ Tài nguyên và Môi trường cung cấp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-079",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Đề thi sát hạch cấp chứng chỉ hành nghề đo đạc và bản đồ hạng II do cơ quan nào xây dựng?",
+      "options": [
+        "Cơ quan có thẩm quyền cấp chứng chỉ hành nghề đo đạc và bản đồ",
+        "Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+        "Hội đồng xét cấp chứng chỉ hành nghề",
+        "Cơ sở đào tạo, bồi dưỡng kiến thức về đo đạc và bản đồ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Cơ quan quản lý chuyên ngành về đo đạc và bản đồ thuộc Bộ Tài nguyên và Môi trường",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-pl-080",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Trong thời hạn bao nhiêu ngày trước khi chứng chỉ hành nghề đo đạc và bản đồ hết hạn, cá nhân phải làm thủ tục đề nghị gia hạn chứng chỉ hành nghề?",
+      "options": [
+        "15 ngày",
+        "30 ngày",
+        "45 ngày",
+        "60 ngày 19"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 30 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-001",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Quy chuẩn kỹ thuật quốc gia nào dưới đây được áp dụng khi thiết kế lưới độ cao quốc gia",
+      "options": [
+        "QCVN 37: 2011/BTNMT",
+        "QCVN 42: 2012/BTNMT",
+        "QCVN 04 : 2009/BTNMT",
+        "QCVN 11 : 2008/BTNMT"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. QCVN 11 : 2008/BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-002",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Tiêu chuẩn hoặc quy chuẩn kỹ thuật quốc gia nào dưới đây được áp dụng khi thiết kế các nhiệm vụ quan trắc lún công trình xây dựng",
+      "options": [
+        "TCVN 9360:2012",
+        "QCVN 11 : 2008/BTNMT",
+        "QCVN 17:2018/BXD",
+        "TCXDVN 271:2002"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. TCVN 9360:2012",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-003",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi thiết kế nhiệm vụ cập nhập CSDL nền địa lý quốc gia tỷ lệ 1:50.000",
+      "options": [
+        "Thông tư số 55/2014/TT-BTNMT",
+        "Thông tư số 20/2014/TT-BTNMT",
+        "Thông tư số 21/2014/TT-BTNMT",
+        "Thông tư số 69/2015/TT-BTNMT"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Thông tư số 20/2014/TT-BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-004",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi thiết kế nhiệm vụ xây dựng mô hình số độ cao bằng công nghệ bay quét LiDAR",
+      "options": [
+        "Thông tư số 39/2014/TT-BTNMT",
+        "Thông tư số 68/2015/TT-BTNMT",
+        "Thông tư số 69/2015/TT-BTNMT",
+        "Thông tư số 63/2015/TT-BTNMT"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Thông tư số 39/2014/TT-BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-005",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi kiểm tra, thẩm dịnh, nghiệm thu sản phẩm đo đạc và bản đồ",
+      "options": [
+        "Thông tư số 17/2018/TT-BTNMT",
+        "Thông tư số 63/2015/TT-BTNMT",
+        "Thông tư số 24/2018/TT-BTNMT",
+        "Thông tư số 04/2019/TT-BTNMT"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Thông tư số 24/2018/TT-BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-006",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi lập dự toán các nhiệm 20 vụ đo đạc và bản đồ cơ bản:",
+      "options": [
+        "Thông tư số 209/2016/TT-BTC",
+        "Thông tư 34/2017/TT-BTNMT",
+        "Thông tư 37/2011/TT-BTNMT",
+        "Thông tư số 136/2017/TT-BTC"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Thông tư số 136/2017/TT-BTC",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-007",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Quy chuẩn kỹ thuật quốc gia nào dưới đây được áp dụng khi thiết kế lưới tọa độ quốc gia",
+      "options": [
+        "QCVN 04 : 2009/BTNMT",
+        "QCVN 11 : 2008/BTNMT",
+        "QCVN 37: 2011/BTNMT",
+        "QCVN 42: 2012/BTNMT"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. QCVN 04 : 2009/BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-008",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi thiết kế lưới trọng lực quốc gia",
+      "options": [
+        "Thông tư số 06/2009/TT-BTNMT",
+        "Thông tư số 01/2009/TT-BTNMT",
+        "Thông tư số 973/2001/TT-TCĐC",
+        "Thông tư số 63/2015/TT-BTNMT"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Thông tư số 01/2009/TT-BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-009",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Thông tư nào dưới đây được áp dụng khi thiết kế nhiệm vụ thành lập bản đồ địa hình quốc gia tỷ lệ 1/2000 bằng phương pháp đo đạc trực tiếp",
+      "options": [
+        "Thông tư số 06/2009/TT-BTNMT",
+        "Thông tư số 02/2007/TT-BTNMT",
+        "Thông tư số 63/2015/TT-BTNMT",
+        "Thông tư số 68/2015/TT-BTNMT"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Thông tư số 68/2015/TT-BTNMT",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-010",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi thiết kế nhiệm vụ đo đạc và bản đồ, việc áp dụng quy chuẩn kỹ thuật quốc gia có liên quan là:",
+      "options": [
+        "Bắt buộc",
+        "Tự nguyện",
+        "Khuyến khích",
+        "Không quy định"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bắt buộc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-011",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là đúng nhất về việc áp dụng tiêu chuẩn khi thiết kế nhiệm vụ đo đạc và bản đồ: 21",
+      "options": [
+        "Bắt buộc đối với tiêu chuản được viện dẫn trong quy chuẩn kỹ thuật quốc gia",
+        "Tự nguyện",
+        "Khuyến khích",
+        "Bắt buộc"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bắt buộc đối với tiêu chuản được viện dẫn trong quy chuẩn kỹ thuật quốc gia",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-012",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Kiểu đối tượng hình học nào dưới đây là kiểu đối tượng hình học mô tả đường cong:",
+      "options": [
+        "GM_Polygon",
+        "GM_Curve",
+        "GM_LineString",
+        "GM_Surface"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. GM_Curve",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-013",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Hệ tọa độ nào dưới đây không được áp dụng trong hệ thống thông tin địa lý:",
+      "options": [
+        "Hệ toạ độ vuông góc (Đê-các-tơ)",
+        "Hệ toạ độ mặt Elipxôit",
+        "Hệ toạ độ cầu",
+        "Hệ tọa độ thiên hà"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Hệ tọa độ thiên hà",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-014",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Việc chuyển toạ độ từ Hệ VN-2000 sang Hệ WGS-84 quốc tế sử dụng bao nhiêu tham số?",
+      "options": [
+        "3 tham số (∆X0, ∆Y0, ∆Z0)",
+        "7 tham số (∆X0, ∆Y0, ∆Z0, ω0, ψ0, ε0, k)",
+        "8 tham số (∆X0, ∆Y0, ∆Z0, ω0, ψ0, ε0, k, L0)",
+        "4 tham số (∆X0, ∆Y0, ∆Z0, k)"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 7 tham số (∆X0, ∆Y0, ∆Z0, ω0, ψ0, ε0, k)",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-015",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "tham số (∆X0, ∆Y0, ∆Z0, k) 4 Phát biểu nào sau đây là đúng khi phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình:",
+      "options": [
+        "Phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình gồm có các loại chính: Lưới chiếu phương vị, lưới chiếu hình nón, lưới chiếu hình ống",
+        "Phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình gồm có các loại chính: Lưới chiếu đồng góc, lưới chiếu đồng diện tích, lưới chiếu đồng khoảng cách",
+        "Phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình gồm có các loại chính: Lưới chiếu đứng, lưới chiếu ngang, lưới chiếu nghiêng 22",
+        "Phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình gồm có các loại chính: Lưới chiếu hình nón, lưới chiếu UTM, lưới chiếu Gauss- Kruger"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Phân loại lưới chiếu bản đồ theo dạng sai số chiếu hình gồm có các loại chính: Lưới chiếu đồng góc, lưới chiếu đồng diện tích, lưới chiếu đồng khoảng cách",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-016",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Kí hiệu nào sau đây được sử dụng để thể hiện trên bản đồ địa hình quốc gia khi đường mép nước ổn định và trùng với đường bờ",
+      "options": [
+        "Ký hiệu đường mép nước",
+        "Ký hiệu đường bờ",
+        "Cả ký hiệu đường mép nước, đường bờ",
+        "Không thể hiện"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Ký hiệu đường bờ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-017",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Góc lệch nam châm trên bản đồ địa hình quốc gia là:",
+      "options": [
+        "Là góc tạo bởi hướng Bắc thực và hướng Bắc nam châm",
+        "Là góc tạo bởi hướng Bắc thực và hướng Bắc lưới ô vuông",
+        "Là góc tạo bởi hướng Bắc từ và hướng Bắc lưới ô vuông",
+        "Là hiệu của góc tạo bởi hướng Bắc thực và hướng Bắc nam châm, góc tạo thành giữa hướng Bắc thực và hướng Bắc lưới ô vuông"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Là góc tạo bởi hướng Bắc thực và hướng Bắc nam châm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-018",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây không đúng:",
+      "options": [
+        "Bản đồ địa hình quốc gia thành lập trong Hệ quy chiếu và Hệ toạ độ quốc gia VN-2000",
+        "Bản đồ địa hình quốc gia thành lập trong Hệ VN-2000",
+        "Bản đồ địa chính thành lập trong Hệ VN-2000",
+        "Bản đồ địa hình quốc gia thành lập trong Hệ tọa độ và Hệ độ cao quốc gia VN-2000"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bản đồ địa hình quốc gia thành lập trong Hệ tọa độ và Hệ độ cao quốc gia VN-2000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-019",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trường hợp nào sau đây phải lập sơ đồ thuyết minh khi thành lập hồ sơ địa giới hành chính:",
+      "options": [
+        "Khu vực đô thị, dân cư đông đúc",
+        "Khu vực không thể hiện được vị trí của đường ĐGHC trên bản đồ",
+        "Tỷ lệ bản đồ địa giới hành chính cấp xã không thể hiện được đường địa giới hành chính",
+        "Tất cả các trường hợp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các trường hợp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-020",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Đối với khu vực quang đãng, sai số trung phương sau bình sai của tọa độ, độ cao mốc địa giới hành chính cho phép là bao nhiêu?",
+      "options": [
+        "0,3 m đối với mặt phẳng và 0,5 m đối với độ cao",
+        "0,1 m đối với mặt phẳng và 0,3 m đối với độ cao 23",
+        "0,5 m đối với mặt phẳng và 0,7 m đối với độ cao",
+        "0,2 m đối với mặt phẳng và 0,5 m đối với độ cao"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 0,3 m đối với mặt phẳng và 0,5 m đối với độ cao",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-021",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Hệ thống bản đồ địa hình quốc gia tỉ lệ trung bình gồm những tỷ lệ nào sau đây:",
+      "options": [
+        "1:25.000, 1:50.000 và 1:100.000",
+        "1:10.000, 1:25.000 và 1:50.000",
+        "1:10.000, 1:25.000, 1:50.000 và 1:100.000",
+        "1:5.000, 1:10.000, 1:25.000 và 1:50.000"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 1:25.000, 1:50.000 và 1:100.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-022",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Việc chia mảnh bản đồ địa hình quốc gia được dựa trên yếu tố nào sau đây",
+      "options": [
+        "Kinh tuyến và vĩ tuyến",
+        "Lưới ki lô mét",
+        "Kinh tuyến, vĩ tuyến và lưới ki lô mét",
+        "Chia mảnh tùy theo khu vực"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Kinh tuyến và vĩ tuyến",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-023",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Lưới chiếu hình trụ ngang đồng góc với múi chiếu 6o, hệ số điều chỉnh tỷ lệ biến dạng chiều dài ko = 0,9996 áp dụng cho các loại bản đồ nào dưới đây",
+      "options": [
+        "Bản đồ địa hình quốc gia, bản đồ hành chính tỷ lệ từ 1:25.000 đến 1:500.000",
+        "Bản đồ địa hình quốc gia, bản đồ hành chính tỷ lệ từ 1:2.000 đến 1:10.000",
+        "Bản đồ địa hình quốc gia, bản đồ hành chính, bản đồ địa chính tỷ lệ từ 1:2.000 đến 1:10.000",
+        "Bản đồ địa hình quốc gia, bản đồ hành chính tỷ lệ từ 1:2.000 đến 1:1.000.000"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bản đồ địa hình quốc gia, bản đồ hành chính tỷ lệ từ 1:25.000 đến 1:500.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-024",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Phép chiếu UTM là gì?",
+      "options": [
+        "Phép chiếu hình trụ đứng đồng góc",
+        "Phép chiếu hình trụ ngang đồng góc",
+        "Phép chiếu hình trụ ngang đồng diện tích",
+        "Phép chiếu hình nón đứng đồng góc"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Phép chiếu hình trụ ngang đồng góc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-025",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Hệ quy chiếu và hệ tọa độ quốc gia VN-2000 sử dụng Elipxôit quy chiếu nào sau đây:",
+      "options": [
+        "Krasovski",
+        "Bessel",
+        "WGS-84",
+        "Everest"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. WGS-84",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-026",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Bản đồ địa hình tỷ lệ nào dưới đây áp dụng lưới chiếu hình nón đồng góc 2 vĩ tuyến chuẩn 11o và 21o",
+      "options": [
+        "1:100.000",
+        "1:250.000",
+        "1:500.000",
+        "1:1.000.000"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. 1:1.000.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-027",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Phát biểu nào dưới đây là đúng đối với phép chiếu hình nón đứng",
+      "options": [
+        "Kinh tuyến là những đường thẳng xuất phát từ một điểm, vĩ tuyến là những cung tròn đồng tâm tại điểm xuất phát của các kinh tuyến",
+        "Vĩ tuyến là những đường thẳng xuất phát từ một điểm, kinh tuyến là những cung tròn đồng tâm",
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là những đường thẳng song song vuông góc với các kinh tuyến",
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là những cung tròn quay về hai cực"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Kinh tuyến là những đường thẳng xuất phát từ một điểm, vĩ tuyến là những cung tròn đồng tâm tại điểm xuất phát của các kinh tuyến",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-028",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Phát biểu nào dưới đây là đúng đối với phép chiếu hình trụ ngang",
+      "options": [
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là những đường thẳng song song vuông góc với các kinh tuyến",
+        "Kinh tuyến là các đường cong, vĩ tuyến là các đường thẳng song song",
+        "Kinh tuyến là các đường cong xuất phát từ một điểm , vĩ tuyến là các cung tròn đồng tâm",
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là những cung tròn quay về hai cực"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Kinh tuyến là các đường cong xuất phát từ một điểm , vĩ tuyến là các cung tròn đồng tâm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-029",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Phát biểu nào dưới đây là đúng đối với phép chiếu hình trụ đứng",
+      "options": [
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là những cung tròn quay về hai cực",
+        "Vĩ tuyến là những đường thẳng xuất phát từ một điểm, kinh tuyến là những cung tròn đồng tâm",
+        "Kinh tuyến là những đường thẳng xuất phát từ một điểm, vĩ tuyến là những cung tròn đồng tâm tại điểm xuất phát của các kinh tuyến",
+        "Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Kinh tuyến là những đường thẳng song song cách đều, vĩ tuyến là",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-030",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Đường bình độ (đường đồng mức) thuộc phương pháp thể hiện bản đồ nào dưới đây:",
+      "options": [
+        "Phương pháp biểu đồ",
+        "Phương pháp đường chuyển động",
+        "Phương pháp đồ giải",
+        "Phương pháp đường đẳng trị"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Phương pháp đường đẳng trị",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-031",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Yếu tố nào dưới đây có ảnh hưởng đến tổng quát hóa bản đồ:",
+      "options": [
+        "Phương pháp thể hiện bản đồ",
+        "Mục đích sử dụng của bản đồ",
+        "Đặc điểm của đối tượng được tổng quát hóa",
+        "Tất cả các yếu tố nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các yếu tố nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-032",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Bản đồ địa hình tỷ lệ nào dưới đây không thuộc hệ thống bản đồ địa hình quốc gia:",
+      "options": [
+        "1: 200.000",
+        "1: 100.000",
+        "1: 50.000",
+        "1: 10.000"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 1: 200.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-033",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trên bản đồ địa hình quốc gia, điểm M có tọa độ (1 324 000, 48 357 000), phát biểu nào sau đây đúng về vị trí của điểm này:",
+      "options": [
+        "Điểm M nằm trong múi chiếu thứ 48, cách kinh tuyến giữa 105o một khoảng 143 km về phía bên phải và cách xích đạo 1324 km về phía Bắc.",
+        "Điểm M nằm trong múi chiếu thứ 48, cách kinh tuyến giữa 105o một khoảng 143 km về phía bên trái và cách xích đạo 1324 km về phía Bắc",
+        "Điểm M nằm trong múi chiếu thứ 48, cách kinh tuyến giữa 105o một khoảng 357 km về phía bên trái và cách xích đạo 1324 km về phía Bắc",
+        "Điểm M nằm trong múi chiếu thứ 48, cách kinh tuyến giữa 105o một khoảng 357 km về phía bên phải và cách xích đạo 1324 km về phía Bắc"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Điểm M nằm trong múi chiếu thứ 48, cách kinh tuyến giữa 105o một khoảng 143 km về phía bên trái và cách xích đạo 1324 km về phía Bắc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-034",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Phép chiếu UTM múi chiếu 6o không có đặc điểm nào dưới đây",
+      "options": [
+        "Hệ số điều chỉnh tỷ lệ biến dạng chiều dài k0>1 trên kinh tuyến trục",
+        "Hệ số điều chỉnh tỷ lệ biến dạng chiều dài k0 =1 trên 2 cát tuyến 26",
+        "Là phép chiếu đồng góc",
+        "Cát tuyến cách kinh tuyến trục khoảng 180 km"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Hệ số điều chỉnh tỷ lệ biến dạng chiều dài k0>1 trên kinh tuyến trục",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-035",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào dưới đây là đúng",
+      "options": [
+        "Hệ số biến dạng độ dài trên kinh tuyến trục của phép chiếu UTM lớn hơn của phép chiếu Gauss",
+        "Hệ số biến dạng độ dài trên kinh tuyến trục của phép chiếu UTM và Gauss bằng nhau",
+        "Hệ số biến dạng độ dài trên kinh tuyến trục của phép chiếu UTM nhỏ hơn của phép chiếu Gauss",
+        "Hệ số biến dạng độ dài trên kinh tuyến trục của phép chiếu UTM có thể lớn hơn, nhỏ hơn, hoặc bằng phép chiếu Gauss tùy thuộc vĩ độ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Hệ số biến dạng độ dài trên kinh tuyến trục của phép chiếu UTM nhỏ hơn của phép chiếu Gauss",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-036",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Bản đồ địa hình quốc gia tỷ lệ 1: 25 000 Hệ quy chiếu và Hệ tọa độ quốc gia VN-2000 khu vực có tọa độ giới hạn bởi 11o48’ đến 12o52’ vĩ độ Bắc, 108o40’ đến 109o28’ kinh độ Đông (tỉnh Khánh Hòa) thuộc múi nào",
+      "options": [
+        "Múi 49",
+        "Múi 48",
+        "Múi 50",
+        "Giữa múi 48 và múi 49"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Múi 49",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-037",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Mảnh bản đồ địa hình quốc gia F-48-8-B-d có tỷ lệ là bao nhiêu",
+      "options": [
+        "1: 25.000",
+        "1: 50.000",
+        "1: 100.000",
+        "1: 10.000"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 1: 25.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-038",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Một mảnh bản đồ địa hình quốc gia tỷ lệ 1:1.000.000 tương ứng bao nhiêu mảnh bản đồ địa hình quốc gia tỷ lệ 1:100.000",
+      "options": [
+        "64",
+        "81",
+        "96",
+        "100"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 96",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-039",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Một mảnh bản đồ địa hình quốc gia tỷ lệ 1:100.000 tương ứng với bao nhiêu mảnh bản đồ địa hình quốc gia tỷ lệ 1:10.000",
+      "options": [
+        "64",
+        "81",
+        "96 27",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 64",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-040",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Kích thước khung trong của mảnh địa hình quốc gia tỷ lệ 1: 50.000 là bao nhiêu",
+      "options": [
+        "7’30” x 7’30”",
+        "10' x 10'",
+        "15' x 15'",
+        "30' x 30'"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 15' x 15'",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-041",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Diện tích gần đúng của một mảnh bản đồ địa hình quốc gia tỷ lệ 1:10.000 là bao nhiêu",
+      "options": [
+        "45 km2",
+        "100 km2",
+        "36 km2",
+        "25 km2"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 45 km2",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-042",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào dưới đây là phù hợp",
+      "options": [
+        "Phương pháp đo ảnh loại bỏ được công tác ngoại nghiệp",
+        "Phương pháp đo ảnh hạn chế được công tác ngoại nghiệp",
+        "Phương pháp đo ảnh không xác định được vị trí của điểm trên thực địa",
+        "Phương pháp đo ảnh được thực hiện chủ yếu ở nội nghiệp"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Phương pháp đo ảnh hạn chế được công tác ngoại nghiệp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-043",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Thành phần nào dưới đây trong một lớp UML được sử dụng để biểu diễn một kiểu đối tượng địa lý",
+      "options": [
+        "Tên lớp",
+        "Các thuộc tính.",
+        "Các quan hệ.",
+        "Bao gồm tất cả các thành phần nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bao gồm tất cả các thành phần nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-044",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Thành phần nào dưới đây không phải là thuộc tính của một lớp UML",
+      "options": [
+        "Tên gói, tên lớp",
+        "Phạm vi",
+        "Kiểu dữ liệu",
+        "Số thể hiện"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Tên gói, tên lớp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-045",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Yếu tố cần được kiểm soát trong tăng dày ảnh hàng không kỹ thuật số có sử dụng hệ thống định vị GNSS/IMU là gì?",
+      "options": [
+        "Thông số định vị tâm chụp ảnh 28",
+        "Sai số xich ma trong định hướng tương đối cặp ảnh",
+        "Sai số đo tại các điểm khống chế ảnh ngoại nghiệp",
+        "Tất cả các yếu tố nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các yếu tố nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-046",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Viễn thám đo lường nguồn năng lượng mặt trời phản xạ hoặc phát xạ từ mặt đất được gọi là:",
+      "options": [
+        "Viễn thám chủ động",
+        "Viễn thám thụ động",
+        "Viễn thám",
+        "Viễn thám tự động"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Viễn thám thụ động",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-047",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Ảnh hồng ngoại nhiệt thuộc loại viễn thám nào sau đây:",
+      "options": [
+        "Viễn thám chủ động",
+        "Viễn thám thụ động",
+        "Viễn thám",
+        "Viễn thám tự động"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Viễn thám thụ động",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-048",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Ảnh Microwave thuộc loại viễn thám nào sau đây:",
+      "options": [
+        "Viễn thám chủ động",
+        "Viễn thám thụ động",
+        "Viễn thám",
+        "Viễn thám tự động"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Viễn thám chủ động",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-049",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trong ảnh vệ tinh quang học, để nhận biết một đối tượng người ta thường dựa vào độ phân giải nào sau đây:",
+      "options": [
+        "Độ phân giải không gian",
+        "Độ phân giải bức xạ",
+        "Độ phân giải phổ",
+        "Độ phân giải thời gian"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Độ phân giải không gian",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-050",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Độ phân giải ảnh nào sau đây liên quan đến khả năng chụp lặp của vệ tinh:",
+      "options": [
+        "Độ phân giải thời gian",
+        "Độ phân giải phổ",
+        "Độ phân giải bức xạ",
+        "Độ phân giải không gian"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Độ phân giải thời gian",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-051",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Ảnh VNREDSAT đa phổ có độ phân giải không gian là:",
+      "options": [
+        "2,5 m",
+        "10 m",
+        "20 m",
+        "30 m"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 10 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-052",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Ảnh LANDSAT 8 có độ phân giải bức xạ là:",
+      "options": [
+        "15/30/100 m",
+        "16 ngày",
+        "12 bits",
+        "11 kênh phổ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 12 bits",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-053",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Ảnh Quickbird có độ phân giải 0,61 m, ảnh Ikonos có độ phân giải 1 m; phát biểu nào sau đây đúng:",
+      "options": [
+        "Ảnh quickbird có độ phân giải không gian cao hơn",
+        "Ảnh Ikonos có độ phân giải không gian cao hơn",
+        "2 ảnh có độ phân giải không gian như nhau",
+        "Ảnh quickbird có độ phân giải phổ cao hơn"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Ảnh quickbird có độ phân giải không gian cao hơn",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-054",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Vệ tinh Meteosat có thời gian chụp lặp lại là 15 phút, vệ tinh NOAA có thời gian chụp lặp lại là 12 giờ; phát biểu nào sau đây đúng:",
+      "options": [
+        "Ảnh vệ tinh Meteosat có độ phân giải thời gian thấp hơn ảnh vệ tinh NOAA",
+        "Ảnh vệ tinh Meteosat có độ phân giải thời gian cao hơn ảnh vệ tinh NOAA",
+        "Ảnh vệ tinh Meteosat có độ phân giải phổ thấp hơn ảnh vệ tinh NOAA",
+        "Ảnh vệ tinh Meteosat có độ phân giải phổ cao hơn ảnh vệ tinh NOAA"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Ảnh vệ tinh Meteosat có độ phân giải thời gian cao hơn ảnh vệ tinh NOAA",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-055",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Độ phân giải thời gian của ảnh vệ tinh là gì?",
+      "options": [
+        "Khoảng cách nhỏ nhất trên mặt đất mà cảm biến có thể phân biệt được",
+        "Số lượng kênh ảnh của một ảnh số về một khu vực nào đó",
+        "Chu kỳ lặp lại của ảnh vệ tinh ghi nhận tại một vị trí cụ thể trên mặt đất",
+        "Khả năng của cảm biến có thể tách biệt được các bức xạ từ nhiều vùng phổ khác nhau"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Chu kỳ lặp lại của ảnh vệ tinh ghi nhận tại một vị trí cụ thể trên mặt đất",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-056",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phương pháp nào sau đây được sử dụng để truyền dữ liệu từ vệ tinh về mặt đất:",
+      "options": [
+        "Truyền trực tiếp xuống dưới trái đất nếu có trạm thu mặt đất nằm 30 ngay trong tầm nhìn của vệ tinh",
+        "Ghi nhận và lưu trữ trong vệ tinh và truyền về sau khi nó đến được vị trí thích hợp",
+        "Truyền xuống các trạm thu thông qua các hệ thống vệ tinh trung gian",
+        "Tất cả các phương pháp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các phương pháp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-057",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hình thức quan sát của vệ tinh địa tĩnh là:",
+      "options": [
+        "Quan sát một khu vực cố định",
+        "Quan sát đều đặn theo chu kỳ",
+        "Quan sát không đều, theo từng cuộc thí nghiệm",
+        "Tất cả các yếu tố nêu tại a, b và c đều đúng"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Quan sát một khu vực cố định",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-058",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Yếu tố nào sau đây dẫn tới biến dạng hình học của ảnh vệ tinh:",
+      "options": [
+        "Sự xoay của trái đất; Sự di chuyển của hệ thống quét ảnh",
+        "Sự di chuyển của vật mang; độ cao và vị thế của vật mang",
+        "Độ cong của Trái Đất",
+        "Tất cả các yếu tố nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các yếu tố nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-059",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Yếu tố nào sau đây không làm biến dạng hình học của ảnh vệ tinh:",
+      "options": [
+        "Hình dạng và kích thước của vật thể",
+        "Sự di chuyển của vật mang; độ cao và vị thế của vật mang",
+        "Độ cong của Trái Đất",
+        "Sự xoay của trái đất; Sự di chuyển của hệ thống quét ảnh"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Hình dạng và kích thước của vật thể",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-060",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Ảnh SPOT có chu k quỹ đạo 101 phút, chu k lặp 26 ngày; chọn phát biểu đúng:",
+      "options": [
+        "Ảnh SP T có độ phân giải thời gian là 101 phút",
+        "Ảnh SP T có độ phân giải thời gian là 26 ngày",
+        "Thời gian để vệ tinh SP T đi hết một vòng quỹ đạo của nó là 26 ngày",
+        "Không có phát biểu nào trên đây là đúng"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Ảnh SP T có độ phân giải thời gian là 26 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-061",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi thiết kế bay chụp ảnh hàng không, độ phủ ngang tối thiểu giữa các tấm ảnh liền kề phải đáp ứng yêu cầu nào sau đây:",
+      "options": [
+        "p ≥ 60%",
+        "p ≥ 50%",
+        "p ≥45% 31",
+        "p ≥ 40%"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. p ≥ 60%",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-062",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi thiết kế bay chụp ảnh hàng không, độ phủ dọc tối thiểu giữa các tấm ảnh liền kề phải phải đáp ứng yêu cầu nào sau đây:",
+      "options": [
+        "q ≥ 30%",
+        "q ≥ 25%",
+        "q ≥20%",
+        "q ≥ 15%"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. q ≥ 30%",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-063",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Chu k cập nhật biến động của dữ liệu giao thông trong CSDL nền địa lý quốc gia được quy định như thế nào?",
+      "options": [
+        "Định kỳ hàng năm",
+        "Định kỳ 03 năm",
+        "Định kỳ 05 năm",
+        "Cập nhật khi có biến động"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Định kỳ hàng năm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-064",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Thông số kỹ thuật cơ bản cần tính toán khi thiết kế bay chụp ảnh hàng không kỹ thuật số phục vụ đo vẽ địa hình là gì?",
+      "options": [
+        "Độ phủ ảnh",
+        "Độ phân giải mặt đất của ảnh chụp",
+        "Độ cao bay chụp trung bình",
+        "Tỷ lệ chụp ảnh trung bình"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Độ phân giải mặt đất của ảnh chụp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-065",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi thiết kế bay quét LiDAR kết hợp với chụp ảnh hàng không phục vụ xây dựng mô hình số độ cao, thông số nào sau đây có vai trò quyết định:",
+      "options": [
+        "Độ phủ của ảnh chụp",
+        "Độ phân giải mặt đất của ảnh chụp",
+        "Độ chính xác của mô hình số độ cao cần thành lập",
+        "Độ chính xác hình học của đối tượng địa lý"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Độ chính xác của mô hình số độ cao cần thành lập",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-066",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Công nghệ nào sau đây được áp dụng trong xây dựng mô hình số độ cao:",
+      "options": [
+        "Đo vẽ địa hình bằng ảnh hàng không",
+        "Bay quét LiDAR kết hợp với chụp ảnh hàng không",
+        "Đo vẽ trực tiếp độ cao chi tiết bề mặt",
+        "Cả ba công nghệ trên"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Cả ba công nghệ trên",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-067",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Độ chính xác đạt được của mô hình số độ cao không phụ thuộc vào yếu tố nào sau đây: 32",
+      "options": [
+        "Công nghệ thu nhận và xử lý dữ liệu độ cao",
+        "Mức độ phức tạp, che khuất của địa hình",
+        "Nhu cầu sử dụng dữ liệu độ cao",
+        "Mức độ ổn định của bề mặt địa hình"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Nhu cầu sử dụng dữ liệu độ cao",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-068",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi thiết kế lưới độ cao quốc gia, phát biểu nào sau đây là đúng:",
+      "options": [
+        "Mốc độ cao thường được chôn cách nhau từ 3 - 5 km ở vùng núi",
+        "Mốc độ cao thường được chôn cách nhau từ 3 - 5 km ở vùng đồng bằng",
+        "Mốc độ cao thường được chôn cách nhau từ 4 - 6 km ở vùng đồng bằng",
+        "Mốc độ cao thường được chôn cách nhau từ 6 - 8 km ở vùng núi"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Mốc độ cao thường được chôn cách nhau từ 3 - 5 km ở vùng đồng bằng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-069",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Trong công tác đo đạc bản đồ địa hình đáy biển tỷ lệ 1:50.000, khoảng cách tối đa giữa hai trạm nghiệm triều hoặc trạm quan trắc thủy triều không được lớn hơn:",
+      "options": [
+        "20 km",
+        "50 km",
+        "100 km",
+        "200 km"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 50 km",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-070",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Khi thành lập bản đồ địa hình đáy biển tỷ lệ 1:5.000 khu vực có độ dốc <2°, khoảng sâu đều cơ bản của đường đẳng sâu là bao nhiêu?",
+      "options": [
+        "2,0 m",
+        "1,5 m",
+        "1,0 m",
+        "0,5 m"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. 0,5 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-071",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Trong thành lập bản đồ địa hình đáy biển tỷ lệ 1:5.000, khi đo sâu bằng máy đo sâu hồi âm đơn tia mà không có máy cảm biến sóng, chỉ được phép tiến hành đo sâu khi độ cao của sóng biển không vượt quá giá trị nào sau đây?",
+      "options": [
+        "0,3 m",
+        "0,4 m",
+        "0,5 m",
+        "0,6 m"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 0,3 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-072",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Thiết bị nào sau đây là không bắt buộc khi đo sâu bằng máy đo sâu hồi âm đa tia trong thành lập bản đồ địa hình đáy biển tỷ lệ 33 1:5.000:",
+      "options": [
+        "Máy cải chính sóng",
+        "Máy la bàn",
+        "Máy đo tốc độ âm bề mặt",
+        "Máy toàn đạc điện tử"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Máy toàn đạc điện tử",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-073",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Trong công tác đo đạc bản đồ địa hình đáy biển, khi lắp đặt đầu biến âm của máy đo sâu hồi âm ở những vị trí nào sau đây:",
+      "options": [
+        "Ở mũi tàu",
+        "Ở cạnh thân tàu",
+        "Ở chính giữa thân tàu",
+        "Tùy thuộc vào từng loại thiết bị đo sâu hồi âm và tàu chuyên dụng hay tàu thuê để lắp đặt một trong phương án nêu tại a, b, c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tùy thuộc vào từng loại thiết bị đo sâu hồi âm và tàu chuyên dụng hay tàu thuê để lắp đặt một trong phương án nêu tại a, b, c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-074",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Trong thành lập bản đồ địa hình đáy biển tỷ lệ 1:5.000 bằng máy đo sâu hồi âm đa tia, độ phủ của 2 tuyến quét liền kề nhau tối thiểu bẳng bao nhiêu % thì không phải thiết kế tuyến quét kiểm tra?",
+      "options": [
+        "2%",
+        "3%",
+        "4%",
+        "5%"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. 5%",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-075",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi thiết kế tuyến bay quét LiDAR để thành lập mô hình số độ cao, độ phủ của các tuyến bay chính liền kề (phủ ngang) trung bình là bao nhiêu %?",
+      "options": [
+        "25%",
+        "30%",
+        "35%",
+        "40%"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 30%",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-076",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Số lượng bãi chuẩn hiệu chỉnh tối thiểu khi thiết kế bay quét LiDAR thành lập mô hình số độ cao là bao nhiêu?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4 34"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 2",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-077",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Phát biểu nào sau đây về chuẩn hóa mô hình số độ cao DEM bằng công nghệ bay quét LiDAR là đúng:",
+      "options": [
+        "Mô hình số độ cao (DEM) được xây dựng từ dữ liệu phản hồi cuối cùng",
+        "Mô hình số độ cao (DEM) được xây dựng từ dữ liệu phản hồi đầu tiên",
+        "Mô hình số độ cao (DEM) được xây dựng từ dữ liệu phản hồi đầu tiên và dữ liệu phản hồi cuối cùng",
+        "Cả ba phát biểu nêu tại a, ba, c đều không đúng"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Mô hình số độ cao (DEM) được xây dựng từ dữ liệu phản hồi cuối cùng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-078",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Theo quy định, quá trình xử lý dữ liệu bay quét LiDAR kết hợp chụp ảnh số để phục vụ thành lập mô hình số độ cao thực hiện mấy bước công việc chính?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 5",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-079",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Quá trình thành lập mô hình số độ cao và bình đồ ảnh số cần thực hiện mấy bước công việc chính:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 5",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-080",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Sai số tiếp biên giữa các mảnh DEM khác phân khu bay quét không được vượt quá bao nhiêu lần sai số cho phép của DEM theo thiết kế được phê duyệt?",
+      "options": [
+        "1,0",
+        "1,5",
+        "2,0",
+        "2,5"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 1,5",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-081",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Thông tin nào dưới đây là không cần thiết đối với đối với sản phẩm ảnh viễn thám mức 2A trong siêu dữ liệu viễn thám quốc gia?",
+      "options": [
+        "Tên bộ cảm biến",
+        "Chế độ chụp",
+        "Kinh độ, vĩ độ tâm ảnh 35",
+        "Tỷ lệ ảnh"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tỷ lệ ảnh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-082",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi đặt hàng ảnh viễn thám người yêu cầu phải xác định rõ vị trí, phạm vi của khu vực đặt hàng. Vị trí, phạm vi nào dưới đây là không phù hợp?",
+      "options": [
+        "Hình đa giác với tọa độ của các đỉnh đa giác có số lượng đỉnh tối thiểu là 4, tối đa là 100",
+        "Hình chữ nhật với tọa độ góc trên bên trái và góc dưới bên phải",
+        "Hình tròn với tọa độ tâm (tọa độ địa lý hoặc tọa độ bản đồ) và bán kính",
+        "Địa danh, địa giới…."
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Hình đa giác với tọa độ của các đỉnh đa giác có số lượng đỉnh tối thiểu là 4, tối đa là 100",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-083",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Khi đặt hàng ảnh viễn thám với các yêu cầu thông thường có cần nêu mục đích sử dụng không?",
+      "options": [
+        "Phải nêu mục đích sử dụng",
+        "Không cần nêu mục đích sử dụng",
+        "Tùy theo từng trường hợp cụ thể",
+        "Chỉ cần nêu mục đích sử dụng khi đặt hàng ảnh viễn thám khu vực biên giới"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Phải nêu mục đích sử dụng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-084",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Thông tin nào dưới đây là không cần thiết đối với đối với sản phẩm ảnh viễn thám mức 3B trong siêu dữ liệu viễn thám quốc gia?",
+      "options": [
+        "Phiên hiệu mảnh",
+        "Hệ quy chiếu",
+        "Định dạng ảnh",
+        "Tên vệ tinh"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tên vệ tinh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-085",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Siêu dữ liệu có phải là sản phẩm bắt buộc khi giao nộp sản phẩm ảnh viễn thám về cơ sở dữ liệu viễn thám quốc gia không?",
+      "options": [
+        "Không bắt buộc",
+        "Bắt buộc",
+        "Bắt buộc nếu đơn vị thực hiện có xây dựng siêu dữ liệu",
+        "Bắt buộc nếu nhà cung cấp ảnh viễn thám có siêu dữ liệu"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bắt buộc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-086",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Việc bình sai kết quả đo thực hiện theo trình tự nào sau đây:",
+      "options": [
+        "Tính sai số khép, xác định số hiệu chỉnh cho trị đo, tính trị xác suất nhất",
+        "Tính sai số khép, tính trị xác suất nhất, xác định số hiệu chỉnh cho trị 36 đo",
+        "Xác định số hiệu chỉnh cho trị đo, tính sai số khép, tính trị xác suất nhất",
+        "Xác định số hiệu chỉnh cho trị đo, tính trị xác suất nhất, tính sai số khép"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Tính sai số khép, xác định số hiệu chỉnh cho trị đo, tính trị xác suất nhất",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-087",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Trong công nghệ GNSS, phương pháp nào sau đây có độ chính xác cao nhất:",
+      "options": [
+        "Phương pháp đo tuyệt đối",
+        "Phương pháp đo tương đối",
+        "Phương pháp đo động thời gian thực (RTK)",
+        "Phương pháp đo vi sai (DGNSS)"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Phương pháp đo tương đối",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-088",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hệ độ cao quốc gia có gốc được xác định từ trạm nghiệm triều nào sau đây:",
+      "options": [
+        "Hòn Dấu (Đồ Sơn)",
+        "Mũi Nai (Hà Tiên)",
+        "Sơn Trà (Đà Nẵng)",
+        "Vũng Tàu (Bà Rịa - Vũng Tàu)"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Hòn Dấu (Đồ Sơn)",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-089",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Độ cao nào sau đây được sử dụng trong hệ độ cao quốc gia:",
+      "options": [
+        "Độ cao chính",
+        "Độ cao chuẩn",
+        "Độ cao trắc địa",
+        "Độ cao geoid"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Độ cao chuẩn",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-090",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Những giải pháp công nghệ nào sau đây sử dụng trong mạng lưới trạm định vị vệ tinh quốc gia:",
+      "options": [
+        "Trạm tham chiếu ảo (Virtual Reference Station - VRS)",
+        "Giải pháp trạm chính - phụ (i-MAX, MAX)",
+        "Giải pháp hiệu chỉnh tham số khu vực (FPK)",
+        "Tất cả các giải pháp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các giải pháp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-091",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Mạng lưới trạm định vị vệ tinh quốc gia hiện đang cung cấp những dịch vụ nào sau đây:",
+      "options": [
+        "Cung cấp RTK qua RTCM",
+        "Cung cấp số liệu GNSS phục vụ đo tĩnh (Static)",
+        "Cung cấp dịch vụ đo động xử lý sau (Post-Processing)",
+        "Tất cả các dịch vụ nêu tại a, b, c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các dịch vụ nêu tại a, b, c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-092",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Dữ liệu cải chính của mạng lưới trạm định vị vệ tinh quốc gia được truyền qua hình thức nào sau đây:",
+      "options": [
+        "Radio Link",
+        "Công nghệ EDGE",
+        "Công nghệ 3G/4G",
+        "Tất cả các hình thức nêu tại a, b và c"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Công nghệ 3G/4G",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-093",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Mạng lưới trạm định vị vệ tinh quốc gia được được xây dựng để:",
+      "options": [
+        "Làm khung tham chiếu cho hệ tọa độ quốc gia",
+        "Làm cơ sở cho việc quan trắc dịch chuyển mảng kiến tạo",
+        "Cung cấp dịch vụ đo động thời gian thực",
+        "Tất cả các mục đích nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các mục đích nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-094",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là đúng đối với công nghệ đo động thời gian thực sử dụng mạng lưới trạm định vị vệ tinh quốc gia hiện có",
+      "options": [
+        "Có độ chính xác cao, đồng nhất trên phạm vi cả nước",
+        "Người đo phải sử dụng ít nhất 2 máy thu cho trạm base và rover",
+        "Có độ chính xác tỷ lệ thuận với thời gian đo",
+        "Có độ chính xác cao, đồng nhất khu vực đồng bằng Bắc Bộ"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Có độ chính xác cao, đồng nhất khu vực đồng bằng Bắc Bộ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-095",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Mạng lưới trạm định vị vệ tinh quốc gia thu nhận được các tín hiệu từ những hệ thống định vị vệ tinh nào sau đây?",
+      "options": [
+        "GPS, GLONASS, WAAS, EGNOS",
+        "GPS, GLONASS, GALILEO, WAAS",
+        "GPS, GLONASS, GALILEO, BAIDU, EGNOS",
+        "GPS, GLONASS, GALILEO, BAIDU, QZSS"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. GPS, GLONASS, GALILEO, BAIDU, QZSS",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-096",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây không đúng về công nghệ đo động thời gian thực sử dụng mạng lưới trạm định vị vệ tinh quốc gia:",
+      "options": [
+        "Thời gian đo trung bình tại một vị trí từ 3 giây - 5 giây",
+        "Thời gian đo trung bình tối thiểu tại một vị trí là 1 phút",
+        "Độ chính xác phụ thuộc vào các yếu tố ngoại cảnh như nhà cao tầng, cây cối che khuất, tầng điện ly",
+        "Có thể xử lý tức thời (real time) hoặc xử lý sau (post-processing)"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Thời gian đo trung bình tối thiểu tại một vị trí là 1 phút",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-097",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi đo chênh cao hạng III, phương tiện đo phải thỏa mãn yêu cầu nào sau đây:",
+      "options": [
+        "Hệ số phòng đại của ống ngắm từ 16 lần trở lên 38",
+        "Hệ số phòng đại của ống ngắm từ 20 lần trở lên",
+        "Hệ số phòng đại của ống ngắm từ 24 lần trở lên",
+        "Hệ số phòng đại của ống ngắm từ 30 lần trở lên"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Hệ số phòng đại của ống ngắm từ 24 lần trở lên",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-098",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Khoảng cách trung bình giữa các trạm Geodetic CORS của mạng lưới trạm định vị vệ tinh quốc gia là bao nhiêu?",
+      "options": [
+        "Từ 50 - 100 km",
+        "Từ 100 - 150 km",
+        "Từ 150 - 200 km",
+        "Từ 200 - 250 km"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Từ 150 - 200 km",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-099",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Khoảng cách trung bình giữa các trạm NRTK CORS của mạng lưới trạm định vị vệ tinh quốc gia là bao nhiêu?",
+      "options": [
+        "Từ 30 - 50 km",
+        "Từ 50 - 80 km",
+        "Từ 80 -120 km",
+        "Từ 120 -150 km"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Từ 50 - 80 km",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-100",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Phát biểu nào sau đây là đúng về việc truyền phát dữ liệu cải chính của mạng lưới trạm định vị vệ tinh quốc gia tới máy thu GNSS:",
+      "options": [
+        "Dữ liệu cải chính được truyền từ trạm điều khiển và xử lý trung tâm tại Hà Nội đến máy thu GNSS",
+        "Dữ liệu cải chính được truyền từ trạm định vị vệ tinh quốc gia gần nhất đến máy thu GNSS",
+        "Dữ liệu cải chính được truyền từ trạm định vị vệ tinh quốc gia bất kỳ đến các máy thu GNSS do người dùng lựa chọn",
+        "Dữ liệu cải chính được truyền từ vệ tinh đến các máy thu GNSS"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Dữ liệu cải chính được truyền từ trạm điều khiển và xử lý trung tâm tại Hà Nội đến máy thu GNSS",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-101",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Trong đo sâu địa hình đáy biển tỷ lệ 1:5.000 bằng máy đo sâu hồi âm đơn tia (SBES), khoảng cách giữa 2 tuyến đo sâu liên tiếp ở thực địa là bao nhiêu mét?",
+      "options": [
+        "10 mét",
+        "50 mét",
+        "100 mét",
+        "200 mét"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 50 mét",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-102",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Phát biểu nào sau đây không đúng về việc xây dựng lưới địa chính bằng phương pháp đường chuyền:",
+      "options": [
+        "Chiều dài cạnh đường chuyền lớn nhất không vượt quá 1400 m 39",
+        "Góc ngoặt đường chuyền không được phép nhỏ hơn 30o",
+        "Trị tuyệt đối sai số trung phương đo góc không được phép lớn hơn 5\"",
+        "Số cạnh trong đường chuyền phải nhỏ hơn 20 cạnh"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Số cạnh trong đường chuyền phải nhỏ hơn 20 cạnh",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-103",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Quy định nào sau đây không đúng khi xây dựng lưới địa chính bằng công nghệ GNSS:",
+      "options": [
+        "Thời gian đo ngắm đồng thời không được phép ít hơn 45 phút",
+        "Khoảng cách tối đa từ một điểm bất kỳ trong lưới đến điểm cấp cao gần nhất không được phép vượt quá 10 km",
+        "Số hướng đo nối tại một điểm không ít hơn 3",
+        "Trước khi đo phải lập lịch đo"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Thời gian đo ngắm đồng thời không được phép ít hơn 45 phút",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-104",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Gọi Mt là mật độ thửa đất trung bình trên 01 ha, quy định nào dưới đây không đúng:",
+      "options": [
+        "Bản đồ địa chính tỷ lệ 1:200 được lựa chọn áp dụng đối với đất thuộc nội thị của đô thị loại đặc biệt có Mt ≥ 60",
+        "Bản đồ địa chính tỷ lệ 1:500 được lựa chọn áp dụng đối với khu vực đất đô thị, đất khu đô thị, đất khu dân cư nông thôn có dạng đô thị có Mt ≥ 25",
+        "Bản đồ địa chính tỷ lệ 1:1.000 được lựa chọn áp dụng đối với khu vực đất khu dân cư có Mt ≥ 10",
+        "Bản đồ địa chính tỷ lệ 1:2.000 được lựa chọn áp dụng đối với khu vực đất nông nghiệp có Mt ≥ 10"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bản đồ địa chính tỷ lệ 1:2.000 được lựa chọn áp dụng đối với khu vực đất nông nghiệp có Mt ≥ 10",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-105",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Sai số vị trí của điểm bất k trên ranh giới thửa đất biểu thị trên bản đồ địa chính tỷ lệ 1:500 dạng số so với vị trí của các điểm khống chế đo vẽ gần nhất không được vượt quá bao nhiêu cm?",
+      "options": [
+        "5 cm",
+        "7 cm",
+        "10 cm",
+        "15 cm"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 7 cm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-106",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Việc chỉnh lý bản đồ địa chính thực hiện trong trường hợp nào?",
+      "options": [
+        "Thay đổi diện tích thửa đất",
+        "Thay đổi mục đích sử dụng đất",
+        "Thay đổi thông tin về tình trạng pháp lý của thửa đất",
+        "Tất cả các trường hợp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các trường hợp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-107",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Việc đo vẽ lại bản đồ địa chính được thực hiện trong các trường 40 hợp nào sau đây:",
+      "options": [
+        "Khu vực đất nông nghiệp",
+        "Khu vực thực hiện quy hoạch sử dụng đất để hình thành các khu trung tâm hành chính, khu đô thị, khu dân cư, khu kinh tế, khu công nghệ cao, khu công nghiệp, khu chế xuất, cụm công nghiệp",
+        "Khu vực chỉ có bản đồ địa chính dạng giấy",
+        "Khu vực chỉ có bản đồ địa chính được lập bằng phương pháp ảnh hàng không"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Khu vực thực hiện quy hoạch sử dụng đất để hình thành các khu trung tâm hành chính, khu đô thị, khu dân cư, khu kinh tế, khu công nghệ cao, khu công nghiệp, khu chế xuất, cụm công nghiệp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-108",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Yếu tố nội dung nào sau đây không bắt buộc phải thể hiện trên tất cả các tờ bản đồ địa chính:",
+      "options": [
+        "Khung bản đồ",
+        "Ranh giới thửa đất, loại đất, số thứ tự thửa đất, diện tích thửa đất",
+        "Dáng đất hoặc điểm ghi chú độ cao",
+        "Địa vật, công trình có giá trị về lịch sử, văn hóa, xã hội và ý nghĩa định hướng cao"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Dáng đất hoặc điểm ghi chú độ cao",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-109",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Sai số biểu thị điểm góc khung bản đồ, giao điểm của lưới km, các điểm tọa độ quốc gia, các điểm địa chính, các điểm có tọa độ khác trên bản đồ địa chính dạng số được phép sai lệch bao nhiêu?",
+      "options": [
+        "Không được phép sai lệch",
+        "0,1 mm",
+        "0,2 mm",
+        "0,3 mm"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Không được phép sai lệch",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-110",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Bản đồ địa hình tỷ lệ 1/250.000 có thể hiện địa giới hành chính cấp xã không?",
+      "options": [
+        "Có thể hiện",
+        "Không thể hiện",
+        "Thể hiện khi diện tích xã ≥ 100 km2",
+        "Thể hiện đối với khu vực các xã biên giới"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Không thể hiện",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-111",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Nội dung cơ bản cần thể hiện trên bản đồ hành chính là gì?",
+      "options": [
+        "Dân cư",
+        "Địa giới hành chính, biên giới quốc gia",
+        "Thủy văn 41",
+        "Giao thông"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Địa giới hành chính, biên giới quốc gia",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-112",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Tài liệu nào sau đây không là tài liệu chính dùng để thành lập bản đồ hành chính?",
+      "options": [
+        "Cơ sở dữ liệu nền địa lý quốc gia, bản đồ địa hình quốc gia",
+        "Tài liệu về biên giới quốc gia do cơ quan nhà nước có thẩm quyền cung cấp",
+        "Tài liệu chuyên ngành về địa hình, thủy văn, dân cư, giao thông, kinh tế - xã hội.",
+        "Tài liệu về điều chỉnh địa giới hành chính đến thời điểm thành lập bản đồ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Tài liệu chuyên ngành về địa hình, thủy văn, dân cư, giao thông, kinh tế - xã hội.",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-113",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Những yếu tố nào sau đây không ảnh hưởng tới việc chọn lưới chiếu bản đồ:",
+      "options": [
+        "Vị trí địa lí của khu vực thành lập bản đồ",
+        "Hình dáng, diện tích lãnh thổ thành lập bản đồ",
+        "Phương pháp thể hiện nội dung bản đồ",
+        "Mục đích sử dụng bản đồ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Phương pháp thể hiện nội dung bản đồ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-114",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây không đúng đối với bảng chú giải bản đồ:",
+      "options": [
+        "Ký hiệu trên bản đồ và trên bảng chú giải phải thống nhất với nhau",
+        "Ký hiệu trên bảng chú giải phải được thể hiện theo từng nhóm nội dung của bản đồ",
+        "Hệ thống ký hiệu trên bảng chú giải trong tập bản đồ phải thống nhất",
+        "Ký hiệu trong bảng chú giải phải sắp xếp theo thứ tự ký hiệu điểm, ký hiệu đường, ký hiệu vùng"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Ký hiệu trong bảng chú giải phải sắp xếp theo thứ tự ký hiệu điểm, ký hiệu đường, ký hiệu vùng",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-115",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi thành lập bản đồ chuyên đề có kèm bản đồ phụ, phát biểu nào sau đây là đúng:",
+      "options": [
+        "Tỷ lệ bản đồ phụ phải lớn hơn tỷ lệ bản đồ chính",
+        "Tỷ lệ bản đồ phụ phải nhỏ hơn tỷ lệ bản đồ chính",
+        "Tỷ lệ bản đồ phụ phải bằng tỷ lệ bản đồ chính",
+        "Không quy định cụ thể tỷ lệ của bản dồ phụ"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Không quy định cụ thể tỷ lệ của bản dồ phụ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-116",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi biên tập phục vụ chế in bản đồ hành chính, trường hợp đối tượng đường quốc lộ chạy song song và sát với đối tượng thủy văn 2 nét, thì phải xử lý như thế nào?",
+      "options": [
+        "Xóa bỏ một trong 2 ký hiệu của các đối tượng",
+        "Xê dịch ký hiệu đường quốc lộ một khoảng bằng 0,2 mm 42",
+        "Xê dịch ký hiệu thủy văn một khoảng bằng 0,2 mm",
+        "Một bên ký hiệu đối tượng đường giao thông thay thế một bên ký hiệu đường bờ nước của đối tượng thủy văn"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Một bên ký hiệu đối tượng đường giao thông thay thế một bên ký hiệu đường bờ nước của đối tượng thủy văn",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-117",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phạm vi thể hiện lãnh thổ quốc gia đối với bản đồ hành chính Việt Nam là:",
+      "options": [
+        "102o-115o kinh độ Đông, 4o30'-23o30' vĩ độ Bắc",
+        "102o-118o kinh độ Đông, 4o30'-23o30' vĩ độ Bắc",
+        "102o-118o kinh độ Đông, 6o-23o vĩ độ Bắc",
+        "102o-115o kinh độ Đông, 6o-23o vĩ độ Bắc"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 102o-118o kinh độ Đông, 4o30'-23o30' vĩ độ Bắc",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-118",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là không đúng khi thể hiện nội dung trên bản đồ hành chính cấp tỉnh, cấp huyện:",
+      "options": [
+        "Thể hiện đầy đủ đường biên giới quốc gia trên đất liền",
+        "Thê hiện tất cả các mốc địa giới hành chính cấp tỉnh, huyện, mốc cấp xã có 3 mặt trở lên và kèm theo ghi chú",
+        "Thể hiện các hồ có diện tích >= 10 mm2 trên bản đồ, các hồ >=5 mm2 có liên quan đến yếu tố biên giới quốc gia, địa giới hành chính",
+        "Ưu tiên ghi chú tên các đối tượng địa lý có liên quan đến yếu tố biên giới quốc gia, địa giới hành chính"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Thể hiện các hồ có diện tích >= 10 mm2 trên bản đồ, các hồ >=5 mm2 có liên quan đến yếu tố biên giới quốc gia, địa giới hành chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-119",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Bản đồ nào sau đây không phải là bản đồ chuyên ngành?",
+      "options": [
+        "Bản đồ địa chính",
+        "Hải đồ",
+        "Bản đồ hành chính",
+        "Bản đồ địa giới hành chính"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bản đồ địa giới hành chính",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-120",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Đường biên giới quốc gia thể hiện trên bản đồ chuyên ngành được sử dụng từ nguồn nào sau đây:",
+      "options": [
+        "Bản đồ hành chính",
+        "Bản đồ địa hình quốc gia",
+        "Bản đồ chuẩn biên giới quốc gia hoặc bản đồ biên giới",
+        "Bản đồ địa giới hành chính"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Bản đồ chuẩn biên giới quốc gia hoặc bản đồ biên giới",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-121",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phương pháp nào sau đây sử dụng để thể hiện địa hình trên bản đồ chuyên ngành nhưng không sử dụng để thể hiện trên bản đồ địa hình quốc gia",
+      "options": [
+        "Đường đẳng trị",
+        "Ghi chú điểm độ cao",
+        "Vờn bóng địa hình 43",
+        "Phân tầng màu theo độ cao"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Phân tầng màu theo độ cao",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-122",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Nội dung nào sau đây không thuộc nội dung đo đạc, thành lập bản đồ địa chính:",
+      "options": [
+        "Thu thập thông tin, dữ liệu về thửa đất và đối tượng địa lý liên quan",
+        "Trích lục bản đồ địa chính thửa đất",
+        "Chỉnh lý biến động bản đồ địa chính",
+        "Xây dựng, cập nhật cơ sở dữ liệu địa chính"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Trích lục bản đồ địa chính thửa đất",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-123",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Tỷ lệ các bản đồ trong tập bản đồ được lựa chọn như thế nào?",
+      "options": [
+        "Lựa chọn một tỷ lệ cho tất cả các bản đồ trong tập bản đồ",
+        "Lựa chọn một số tỷ lệ nhất định tùy theo nội dung bản đồ, kích thước khu vực cần biểu thị",
+        "Lựa chọn tỷ lệ bất kỳ tùy theo nội dung bản đồ, kích thước khu vực cần biểu thị",
+        "Lựa chọn tỷ lệ các bản đồ theo phương pháp thành lập"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Lựa chọn một số tỷ lệ nhất định tùy theo nội dung bản đồ, kích thước khu vực cần biểu thị",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-124",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là không đúng về bản đồ hành chính",
+      "options": [
+        "Bản đồ hành chính thuộc nhóm bản đồ chuyên đề",
+        "Bản đồ hành chính là bản đồ thể hiện sự phân chia lãnh thổ theo đơn vị hành chính",
+        "Bản đồ hành chính được lập cho đơn vị hành chính cấp tỉnh, cấp huyện, cấp xã",
+        "Bản đồ hành chính bao gồm bản đồ hành chính Việt Nam, bản đồ hành chính cấp tỉnh, bản đồ hành chính cấp huyện"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Bản đồ hành chính được lập cho đơn vị hành chính cấp tỉnh, cấp huyện, cấp xã",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-125",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Kinh tuyến trục của bản đồ hành chính cấp tỉnh được quy định như thế nào?",
+      "options": [
+        "Quy định cụ thể cho từng tỉnh, thành phố trực thuộc Trung ương",
+        "Theo kinh tuyến trục của hệ thống bản đồ địa hình quốc gia sử dụng để thành lập bản dồ hành chính",
+        "Thống nhất sử dụng kinh tuyến trục 105o 00' cho các tỉnh, thành phố trực thuộc trung ương",
+        "Theo kinh tuyến trục của bản đồ địa giới hành chính cấp tỉnh"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Quy định cụ thể cho từng tỉnh, thành phố trực thuộc Trung ương",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-126",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Việc đo đạc, thành lập hải đồ không bao gồm nội dung nào sau đây:",
+      "options": [
+        "Đo đạc, cập nhật tọa độ, độ sâu đáy biển, các đối tượng địa lý trên mặt biển, trong lòng biển, đáy biển",
+        "Thu thập, cập nhật thông tin, dữ liệu về các đối tượng địa lý trên mặt 44 biển, trong lòng biển, đáy biển",
+        "Xác định ranh giới quản lý hành chính trên biển",
+        "Xây dựng, cập nhật cơ sở dữ liệu hải đồ"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Xác định ranh giới quản lý hành chính trên biển",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-127",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Nội dung đo đạc, thành lập bản đồ hàng không dân dụng khu vực sân bay không bao gồm nội dung nào sau đây:",
+      "options": [
+        "Đo đạc, cập nhật tọa độ, độ cao các đối tượng địa lý trên mặt đất, trên không",
+        "Thu thập, cập nhật thông tin, dữ liệu về các đối tượng địa lý trên mặt đất, trên không",
+        "Thành lập, cập nhật bản đồ địa hình quốc gia khu vực sân bay",
+        "Xây dựng, cập nhật cơ sở dữ liệu bản đồ hàng không dân dụng"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Thành lập, cập nhật bản đồ địa hình quốc gia khu vực sân bay",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-128",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Nội dung nào sau đây không thuộc nội dung đo đạc, thành lập bản đồ công trình ngầm:",
+      "options": [
+        "Đo đạc, thành lập, cập nhật bản đồ hiện trạng công trình ngầm",
+        "Đo đạc, thành lập bản đồ phục vụ quy hoạch không gian ngầm",
+        "Xây dựng, cập nhật cơ sở dữ liệu bản đồ công trình ngầm",
+        "Đo đạc, cập nhật bản đồ địa hình quốc gia khu vực công trình ngầm"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Đo đạc, cập nhật bản đồ địa hình quốc gia khu vực công trình ngầm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-129",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Chủ đầu tư khi triển khai xây dựng công trình ngầm phải nộp một bộ bản đồ số hiện trạng công trình ngầm cho Ủy ban nhân dân cấp tỉnh trong thời hạn là bao nhiêu ngày kể từ ngày hoàn thiện công trình ngầm?",
+      "options": [
+        "60 ngày",
+        "75 ngày",
+        "90 ngày",
+        "120 ngày"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 90 ngày",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-130",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Việc giao nộp sản phẩm bản đồ chuyên ngành được quy định như thế nào?",
+      "options": [
+        "Sản phẩm bản đồ chuyên ngành được giao nộp theo quy định chung cho tất cả các loại",
+        "Sản phẩm bản đồ chuyên ngành được giao nộp theo quy định phù hợp với từng loại bản đồ và được quy định cụ thể trong dự án, thiết kế kỹ thuật - dự toán",
+        "Sản phẩm bản đồ chuyên ngành được giao nộp tùy thuộc vào giải pháp thực hiện của đơn vị thi công",
+        "Chỉ giao nộp sản phẩm cuối cùng 45"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Sản phẩm bản đồ chuyên ngành được giao nộp theo quy định phù hợp với từng loại bản đồ và được quy định cụ thể trong dự án, thiết kế kỹ thuật - dự toán",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-131",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là đúng khi biên tập bản đồ chuyên đề",
+      "options": [
+        "Biên tập nội dung chuyên đề theo đúng chỉ thị biên tập được chủ đầu tư phê duyệt",
+        "Biên tập nội dung chuyên đề theo chỉ thị biên tập của đơn vị thi công",
+        "Biên tập nội dung chuyên đề theo chỉ thị biên tập của đơn vị tư vấn kiểm tra",
+        "Biên tập nội dung chuyên đề theo chỉ thị biên tập của tác giả chủ biên"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Biên tập nội dung chuyên đề theo đúng chỉ thị biên tập được chủ đầu tư phê duyệt",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-132",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Lưới chiếu nào sau đây được quy định áp dụng khi thành lập bản đồ hành chính Việt Nam:",
+      "options": [
+        "Lưới chiếu hình nón đứng đồng góc 2 vĩ tuyến chuẩn",
+        "Lưới chiếu hình trụ ngang đồng góc",
+        "Lưới chiếu hình nón ngang đồng góc",
+        "Lưới chiếu hình trụ đứng đồng góc"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Lưới chiếu hình nón đứng đồng góc 2 vĩ tuyến chuẩn",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-133",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi biên tập phục vụ chế in bản đồ địa hình, trường hợp đối tượng đường giao thông 1 nét chạy song song và cách đối tượng thủy văn <0,2 mm trên bản đồ thì phải xử lý như thế nào?",
+      "options": [
+        "Giữ nguyên vị trí của các đối tượng",
+        "Xê dịch ký hiệu đường giao thông cách đối tượng thủy hệ 0,2 mm",
+        "Xê dịch ký hiệu thủy hệ cách đối tượng giao thông 0,2 mm",
+        "Việc xê dịch đối tượng do biên tập viên tự quyết định"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Xê dịch ký hiệu đường giao thông cách đối tượng thủy hệ 0,2 mm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-134",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Quy định về chia mảnh bản đồ địa chính tỷ lệ 1:2.000 như thế nào?",
+      "options": [
+        "Chia mảnh bản đồ địa chính tỷ lệ 1:5.000 thành 4 mảnh tỷ lệ 1:2.000",
+        "Chia mảnh bản đồ địa chính tỷ lệ 1:5.000 thành 6 mảnh tỷ lệ 1:2.000",
+        "Chia mảnh bản đồ địa chính tỷ lệ 1:5.000 thành 9 mảnh tỷ lệ 1:2.000",
+        "Chia mảnh bản đồ địa chính tỷ lệ 1:5.000 thành 16 mảnh tỷ lệ 1:2.000"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Chia mảnh bản đồ địa chính tỷ lệ 1:5.000 thành 9 mảnh tỷ lệ 1:2.000",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-135",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Một mảnh bản đồ địa chính tỷ lệ 1:10.000 tương ứng với bao nhiêu mảnh bản đồ địa chính 1:2.000",
+      "options": [
+        "32",
+        "36",
+        "48",
+        "60 46"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 36",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-136",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Một mảnh bản đồ địa chính tỷ lệ 1:5.000 tương ứng với bao nhiêu mảnh bản đồ địa chính 1:200",
+      "options": [
+        "810",
+        "900",
+        "1225",
+        "1600"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. 900",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-137",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Kích thước khung trong tiêu chuẩn của mảnh bản đồ địa chính tỷ lệ 1:5.000 là bao nhiêu?",
+      "options": [
+        "50 cm x 50 cm",
+        "55 cm x 55 cm",
+        "60 cm x 60 cm",
+        "70 cm x 70 cm"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 60 cm x 60 cm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-138",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Kích thước khung trong tiêu chuẩn của mảnh bản đồ địa chính tỷ lệ 1:2.000 là bao nhiêu?",
+      "options": [
+        "50 cm x 50 cm",
+        "55 cm x 55 cm",
+        "60 cm x 60 cm",
+        "70 cm x 70 cm"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. 50 cm x 50 cm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-139",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Quy định đặt tên cho một mảnh bản đồ địa chính như thế nào?",
+      "options": [
+        "Gồm tên của đơn vị hành chính cấp tỉnh, huyện, xã đo vẽ bản đồ; mã hiệu mảnh bản đồ địa chính và số thứ tự của mảnh bản đồ địa chính trong phạm vi một đơn vị hành chính cấp xã",
+        "Gồm tên của đơn vị hành chính cấp xã đo vẽ bản đồ; mã hiệu mảnh bản đồ địa chính và số thứ tự của mảnh bản đồ địa chính trong phạm vi một đơn vị hành chính cấp xã",
+        "Gồm mã hiệu mảnh bản đồ địa chính và số thứ tự của mảnh bản đồ địa chính trong phạm vi một đơn vị hành chính cấp xã",
+        "Gồm tên của đơn vị hành chính cấp tỉnh, huyện, xã đo vẽ bản đồ và số thứ tự của mảnh bản đồ địa chính trong phạm vi một đơn vị hành chính cấp xã"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Gồm tên của đơn vị hành chính cấp tỉnh, huyện, xã đo vẽ bản đồ; mã hiệu mảnh bản đồ địa chính và số thứ tự của mảnh bản đồ địa chính trong phạm vi một đơn vị hành chính cấp xã",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-140",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phát biểu nào sau đây là đúng",
+      "options": [
+        "Bản đồ địa chính chỉ được thành lập cho đơn vị hành chính cấp xã",
+        "Bản đồ địa chính được thành lập cho đơn vị hành chính cấp xã và cấp huyện",
+        "Bản đồ địa chính được thành lập cho đơn vị hành chính các cấp 47",
+        "Bản đồ địa chính được thành lập cho đơn vị hành chính cấp xã hoặc cấp huyện đối với những huyện không có đơn vị hành chính cấp xã"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bản đồ địa chính được thành lập cho đơn vị hành chính cấp xã hoặc cấp huyện đối với những huyện không có đơn vị hành chính cấp xã",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-141",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trong quá trình kiểm tra chất lượng sản phẩm đo đạc và bản đồ, tài liệu nào sau đây chỉ là tham khảo, không bắt buộc tuân thủ",
+      "options": [
+        "Dự án đã được phê duyệt",
+        "Thiết kế kỹ thuật - dự toán đã được phê duyệt",
+        "Hướng dẫn thi công chi tiết của đơn vị thi công",
+        "Tiêu chuẩn quốc gia, quy chuẩn kỹ thuật"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Hướng dẫn thi công chi tiết của đơn vị thi công",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-142",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi thành lập bản đồ địa hình quốc gia từ cơ sở dữ liệu nền địa lý quốc gia, nội dung nào sau đây không quy định phải thực hiện kiểm tra",
+      "options": [
+        "Kiểm tra cơ sở toán học của bản đồ địa hình",
+        "Kiểm tra sản phẩm tại thực địa",
+        "Kiểm tra kết quả trình bày bản đồ địa hình",
+        "Kiểm tra mức độ đầy đủ nội dung bản đồ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Kiểm tra sản phẩm tại thực địa",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-143",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Tuyến đo kiểm tra được quy định như thế nào khi kiểm tra sản phẩm bản đồ địa hình đáy biển được thành lập bằng phương pháp đo trực tiếp sử dụng máy đo sâu hồi âm đơn tia",
+      "options": [
+        "Song song với tuyến đo sâu",
+        "Vuông góc với tuyến đo sâu",
+        "Tây Bắc - Đông Nam",
+        "Do người kiểm tra quyết định"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Vuông góc với tuyến đo sâu",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-144",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Sản phẩm đo đạc và bản đồ trước khi giao nộp phải được kiểm tra chất lượng qua các cấp nào?",
+      "options": [
+        "Cấp tổ sản xuất",
+        "Cấp đơn vị thi công",
+        "Cấp chủ đầu tư",
+        "Tất cả các cấp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các cấp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-145",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi kiểm tra chất lượng sản phẩm cấp chủ đầu tư, người kiểm tra (hoặc tổ chức kiểm tra) không phải chịu trách nhiệm nào dưới đây",
+      "options": [
+        "Báo cáo đầy đủ với chủ đầu tư những vấn đề kỹ thuật ngoài đề án, dự án, thiết kế kỹ thuật - dự toán đã được duyệt 48",
+        "Kiến nghị với chủ đầu tư hình thức xử lý đối với đơn vị thi công vi phạm tiến độ thực hiện do yếu tố chủ quan của đơn vị thi công",
+        "Lập hồ sơ kiểm tra chất lượng, hồ sơ nghiệm thu theo yêu cầu của chủ đầu tư",
+        "Lập biên bản nghiệm thu khối lượng, chất lượng sản phẩm"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Lập biên bản nghiệm thu khối lượng, chất lượng sản phẩm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-146",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Đơn vị thi công phải có trách nhiệm kiểm tra chất lượng sản phẩm đo đạc và bản đồ như thế nào",
+      "options": [
+        "Kiểm tra các nội dung công việc chính, quan trọng",
+        "Kiểm tra các nội dung công việc mà có nhiều khả năng chưa đạt chất lượng",
+        "Kiểm tra các nội dung công việc chính, quan trọng và các nội dung công việc mà có nhiều khả năng chưa đạt chất lượng",
+        "Kiểm tra chất lượng đối với tất cả các hạng mục công việc, sản phẩm do mình thi công"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Kiểm tra chất lượng đối với tất cả các hạng mục công việc, sản phẩm do mình thi công",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-147",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phiếu ghi ý kiến kiểm tra chất lượng sản phẩm phải được lập đối với:",
+      "options": [
+        "Các sản phẩm chưa đạt yêu cầu chất lượng",
+        "Các sản phẩm yêu cầu phải sửa chữa, hoàn thiện",
+        "Các sản phẩm được đánh giá là đạt chất lượng",
+        "Tất cả các trường hợp nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Tất cả các trường hợp nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-148",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hồ sơ kiểm tra chất lượng sản phẩm cấp đơn vị thi công không bao gồm tài liệu nào dưới đây",
+      "options": [
+        "Báo cáo tổng kết kỹ thuật",
+        "Báo cáo kiểm tra chất lượng sản phẩm của đơn vị thi công",
+        "Biên bản giao nộp sản phẩm",
+        "Báo cáo những thay đổi về giải pháp công nghệ, khối lượng công việc, tiến độ thi công"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Biên bản giao nộp sản phẩm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-149",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hồ sơ kiểm tra chất lượng sản phẩm cấp chủ đầu tư không bao gồm tài liệu nào dưới đây",
+      "options": [
+        "Phiếu ghi ý kiến kiểm tra cấp đơn vị thi công",
+        "Hợp đồng kinh tế hoặc văn bản giao nhiệm vụ, đặt hàng",
+        "Báo cáo tổng kết kỹ thuật của đơn vị thi công",
+        "Báo cáo kiểm tra chất lượng sản phẩm cấp chủ đầu tư"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Phiếu ghi ý kiến kiểm tra cấp đơn vị thi công",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-150",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trong quá trình kiểm tra chất lượng sản phẩm đo đạc và bản đồ, người kiểm tra có được phép sử dụng ảnh vệ tinh từ Google 49 Maps không",
+      "options": [
+        "Được sử dụng và là tài liệu chính thức để đánh giá chất lượng sản phẩm",
+        "Không được sử dụng tài liệu này trong công tác kiểm tra chất lượng",
+        "Được sử dụng khi phát hiện sản phẩm có sai sót lớn về chất lượng",
+        "Được sử dụng và là nguồn tài liệu có tính chất tham khảo khi kiểm tra nội nghiệp"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Được sử dụng và là nguồn tài liệu có tính chất tham khảo khi kiểm tra nội nghiệp",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-151",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Các sản phẩm đo đạc và bản đồ nào dưới đây phải chịu sự kiểm tra nhà nước về chất lượng sản phẩm",
+      "options": [
+        "Sản phẩm đo đạc và bản đồ sản xuất trong nước",
+        "Sản phẩm đo đạc và bản đồ nhập khẩu",
+        "Sản phẩm đo đạc và bản đồ sản xuất trong nước và nhập khẩu",
+        "Sản phẩm đo đạc bản đồ chưa được kiểm tra cấp chủ đầu tư"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Sản phẩm đo đạc và bản đồ sản xuất trong nước và nhập khẩu",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-152",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Công tác kiểm tra nhà nước về chất lượng sản phẩm đo đạc và bản đồ được thực hiện khi nào",
+      "options": [
+        "Khi có khiếu nại, tố cáo, cảnh báo về chất lượng sản phẩm",
+        "Theo kế hoạch được xây dựng hàng năm hoặc đột xuất khi có yêu cầu của cơ quan quản lý chuyên ngành",
+        "Theo đề nghị của chủ đầu tư để nâng cao chất lượng sản phẩm",
+        "Trong các trường hợp nêu tại a và b"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Trong các trường hợp nêu tại a và b",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-153",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Công tác kiểm tra nhà nước về sản phẩm đo đạc và bản đồ chịu sự điều chỉnh của pháp luật nào dưới đây",
+      "options": [
+        "Pháp luật về chất lượng sản phẩm, hàng hóa và pháp luật về quản lý đất đai",
+        "Pháp luật về đo đạc và bản đồ",
+        "Pháp luật về đo đạc và bản đồ và pháp luật về quản lý đất đai",
+        "Pháp luật về chất lượng sản phẩm, hàng hóa và pháp luật về đo đạc và bản đồ"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Pháp luật về chất lượng sản phẩm, hàng hóa và pháp luật về đo đạc và bản đồ",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-154",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Quá trình kiểm tra điều vẽ, xác minh, bổ sung thông tin đối tượng địa lý tại thực địa đối với từng mảnh bản đồ được thực hiện như thế nào?",
+      "options": [
+        "Kiểm tra toàn bộ các đối tượng địa lý có trong mảnh bản đồ đó",
+        "Kiểm tra xác suất một số đối tượng địa lý có trong mảnh bản đồ đó",
+        "Kiểm tra đầy đủ đối với từng loại đối tượng địa lý có trong mảnh bản đồ đó",
+        "Kiểm tra xác suất các đối tượng địa lý có trong mảnh bản đồ đó tại một khu vực cụ thể"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Kiểm tra đầy đủ đối với từng loại đối tượng địa lý có trong mảnh bản đồ đó",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-155",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Trong quá trình thi công, đơn vị thi công có được phép thay đổi giải pháp công nghệ không",
+      "options": [
+        "Không được phép",
+        "Được phép nhưng chỉ được thực hiện sau khi có văn bản chấp thuận của chủ đầu tư hoặc cơ quan quyết định đầu tư",
+        "Được phép và chỉ được thực hiện sau khi báo cáo chủ đầu tư",
+        "Được phép thay đổi và chủ động thực hiện nhưng phải nêu rõ trong báo cáo tổng kết kỹ thuật"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Được phép nhưng chỉ được thực hiện sau khi có văn bản chấp thuận của chủ đầu tư hoặc cơ quan quyết định đầu tư",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-156",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi nghiệm thu khối lượng, chất lượng sản phẩm đo đạc và bản đồ, nội dung công việc nào dưới đây không phù hợp",
+      "options": [
+        "Nghiệm thu về khối lượng, sản phẩm đã hoàn thành đạt chất lượng",
+        "Nghiệm thu về giá trị sản phẩm đã hoàn thành theo hợp đồng đã ký kết",
+        "Nghiệm thu về khối lượng, sản phẩm phát sinh so với thiết kế kỹ thuật - dự toán được duyệt",
+        "Xác nhận mức khó khăn đối với các hạng mục công việc, sản phẩm hoàn thành"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Nghiệm thu về giá trị sản phẩm đã hoàn thành theo hợp đồng đã ký kết",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-157",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Tiêu chí nào dưới đây không được áp dụng trong nhóm tiêu chí đánh giá chất lượng dữ liệu thông tin địa lý theo định lượng:",
+      "options": [
+        "Mức độ đầy đủ của dữ liệu",
+        "Mức độ phù hợp của dữ liệu với mô hình cấu trúc dữ liệu",
+        "Mục đích sử dụng dữ liệu địa lý",
+        "Độ chính xác vị trí của đối tượng địa lý"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Mục đích sử dụng dữ liệu địa lý",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-158",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Phương pháp nào sau đây không phải là phương pháp gián tiếp khi đánh giá chất lượng dữ liệu địa lý",
+      "options": [
+        "Đánh giá chất lượng dữ liệu địa lý thông qua sử dụng dữ liệu ảnh hàng không",
+        "Đánh giá chất lượng dữ liệu địa lý thông qua sử dụng dữ liệu ảnh viễn thám",
+        "Đánh giá chất lượng dữ liệu địa lý dựa trên trạm đo vẽ ảnh số",
+        "Đánh giá chất lượng dữ liệu theo kết quả lấy mẫu, đo đạc tại thực địa"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Đánh giá chất lượng dữ liệu theo kết quả lấy mẫu, đo đạc tại thực địa",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-159",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Yếu tố nào dưới đây phải thực hiện đánh giá chất lượng sản phẩm khi bay chụp, thu nhận dữ liệu ảnh hàng không có sử dụng hệ thống đinh vị GNSS/IMU",
+      "options": [
+        "Chất lượng ảnh màu kỹ thuật số",
+        "Thông số định vị ảnh và thông số liên quan",
+        "Báo cáo quá trình thu nhận và xử lý dữ liệu ảnh",
+        "Cả ba yếu tố nêu tại a, b và c"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Cả ba yếu tố nêu tại a, b và c",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-160",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Khi kiểm tra bản đồ địa hình đáy biển tỷ lệ 1:5.000 được thành lập bằng máy đo sâu hồi âm đơn tia, khoảng cách giữa 2 tuyến đo sâu kiểm tra liên tiếp ở thực địa là bao nhiêu",
+      "options": [
+        "100 m",
+        "200 m",
+        "400 m",
+        "600 m"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. 400 m",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-161",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Việc giao nộp sản phẩm đo đạc và bản đồ cho tổ chức lưu trữ được thực hiện vào thời điểm nào",
+      "options": [
+        "Sau khi hoàn thành công tác kiểm tra chất lượng sản phẩm cấp chủ đầu tư",
+        "Sau khi hoàn thành công tác thẩm định khối lượng, chất lượng sản phẩm",
+        "Sau khi có biên bản nghiệm thu khối lượng, chất lượng sản phẩm",
+        "Sau khi lập hồ sơ nghiệm thu và thanh quyết toán công trình."
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Sau khi có biên bản nghiệm thu khối lượng, chất lượng sản phẩm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-162",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hồ sơ nghiệm thu sản phẩm đo đạc và bản đồ không bao gồm tài liệu nào dưới đây:",
+      "options": [
+        "Báo cáo kiểm tra chất lượng sản phẩm của đơn vị thi công",
+        "Báo cáo kiểm tra chất lượng sản phẩm cấp chủ đầu tư",
+        "Báo cáo thẩm định khối lượng, chất lượng sản phẩm",
+        "Biên bản nghiệm thu khối lượng, chất lượng sản phẩm"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Báo cáo kiểm tra chất lượng sản phẩm của đơn vị thi công",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-163",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Khi thẩm định chất lượng sản phẩm đo đạc và bản đồ, quy định nào dưới đây là không phù hợp",
+      "options": [
+        "Chủ đầu tư được phép giao cho tổ chức chuyên môn trực thuộc thực hiện công tác thẩm định",
+        "Chủ đầu tư được phép thành lập hội đồng để thực hiện công tác thẩm định",
+        "Chủ đầu tư được phép thuê đơn vị tư vấn độc lập thẩm định",
+        "Chủ đầu tư giao cho tổ chức chuyên môn trực thuộc hoặc thành lập hội đồng thực hiện công tác thẩm định"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Chủ đầu tư được phép thuê đơn vị tư vấn độc lập thẩm định",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    },
+    {
+      "id": "2019-kn-164",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Kinh phí kiểm tra chất lượng cấp đơn vị thi công được lấy từ nguồn kinh phí nào dưới đây",
+      "options": [
+        "Từ kinh phí kiểm tra, thẩm định, nghiệm thu của cấp chủ đầu tư",
+        "Không có kinh phí cho nội dung này",
+        "Từ kinh phí được tính trong đơn giá, dự toán của sản phẩm",
+        "Từ kinh phí được lập riêng trong từng thiết kế kỹ thuật – dự toán Nguyễn Thị Phương Hoa và Môi trường btnmt@monre.gov.vn nguyên và Môi trường 10:39:07 +07:00"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Từ kinh phí được tính trong đơn giá, dự toán của sản phẩm",
+      "source": "Ngân hàng câu hỏi phục vụ sát hạch CCHN Đo đạc và Bản đồ (ban hành kèm QĐ số 2317/QĐ-BTNMT ngày 06/9/2019)"
+    }
+  ]
+}

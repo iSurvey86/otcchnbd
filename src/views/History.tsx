@@ -1,4 +1,5 @@
-import { sectorTitle } from '../lib/bank'
+import { resolveDdBankId } from '../data/dd/banks'
+import { questionsForScope, sectorTitle } from '../lib/bank'
 import { examConfigFor, examTotalMax, formatTime, isExamPassed } from '../lib/exam'
 import { loadAttempts } from '../lib/storage'
 import type { AppView, StudyScope } from '../types'
@@ -15,6 +16,13 @@ export function History({ scope, onNavigate }: Props) {
     }
     if (scope.sector === 'dau-thau') {
       return item.sector === 'dau-thau'
+    }
+    if (scope.sector === 'do-dac-ban-do') {
+      const bankId = resolveDdBankId(scope.bankId)
+      return (
+        (!item.sector || item.sector === 'do-dac-ban-do') &&
+        resolveDdBankId(item.bankId) === bankId
+      )
     }
     return !item.sector || item.sector === 'do-dac-ban-do'
   })
@@ -34,8 +42,14 @@ export function History({ scope, onNavigate }: Props) {
             const itemScope: StudyScope = {
               sector: item.sector ?? 'do-dac-ban-do',
               trackId: item.trackId,
+              bankId: item.bankId,
             }
-            const exam = examConfigFor(itemScope)
+            const exam = examConfigFor(
+              itemScope,
+              item.questionIds.length ||
+                questionsForScope(itemScope).length ||
+                undefined,
+            )
             const totalMax = examTotalMax(exam)
             const passed = isExamPassed(item.lawScore, item.skillScore, exam)
             return (

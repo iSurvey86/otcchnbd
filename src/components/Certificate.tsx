@@ -1,6 +1,11 @@
 import { useRef, useState } from 'react'
 import html2canvas from 'html2canvas'
-import { lawSectionLabel, sectorTitle, skillSectionLabel } from '../lib/bank'
+import {
+  bankFullTitleForScope,
+  lawSectionLabel,
+  sectorTitle,
+  skillSectionLabel,
+} from '../lib/bank'
 import {
   examConfigFor,
   examGradeLabel,
@@ -21,7 +26,8 @@ interface Props {
 export function Certificate({ attempt, passed, scope }: Props) {
   const cardRef = useRef<HTMLElement>(null)
   const [saving, setSaving] = useState(false)
-  const exam = examConfigFor(scope)
+  const exam = examConfigFor(scope, attempt.questionIds.length)
+  const bankLine = bankFullTitleForScope(scope)
   const lawMax = sectionMax('phap-luat', exam)
   const skillMax = sectionMax('kinh-nghiem', exam)
   const totalMax = examTotalMax(exam)
@@ -154,6 +160,7 @@ export function Certificate({ attempt, passed, scope }: Props) {
             <h3 className="certificate-title">
               {passed ? 'Thi thử sát hạch' : 'Luyện tập thi thử'}
             </h3>
+            {bankLine ? <p className="certificate-bank">{bankLine}</p> : null}
             <p className="certificate-awarded">
               {passed ? 'Trân trọng trao tặng' : 'Trân trọng gửi tới'}
             </p>

@@ -13,7 +13,7 @@ export const SECTORS: Sector[] = [
   {
     id: 'do-dac-ban-do',
     title: 'Đo đạc và Bản đồ',
-    blurb: 'Ôn thi Chứng chỉ hành nghề Đo đạc và Bản đồ – ngân hàng câu hỏi biên soạn theo Quyết định 308/QĐ-ĐĐBĐVN ngày 29/12/2020.',
+    blurb: 'Ôn thi Chứng chỉ hành nghề Đo đạc và Bản đồ – chọn ngân hàng câu hỏi chính thức hoặc bộ cập nhật ONTHICCHN.',
     open: true,
     visible: true,
   },

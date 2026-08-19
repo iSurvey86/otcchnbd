@@ -1,0 +1,185 @@
+{
+  "bankId": "onthicchn-2026-07",
+  "questions": [
+    {
+      "id": "o2607-pl-001",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Theo quy định mới bổ sung tháng 7/2026, hoạt động đo đạc và bản đồ phải tuân thủ nguyên tắc nào sau đây?",
+      "options": [
+        "Chỉ áp dụng cho dự án có vốn ngân sách nhà nước",
+        "Đảm bảo tính thống nhất, chính xác và liên thông dữ liệu không gian",
+        "Không áp dụng cho đo đạc địa chính",
+        "Chỉ thực hiện khi có yêu cầu bằng văn bản của cơ quan quản lý nhà nước cấp tỉnh"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-pl-002",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chứng chỉ hành nghề đo đạc và bản đồ bị thu hồi trong trường hợp nào sau đây?",
+      "options": [
+        "Người hành nghề chuyển công tác sang đơn vị khác trong cùng tỉnh",
+        "Người hành nghề vi phạm nghiêm trọng quy định về chất lượng sản phẩm đo đạc và bản đồ",
+        "Người hành nghề nghỉ phép dài ngày",
+        "Người hành nghề tham gia khóa bồi dưỡng nghiệp vụ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-pl-003",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Dữ liệu đo đạc phục vụ công trình hạ tầng quốc gia phải được lưu trữ tối thiểu bao lâu?",
+      "options": [
+        "05 năm",
+        "10 năm",
+        "15 năm",
+        "Theo quy định của cơ quan quản lý chuyên ngành và loại công trình"
+      ],
+      "answer": 3,
+      "explanation": "Đáp án đúng: D. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-001",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Khi đo GNSS trong điều kiện nhiễu đa đường, biện pháp nào sau đây phù hợp nhất?",
+      "options": [
+        "Tăng thời gian quan sát và chọn thời điểm vệ tinh phân bố tốt",
+        "Giảm chiều cao anten xuống tối đa",
+        "Chỉ sử dụng một hệ quy chiếu tùy ý",
+        "Không cần kiểm tra điểm khống chế"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-002",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Sai số vị trí ngang trên bản đồ địa hình tỷ lệ 1:2.000 thường được kiểm tra bằng phương pháp nào?",
+      "options": [
+        "So sánh với điểm khống chế độc lập và đo kiểm tra chéo",
+        "Chỉ đối chiếu với ảnh vệ tinh không chỉnh ortho",
+        "Dựa vào cảm quan của người biên tập",
+        "Không cần kiểm tra nếu đã nộp hồ sơ"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-003",
+      "section": "kinh-nghiem",
+      "topic": "csdl-ban-do",
+      "prompt": "Metadata bắt buộc của lớp dữ liệu không gian trong cơ sở dữ liệu nền địa lý quốc gia không bao gồm:",
+      "options": [
+        "Hệ tọa độ và độ chính xác",
+        "Thời điểm thu thập / cập nhật",
+        "Màu sắc giao diện phần mềm người dùng",
+        "Phạm vi không gian (extent)"
+      ],
+      "answer": 2,
+      "explanation": "Đáp án đúng: C. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-004",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Ảnh viễn thám phục vụ lập bản đồ địa hình cần được kiểm tra yếu tố nào trước khi biên tập?",
+      "options": [
+        "Độ phân giải, nhiễu, che phủ mây và độ lệch vị trí",
+        "Chỉ kích thước file lưu trữ",
+        "Tên file theo quy tắc đặt tên nội bộ",
+        "Số lượng band màu tối đa"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-pl-004",
+      "section": "phap-luat",
+      "topic": "chat-luong-de-an",
+      "prompt": "Đề án đo đạc và bản đồ phải được thẩm định về chất lượng trước khi nghiệm thu trong trường hợp nào?",
+      "options": [
+        "Mọi công trình, không phân biệt quy mô",
+        "Theo quy định của pháp luật về đo đạc và bản đồ và hướng dẫn kỹ thuật",
+        "Chỉ công trình có diện tích trên 10 ha",
+        "Chỉ khi chủ đầu tư yêu cầu bằng văn bản"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-005",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Khép vòng bằng bình độ thủy chuẩn cấp IV, sai số khép vòng cho phép thường được tính theo:",
+      "options": [
+        "Công thức n trong hướng dẫn kỹ thuật tương ứng",
+        "Cố định 10 mm bất kể chiều dài tuyến",
+        "Không cần khép vòng nếu dùng máy thủy bình tự động",
+        "Theo ý kiến chủ đầu tư"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-006",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Khi biên tập bản đồ địa hình, ranh giới thửa đất nên thể hiện theo nguyên tắc:",
+      "options": [
+        "Đúng vị trí, đúng quy ước ký hiệu và không làm mất tính đọc của địa hình",
+        "Luôn tô đậm đè lên đường đồng mức",
+        "Chỉ vẽ ranh giới đã có sổ đỏ",
+        "Không thể hiện ranh giới trên bản đồ địa hình"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-pl-005",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Thông tin đo đạc và bản đồ thuộc phạm vi an ninh quốc gia được xử lý như thế nào?",
+      "options": [
+        "Công khai trên cổng thông tin đo đạc",
+        "Quản lý, sử dụng theo quy định của pháp luật về bảo vệ bí mật nhà nước",
+        "Chia sẻ tự do cho mọi tổ chức có nhu cầu",
+        "Chỉ lưu tại đơn vị thực hiện, không nộp cơ quan quản lý"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    },
+    {
+      "id": "o2607-kn-007",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Hồ sơ nghiệm thu sản phẩm đo đạc cần có tối thiểu:",
+      "options": [
+        "Nhật ký thực địa, số liệu đo, báo cáo kết quả và bản vẽ thành phẩm",
+        "Chỉ bản vẽ PDF không kèm số liệu gốc",
+        "Email xác nhận của chủ đầu tư",
+        "Ảnh chụp hiện trường không ghi chú tọa độ"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 07/2026.",
+      "source": "ONTHICCHN · Cập nhật 07/2026"
+    }
+  ]
+}

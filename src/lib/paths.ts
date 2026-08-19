@@ -1,7 +1,11 @@
+import { DD_DEFAULT_BANK_ID } from '../data/dd/banks'
 import type { AppView, StudyScope, TopicId } from '../types'
 
 export function scopeBasePath(scope: StudyScope): string {
-  if (scope.sector === 'do-dac-ban-do') return '/do-dac-ban-do'
+  if (scope.sector === 'do-dac-ban-do') {
+    const bankId = scope.bankId ?? DD_DEFAULT_BANK_ID
+    return `/do-dac-ban-do/${encodeURIComponent(bankId)}`
+  }
   if (scope.sector === 'xay-dung') {
     return scope.trackId ? `/xay-dung/${encodeURIComponent(scope.trackId)}` : '/xay-dung'
   }
@@ -12,6 +16,8 @@ export function pathForView(view: AppView): string {
   switch (view.name) {
     case 'catalog':
       return '/'
+    case 'dd-browse':
+      return '/do-dac-ban-do'
     case 'xd-browse':
       return '/xay-dung'
     case 'dt-browse':
@@ -65,11 +71,18 @@ export function viewFromPath(
   if (path === '/admin') return { name: 'admin' }
   if (path === '/xay-dung') return { name: 'xd-browse' }
   if (path === '/dau-thau') return { name: 'dt-browse' }
+  if (path === '/do-dac-ban-do') return { name: 'dd-browse' }
 
-  // /do-dac-ban-do[/practice|exam|history|result/:id]
-  const doDac = path.match(/^\/do-dac-ban-do(?:\/(practice|exam|history|result)(?:\/([^/]+))?)?$/)
+  // /do-dac-ban-do/:bankId[/practice|exam|history|result/:id]
+  const doDac = path.match(
+    /^\/do-dac-ban-do\/([^/]+)(?:\/(practice|exam|history|result)(?:\/([^/]+))?)?$/,
+  )
   if (doDac) {
-    return studyView({ sector: 'do-dac-ban-do' }, doDac[1], doDac[2], topicId)
+    const scope: StudyScope = {
+      sector: 'do-dac-ban-do',
+      bankId: decodeURIComponent(doDac[1]),
+    }
+    return studyView(scope, doDac[2], doDac[3], topicId)
   }
 
   // /dau-thau[/practice|exam|history|result/:id] — không còn lô

@@ -1,4 +1,5 @@
 import { QUESTIONS } from '../data/questions'
+import { getDdBank, resolveDdBankId } from '../data/dd/banks'
 import { dtLotQuestionCount } from '../data/dt/lots'
 import { findQuestionsByIds } from './bank'
 import type {
@@ -63,11 +64,25 @@ export function examDauThauForLot(lotId: string | undefined): ExamConfig {
 /** @deprecated use examConfigFor(scope) */
 export const EXAM = EXAM_DO_DAC
 
-export function examConfigFor(scope: StudyScope): ExamConfig {
+export function examConfigFor(scope: StudyScope, poolSize?: number): ExamConfig {
   if (scope.sector === 'xay-dung') return EXAM_XAY_DUNG
   if (scope.sector === 'dau-thau') {
     if (scope.trackId?.startsWith('dt-lo-')) return examDauThauForLot(scope.trackId)
     return EXAM_DAU_THAU
+  }
+  if (scope.sector === 'do-dac-ban-do') {
+    const bank = getDdBank(resolveDdBankId(scope.bankId))
+    if (bank?.examKind === 'whole-pool') {
+      const n = Math.max(1, poolSize ?? bank.questionCountHint ?? 1)
+      return {
+        lawCount: 0,
+        skillCount: n,
+        minutes: bank.examMinutes ?? 45,
+        pointsPerQuestion: 100 / n,
+        passMode: 'total-percent',
+        passPercent: 80,
+      }
+    }
   }
   return EXAM_DO_DAC
 }
@@ -97,6 +112,9 @@ export function formatExamScore(value: number): string {
 
 /** Ngưỡng điểm tổng để coi là đạt (hiển thị nhật ký). */
 export function examPassMark(config: ExamConfig): number {
+  if (config.passMode === 'total-percent') {
+    return (examTotalMax(config) * (config.passPercent ?? 80)) / 100
+  }
   if (config.passMode === 'law-and-total') {
     return config.totalPassMin ?? examTotalMax(config)
   }
@@ -137,6 +155,11 @@ export function isExamPassed(
   skillScore: number,
   config: ExamConfig = EXAM_DO_DAC,
 ): boolean {
+  if (config.passMode === 'total-percent') {
+    const total = lawScore + skillScore
+    const max = examTotalMax(config)
+    return total >= (max * (config.passPercent ?? 80)) / 100
+  }
   if (config.passMode === 'law-and-total') {
     const total = lawScore + skillScore
     return (
@@ -151,6 +174,11 @@ export function isExamPassed(
 }
 
 export function examPassSummary(config: ExamConfig): string {
+  if (config.passMode === 'total-percent') {
+    const max = examTotalMax(config)
+    const mark = (max * (config.passPercent ?? 80)) / 100
+    return `Đạt khi tổng ≥ ${config.passPercent}%: ≥ ${formatExamScore(mark)}/${formatExamScore(max)}`
+  }
   if (config.passMode === 'law-and-total') {
     return `Đạt khi pháp luật ≥ ${config.lawPassMin}/${sectionMax('phap-luat', config)} và tổng ≥ ${config.totalPassMin}/${examTotalMax(config)}`
   }
@@ -183,7 +211,7 @@ export function pickExamQuestions(
   config: ExamConfig = EXAM_DO_DAC,
 ): Question[] {
   if (config.lawCount === 0) {
-    return shuffle(pool).slice(0, config.skillCount)
+    return shuffle(pool).slice(0, Math.min(config.skillCount, pool.length))
   }
   if (config.skillCount === 0) {
     return shuffle(pool).slice(0, config.lawCount)

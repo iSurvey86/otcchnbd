@@ -1,4 +1,4 @@
-import { QUESTIONS } from '../data/questions'
+import { ddOpenQuestionTotal } from '../data/dd/banks'
 import { openDtQuestionTotal } from '../data/dt/questions'
 import { SECTORS } from '../data/sectors'
 import { openXdQuestionTotal } from '../data/xd/tracks'
@@ -9,7 +9,7 @@ interface Props {
 }
 
 function sectorBadge(id: SectorId): string {
-  if (id === 'do-dac-ban-do') return `${QUESTIONS.length} câu`
+  if (id === 'do-dac-ban-do') return `${ddOpenQuestionTotal()} câu`
   if (id === 'xay-dung') return `${openXdQuestionTotal()} câu`
   if (id === 'dau-thau') return `${openDtQuestionTotal()} câu`
   return ''
@@ -18,13 +18,13 @@ function sectorBadge(id: SectorId): string {
 function sectorTarget(id: SectorId): AppView {
   if (id === 'xay-dung') return { name: 'xd-browse' }
   if (id === 'dau-thau') return { name: 'dt-browse' }
-  return { name: 'home', scope: { sector: 'do-dac-ban-do' } }
+  return { name: 'dd-browse' }
 }
 
 function sectorCta(id: SectorId): string {
   if (id === 'xay-dung') return 'Chọn hạng và chuyên ngành'
   if (id === 'dau-thau') return 'Ôn và thi thử'
-  return 'Vào ôn và thi thử'
+  return 'Chọn ngân hàng câu hỏi'
 }
 
 /** Mỗi ngành một tông màu (kiểu KPI workflow ksnpsc). */

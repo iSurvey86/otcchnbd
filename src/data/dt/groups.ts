@@ -56,6 +56,29 @@ export function dtRandCount(topicId: TopicId | undefined): number | null {
   return n === 10 || n === 20 || n === 30 ? n : null
 }
 
+export interface DtOnthicchnSet {
+  id: string
+  periodLabel: string
+  blurb: string
+  ready: boolean
+  questionCountHint?: number
+}
+
+export const DT_ONTHICCHN_SETS: DtOnthicchnSet[] = [
+  {
+    id: 'onthicchn-2026-07',
+    periodLabel: '07/2026',
+    blurb: 'Bộ câu hỏi cập nhật từ ONTHICCHN — đang bổ sung vào ngân hàng.',
+    ready: false,
+  },
+  {
+    id: 'onthicchn-2026-06',
+    periodLabel: '06/2026',
+    blurb: 'Bộ câu hỏi cập nhật từ ONTHICCHN — đang bổ sung vào ngân hàng.',
+    ready: false,
+  },
+]
+
 export function dtDocGroupOf(source: string): DtDocGroup {
   const hasLuat = /Luật Đấu thầu|VBHN Luật/i.test(source)
   const hasNd = /214\/2025/.test(source)

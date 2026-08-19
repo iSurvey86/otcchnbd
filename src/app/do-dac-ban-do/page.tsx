@@ -1,7 +1,9 @@
 'use client'
 
-import { StudyPage } from '@/components/StudyPage'
+import { DoDacBrowse } from '@/views/DoDacBrowse'
+import { useAppNavigate } from '@/lib/useAppNavigate'
 
-export default function Page() {
-  return <StudyPage sector="do-dac-ban-do" mode="home" />
+export default function DoDacBrowsePage() {
+  const onNavigate = useAppNavigate()
+  return <DoDacBrowse onNavigate={onNavigate} />
 }

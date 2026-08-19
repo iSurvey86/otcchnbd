@@ -7,6 +7,7 @@ import {
   sourceNoteForScope,
   topicsForScope,
 } from '../lib/bank'
+import { getDdBank } from '../data/dd/banks'
 import {
   examConfigFor,
   examPassSummary,
@@ -23,8 +24,10 @@ interface Props {
 
 export function Home({ scope, onNavigate }: Props) {
   const questions = questionsForScope(scope)
-  const topics = topicsForScope(scope)
-  const exam = examConfigFor(scope)
+  const topics = topicsForScope(scope).filter(
+    (topic) => countByTopicForScope(scope, topic.id) > 0,
+  )
+  const exam = examConfigFor(scope, questions.length)
   const totalQ = examQuestionCount(exam)
   const totalMax = examTotalMax(exam)
   const lawMax = sectionMax('phap-luat', exam)
@@ -32,6 +35,10 @@ export function Home({ scope, onNavigate }: Props) {
   const lawCount = questions.filter((q) => q.section === 'phap-luat').length
   const skillCount = questions.filter((q) => q.section === 'kinh-nghiem').length
   const title = sectorTitle(scope)
+  const bankMeta =
+    scope.sector === 'do-dac-ban-do' && scope.bankId
+      ? getDdBank(scope.bankId)
+      : undefined
 
   return (
     <>
@@ -93,6 +100,11 @@ export function Home({ scope, onNavigate }: Props) {
                   Theo Thông báo 1891/TB-QLĐT: {totalQ} câu / {exam.minutes} phút /
                   100 điểm, rút từ ngân hàng NVCM. {examPassSummary(exam)}.
                 </>
+              ) : bankMeta?.examKind === 'whole-pool' ? (
+                <>
+                  Thi thử: {totalQ} câu / {exam.minutes} phút (toàn bộ bộ{' '}
+                  {bankMeta.periodLabel}). {examPassSummary(exam)}.
+                </>
               ) : (
                 <>
                   Đề thi thử: {totalQ} câu / {exam.minutes} phút – {exam.skillCount} câu{' '}
@@ -107,7 +119,9 @@ export function Home({ scope, onNavigate }: Props) {
               <span className="chip">
                 {exam.passMode === 'law-and-total'
                   ? `Đạt ≥ ${exam.totalPassMin}/${totalMax}`
-                  : scope.sector === 'dau-thau'
+                  : exam.passMode === 'total-percent'
+                    ? 'Đạt ≥ 80% tổng'
+                    : scope.sector === 'dau-thau'
                     ? 'Đạt ≥ 50/100'
                     : 'Đạt ≥ 80% từng phần'}
               </span>

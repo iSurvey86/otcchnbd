@@ -5,6 +5,43 @@
 
 ---
 
+## 2026-08-20 — Đo đạc multi-bank + hub Đấu thầu 2 cột
+
+### Đã làm
+
+- **Đo đạc multi-bank:** routing `/do-dac-ban-do/[bankId]/…`; màn chọn bộ (`DoDacBrowse`) 2 cột ONTHICCHN | chính thức; ngân hàng **2019** số hóa (244 câu, `official-2019.json`); wire `bankId` toàn app.
+- **Home Đo đạc:** hero chỉ **Đo đạc và Bản đồ**; **bỏ banner** “Bộ đang học”.
+- **Hub Đấu thầu:** 2 cột — trái ôn luyện + ONTHICCHN (placeholder 07/06-2026); phải ôn theo văn bản (căn phải).
+- **OTP mail:** hướng dẫn sửa template Supabase (`{{ .Token }} là mã đăng nhập ONTHICCHN.ORG của bạn`) — chưa đổi trên dashboard.
+- **Dev:** fix CSS trôi = xóa `.next`, kill process dev cũ, restart một port.
+
+### File chính
+
+| File | Vai trò |
+|------|---------|
+| `src/data/dd/` | banks, questions, official-2019.json |
+| `src/views/DoDacBrowse.tsx` | Chọn bộ đề Đo đạc |
+| `src/views/DtBrowse.tsx` | Hub Đấu thầu 2 cột |
+| `src/data/dt/groups.ts` | `DT_ONTHICCHN_SETS` (chưa có data) |
+| `src/lib/bank.ts` | Scope theo bankId, `sectorTitle` |
+| `scripts/parse_dd2019.py` | Parser PDF 2019 |
+
+### Việc tiếp
+
+- [ ] **Chưa commit** — push/deploy khi user bảo.
+- [ ] JSON + routing **ONTHICCHN Đấu thầu** (07/2026, 06/2026).
+- [ ] Cập nhật **email template Supabase** (Magic Link / OTP).
+- [ ] Dọn `tmp-*` ở root (không commit).
+- [ ] Gắn a–d Điều 18 khi có bảng BTC.
+
+### Câu mở phiên sau
+
+> Đọc HANDOFF mới nhất. Đo đạc đã multi-bank (2019/2020/ONTHICCHN), hub chọn bộ 2 cột. Đấu thầu hub 2 cột; ONTHICCHN ĐT mới placeholder. Home DD bỏ banner Bộ đang học. Build pass; chưa commit. Tiếp: data ONTHICCHN ĐT, Supabase mail, commit/deploy.
+
+Chi tiết: [2026-08-20-do-dac-multi-bank-dt-browse.md](./2026-08-20-do-dac-multi-bank-dt-browse.md)
+
+---
+
 ## 2026-08-18 (tối) — Chứng nhận phôi PNG + OTP local + ẩn admin
 
 ### Đã làm

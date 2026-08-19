@@ -46,8 +46,8 @@ export interface ExamConfig {
   skillCount: number
   minutes: number
   pointsPerQuestion: number
-  /** per-section-percent = đo đạc; law-and-total = xây dựng NĐ 217 */
-  passMode: 'per-section-percent' | 'law-and-total'
+  /** per-section-percent = đo đạc; law-and-total = xây dựng NĐ 217; total-percent = bộ cập nhật ONTHICCHN */
+  passMode: 'per-section-percent' | 'law-and-total' | 'total-percent'
   passPercent?: number
   lawPassMin?: number
   totalPassMin?: number
@@ -74,6 +74,8 @@ export interface StudyScope {
   sector: SectorId
   /** Required when sector is xay-dung (track) */
   trackId?: string
+  /** Required when sector is do-dac-ban-do (question bank) */
+  bankId?: string
 }
 
 export interface ExamAttempt {
@@ -81,6 +83,7 @@ export interface ExamAttempt {
   candidateName?: string
   sector?: SectorId
   trackId?: string
+  bankId?: string
   startedAt: string
   finishedAt: string
   durationSec: number
@@ -96,6 +99,7 @@ export interface ExamAttempt {
 
 export type AppView =
   | { name: 'catalog' }
+  | { name: 'dd-browse' }
   | { name: 'xd-browse' }
   | { name: 'dt-browse' }
   | { name: 'home'; scope: StudyScope }

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { ConfirmDialog } from '../components/ConfirmDialog'
 import { QuestionCard } from '../components/QuestionCard'
 import { useAuth } from '../context/AuthContext'
-import { lawSectionLabel, questionsForScope, skillSectionLabel } from '../lib/bank'
+import { lawSectionLabel, questionsForScope, scopeKey, skillSectionLabel } from '../lib/bank'
 import {
   examConfigFor,
   examPassMark,
@@ -34,9 +34,7 @@ interface Session {
 }
 
 function scopeStorageKey(scope: StudyScope): string {
-  if (scope.sector === 'xay-dung') return `xd:${scope.trackId ?? ''}`
-  if (scope.sector === 'dau-thau') return 'dt'
-  return 'do-dac'
+  return scopeKey(scope)
 }
 
 function sessionKey(scope: StudyScope): string {
@@ -73,7 +71,7 @@ function isValidName(name: string): boolean {
 
 export function Exam({ scope, onFinish }: Props) {
   const pool = useMemo(() => questionsForScope(scope), [scope])
-  const exam = useMemo(() => examConfigFor(scope), [scope])
+  const exam = useMemo(() => examConfigFor(scope, pool.length), [scope, pool.length])
   const totalQ = examQuestionCount(exam)
   const storageKey = scopeStorageKey(scope)
   const { tryRecordAnswer, notifyExamStarted, notifyExamSubmitted } = useAuth()
@@ -116,6 +114,7 @@ export function Exam({ scope, onFinish }: Props) {
       candidateName: current.candidateName,
       sector: scope.sector,
       trackId: scope.trackId,
+      bankId: scope.bankId,
       startedAt: current.startedAt,
       finishedAt: new Date().toISOString(),
       durationSec: exam.minutes * 60 - Math.max(0, current.remaining),
@@ -213,7 +212,9 @@ export function Exam({ scope, onFinish }: Props) {
             ? `đạt PL ≥ ${exam.lawPassMin}/${exam.lawCount} và tổng ≥ ${exam.totalPassMin}/${totalQ}`
             : scope.sector === 'dau-thau'
               ? 'đạt ≥ 50/100 điểm'
-              : 'đạt ≥ 80% từng phần'}
+              : exam.passMode === 'total-percent'
+                ? 'đạt ≥ 80% tổng điểm'
+                : 'đạt ≥ 80% từng phần'}
         </h2>
         <p className="lead justified">
           {scope.sector === 'dau-thau' ? (

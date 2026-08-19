@@ -1,0 +1,155 @@
+{
+  "bankId": "onthicchn-2026-06",
+  "questions": [
+    {
+      "id": "o2606-pl-001",
+      "section": "phap-luat",
+      "topic": "luat-chung",
+      "prompt": "Tổ chức, cá nhân thực hiện hoạt động đo đạc và bản đồ phải có điều kiện gì?",
+      "options": [
+        "Chỉ cần đăng ký kinh doanh ngành nghề liên quan",
+        "Có chứng chỉ hành nghề hoặc giấy phép theo quy định của pháp luật",
+        "Chỉ cần có trang thiết bị đo",
+        "Không cần điều kiện nếu làm việc nội bộ"
+      ],
+      "answer": 1,
+      "explanation": "Đáp án đúng: B. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-001",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Trước khi đo chi tiết địa hình, cần kiểm tra điểm khống chế theo quy trình nào?",
+      "options": [
+        "Đối chiếu với mạng lưới khống chế cấp trên và ghi nhận kết quả kiểm tra",
+        "Chỉ dùng tọa độ trên Google Maps",
+        "Không cần kiểm tra nếu đo trong phạm vi thửa đất nhỏ",
+        "Chỉ kiểm tra khi chủ đầu tư yêu cầu"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-pl-002",
+      "section": "phap-luat",
+      "topic": "giay-phep-chung-chi",
+      "prompt": "Chứng chỉ hành nghề đo đạc và bản đồ có giá trị sử dụng khi nào?",
+      "options": [
+        "Khi còn thời hạn và người được cấp còn đủ điều kiện hành nghề",
+        "Vĩnh viễn sau khi cấp lần đầu",
+        "Chỉ trong tỉnh cấp chứng chỉ",
+        "Chỉ khi làm việc tại doanh nghiệp nhà nước"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-002",
+      "section": "kinh-nghiem",
+      "topic": "toan-ban-do",
+      "prompt": "Khi chuyển tọa độ từ hệ VN-2000 sang hệ quốc gia mới (nếu được quy định), cần:",
+      "options": [
+        "Áp dụng tham số chuyển đổi được công bố chính thức và kiểm tra điểm khống chế",
+        "Dùng hệ số tỷ lệ cố định 1:1",
+        "Chỉ cộng thêm hằng số 500 m",
+        "Không cần kiểm tra sau chuyển đổi"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-003",
+      "section": "kinh-nghiem",
+      "topic": "csdl-ban-do",
+      "prompt": "Chia sẻ dữ liệu bản đồ nền giữa các cơ quan nhà nước phải đảm bảo:",
+      "options": [
+        "Đúng quyền truy cập, an toàn thông tin và quy định về dữ liệu không gian",
+        "Công khai toàn bộ không lọc metadata",
+        "Chỉ gửi qua email cá nhân",
+        "Không cần ghi log truy cập"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-pl-003",
+      "section": "phap-luat",
+      "topic": "cong-trinh-ha-tang",
+      "prompt": "Đo đạc phục vụ công trình hạ tầng quốc gia phải sử dụng hệ quy chiếu:",
+      "options": [
+        "Theo quy định của pháp luật về đo đạc và bản đồ Việt Nam",
+        "Tùy ý của tư vấn thiết kế",
+        "Hệ quy chiếu địa phương không đăng ký",
+        "Hệ quy chiếu của nước ngoài không chuyển đổi"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-004",
+      "section": "kinh-nghiem",
+      "topic": "anh-vien-tham",
+      "prompt": "Orthorectification ảnh viễn thám nhằm mục đích chính:",
+      "options": [
+        "Loại bỏ sai số do địa hình và đưa ảnh về hệ tọa độ bản đồ",
+        "Tăng độ sáng ảnh đen trắng",
+        "Nén file ảnh xuống dưới 1 MB",
+        "Thay đổi hệ tọa độ tùy ý không cần tham số"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-005",
+      "section": "kinh-nghiem",
+      "topic": "do-truc-tiep",
+      "prompt": "Mục tiêu của đo trọng lực trong một số dự án đo đạc là:",
+      "options": [
+        "Phục vụ tính độ cao quốc gia / trọng lực và hiệu chỉnh độ cao",
+        "Thay thế hoàn toàn đo GNSS",
+        "Chỉ để kiểm tra pin máy đo",
+        "Không có ứng dụng trong đo đạc địa hình"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-pl-004",
+      "section": "phap-luat",
+      "topic": "chat-luong-de-an",
+      "prompt": "Sản phẩm đo đạc và bản đồ nộp cơ quan quản lý phải:",
+      "options": [
+        "Đúng quy chuẩn kỹ thuật, định dạng và quy trình nghiệm thu",
+        "Chỉ cần file Word mô tả",
+        "Không cần chữ ký người hành nghề",
+        "Chỉ nộp bản photo không lưu số liệu gốc"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    },
+    {
+      "id": "o2606-kn-006",
+      "section": "kinh-nghiem",
+      "topic": "chat-luong-de-an",
+      "prompt": "Kiểm tra chất lượng bản vẽ đo đạc thường gồm bước:",
+      "options": [
+        "Đối chiếu số liệu, ký hiệu, tỷ lệ và báo cáo kết quả kiểm tra",
+        "Chỉ in thử một bản A4",
+        "Không cần lập biên bản",
+        "Chỉ kiểm tra màu sắc bản vẽ"
+      ],
+      "answer": 0,
+      "explanation": "Đáp án đúng: A. Bổ sung ONTHICCHN 06/2026.",
+      "source": "ONTHICCHN · Cập nhật 06/2026"
+    }
+  ]
+}

@@ -16,15 +16,17 @@ type StudyMode = 'home' | 'practice' | 'exam' | 'history' | 'result'
 export function StudyPage({
   sector,
   trackId,
+  bankId,
   mode,
   attemptId,
 }: {
   sector: SectorId
   trackId?: string
+  bankId?: string
   mode: StudyMode
   attemptId?: string
 }) {
-  const scope: StudyScope = { sector, trackId }
+  const scope: StudyScope = { sector, trackId, bankId }
   const onNavigate = useAppNavigate()
 
   return (
@@ -65,7 +67,7 @@ function StudyBody({
     return (
       <TrackBankGate scope={scope}>
         <Practice
-          key={`${scope.sector}:${scope.trackId ?? ''}:${topicId ?? 'all'}`}
+          key={`${scope.sector}:${scope.trackId ?? ''}:${scope.bankId ?? ''}:${topicId ?? 'all'}`}
           scope={scope}
           topicId={topicId}
         />
@@ -77,7 +79,7 @@ function StudyBody({
     return (
       <TrackBankGate scope={scope}>
         <Exam
-          key={`${scope.sector}:${scope.trackId ?? ''}`}
+          key={`${scope.sector}:${scope.trackId ?? ''}:${scope.bankId ?? ''}`}
           scope={scope}
           onFinish={(id) =>
             onNavigate({ name: 'result', scope, attemptId: id })

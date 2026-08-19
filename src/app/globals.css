@@ -1082,6 +1082,10 @@ body::before {
   letter-spacing: 0.04em;
 }
 
+.dd-browse-head h1 {
+  font-size: clamp(26px, 4.2vw, 36px);
+}
+
 .catalog-sub {
   margin: 10px 0 0;
   font-size: 18px;
@@ -1186,6 +1190,262 @@ body::before {
 .sector-card-soon .badge {
   background: #efe4c8;
   color: var(--warn);
+}
+
+/* Đo đạc – chọn bộ đề */
+.dd-browse-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+.dd-browse-col {
+  min-width: 0;
+}
+
+.dd-browse-col .section-head {
+  padding-inline: 0;
+  margin: 8px 0 14px;
+}
+
+.dd-browse-col .section-head h2 {
+  font-size: clamp(18px, 1.75vw, 22px);
+  line-height: 1.35;
+}
+
+.dd-browse-col-official .section-head {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.dd-bank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.dd-browse-col .dd-bank-list {
+  margin-bottom: 0;
+}
+
+.dt-browse-columns .dt-browse-subhead {
+  margin-top: 1.25rem;
+}
+
+.dt-browse-soon {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+.dd-bank-card.topic-card {
+  min-height: 0;
+  padding: 20px 18px 16px;
+  gap: 0;
+  cursor: default;
+}
+
+.dd-bank-card-featured {
+  margin-bottom: 1.25rem;
+  min-height: 188px;
+}
+
+.dd-bank-kicker {
+  color: var(--topic-ink, var(--forest));
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin: 0 0 6px;
+}
+
+.dd-bank-card-featured .dd-bank-kicker {
+  color: #0a4a42;
+}
+
+.dd-bank-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 6px 0 8px;
+}
+
+.dd-bank-title {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: clamp(16px, 1.6vw, 19px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--topic-ink, var(--forest));
+  text-align: left;
+}
+
+.dd-bank-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--topic-ink, var(--forest));
+  background: color-mix(in srgb, var(--topic-accent, var(--moss)) 16%, #fff);
+  border: 1px solid color-mix(in srgb, var(--topic-accent, var(--moss)) 28%, transparent);
+}
+
+.dd-bank-source-link {
+  color: var(--forest-2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(21, 94, 86, 0.35);
+  text-underline-offset: 0.15em;
+}
+
+.dd-bank-source-link:hover {
+  color: var(--moss);
+  text-decoration-color: currentColor;
+}
+
+.dd-bank-new-icon {
+  margin-left: 0.08em;
+  padding: 0;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  vertical-align: super;
+  line-height: 0;
+  background: none;
+  color: #dc2626;
+  animation: dd-bank-new-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes dd-bank-new-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dd-bank-new-icon {
+    animation: none;
+  }
+}
+
+.dd-bank-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge-official {
+  background: #e0f2ef;
+  color: #0e3d38;
+}
+
+.badge-onthicchn {
+  background: #f3e8dc;
+  color: #7a4b1e;
+}
+
+.badge-new {
+  background: var(--copper);
+  color: #fff;
+}
+
+.dd-bank-ref,
+.dd-bank-note,
+.dd-bank-meta,
+.dd-bank-exam {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.dd-bank-exam {
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.dd-bank-cta {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dd-bank-card .dd-bank-btn {
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: #fff;
+  border-color: color-mix(in srgb, var(--topic-accent, var(--moss)) 55%, #0f172a);
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--topic-accent, var(--moss)) 82%, #fff),
+    var(--topic-accent, var(--moss))
+  );
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--topic-accent, var(--moss)) 22%, transparent),
+    0 4px 10px -3px var(--topic-glow, rgba(15, 23, 42, 0.14));
+}
+
+.dd-bank-card .dd-bank-btn:hover {
+  background: linear-gradient(
+    165deg,
+    var(--topic-accent, var(--moss)),
+    color-mix(in srgb, var(--topic-accent, var(--moss)) 78%, #0f172a)
+  );
+}
+
+.dd-bank-card-soon {
+  opacity: 0.88;
+}
+
+.dd-section-head {
+  margin-top: 0.5rem;
+}
+
+.dd-footnote {
+  margin: -0.5rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+
+.dd-bank-banner {
+  margin-bottom: 1rem;
+  border-color: rgba(47, 143, 127, 0.35);
+  background: linear-gradient(160deg, rgba(224, 242, 239, 0.75) 0%, #fff 70%);
+}
+
+.dd-bank-banner-title {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.dd-bank-banner-warn {
+  margin: 0.35rem 0;
+  color: var(--warn);
+  font-size: 0.92rem;
+}
+
+.certificate-bank {
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  color: var(--cert-ink);
+  font-weight: 600;
+}
+
+.dd-result-bank {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
 }
 
 /* Đo đạc – teal / forest */
@@ -2208,8 +2468,22 @@ body::before {
   .hero,
   .quiz-layout,
   .result-hero,
-  .topic-grid {
+  .topic-grid,
+  .dd-browse-columns {
     grid-template-columns: 1fr;
+  }
+
+  .dd-browse-columns {
+    gap: 0;
+  }
+
+  .dd-browse-col + .dd-browse-col {
+    margin-top: 1.25rem;
+  }
+
+  .dd-browse-col-official .section-head {
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .hero-single > .exam-card {

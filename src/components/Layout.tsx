@@ -11,11 +11,17 @@ interface Props {
 }
 
 function backNavFor(view: AppView): { label: string; target: AppView } | null {
-  if (view.name === 'xd-browse' || view.name === 'dt-browse') {
+  if (view.name === 'dd-browse' || view.name === 'xd-browse' || view.name === 'dt-browse') {
     return { label: '← Chọn ngành', target: { name: 'catalog' } }
   }
   const scope = getViewScope(view)
   if (!scope) return null
+  if (scope.sector === 'do-dac-ban-do') {
+    return {
+      label: '← Chọn bộ đề',
+      target: { name: 'dd-browse' },
+    }
+  }
   if (scope.sector === 'xay-dung') {
     return {
       label: '← Chọn hạng / chuyên ngành',
