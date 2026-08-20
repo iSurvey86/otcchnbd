@@ -657,9 +657,6 @@ export function Admin() {
             <option value="dong">Đóng</option>
           </select>
         )}
-        <button className="btn ghost compact" onClick={() => void load()} disabled={loading}>
-          {loading ? 'Đang tải…' : 'Làm mới'}
-        </button>
       </div>
 
       {error ? <p className="auth-error">{error}</p> : null}
