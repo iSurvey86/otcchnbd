@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getDdBank } from '@/data/dd/banks'
 import { getXdTrack, xdTrackLabel } from '@/data/xd/tracks'
 
-export const SITE_URL = 'https://onthicchn.org'
+export const SITE_URL = 'https://www.onthicchn.org'
 
 export function pageMeta(
   title: string,

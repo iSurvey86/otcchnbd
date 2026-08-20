@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { DD_BANKS } from '@/data/dd/banks'
 import { XD_TRACKS } from '@/data/xd/tracks'
 
-const SITE = 'https://onthicchn.org'
+const SITE = 'https://www.onthicchn.org'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

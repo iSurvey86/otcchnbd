@@ -7,7 +7,7 @@ import './globals.css'
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim()
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://onthicchn.org'),
+  metadataBase: new URL('https://www.onthicchn.org'),
   title: {
     default: 'Ôn thi sát hạch Chứng chỉ hành nghề | ONTHICCHN',
     template: '%s | ONTHICCHN',
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     'chứng chỉ hành nghề xây dựng',
     'ôn thi đấu thầu',
   ],
-  authors: [{ name: 'ONTHICCHN', url: 'https://onthicchn.org' }],
+  authors: [{ name: 'ONTHICCHN', url: 'https://www.onthicchn.org' }],
   openGraph: {
     title: 'Ôn thi sát hạch Chứng chỉ hành nghề | ONTHICCHN',
     description:
       'Luyện trắc nghiệm sát hạch cấp chứng chỉ hành nghề: Đo đạc và Bản đồ, Xây dựng, Đấu thầu.',
-    url: 'https://onthicchn.org',
+    url: 'https://www.onthicchn.org',
     siteName: 'ONTHICCHN',
     locale: 'vi_VN',
     type: 'website',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'Luyện trắc nghiệm sát hạch CCHN: Đo đạc và Bản đồ, Xây dựng, Đấu thầu.',
   },
-  alternates: { canonical: 'https://onthicchn.org' },
+  alternates: { canonical: 'https://www.onthicchn.org' },
   icons: {
     icon: '/favicon.svg',
   },

@@ -1104,10 +1104,21 @@ a.btn.primary {
 
 .catalog-head h1 {
   margin: 0;
-  font-size: clamp(30px, 5vw, 44px);
+  font-size: clamp(28px, 4.6vw, 40px);
   color: var(--forest);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.catalog-lead {
+  margin: 14px auto 0;
+  max-width: 40rem;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .dd-browse-head h1 {
@@ -1115,7 +1126,7 @@ a.btn.primary {
 }
 
 .catalog-sub {
-  margin: 10px 0 0;
+  margin: 18px 0 0;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.16em;
