@@ -2493,6 +2493,106 @@ a.btn.primary {
   color: var(--muted);
 }
 
+.admin-table th.admin-cspl-col-sohieu,
+.admin-table td.admin-cspl-col-sohieu {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.admin-cspl-hl-on {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+}
+
+.admin-cspl-hl-off {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+}
+
+.admin-cspl-expire-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.admin-cspl-expire-help {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.admin-cspl-expire-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.admin-cspl-appendix-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-cspl-appendix-list li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.admin-cspl-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.admin-cspl-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.admin-cspl-icon-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.admin-cspl-icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-cspl-icon-btn-danger {
+  color: #ef4444;
+  border-color: #fca5a5;
+}
+
+.admin-cspl-icon-btn-danger:hover:not(:disabled) {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #f87171;
+}
+
 @media (max-width: 900px) {
   .admin-cspl-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

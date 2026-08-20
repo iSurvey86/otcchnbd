@@ -6,6 +6,7 @@ import {
   CSPL_BUCKET,
   CSPL_MAX_BYTES,
   CSPL_PILOT_SECTOR,
+  CSPL_SELECT,
   extFromFilename,
   mapCsplRow,
   type CsplDocType,
@@ -67,9 +68,7 @@ export async function GET(request: Request) {
   const db = getSupabaseAdmin()!
   const { data, error } = await db
     .from('cspl_documents')
-    .select(
-      'id, sector, doc_type, so_hieu, title, issued_on, effective_on, status, storage_path, original_filename, content_type, byte_size, uploaded_by_email, notes, created_at',
-    )
+    .select(CSPL_SELECT)
     .eq('sector', sector)
     .order('created_at', { ascending: false })
     .limit(limit)
@@ -200,6 +199,8 @@ export async function POST(request: Request) {
       issued_on: issuedOn,
       effective_on: effectiveOn,
       status: 'uploaded',
+      legal_status: 'con_hieu_luc',
+      phu_luc_files: [],
       storage_bucket: CSPL_BUCKET,
       storage_path: storagePath,
       original_filename: file.name,
@@ -209,9 +210,7 @@ export async function POST(request: Request) {
       uploaded_by_email: auth.user.email ?? null,
       notes,
     })
-    .select(
-      'id, sector, doc_type, so_hieu, title, issued_on, effective_on, status, storage_path, original_filename, content_type, byte_size, uploaded_by_email, notes, created_at',
-    )
+    .select(CSPL_SELECT)
     .single()
 
   if (error) {

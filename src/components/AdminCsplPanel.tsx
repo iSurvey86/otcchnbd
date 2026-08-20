@@ -4,10 +4,11 @@ import { useCallback, useEffect, useId, useState, type FormEvent } from 'react'
 import { getFirebaseAuth } from '../lib/firebase'
 import {
   CSPL_DOC_TYPE_LABEL,
+  CSPL_LEGAL_STATUS_LABEL,
   CSPL_MAX_BYTES,
   CSPL_PILOT_SECTOR,
   CSPL_SECTOR_LABEL,
-  CSPL_STATUS_LABEL,
+  csplDocLabel,
   type CsplDocType,
   type CsplDocument,
 } from '../lib/cspl'
@@ -38,6 +39,28 @@ function formatWhen(iso: string): string {
   })
 }
 
+function IconPencil() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm2.92 2.33H5v-.92l9.06-9.06.92.92L5.92 19.58zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+      />
+    </svg>
+  )
+}
+
+function IconTrash() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+      />
+    </svg>
+  )
+}
+
 export function AdminCsplPanel({
   onDocumentsChange,
 }: {
@@ -59,6 +82,24 @@ export function AdminCsplPanel({
   const [effectiveOn, setEffectiveOn] = useState('')
   const [notes, setNotes] = useState('')
   const [file, setFile] = useState<File | null>(null)
+  const [expireTarget, setExpireTarget] = useState<CsplDocument | null>(null)
+  const [expireOn, setExpireOn] = useState('')
+  const [replacedById, setReplacedById] = useState('')
+  const [expireNote, setExpireNote] = useState('')
+  const [expiring, setExpiring] = useState(false)
+  const [appendixTarget, setAppendixTarget] = useState<CsplDocument | null>(null)
+  const [appendixFile, setAppendixFile] = useState<File | null>(null)
+  const [appendixTen, setAppendixTen] = useState('')
+  const [appendixBusy, setAppendixBusy] = useState(false)
+  const [editTarget, setEditTarget] = useState<CsplDocument | null>(null)
+  const [editDocType, setEditDocType] = useState<CsplDocType>('nghi-dinh')
+  const [editSoHieu, setEditSoHieu] = useState('')
+  const [editTitle, setEditTitle] = useState('')
+  const [editIssuedOn, setEditIssuedOn] = useState('')
+  const [editEffectiveOn, setEditEffectiveOn] = useState('')
+  const [editNotes, setEditNotes] = useState('')
+  const [editBusy, setEditBusy] = useState(false)
+  const [deletingId, setDeletingId] = useState<string | null>(null)
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -196,7 +237,6 @@ export function AdminCsplPanel({
         setError(json.error || `Lỗi ${res.status}`)
         return
       }
-      setOkMsg(`Đã tải lên: ${json.data?.soHieu ?? soHieu}`)
       setSoHieu('')
       setTitle('')
       setIssuedOn('')
@@ -211,6 +251,239 @@ export function AdminCsplPanel({
       setUploading(false)
     }
   }
+
+  async function onExpireSave() {
+    if (!expireTarget) return
+    setError(null)
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(expireOn)) {
+      setError('Chọn ngày hết hiệu lực.')
+      return
+    }
+    const auth = getFirebaseAuth()
+    const user = auth?.currentUser
+    if (!user) {
+      setError('Chưa đăng nhập.')
+      return
+    }
+    setExpiring(true)
+    try {
+      const token = await user.getIdToken()
+      const res = await fetch(`/api/admin/cspl/${expireTarget.id}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'expire',
+          expiredOn: expireOn,
+          replacedById: replacedById || null,
+          expireNote: expireNote.trim() || null,
+        }),
+      })
+      const json = (await res.json().catch(() => ({}))) as { error?: string }
+      if (!res.ok) {
+        setError(json.error || `Lỗi ${res.status}`)
+        return
+      }
+      setExpireTarget(null)
+      setExpireOn('')
+      setReplacedById('')
+      setExpireNote('')
+      setOkMsg(`Đã đánh dấu hết HL: ${expireTarget.soHieu}`)
+      await load()
+    } catch {
+      setError('Không kết nối được máy chủ.')
+    } finally {
+      setExpiring(false)
+    }
+  }
+
+  async function onAddAppendix() {
+    if (!appendixTarget || !appendixFile) {
+      setError('Chọn file phụ lục / phần Công báo.')
+      return
+    }
+    const auth = getFirebaseAuth()
+    const user = auth?.currentUser
+    if (!user) {
+      setError('Chưa đăng nhập.')
+      return
+    }
+    setAppendixBusy(true)
+    setError(null)
+    try {
+      const token = await user.getIdToken()
+      const body = new FormData()
+      body.set('file', appendixFile)
+      if (appendixTen.trim()) body.set('ten', appendixTen.trim())
+      const res = await fetch(`/api/admin/cspl/${appendixTarget.id}/attachments`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+        body,
+      })
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: string
+        data?: CsplDocument
+      }
+      if (!res.ok || !json.data) {
+        setError(json.error || `Lỗi ${res.status}`)
+        return
+      }
+      setAppendixFile(null)
+      setAppendixTen('')
+      setAppendixTarget(json.data)
+      setOkMsg(`Đã thêm phụ lục cho ${json.data.soHieu}`)
+      await load()
+    } catch {
+      setError('Không kết nối được máy chủ.')
+    } finally {
+      setAppendixBusy(false)
+    }
+  }
+
+  async function onRemoveAppendix(appendixId: string) {
+    if (!appendixTarget) return
+    if (!window.confirm('Xóa phụ lục này khỏi văn bản?')) return
+    const auth = getFirebaseAuth()
+    const user = auth?.currentUser
+    if (!user) {
+      setError('Chưa đăng nhập.')
+      return
+    }
+    setAppendixBusy(true)
+    setError(null)
+    try {
+      const token = await user.getIdToken()
+      const res = await fetch(
+        `/api/admin/cspl/${appendixTarget.id}/attachments?appendixId=${encodeURIComponent(appendixId)}`,
+        {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      )
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: string
+        data?: CsplDocument
+      }
+      if (!res.ok || !json.data) {
+        setError(json.error || `Lỗi ${res.status}`)
+        return
+      }
+      setAppendixTarget(json.data)
+      await load()
+    } catch {
+      setError('Không kết nối được máy chủ.')
+    } finally {
+      setAppendixBusy(false)
+    }
+  }
+
+  async function onEditSave() {
+    if (!editTarget) return
+    if (!editSoHieu.trim()) {
+      setError('Nhập số hiệu văn bản.')
+      return
+    }
+    const auth = getFirebaseAuth()
+    const user = auth?.currentUser
+    if (!user) {
+      setError('Chưa đăng nhập.')
+      return
+    }
+    setEditBusy(true)
+    setError(null)
+    try {
+      const token = await user.getIdToken()
+      const res = await fetch(`/api/admin/cspl/${editTarget.id}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'update',
+          soHieu: editSoHieu.trim(),
+          docType: editDocType,
+          title: editTitle.trim() || null,
+          issuedOn: editIssuedOn || null,
+          effectiveOn: editEffectiveOn || null,
+          notes: editNotes.trim() || null,
+        }),
+      })
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: string
+        data?: CsplDocument
+      }
+      if (!res.ok || !json.data) {
+        setError(json.error || `Lỗi ${res.status}`)
+        return
+      }
+      setEditTarget(null)
+      setOkMsg(`Đã cập nhật: ${json.data.soHieu}`)
+      await load()
+    } catch {
+      setError('Không kết nối được máy chủ.')
+    } finally {
+      setEditBusy(false)
+    }
+  }
+
+  async function onDeleteDoc(row: CsplDocument) {
+    if (
+      !window.confirm(
+        `Xóa văn bản ${row.soHieu}?\n\nSẽ xóa luôn file gốc và phụ lục trên Storage. Không hoàn tác.`,
+      )
+    ) {
+      return
+    }
+    const auth = getFirebaseAuth()
+    const user = auth?.currentUser
+    if (!user) {
+      setError('Chưa đăng nhập.')
+      return
+    }
+    setDeletingId(row.id)
+    setError(null)
+    setOkMsg(null)
+    try {
+      const token = await user.getIdToken()
+      const res = await fetch(`/api/admin/cspl/${row.id}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const json = (await res.json().catch(() => ({}))) as { error?: string }
+      if (!res.ok) {
+        setError(json.error || `Lỗi ${res.status}`)
+        return
+      }
+      if (editTarget?.id === row.id) setEditTarget(null)
+      if (appendixTarget?.id === row.id) setAppendixTarget(null)
+      if (expireTarget?.id === row.id) setExpireTarget(null)
+      setOkMsg(`Đã xóa: ${row.soHieu}`)
+      await load()
+    } catch {
+      setError('Không kết nối được máy chủ.')
+    } finally {
+      setDeletingId(null)
+    }
+  }
+
+  function openEdit(row: CsplDocument) {
+    setEditTarget(row)
+    setEditDocType(row.docType)
+    setEditSoHieu(row.soHieu)
+    setEditTitle(row.title || '')
+    setEditIssuedOn(row.issuedOn || '')
+    setEditEffectiveOn(row.effectiveOn || '')
+    setEditNotes(row.notes || '')
+    setError(null)
+  }
+
+  const replacementChoices = rows.filter(
+    (r) =>
+      r.id !== expireTarget?.id && r.legalStatus === 'con_hieu_luc',
+  )
 
   return (
     <div className="admin-cspl">
@@ -262,7 +535,10 @@ export function AdminCsplPanel({
               <input
                 className="admin-cspl-input"
                 value={soHieu}
-                onChange={(e) => setSoHieu(e.target.value)}
+                onChange={(e) => {
+                  setSoHieu(e.target.value)
+                  setOkMsg(null)
+                }}
                 placeholder="96/2024/NĐ-CP"
                 required
               />
@@ -355,40 +631,390 @@ export function AdminCsplPanel({
             <table className="admin-table admin-table-logs">
               <thead>
                 <tr>
-                  <th>Số hiệu</th>
-                  <th>Loại</th>
-                  <th>Trạng thái</th>
-                  <th>File</th>
+                  <th className="admin-cspl-col-sohieu">Số hiệu</th>
+                  <th>Hiệu lực</th>
+                  <th>File gốc</th>
+                  <th>Phụ lục</th>
                   <th>Ngày tải</th>
+                  <th>Thao tác</th>
                 </tr>
               </thead>
               <tbody>
-                {rows.map((row) => (
-                  <tr key={row.id}>
-                    <td>
-                      <strong>{row.soHieu}</strong>
-                      {row.title ? (
-                        <div className="admin-cspl-sub">{row.title}</div>
-                      ) : null}
-                    </td>
-                    <td>{CSPL_DOC_TYPE_LABEL[row.docType] ?? row.docType}</td>
-                    <td>
-                      <span className="admin-chip">
-                        {CSPL_STATUS_LABEL[row.status] ?? row.status}
-                      </span>
-                    </td>
-                    <td>
-                      {row.originalFilename || '–'}
-                      <div className="admin-cspl-sub">{formatBytes(row.byteSize)}</div>
-                    </td>
-                    <td>{formatWhen(row.createdAt)}</td>
-                  </tr>
-                ))}
+                {rows.map((row) => {
+                  const repl = row.replacedById
+                    ? rows.find((r) => r.id === row.replacedById)
+                    : undefined
+                  return (
+                    <tr key={row.id}>
+                      <td className="admin-cspl-col-sohieu">
+                        <strong>{row.soHieu}</strong>
+                        {row.title ? (
+                          <div className="admin-cspl-sub">{row.title}</div>
+                        ) : null}
+                        {row.legalStatus === 'het_hieu_luc' && repl ? (
+                          <div className="admin-cspl-sub">
+                            Thay thế bởi: {repl.soHieu}
+                          </div>
+                        ) : null}
+                      </td>
+                      <td>
+                        <span
+                          className={`admin-chip ${
+                            row.legalStatus === 'het_hieu_luc'
+                              ? 'admin-cspl-hl-off'
+                              : 'admin-cspl-hl-on'
+                          }`}
+                        >
+                          {CSPL_LEGAL_STATUS_LABEL[row.legalStatus]}
+                        </span>
+                        {row.expiredOn ? (
+                          <div className="admin-cspl-sub">Hết: {row.expiredOn}</div>
+                        ) : null}
+                      </td>
+                      <td>
+                        {row.originalFilename || '–'}
+                        <div className="admin-cspl-sub">{formatBytes(row.byteSize)}</div>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          className="btn ghost compact"
+                          onClick={() => {
+                            setAppendixTarget(row)
+                            setAppendixFile(null)
+                            setAppendixTen('')
+                            setError(null)
+                          }}
+                        >
+                          {row.appendices.length > 0
+                            ? `📎 ${row.appendices.length}`
+                            : '+ Thêm'}
+                        </button>
+                      </td>
+                      <td>{formatWhen(row.createdAt)}</td>
+                      <td>
+                        <div className="admin-cspl-row-actions">
+                          <button
+                            type="button"
+                            className="admin-cspl-icon-btn"
+                            title="Sửa"
+                            aria-label="Sửa"
+                            disabled={deletingId === row.id}
+                            onClick={() => openEdit(row)}
+                          >
+                            <IconPencil />
+                          </button>
+                          <button
+                            type="button"
+                            className="admin-cspl-icon-btn admin-cspl-icon-btn-danger"
+                            title="Xóa"
+                            aria-label="Xóa"
+                            disabled={deletingId === row.id}
+                            onClick={() => void onDeleteDoc(row)}
+                          >
+                            {deletingId === row.id ? '…' : <IconTrash />}
+                          </button>
+                          {row.legalStatus === 'con_hieu_luc' ? (
+                            <button
+                              type="button"
+                              className="btn ghost compact"
+                              disabled={deletingId === row.id}
+                              onClick={() => {
+                                setExpireTarget(row)
+                                setExpireOn(
+                                  new Date().toISOString().slice(0, 10),
+                                )
+                                setReplacedById('')
+                                setExpireNote('')
+                                setError(null)
+                              }}
+                            >
+                              Hết HL
+                            </button>
+                          ) : null}
+                        </div>
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
         )}
       </section>
+
+      {editTarget ? (
+        <div
+          className="modal-backdrop"
+          onClick={() => !editBusy && setEditTarget(null)}
+          role="presentation"
+        >
+          <div
+            className="feedback-modal admin-cspl-expire-modal"
+            role="dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="feedback-modal-title">Sửa văn bản</h2>
+            <p className="feedback-modal-meta">
+              File gốc giữ nguyên. Đổi file: xóa rồi upload lại, hoặc thêm phụ lục.
+            </p>
+
+            <div className="admin-cspl-grid">
+              <label className="admin-cspl-field">
+                <span>Số hiệu *</span>
+                <input
+                  className="admin-cspl-input"
+                  value={editSoHieu}
+                  onChange={(e) => setEditSoHieu(e.target.value)}
+                  required
+                />
+              </label>
+              <label className="admin-cspl-field">
+                <span>Loại văn bản *</span>
+                <select
+                  className="admin-cspl-input"
+                  value={editDocType}
+                  onChange={(e) =>
+                    setEditDocType(e.target.value as CsplDocType)
+                  }
+                >
+                  {DOC_TYPE_OPTIONS.map(([id, label]) => (
+                    <option key={id} value={id}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="admin-cspl-field">
+                <span>Ngày ban hành</span>
+                <input
+                  type="date"
+                  className="admin-cspl-input"
+                  value={editIssuedOn}
+                  onChange={(e) => setEditIssuedOn(e.target.value)}
+                />
+              </label>
+              <label className="admin-cspl-field">
+                <span>Ngày hiệu lực</span>
+                <input
+                  type="date"
+                  className="admin-cspl-input"
+                  value={editEffectiveOn}
+                  onChange={(e) => setEditEffectiveOn(e.target.value)}
+                />
+              </label>
+              <label className="admin-cspl-field admin-cspl-field-half">
+                <span>Nội dung / trích yếu</span>
+                <textarea
+                  className="admin-cspl-input admin-cspl-textarea"
+                  value={editTitle}
+                  onChange={(e) => setEditTitle(e.target.value)}
+                  rows={3}
+                />
+              </label>
+              <label className="admin-cspl-field admin-cspl-field-half">
+                <span>Ghi chú nội bộ</span>
+                <textarea
+                  className="admin-cspl-input admin-cspl-textarea"
+                  value={editNotes}
+                  onChange={(e) => setEditNotes(e.target.value)}
+                  rows={3}
+                />
+              </label>
+            </div>
+
+            <div className="admin-cspl-expire-actions">
+              <button
+                type="button"
+                className="btn ghost"
+                disabled={editBusy}
+                onClick={() => setEditTarget(null)}
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                className="btn primary"
+                disabled={editBusy || !editSoHieu.trim()}
+                onClick={() => void onEditSave()}
+              >
+                {editBusy ? 'Đang lưu…' : 'Lưu'}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {appendixTarget ? (
+        <div
+          className="modal-backdrop"
+          onClick={() => !appendixBusy && setAppendixTarget(null)}
+          role="presentation"
+        >
+          <div
+            className="feedback-modal admin-cspl-expire-modal"
+            role="dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="feedback-modal-title">Phụ lục / phần Công báo</h2>
+            <p className="feedback-modal-meta">{csplDocLabel(appendixTarget)}</p>
+            <p className="admin-cspl-expire-help">
+              Cùng một văn bản (một số hiệu). File gốc đã lưu; thêm lần lượt các phần
+              còn lại / phụ lục. Hệ thống gắn tất cả vào bản ghi này để tham chiếu sau.
+            </p>
+
+            {appendixTarget.appendices.length > 0 ? (
+              <ul className="admin-cspl-appendix-list">
+                {appendixTarget.appendices.map((pl) => (
+                  <li key={pl.id}>
+                    <div>
+                      <strong>
+                        {pl.thuTu}. {pl.ten}
+                      </strong>
+                      <div className="admin-cspl-sub">
+                        {pl.fileTenGoc || pl.path}
+                        {pl.byteSize != null ? ` · ${formatBytes(pl.byteSize)}` : ''}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      className="btn ghost compact"
+                      disabled={appendixBusy}
+                      onClick={() => void onRemoveAppendix(pl.id)}
+                    >
+                      Xóa
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="admin-cspl-sub">Chưa có phụ lục.</p>
+            )}
+
+            <label className="admin-cspl-field">
+              <span>Tên phần (tuỳ chọn)</span>
+              <input
+                className="admin-cspl-input"
+                value={appendixTen}
+                onChange={(e) => setAppendixTen(e.target.value)}
+                placeholder="VD: Phần 2 — Điều khoản thi hành / Phụ lục I"
+              />
+            </label>
+
+            <label className="admin-cspl-field">
+              <span>File PDF / Word *</span>
+              <input
+                type="file"
+                accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                onChange={(e) => setAppendixFile(e.target.files?.[0] ?? null)}
+              />
+              {appendixFile ? (
+                <span className="admin-cspl-sub">
+                  {appendixFile.name} ({formatBytes(appendixFile.size)})
+                </span>
+              ) : null}
+            </label>
+
+            <div className="admin-cspl-expire-actions">
+              <button
+                type="button"
+                className="btn ghost"
+                disabled={appendixBusy}
+                onClick={() => setAppendixTarget(null)}
+              >
+                Đóng
+              </button>
+              <button
+                type="button"
+                className="btn primary"
+                disabled={appendixBusy || !appendixFile}
+                onClick={() => void onAddAppendix()}
+              >
+                {appendixBusy ? 'Đang tải…' : 'Thêm phụ lục'}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {expireTarget ? (
+        <div
+          className="modal-backdrop"
+          onClick={() => !expiring && setExpireTarget(null)}
+          role="presentation"
+        >
+          <div
+            className="feedback-modal admin-cspl-expire-modal"
+            role="dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="feedback-modal-title">Đánh dấu hết hiệu lực</h2>
+            <p className="feedback-modal-meta">
+              {csplDocLabel(expireTarget)}
+            </p>
+            <p className="admin-cspl-expire-help">
+              Upload văn bản mới trước (nếu có), rồi chọn làm văn bản thay thế. Không
+              xóa dòng cũ — giữ để tra cứu.
+            </p>
+
+            <label className="admin-cspl-field">
+              <span>Ngày hết hiệu lực *</span>
+              <input
+                type="date"
+                className="admin-cspl-input"
+                value={expireOn}
+                onChange={(e) => setExpireOn(e.target.value)}
+              />
+            </label>
+
+            <label className="admin-cspl-field">
+              <span>Văn bản thay thế</span>
+              <select
+                className="admin-cspl-input"
+                value={replacedById}
+                onChange={(e) => setReplacedById(e.target.value)}
+              >
+                <option value="">— Chưa chọn / không có —</option>
+                {replacementChoices.map((r) => (
+                  <option key={r.id} value={r.id}>
+                    {r.soHieu}
+                    {r.title ? ` — ${r.title.slice(0, 60)}` : ''}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="admin-cspl-field">
+              <span>Ghi chú</span>
+              <input
+                className="admin-cspl-input"
+                value={expireNote}
+                onChange={(e) => setExpireNote(e.target.value)}
+                placeholder="VD: Bãi bỏ bởi NĐ …"
+              />
+            </label>
+
+            <div className="admin-cspl-expire-actions">
+              <button
+                type="button"
+                className="btn ghost"
+                disabled={expiring}
+                onClick={() => setExpireTarget(null)}
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                className="btn primary"
+                disabled={expiring}
+                onClick={() => void onExpireSave()}
+              >
+                {expiring ? 'Đang lưu…' : 'Xác nhận hết HL'}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   )
 }

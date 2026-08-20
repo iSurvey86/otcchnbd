@@ -21,6 +21,7 @@ create table if not exists public.cspl_documents (
   title text,
   issued_on date,
   effective_on date,
+  -- Pipeline xử lý file / sinh câu (không lẫn với hiệu lực pháp lý)
   status text not null default 'uploaded'
     check (status in (
       'uploaded',
@@ -29,6 +30,13 @@ create table if not exists public.cspl_documents (
       'active',
       'superseded'
     )),
+  -- Hiệu lực pháp lý (kiểu danh mục CSPL ksnpsc)
+  legal_status text not null default 'con_hieu_luc'
+    check (legal_status in ('con_hieu_luc', 'het_hieu_luc')),
+  expired_on date,
+  replaced_by_id uuid references public.cspl_documents (id) on delete set null,
+  expire_note text,
+  phu_luc_files jsonb not null default '[]'::jsonb,
   storage_bucket text not null default 'cspl',
   storage_path text not null,
   original_filename text,
@@ -47,6 +55,9 @@ create index if not exists cspl_documents_sector_created_idx
 
 create index if not exists cspl_documents_so_hieu_idx
   on public.cspl_documents (so_hieu);
+
+create index if not exists cspl_documents_legal_status_idx
+  on public.cspl_documents (legal_status);
 
 create unique index if not exists cspl_documents_storage_path_uidx
   on public.cspl_documents (storage_path);
