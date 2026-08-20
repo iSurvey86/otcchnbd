@@ -119,6 +119,57 @@ function clip(text: string, max = 90): string {
   return `${clean.slice(0, max - 1)}…`
 }
 
+type TimeRangePreset = 'all' | 'today' | 'week' | 'month' | '7d' | '30d' | 'custom'
+
+function startOfDay(d: Date): Date {
+  const x = new Date(d)
+  x.setHours(0, 0, 0, 0)
+  return x
+}
+
+function endOfDay(d: Date): Date {
+  const x = new Date(d)
+  x.setHours(23, 59, 59, 999)
+  return x
+}
+
+function timeRangeBounds(
+  preset: TimeRangePreset,
+  customFrom: string,
+  customTo: string,
+): { from: Date | null; to: Date | null } {
+  const now = new Date()
+  if (preset === 'all') return { from: null, to: null }
+  if (preset === 'today') return { from: startOfDay(now), to: endOfDay(now) }
+  if (preset === '7d') {
+    const from = startOfDay(now)
+    from.setDate(from.getDate() - 6)
+    return { from, to: endOfDay(now) }
+  }
+  if (preset === '30d') {
+    const from = startOfDay(now)
+    from.setDate(from.getDate() - 29)
+    return { from, to: endOfDay(now) }
+  }
+  if (preset === 'week') {
+    const from = startOfDay(now)
+    const mondayOffset = (from.getDay() + 6) % 7
+    from.setDate(from.getDate() - mondayOffset)
+    return { from, to: endOfDay(now) }
+  }
+  if (preset === 'month') {
+    const from = startOfDay(now)
+    from.setDate(1)
+    return { from, to: endOfDay(now) }
+  }
+  const from = customFrom ? startOfDay(new Date(`${customFrom}T00:00:00`)) : null
+  const to = customTo ? endOfDay(new Date(`${customTo}T00:00:00`)) : null
+  return {
+    from: from && !Number.isNaN(from.getTime()) ? from : null,
+    to: to && !Number.isNaN(to.getTime()) ? to : null,
+  }
+}
+
 function fmtScore(value: number): string {
   return value.toLocaleString('vi-VN', { maximumFractionDigits: 1 })
 }
@@ -230,7 +281,151 @@ function formatWhen(value: Date | null): string {
     : '–'
 }
 
-function answerBits(row: LogRow) {
+function eventMeta(row: LogRow) {
+  return (
+    EVENT_META[row.event] ?? {
+      module: 'KHAC',
+      action: String(row.event).toUpperCase(),
+      detail: String(row.event),
+    }
+  )
+}
+
+const EXPORT_HEADERS = [
+  'STT',
+  'Họ tên',
+  'Email',
+  'Lĩnh vực',
+  'Chi tiết lĩnh vực',
+  'Phân hệ',
+  'Ôn/Thi',
+  'Hành động',
+  'Thời gian',
+  'Chi tiết',
+] as const
+
+const EXPORT_COL_WIDTHS = [6, 22, 28, 16, 28, 12, 10, 12, 18, 72]
+const EXPORT_COL_COUNT = EXPORT_HEADERS.length
+const EXPORT_HEADER_ROW = 3
+
+function exportRangeLabel(rows: LogRow[]): string {
+  const times = rows
+    .map((r) => r.createdAt)
+    .filter((d): d is Date => d instanceof Date && !Number.isNaN(d.getTime()))
+  if (times.length === 0) return 'TỪ … ĐẾN …'
+  let min = times[0]
+  let max = times[0]
+  for (const t of times) {
+    if (t < min) min = t
+    if (t > max) max = t
+  }
+  return `TỪ ${formatWhen(min)} ĐẾN ${formatWhen(max)}`
+}
+
+async function exportLogsXlsx(rows: LogRow[]) {
+  const ExcelJS = (await import('exceljs')).default
+  const wb = new ExcelJS.Workbook()
+  wb.creator = 'onthicchn'
+  const ws = wb.addWorksheet('Nhật ký', {
+    views: [{ state: 'frozen', ySplit: EXPORT_HEADER_ROW }],
+  })
+
+  for (let i = 0; i < EXPORT_COL_COUNT; i++) {
+    ws.getColumn(i + 1).width = EXPORT_COL_WIDTHS[i]
+  }
+
+  ws.mergeCells(1, 1, 1, EXPORT_COL_COUNT)
+  const titleCell = ws.getCell(1, 1)
+  titleCell.value = 'BẢNG NHẬT KÝ HOẠT ĐỘNG NGƯỜI DÙNG'
+  titleCell.font = { bold: true, name: 'Calibri', size: 16, color: { argb: 'FF7A4E22' } }
+  titleCell.alignment = { vertical: 'middle', horizontal: 'center' }
+  ws.getRow(1).height = 28
+
+  ws.mergeCells(2, 1, 2, EXPORT_COL_COUNT)
+  const rangeCell = ws.getCell(2, 1)
+  rangeCell.value = exportRangeLabel(rows)
+  rangeCell.font = { italic: true, name: 'Calibri', size: 11, color: { argb: 'FF6B5A45' } }
+  rangeCell.alignment = { vertical: 'middle', horizontal: 'center' }
+  ws.getRow(2).height = 20
+
+  const headerRow = ws.getRow(EXPORT_HEADER_ROW)
+  headerRow.height = 22
+  for (let col = 1; col <= EXPORT_COL_COUNT; col++) {
+    const cell = headerRow.getCell(col)
+    cell.value = EXPORT_HEADERS[col - 1]
+    cell.font = { bold: true, color: { argb: 'FFFFFFFF' }, name: 'Calibri', size: 11 }
+    cell.fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: 'FFB57A3C' },
+    }
+    cell.alignment = { vertical: 'middle', horizontal: 'center', wrapText: true }
+    cell.border = {
+      top: { style: 'thin', color: { argb: 'FF8F5F2E' } },
+      left: { style: 'thin', color: { argb: 'FF8F5F2E' } },
+      bottom: { style: 'thin', color: { argb: 'FF8F5F2E' } },
+      right: { style: 'thin', color: { argb: 'FF8F5F2E' } },
+    }
+  }
+
+  rows.forEach((row, i) => {
+    const meta = eventMeta(row)
+    const field = linhVuc(row)
+    const detail = logDetail(row, { full: true })
+    const excelRow = ws.addRow([
+      i + 1,
+      row.displayName || '',
+      row.email || '',
+      field?.title || '',
+      field?.sub || '',
+      meta.module,
+      meta.module === 'ON_THI' ? onThiKind(row) : '',
+      meta.action,
+      formatWhen(row.createdAt),
+      detail,
+    ])
+
+    const stripe = i % 2 === 1
+    excelRow.eachCell((cell, col) => {
+      cell.font = { name: 'Calibri', size: 10, color: { argb: 'FF1F2937' } }
+      cell.border = {
+        top: { style: 'thin', color: { argb: 'FFD6C4A8' } },
+        left: { style: 'thin', color: { argb: 'FFD6C4A8' } },
+        bottom: { style: 'thin', color: { argb: 'FFD6C4A8' } },
+        right: { style: 'thin', color: { argb: 'FFD6C4A8' } },
+      }
+      cell.alignment = {
+        vertical: 'middle',
+        horizontal: col === 1 ? 'center' : 'left',
+        wrapText: true,
+      }
+      if (stripe) {
+        cell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FFF8F1E7' },
+        }
+      }
+    })
+
+    const lines = Math.max(1, Math.ceil(detail.length / 70))
+    excelRow.height = Math.min(120, 15 + lines * 12)
+  })
+
+  const buffer = await wb.xlsx.writeBuffer()
+  const blob = new Blob([buffer], {
+    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  })
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `nhat-ky-hoat-dong-${stamp}.xlsx`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+function answerBits(row: LogRow, opts?: { full?: boolean }) {
   const payload = row.payload
   const question = row.questionId ? QUESTION_BY_ID.get(row.questionId) : undefined
   const prompt = asStr(payload.prompt) || question?.prompt
@@ -249,13 +444,14 @@ function answerBits(row: LogRow) {
   const answer = asNum(payload.answer)
   const choiceText = optionSnippet(row, 'choice')
   const answerText = optionSnippet(row, 'answer')
+  const text = (value: string, max: number) => (opts?.full ? value : clip(value, max))
   const chose =
     choice != null
-      ? `Chọn ${letter(choice)}${choiceText ? `. ${clip(choiceText, 90)}` : ''}`
+      ? `Chọn ${letter(choice)}${choiceText ? `. ${text(choiceText, 90)}` : ''}`
       : ''
   const key =
     answer != null
-      ? `Đáp án ${letter(answer)}${answerText ? `. ${clip(answerText, 90)}` : ''}`
+      ? `Đáp án ${letter(answer)}${answerText ? `. ${text(answerText, 90)}` : ''}`
       : ''
   return {
     pos,
@@ -268,20 +464,23 @@ function answerBits(row: LogRow) {
   }
 }
 
-function logDetail(row: LogRow): string {
+function logDetail(row: LogRow, opts?: { full?: boolean }): string {
   const payload = row.payload
 
   if (row.event === 'question_answered') {
-    const b = answerBits(row)
+    const b = answerBits(row, opts)
     const head = [b.pos, b.topic ? `chuyên đề ${b.topic}` : null].filter(Boolean).join(' · ')
     const pick = b.chose || 'Chưa ghi đáp án đã chọn'
     const result =
       b.result && b.passed === false && b.key
         ? `${b.result} · ${b.key}`
         : b.result
-    return [head, b.prompt ? clip(b.prompt, 140) : null, pick, result]
-      .filter(Boolean)
-      .join(' — ')
+    const promptBit = b.prompt
+      ? opts?.full
+        ? b.prompt
+        : clip(b.prompt, 140)
+      : null
+    return [head, promptBit, pick, result].filter(Boolean).join(' — ')
   }
 
   if (row.event === 'exam_submitted') {
@@ -369,6 +568,9 @@ export function Admin() {
   const [moduleFilter, setModuleFilter] = useState('all')
   const [actionFilter, setActionFilter] = useState('all')
   const [sectorFilter, setSectorFilter] = useState('all')
+  const [timePreset, setTimePreset] = useState<TimeRangePreset>('all')
+  const [customFrom, setCustomFrom] = useState('')
+  const [customTo, setCustomTo] = useState('')
   const [hideAdmin, setHideAdmin] = useState(() => {
     try {
       return localStorage.getItem('otcchnbd.admin.hideAdmin') === '1'
@@ -423,10 +625,22 @@ export function Admin() {
 
   useEffect(() => {
     setPage(1)
-  }, [tab, search, moduleFilter, actionFilter, sectorFilter, feedbackStatus, hideAdmin])
+  }, [
+    tab,
+    search,
+    moduleFilter,
+    actionFilter,
+    sectorFilter,
+    timePreset,
+    customFrom,
+    customTo,
+    feedbackStatus,
+    hideAdmin,
+  ])
 
   const filteredLogs = useMemo(() => {
     const q = search.trim().toLowerCase()
+    const { from, to } = timeRangeBounds(timePreset, customFrom, customTo)
     return logs.filter((row) => {
       const meta = EVENT_META[row.event] ?? {
         module: 'KHAC',
@@ -437,6 +651,11 @@ export function Admin() {
       if (actionFilter !== 'all' && meta.action !== actionFilter) return false
       if (sectorFilter !== 'all' && inferScope(row).sector !== sectorFilter) return false
       if (hideAdmin && isAdminEmail(row.email)) return false
+      if (from || to) {
+        if (!row.createdAt) return false
+        if (from && row.createdAt < from) return false
+        if (to && row.createdAt > to) return false
+      }
       if (!q) return true
       const field = linhVuc(row)
       const hay = [
@@ -456,7 +675,17 @@ export function Admin() {
         .toLowerCase()
       return hay.includes(q)
     })
-  }, [logs, search, moduleFilter, actionFilter, sectorFilter, hideAdmin])
+  }, [
+    logs,
+    search,
+    moduleFilter,
+    actionFilter,
+    sectorFilter,
+    hideAdmin,
+    timePreset,
+    customFrom,
+    customTo,
+  ])
 
   const filteredFeedback = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -628,6 +857,39 @@ export function Admin() {
               <option value="PAYWALL">PAYWALL</option>
               <option value="SUBMIT">SUBMIT</option>
             </select>
+            <select
+              value={timePreset}
+              onChange={(e) => setTimePreset(e.target.value as TimeRangePreset)}
+              className="admin-select"
+              aria-label="Khoảng thời gian"
+            >
+              <option value="all">Tất cả thời gian</option>
+              <option value="today">Hôm nay</option>
+              <option value="week">Tuần này</option>
+              <option value="month">Tháng này</option>
+              <option value="7d">7 ngày gần đây</option>
+              <option value="30d">30 ngày gần đây</option>
+              <option value="custom">Khoảng tùy chọn…</option>
+            </select>
+            {timePreset === 'custom' ? (
+              <span className="admin-date-range">
+                <input
+                  type="date"
+                  className="admin-date"
+                  value={customFrom}
+                  onChange={(e) => setCustomFrom(e.target.value)}
+                  aria-label="Từ ngày"
+                />
+                <span className="admin-date-sep">→</span>
+                <input
+                  type="date"
+                  className="admin-date"
+                  value={customTo}
+                  onChange={(e) => setCustomTo(e.target.value)}
+                  aria-label="Đến ngày"
+                />
+              </span>
+            ) : null}
             <button
               type="button"
               className={hideAdmin ? 'btn copper compact' : 'btn ghost compact'}
@@ -642,6 +904,16 @@ export function Admin() {
               }}
             >
               {hideAdmin ? 'Hiện admin' : 'Ẩn admin'}
+            </button>
+            <button
+              type="button"
+              className="btn primary compact"
+              disabled={filteredLogs.length === 0 || loading}
+              onClick={() => {
+                void exportLogsXlsx(filteredLogs)
+              }}
+            >
+              Xuất Excel ({filteredLogs.length})
             </button>
           </>
         ) : (

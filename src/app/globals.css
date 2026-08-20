@@ -2241,6 +2241,30 @@ a.btn.primary {
   color: var(--ink-soft);
 }
 
+.admin-date-range {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.admin-date {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 10px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.admin-date-sep {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .admin-panel {
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.04),
