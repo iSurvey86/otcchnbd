@@ -141,3 +141,9 @@ export function bankTitleForMeta(bank: DdBankMeta): string {
 export function bankKindLabel(bank: DdBankMeta): string {
   return bank.kind === 'official' ? 'Chính thức' : 'ONTHICCHN'
 }
+
+/** Bộ đề khác cùng lĩnh vực Đo đạc — liên kết nội bộ. */
+export function relatedDdBanks(bankId: string | undefined, limit = 3): DdBankMeta[] {
+  const current = resolveDdBankId(bankId)
+  return DD_BANKS.filter((b) => b.ready && b.id !== current).slice(0, limit)
+}

@@ -1,15 +1,12 @@
 'use client'
 
+import { AppLink } from '../components/AppLink'
 import { DT_DOC_GROUPS, DT_ONTHICCHN_SETS } from '../data/dt/groups'
 import { dtCountByTopic, openDtQuestionTotal } from '../data/dt/questions'
 import { useDtBank } from '../hooks/useDtBank'
 import { examConfigFor, examPassSummary, examQuestionCount } from '../lib/exam'
 import { readDtCursor, readDtWrongIds } from '../lib/dtPractice'
 import type { AppView, TopicId } from '../types'
-
-interface Props {
-  onNavigate: (view: AppView) => void
-}
 
 const DT_SCOPE = { sector: 'dau-thau' as const }
 
@@ -18,29 +15,25 @@ function PracticeCard({
   count,
   title,
   blurb,
-  onClick,
+  view,
 }: {
   tone: number
   count: string
   title: string
   blurb: string
-  onClick: () => void
+  view: AppView
 }) {
   return (
-    <button
-      type="button"
-      className={`topic-card topic-tone-${tone % 8}`}
-      onClick={onClick}
-    >
+    <AppLink className={`topic-card topic-tone-${tone % 8}`} view={view}>
       <span className="topic-card-bar" aria-hidden />
       <span className="count">{count}</span>
       <h3>{title}</h3>
       <p>{blurb}</p>
-    </button>
+    </AppLink>
   )
 }
 
-export function DtBrowse({ onNavigate }: Props) {
+export function DtBrowse() {
   const { status } = useDtBank(true)
   const total = openDtQuestionTotal()
   const exam = examConfigFor(DT_SCOPE)
@@ -85,12 +78,9 @@ export function DtBrowse({ onNavigate }: Props) {
                   <span className="chip">Đạt ≥ 50/100</span>
                 </div>
               </div>
-              <button
-                className="btn copper"
-                onClick={() => onNavigate({ name: 'exam', scope: DT_SCOPE })}
-              >
+              <AppLink className="btn copper" view={{ name: 'exam', scope: DT_SCOPE }}>
                 Bắt đầu thi thử
-              </button>
+              </AppLink>
             </div>
           </section>
 
@@ -98,12 +88,12 @@ export function DtBrowse({ onNavigate }: Props) {
             <section className="dd-browse-col">
               <div className="section-head">
                 <h2>Ôn luyện</h2>
-                <button
+                <AppLink
                   className="btn ghost compact"
-                  onClick={() => onNavigate({ name: 'history', scope: DT_SCOPE })}
+                  view={{ name: 'history', scope: DT_SCOPE }}
                 >
                   Lịch sử thi thử
-                </button>
+                </AppLink>
               </div>
               <div className="dd-bank-list">
                 <PracticeCard
@@ -113,55 +103,47 @@ export function DtBrowse({ onNavigate }: Props) {
                   }
                   title="Tiếp tục ôn"
                   blurb="Đi lần lượt 390 câu theo thứ tự ngân hàng, nhớ chỗ đang dở."
-                  onClick={() => onNavigate({ name: 'practice', scope: DT_SCOPE })}
+                  view={{ name: 'practice', scope: DT_SCOPE }}
                 />
                 <PracticeCard
                   tone={1}
                   count={`${wrongCount} câu`}
                   title="Ôn câu sai"
                   blurb="Các câu đã trả lời sai khi ôn hoặc thi thử trên máy này."
-                  onClick={() =>
-                    onNavigate({ name: 'practice', scope: DT_SCOPE, topicId: 'dt-sai' })
-                  }
+                  view={{ name: 'practice', scope: DT_SCOPE, topicId: 'dt-sai' }}
                 />
                 <PracticeCard
                   tone={2}
                   count="10 câu"
                   title="Ôn ngẫu nhiên 10"
                   blurb="Một phiên ngắn, rút ngẫu nhiên từ cả ngân hàng."
-                  onClick={() =>
-                    onNavigate({
-                      name: 'practice',
-                      scope: DT_SCOPE,
-                      topicId: 'dt-rand-10' as TopicId,
-                    })
-                  }
+                  view={{
+                    name: 'practice',
+                    scope: DT_SCOPE,
+                    topicId: 'dt-rand-10' as TopicId,
+                  }}
                 />
                 <PracticeCard
                   tone={3}
                   count="20 câu"
                   title="Ôn ngẫu nhiên 20"
                   blurb="Phiên trung bình, rút ngẫu nhiên từ cả ngân hàng."
-                  onClick={() =>
-                    onNavigate({
-                      name: 'practice',
-                      scope: DT_SCOPE,
-                      topicId: 'dt-rand-20' as TopicId,
-                    })
-                  }
+                  view={{
+                    name: 'practice',
+                    scope: DT_SCOPE,
+                    topicId: 'dt-rand-20' as TopicId,
+                  }}
                 />
                 <PracticeCard
                   tone={4}
                   count="30 câu"
                   title="Ôn ngẫu nhiên 30"
                   blurb="Phiên dài hơn, rút ngẫu nhiên từ cả ngân hàng."
-                  onClick={() =>
-                    onNavigate({
-                      name: 'practice',
-                      scope: DT_SCOPE,
-                      topicId: 'dt-rand-30' as TopicId,
-                    })
-                  }
+                  view={{
+                    name: 'practice',
+                    scope: DT_SCOPE,
+                    topicId: 'dt-rand-30' as TopicId,
+                  }}
                 />
               </div>
 
@@ -203,25 +185,50 @@ export function DtBrowse({ onNavigate }: Props) {
               </div>
               <div className="dd-bank-list">
                 {DT_DOC_GROUPS.map((topic, index) => (
-                  <button
+                  <AppLink
                     key={topic.id}
-                    type="button"
                     className={`topic-card topic-tone-${index % 8}`}
-                    onClick={() =>
-                      onNavigate({ name: 'practice', scope: DT_SCOPE, topicId: topic.id })
-                    }
+                    view={{ name: 'practice', scope: DT_SCOPE, topicId: topic.id }}
                   >
                     <span className="topic-card-bar" aria-hidden />
                     <span className="count">{dtCountByTopic('', topic.id)} câu</span>
                     <h3>{topic.title}</h3>
                     <p>{topic.blurb}</p>
-                  </button>
+                  </AppLink>
                 ))}
               </div>
             </section>
           </div>
         </>
       ) : null}
+
+      <section className="related-block" aria-label="Lĩnh vực khác">
+        <div className="section-head">
+          <h2>Khám phá lĩnh vực khác</h2>
+        </div>
+        <div className="related-sector-grid">
+          <AppLink
+            className="sector-card sector-card-open sector-tone-teal related-sector-card"
+            view={{ name: 'dd-browse' }}
+          >
+            <span className="sector-card-bar" aria-hidden />
+            <span className="badge">Đo đạc</span>
+            <h2>Đo đạc và Bản đồ</h2>
+            <p>Ngân hàng chính thức và bộ cập nhật ONTHICCHN</p>
+            <span className="sector-cta">Chọn ngân hàng câu hỏi</span>
+          </AppLink>
+          <AppLink
+            className="sector-card sector-card-open sector-tone-sky related-sector-card"
+            view={{ name: 'xd-browse' }}
+          >
+            <span className="sector-card-bar" aria-hidden />
+            <span className="badge">Xây dựng</span>
+            <h2>Xây dựng</h2>
+            <p>Ôn theo hạng và chuyên ngành QĐ 163/QĐ-BXD</p>
+            <span className="sector-cta">Chọn hạng và chuyên ngành</span>
+          </AppLink>
+        </div>
+      </section>
     </>
   )
 }

@@ -2,11 +2,8 @@ import { ddOpenQuestionTotal } from '../data/dd/banks'
 import { openDtQuestionTotal } from '../data/dt/questions'
 import { SECTORS } from '../data/sectors'
 import { openXdQuestionTotal } from '../data/xd/tracks'
+import { AppLink } from '../components/AppLink'
 import type { AppView, SectorId } from '../types'
-
-interface Props {
-  onNavigate: (view: AppView) => void
-}
 
 function sectorBadge(id: SectorId): string {
   if (id === 'do-dac-ban-do') return `${ddOpenQuestionTotal()} câu`
@@ -34,7 +31,7 @@ function sectorTone(id: SectorId): string {
   return 'sector-tone-teal'
 }
 
-export function Catalog({ onNavigate }: Props) {
+export function Catalog() {
   return (
     <>
       <div className="catalog-head">
@@ -60,18 +57,17 @@ export function Catalog({ onNavigate }: Props) {
           }
 
           return (
-            <button
+            <AppLink
               key={sector.id}
-              type="button"
               className={`sector-card sector-card-open ${tone}`}
-              onClick={() => onNavigate(sectorTarget(sector.id))}
+              view={sectorTarget(sector.id)}
             >
               <span className="sector-card-bar" aria-hidden />
               <span className="badge">{sectorBadge(sector.id)}</span>
               <h2>{sector.title}</h2>
               <p>{sector.blurb}</p>
               <span className="sector-cta">{sectorCta(sector.id)}</span>
-            </button>
+            </AppLink>
           )
         })}
       </div>

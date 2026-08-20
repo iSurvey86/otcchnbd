@@ -1,6 +1,8 @@
 'use client'
 
+import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { AppLink } from './AppLink'
 import { useAuth } from '../context/AuthContext'
 import { getViewScope, isStudyView, type AppView } from '../types'
 
@@ -46,58 +48,49 @@ export function Layout({ view, onNavigate, children }: Props) {
     <div className="app-shell">
       <header className="topbar">
         <div className="topbar-lead">
-          <button className="brand" onClick={() => onNavigate({ name: 'catalog' })}>
+          <AppLink className="brand" view={{ name: 'catalog' }}>
             <span className="brand-mark">ÔN</span>
             <span>
               <small>Ôn thi sát hạch</small>
               <strong>Chứng chỉ hành nghề</strong>
             </span>
-          </button>
+          </AppLink>
           {back ? (
-            <button
-              type="button"
-              className="text-link back-link topbar-back"
-              onClick={() => onNavigate(back.target)}
-            >
+            <AppLink className="text-link back-link topbar-back" view={back.target}>
               {back.label}
-            </button>
+            </AppLink>
           ) : null}
         </div>
         {showStudyNav && scope ? (
           <nav className="nav-pills">
-            <NavButton
+            <NavLink
               active={
                 view.name === 'home' ||
                 (scope.sector === 'dau-thau' && view.name === 'dt-browse')
               }
-              onClick={() =>
-                onNavigate(
-                  scope.sector === 'dau-thau'
-                    ? { name: 'dt-browse' }
-                    : { name: 'home', scope },
-                )
+              view={
+                scope.sector === 'dau-thau'
+                  ? { name: 'dt-browse' }
+                  : { name: 'home', scope }
               }
             >
               Trang chủ
-            </NavButton>
-            <NavButton
+            </NavLink>
+            <NavLink
               active={view.name === 'practice'}
-              onClick={() => onNavigate({ name: 'practice', scope })}
+              view={{ name: 'practice', scope }}
             >
               Ôn tập
-            </NavButton>
-            <NavButton
-              active={view.name === 'exam'}
-              onClick={() => onNavigate({ name: 'exam', scope })}
-            >
+            </NavLink>
+            <NavLink active={view.name === 'exam'} view={{ name: 'exam', scope }}>
               Thi thử
-            </NavButton>
-            <NavButton
+            </NavLink>
+            <NavLink
               active={view.name === 'history'}
-              onClick={() => onNavigate({ name: 'history', scope })}
+              view={{ name: 'history', scope }}
             >
               Lịch sử
-            </NavButton>
+            </NavLink>
           </nav>
         ) : null}
         <AuthBar view={view} onNavigate={onNavigate} />
@@ -107,19 +100,19 @@ export function Layout({ view, onNavigate, children }: Props) {
   )
 }
 
-function NavButton({
+function NavLink({
   active,
-  onClick,
+  view,
   children,
 }: {
   active: boolean
-  onClick: () => void
+  view: AppView
   children: ReactNode
 }) {
   return (
-    <button className={active ? 'active' : ''} onClick={onClick}>
+    <AppLink className={active ? 'active' : undefined} view={view}>
       {children}
-    </button>
+    </AppLink>
   )
 }
 
@@ -130,8 +123,7 @@ function AuthBar({
   view: AppView
   onNavigate: (view: AppView) => void
 }) {
-  const { user, isAdmin, isConfigured, openLogin, signOutUser } =
-    useAuth()
+  const { user, isAdmin, isConfigured, openLogin, signOutUser } = useAuth()
 
   if (!isConfigured) return null
 
@@ -148,16 +140,22 @@ function AuthBar({
   return (
     <div className="auth-bar">
       {isAdmin ? (
-        <button
+        <AppLink
           className={view.name === 'admin' ? 'btn primary compact' : 'btn ghost compact'}
-          onClick={() => onNavigate({ name: 'admin' })}
+          view={{ name: 'admin' }}
         >
           Quản lý
-        </button>
+        </AppLink>
       ) : null}
       <span className="user-chip">
         {user.photoURL ? (
-          <img src={user.photoURL} alt="" referrerPolicy="no-referrer" />
+          <Image
+            src={user.photoURL}
+            alt=""
+            width={28}
+            height={28}
+            referrerPolicy="no-referrer"
+          />
         ) : (
           <span className="user-fallback">{(user.displayName ?? 'U').slice(0, 1)}</span>
         )}

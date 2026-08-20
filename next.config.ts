@@ -11,6 +11,14 @@ const authHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   serverExternalPackages: ['firebase-admin', 'jose', 'jwks-rsa'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+    ],
+  },
   async redirects() {
     const legacyDd = ['practice', 'exam', 'history'] as const
     const legacyDt = ['practice', 'exam', 'history'] as const

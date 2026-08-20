@@ -44,7 +44,8 @@ summary,
 .sector-card-open,
 .history-item,
 .admin-tabs button,
-.nav-pills button {
+.nav-pills button,
+.nav-pills a {
   cursor: pointer;
 }
 
@@ -119,6 +120,15 @@ body::before {
   padding: 0;
   text-align: left;
   color: var(--forest);
+  text-decoration: none;
+}
+
+a.topic-card,
+a.sector-card-open,
+a.history-item {
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
 }
 
 .brand-mark {
@@ -156,7 +166,9 @@ body::before {
 }
 
 .nav-pills button,
-.btn {
+.nav-pills a,
+.btn,
+a.btn {
   border: 1px solid transparent;
   border-radius: 999px;
   padding: 10px 16px;
@@ -166,8 +178,24 @@ body::before {
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.nav-pills a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
 .nav-pills button.active,
-.btn.primary {
+.nav-pills a.active,
+.btn.primary,
+a.btn.primary {
   background: var(--forest);
   color: #f7f3ea;
 }
@@ -1093,6 +1121,68 @@ body::before {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--copper);
+}
+
+.related-block {
+  margin-top: 36px;
+}
+
+.related-kpi-grid {
+  margin-bottom: 8px;
+}
+
+.related-kpi-more {
+  border-style: dashed;
+}
+
+.related-sector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Cùng tỉ lệ topic-card KPI, không inherit min-height 240px của catalog */
+.related-sector-card.sector-card {
+  width: 100%;
+  min-height: 148px;
+  padding: 20px 18px 16px;
+  border-radius: 16px;
+}
+
+.related-sector-card .sector-card-bar {
+  height: 5px;
+}
+
+.related-sector-card .badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  margin: 0 0 2px;
+}
+
+.related-sector-card h2 {
+  margin: 6px 0 6px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.related-sector-card p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+  hyphens: none;
+}
+
+.related-sector-card .sector-cta {
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .related-sector-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .sector-grid {

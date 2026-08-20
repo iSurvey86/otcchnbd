@@ -58,7 +58,7 @@ function StudyBody({
   if (mode === 'home') {
     return (
       <TrackBankGate scope={scope}>
-        <Home scope={scope} onNavigate={onNavigate} />
+        <Home scope={scope} />
       </TrackBankGate>
     )
   }
@@ -90,13 +90,13 @@ function StudyBody({
   }
 
   if (mode === 'history') {
-    return <History scope={scope} onNavigate={onNavigate} />
+    return <History scope={scope} />
   }
 
   if (mode === 'result' && attemptId) {
     return (
       <TrackBankGate scope={scope}>
-        <Result attemptId={attemptId} scope={scope} onNavigate={onNavigate} />
+        <Result attemptId={attemptId} scope={scope} />
       </TrackBankGate>
     )
   }

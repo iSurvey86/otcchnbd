@@ -1,3 +1,5 @@
+import { AppLink } from '../components/AppLink'
+import { RelatedLinks } from '../components/RelatedLinks'
 import {
   countByTopicForScope,
   lawSectionLabel,
@@ -15,14 +17,13 @@ import {
   examTotalMax,
   sectionMax,
 } from '../lib/exam'
-import type { AppView, StudyScope } from '../types'
+import type { StudyScope } from '../types'
 
 interface Props {
   scope: StudyScope
-  onNavigate: (view: AppView) => void
 }
 
-export function Home({ scope, onNavigate }: Props) {
+export function Home({ scope }: Props) {
   const questions = questionsForScope(scope)
   const topics = topicsForScope(scope).filter(
     (topic) => countByTopicForScope(scope, topic.id) > 0,
@@ -122,44 +123,39 @@ export function Home({ scope, onNavigate }: Props) {
                   : exam.passMode === 'total-percent'
                     ? 'Đạt ≥ 80% tổng'
                     : scope.sector === 'dau-thau'
-                    ? 'Đạt ≥ 50/100'
-                    : 'Đạt ≥ 80% từng phần'}
+                      ? 'Đạt ≥ 50/100'
+                      : 'Đạt ≥ 80% từng phần'}
               </span>
             </div>
           </div>
-          <button
-            className="btn copper"
-            onClick={() => onNavigate({ name: 'exam', scope })}
-          >
+          <AppLink className="btn copper" view={{ name: 'exam', scope }}>
             Bắt đầu thi thử
-          </button>
+          </AppLink>
         </div>
       </section>
 
       <div className="section-head">
         <h2>Ôn theo chuyên đề</h2>
-        <button
-          className="btn amber compact"
-          onClick={() => onNavigate({ name: 'practice', scope })}
-        >
+        <AppLink className="btn amber compact" view={{ name: 'practice', scope }}>
           Ôn tất cả
-        </button>
+        </AppLink>
       </div>
       <div className="topic-grid">
         {topics.map((topic, index) => (
-          <button
+          <AppLink
             key={topic.id}
-            type="button"
             className={`topic-card topic-tone-${index % 8}`}
-            onClick={() => onNavigate({ name: 'practice', scope, topicId: topic.id })}
+            view={{ name: 'practice', scope, topicId: topic.id }}
           >
             <span className="topic-card-bar" aria-hidden />
             <span className="count">{countByTopicForScope(scope, topic.id)} câu</span>
             <h3>{topic.title}</h3>
             <p>{topic.blurb}</p>
-          </button>
+          </AppLink>
         ))}
       </div>
+
+      <RelatedLinks scope={scope} />
     </>
   )
 }

@@ -97,3 +97,34 @@ export function xdTrackLabel(trackId: string): string {
 export function openXdQuestionTotal(): number {
   return Object.values(OPEN_TRACKS).reduce((sum, n) => sum + n, 0)
 }
+
+/** Track cùng hạng + nhóm, rồi cùng mã lĩnh vực hạng khác — cho liên kết nội bộ. */
+export function relatedXdTracks(trackId: string, limit = 4): XdTrackMeta[] {
+  const current = getXdTrack(trackId)
+  if (!current) return []
+
+  const sameHangGroup = XD_TRACKS.filter(
+    (t) =>
+      t.open &&
+      t.id !== trackId &&
+      t.hang === current.hang &&
+      t.group === current.group,
+  )
+  const sameField = XD_TRACKS.filter(
+    (t) =>
+      t.open &&
+      t.id !== trackId &&
+      t.fieldCode === current.fieldCode &&
+      !sameHangGroup.some((s) => s.id === t.id),
+  )
+  const sameHangOther = XD_TRACKS.filter(
+    (t) =>
+      t.open &&
+      t.id !== trackId &&
+      t.hang === current.hang &&
+      !sameHangGroup.some((s) => s.id === t.id) &&
+      !sameField.some((s) => s.id === t.id),
+  )
+
+  return [...sameHangGroup, ...sameField, ...sameHangOther].slice(0, limit)
+}

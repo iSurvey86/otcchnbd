@@ -1,8 +1,10 @@
+'use client'
+
+import { AppLink } from '../components/AppLink'
 import {
   EXAM_DO_DAC,
   examPassSummary,
   examQuestionCount,
-  examTotalMax,
   sectionMax,
 } from '../lib/exam'
 import {
@@ -15,10 +17,6 @@ import {
 } from '../data/dd/banks'
 import { ddQuestions } from '../data/dd/questions'
 import type { AppView } from '../types'
-
-interface Props {
-  onNavigate: (view: AppView) => void
-}
 
 function formatPublished(iso?: string): string {
   if (!iso) return ''
@@ -48,11 +46,11 @@ function examLineOnthicchn(bank: DdBankMeta): string {
   return `Thi thử: ${n} câu / ${minutes} phút (toàn bộ bộ ${bank.periodLabel}) · Đạt ≥ 80% tổng`
 }
 
-function openBank(bank: DdBankMeta, onNavigate: Props['onNavigate']) {
-  onNavigate({
+function bankHomeView(bank: DdBankMeta): AppView {
+  return {
     name: 'home',
     scope: { sector: 'do-dac-ban-do', bankId: bank.id },
-  })
+  }
 }
 
 function BankTitle({ bank, showNew }: { bank: DdBankMeta; showNew?: boolean }) {
@@ -86,12 +84,10 @@ function BankCard({
   bank,
   featured,
   toneIndex = 0,
-  onNavigate,
 }: {
   bank: DdBankMeta
   featured?: boolean
   toneIndex?: number
-  onNavigate: Props['onNavigate']
 }) {
   const count = questionCountFor(bank)
   const isLatestOnthicchn = latestOnthicchnBank()?.id === bank.id
@@ -134,13 +130,9 @@ function BankCard({
       <p className="dd-bank-exam">{examLine}</p>
       {bank.ready ? (
         <div className="dd-bank-cta">
-          <button
-            type="button"
-            className="btn dd-bank-btn"
-            onClick={() => openBank(bank, onNavigate)}
-          >
+          <AppLink className="btn dd-bank-btn" view={bankHomeView(bank)}>
             Vào ôn &amp; thi thử
-          </button>
+          </AppLink>
         </div>
       ) : (
         <p className="muted dd-bank-soon">Đang bổ sung ngân hàng câu hỏi này.</p>
@@ -149,7 +141,7 @@ function BankCard({
   )
 }
 
-export function DoDacBrowse({ onNavigate }: Props) {
+export function DoDacBrowse() {
   const recommended = recommendedDdBank()
   const officials = officialDdBanks()
   const onthicchn = onthicchnDdBanks()
@@ -165,7 +157,7 @@ export function DoDacBrowse({ onNavigate }: Props) {
         </p>
       </div>
 
-      <BankCard bank={recommended} featured onNavigate={onNavigate} />
+      <BankCard bank={recommended} featured />
 
       {onthicchn.length > 0 || officials.length > 0 ? (
         <div className="dd-browse-columns">
@@ -178,12 +170,7 @@ export function DoDacBrowse({ onNavigate }: Props) {
               </div>
               <div className="dd-bank-list">
                 {onthicchn.map((bank, index) => (
-                  <BankCard
-                    key={bank.id}
-                    bank={bank}
-                    toneIndex={index}
-                    onNavigate={onNavigate}
-                  />
+                  <BankCard key={bank.id} bank={bank} toneIndex={index} />
                 ))}
               </div>
             </section>
@@ -198,12 +185,7 @@ export function DoDacBrowse({ onNavigate }: Props) {
               </div>
               <div className="dd-bank-list">
                 {officials.map((bank, index) => (
-                  <BankCard
-                    key={bank.id}
-                    bank={bank}
-                    toneIndex={index}
-                    onNavigate={onNavigate}
-                  />
+                  <BankCard key={bank.id} bank={bank} toneIndex={index} />
                 ))}
               </div>
             </section>
