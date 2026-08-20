@@ -20,6 +20,8 @@ import {
   type FeedbackRow,
   type FeedbackStatus,
 } from '../lib/feedback'
+import { AdminCsplPanel } from '../components/AdminCsplPanel'
+import type { CsplDocument } from '../lib/cspl'
 
 interface LogRow {
   id: string
@@ -561,7 +563,7 @@ export function Admin() {
   const { isAdmin, isConfigured } = useAuth()
   const [logs, setLogs] = useState<LogRow[]>([])
   const [feedback, setFeedback] = useState<FeedbackRow[]>([])
-  const [tab, setTab] = useState<'logs' | 'feedback'>('logs')
+  const [tab, setTab] = useState<'logs' | 'feedback' | 'cspl'>('logs')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [search, setSearch] = useState('')
@@ -583,6 +585,7 @@ export function Admin() {
   const [selectedFeedback, setSelectedFeedback] = useState<FeedbackRow | null>(null)
   const [reply, setReply] = useState('')
   const [savingFeedback, setSavingFeedback] = useState(false)
+  const [csplDocs, setCsplDocs] = useState<CsplDocument[]>([])
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -700,7 +703,7 @@ export function Admin() {
     })
   }, [feedback, search, feedbackStatus])
 
-  const rows = tab === 'logs' ? filteredLogs : filteredFeedback
+  const rows = tab === 'logs' ? filteredLogs : tab === 'feedback' ? filteredFeedback : []
   const totalPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE))
   const pageSafe = Math.min(page, totalPages)
   const pageRows = rows.slice((pageSafe - 1) * PAGE_SIZE, pageSafe * PAGE_SIZE)
@@ -719,6 +722,25 @@ export function Admin() {
       feedbackMoi: moiCount,
     }
   }, [logs, moiCount])
+
+  const csplStats = useMemo(() => {
+    let luat = 0
+    let nghiDinh = 0
+    let thongTu = 0
+    for (const row of csplDocs) {
+      if (row.docType === 'luat') luat += 1
+      else if (row.docType === 'nghi-dinh') nghiDinh += 1
+      else if (row.docType === 'thong-tu') thongTu += 1
+    }
+    const known = luat + nghiDinh + thongTu
+    return {
+      total: csplDocs.length,
+      luat,
+      nghiDinh,
+      thongTu,
+      khac: Math.max(0, csplDocs.length - known),
+    }
+  }, [csplDocs])
 
   async function saveFeedbackPatch(status?: FeedbackStatus) {
     if (!selectedFeedback) return
@@ -764,7 +786,7 @@ export function Admin() {
       <div className="admin-head">
         <div>
           <h1 className="admin-title">Quản lý hệ thống</h1>
-          <p className="admin-sub">Giám sát hoạt động và góp ý người dùng</p>
+          <p className="admin-sub">Giám sát hoạt động, góp ý và kho CSPL (pilot Đo đạc)</p>
         </div>
         <div className="admin-tabs">
           <button
@@ -782,32 +804,73 @@ export function Admin() {
             Góp ý người dùng
             {moiCount > 0 ? <span className="admin-tab-badge">{moiCount > 9 ? '9+' : moiCount}</span> : null}
           </button>
+          <button
+            type="button"
+            className={`admin-tab admin-tab-cspl${tab === 'cspl' ? ' active' : ''}`}
+            onClick={() => setTab('cspl')}
+          >
+            CSPL Đo đạc
+          </button>
         </div>
       </div>
 
-      <div className="stats admin-stats">
-        <div className="stat stat-law">
-          <span className="stat-bar" aria-hidden />
-          <b>{stats.loginsToday}</b>
-          <span>Đăng nhập hôm nay</span>
+      {tab === 'cspl' ? (
+        <div className="stats admin-stats admin-stats-cspl">
+          <div className="stat stat-bank">
+            <span className="stat-bar" aria-hidden />
+            <b>{csplStats.total}</b>
+            <span>Tổng số</span>
+          </div>
+          <div className="stat stat-law">
+            <span className="stat-bar" aria-hidden />
+            <b>{csplStats.luat}</b>
+            <span>Luật</span>
+          </div>
+          <div className="stat stat-skill">
+            <span className="stat-bar" aria-hidden />
+            <b>{csplStats.nghiDinh}</b>
+            <span>Nghị định</span>
+          </div>
+          <div className="stat stat-exam">
+            <span className="stat-bar" aria-hidden />
+            <b>{csplStats.thongTu}</b>
+            <span>Thông tư</span>
+          </div>
+          <div className="stat stat-bank">
+            <span className="stat-bar" aria-hidden />
+            <b>{csplStats.khac}</b>
+            <span>Khác</span>
+          </div>
         </div>
-        <div className="stat stat-skill">
-          <span className="stat-bar" aria-hidden />
-          <b>{stats.answers}</b>
-          <span>Câu đã trả lời</span>
+      ) : (
+        <div className="stats admin-stats">
+          <div className="stat stat-law">
+            <span className="stat-bar" aria-hidden />
+            <b>{stats.loginsToday}</b>
+            <span>Đăng nhập hôm nay</span>
+          </div>
+          <div className="stat stat-skill">
+            <span className="stat-bar" aria-hidden />
+            <b>{stats.answers}</b>
+            <span>Câu đã trả lời</span>
+          </div>
+          <div className="stat stat-bank">
+            <span className="stat-bar" aria-hidden />
+            <b>{stats.exams}</b>
+            <span>Bài thi đã nộp</span>
+          </div>
+          <div className="stat stat-exam">
+            <span className="stat-bar" aria-hidden />
+            <b>{stats.feedbackMoi}</b>
+            <span>Góp ý mới</span>
+          </div>
         </div>
-        <div className="stat stat-bank">
-          <span className="stat-bar" aria-hidden />
-          <b>{stats.exams}</b>
-          <span>Bài thi đã nộp</span>
-        </div>
-        <div className="stat stat-exam">
-          <span className="stat-bar" aria-hidden />
-          <b>{stats.feedbackMoi}</b>
-          <span>Góp ý mới</span>
-        </div>
-      </div>
+      )}
 
+      {tab === 'cspl' ? (
+        <AdminCsplPanel onDocumentsChange={setCsplDocs} />
+      ) : (
+        <>
       <div className="admin-toolbar">
         <input
           type="search"
@@ -1080,6 +1143,8 @@ export function Admin() {
           </button>
         </div>
       </div>
+        </>
+      )}
 
       {selectedFeedback ? (
         <div
