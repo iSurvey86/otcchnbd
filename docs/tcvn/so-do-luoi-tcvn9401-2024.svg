@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arrD" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#12121f"/>
+
+  <text x="960" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#f8fafc">
+    HỆ THỐNG LƯỚI TỌA ĐỘ VÀ ĐỘ CAO
+  </text>
+  <text x="960" y="68" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#93c5fd">
+    TCVN 9401:2024 · Lưới khống chế khảo sát công trình (GNSS tĩnh)
+  </text>
+  <text x="960" y="86" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#64748b">
+    Điều 6.2 · Định nghĩa 3.x (lưới quốc gia) · Bảng 2
+  </text>
+
+  <!-- HÀNG 1 -->
+  <rect x="48" y="95" width="200" height="140" rx="10" fill="#6366f1" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="268" y="95" width="780" height="140" rx="10" fill="#4f46e5" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="1068" y="95" width="804" height="140" rx="10" fill="#db2777" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <text x="148" y="150.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#eef2ff">LƯỚI QUỐC GIA</text>
+  <text x="148" y="178.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#c7d2fe">(Định nghĩa 3.x)</text>
+  <text x="658" y="136.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">LƯỚI TỌA ĐỘ QUỐC GIA</text>
+  <text x="658" y="164.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#dbeafe">Hệ VN-2000 · thống nhất toàn quốc</text>
+  <text x="658" y="192.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#fef08a">Cấp 0 · Hạng I · II · III</text>
+  <text x="1470" y="136.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">LƯỚI ĐỘ CAO QUỐC GIA</text>
+  <text x="1470" y="164.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ffedd5">Điểm gốc độ cao quốc gia (Đồ Sơn)</text>
+  <text x="1470" y="192.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#fef08a">Hạng I · II · III · IV</text>
+  <line x1="458" y1="235" x2="458" y2="300" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="853" y1="235" x2="853" y2="300" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1460" y1="235" x2="1460" y2="300" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="48" y1="267.5" x2="1872" y2="267.5" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.6"/>
+
+  <!-- HÀNG 2 -->
+  <rect x="48" y="300" width="200" height="155" rx="10" fill="#6366f1" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="268" y="300" width="380" height="155" rx="10" fill="#4f46e5" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="658" y="300" width="390" height="155" rx="10" fill="#4f46e5" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="1058" y="300" width="804" height="155" rx="10" fill="#db2777" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <text x="148" y="362.75" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#eef2ff">LƯỚI CƠ SỞ</text>
+  <text x="148" y="390.75" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#c7d2fe">(Điều 6.2.1)</text>
+  <text x="458" y="348.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CƠ SỞ CẤP 1</text>
+  <text x="458" y="376.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#dbeafe">GNSS tĩnh · từ điểm tọa độ QG</text>
+  <text x="458" y="404.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#bfdbfe">Khoảng cách 1–5 km (Điều 6.2.6, Bảng 2)</text>
+  <text x="853" y="337.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CƠ SỞ CẤP 2</text>
+  <text x="853" y="363.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#dbeafe">GNSS tĩnh · tăng dày điểm KC</text>
+  <text x="853" y="389.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#bfdbfe">Từ lưới cơ sở cấp 1 trở lên (Điều 6.2.6)</text>
+  <text x="853" y="415.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#93c5fd">Có thể đo vẽ chi tiết trực tiếp</text>
+  <text x="1460" y="337.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">LƯỚI ĐỘ CAO KỸ THUậT</text>
+  <text x="1460" y="363.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ffedd5">01 cấp độ cao trong KC cơ sở</text>
+  <text x="1460" y="389.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fed7aa">Gốc: độ cao QG hạng IV trở lên</text>
+  <text x="1460" y="415.7" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#fdba74">Kế hợp GNSS tĩnh (Điều 5.7)</text>
+  <line x1="458" y1="455" x2="658" y2="520" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="853" y1="455" x2="658" y2="520" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="853" y1="455" x2="1470" y2="520" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1460" y1="455" x2="658" y2="520" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1460" y1="455" x2="1470" y2="520" stroke="#c4b5fd" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="48" y1="487.5" x2="1872" y2="487.5" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.6"/>
+
+  <!-- HÀNG 3 -->
+  <rect x="48" y="520" width="200" height="182" rx="10" fill="#6366f1" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="268" y="520" width="780" height="182" rx="10" fill="#9333ea" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="1068" y="520" width="804" height="182" rx="10" fill="#9333ea" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <text x="148" y="596.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#eef2ff">LƯỚI ĐO VẼ</text>
+  <text x="148" y="624.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#c7d2fe">(Điều 6.2.7)</text>
+  <text x="658" y="562.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">ĐO VẼ CẤP 1</text>
+  <text x="658" y="586.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ede9fe">GNSS tĩnh — tọa độ &amp; độ cao đồng thời</text>
+  <text x="658" y="610.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ede9fe">MP vị trí 0,02 m · MP độ cao 0,03 m</text>
+  <text x="658" y="634.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fef08a">(Điều 6.2.13 · Bảng 2)</text>
+  <text x="658" y="658.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#ddd6fe">≥ 3 điểm gốc tọa độ / độ cao QG</text>
+  <text x="1470" y="562.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">ĐO VẼ CẤP 2</text>
+  <text x="1470" y="586.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ede9fe">GNSS tĩnh / GNSS động / đường chuyền</text>
+  <text x="1470" y="610.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ede9fe">MP vị trí 0,03 m · lưới KC cuối cùng</text>
+  <text x="1470" y="634.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fef08a">(Điều 6.2.14–6.2.15 · Bảng 2)</text>
+  <text x="1470" y="658.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#ddd6fe">Tăng dày điểm phục vụ đo đạc chi tiết</text>
+  <line x1="658" y1="702" x2="960" y2="767" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="1470" y1="702" x2="960" y2="767" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="48" y1="726" x2="1872" y2="726" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.6"/>
+
+  <!-- HÀNG 4 -->
+  <rect x="48" y="767" width="200" height="110" rx="10" fill="#6366f1" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <rect x="268" y="767" width="1604" height="110" rx="10" fill="#0e7490" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <text x="148" y="807.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#eef2ff">CHI TIẾT</text>
+  <text x="148" y="835.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#c7d2fe">(Điều 6.2.1)</text>
+  <text x="960" y="807.1" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">ĐO Vẽ BẢN ĐỒ ĐỊA HÌNH CÔNG TRÌNH</text>
+  <text x="960" y="835.1" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#ccfbf1">1:500 · 1:1000 · 1:2000 · 1:5000  |  Đo đạc địa hình, địa vật phục vụ thiết kế XD</text>
+
+  <!-- Chân -->
+  <rect x="48" y="922" width="1824" height="110" rx="8" fill="#1e1b4b" stroke="rgba(199,210,254,0.16)" stroke-width="1"/>
+  <text x="68" y="960" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#f1f5f9">
+    <tspan font-weight="700" fill="#fbbf24">Nguyên tắc (Điều 6.2.2):</tspan>
+    cấp cao → cấp thấp; tổng thể → cục bộ.
+    <tspan font-weight="700" fill="#67e8f9"> GNSS:</tspan>
+    có thể bỏ qua cấp trung gian khi xây dựng lưới tọa độ cấp thấp hơn.
+  </text>
+  <text x="68" y="994" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#94a3b8">
+    Nguồn: TCVN 9401:2024 — Điều 6.2 (lưới KS công trình), Định nghĩa 3.x, Bảng 2; tham chiếu TT 68/2015 về phân cấp lưới quốc gia.
+  </text>
+</svg>

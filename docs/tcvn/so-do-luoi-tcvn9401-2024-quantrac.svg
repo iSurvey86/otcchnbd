@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrD" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="#1a1210"/>
+  
+  
+  <text x="960" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#fff7ed">LƯỚI QUAN TRẮC CHUYỂN DỊCH NGANG</text>
+  <text x="960" y="70" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#fdba74">TCVN 9401:2024 · Điều 6.4 · GNSS tĩnh · Bảng 4</text>
+  <text x="960" y="88" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#78716c">Giám sát biến dạng ngang công trình · hệ tọa độ độc lập</text>
+
+  <rect x="48" y="92" width="200" height="98" rx="10" fill="#92400e" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="268" y="92" width="1604" height="98" rx="10" fill="#4338ca" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <text x="148" y="126.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fffbeb">HỆ TỊA</text>
+  <text x="148" y="154.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#fde68a">(Điều 6.4.4)</text>
+  <text x="1070" y="112.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">HỆ TỊA ĐỘ ĐỘC LẬP</text>
+  <text x="1070" y="140.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#c7d2fe">Khi cần tọa độ QG: đo nối một số điểm tọa độ quốc gia</text>
+  <text x="1070" y="168.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#e0e7ff">GNSS khi tầm thông thoáng tốt (Điều 6.4.2, 6.2.8)</text>
+  <line x1="1070" y1="190" x2="1070" y2="328" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="48" y1="259" x2="1872" y2="259" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.5"/>
+
+  <rect x="48" y="328" width="200" height="98" rx="10" fill="#92400e" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="268" y="328" width="1604" height="98" rx="10" fill="#7c2d12" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <text x="148" y="362.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fffbeb">BẬC 1</text>
+  <text x="148" y="390.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#fde68a">(Điều 6.4.5)</text>
+  <text x="1070" y="348.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">LƯỚI CƠ SỞ — MỐC CHUẨN</text>
+  <text x="1070" y="376.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#fed7aa">Các mốc chuẩn đo nối với nhau · vòng khép</text>
+  <text x="1070" y="404.15" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fef08a">Cấp 1–2 độ chính xác cao: có thể 1 bậc lưới duy nhất</text>
+  <line x1="464.5" y1="426" x2="464.5" y2="564" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="867.5" y1="426" x2="867.5" y2="564" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1270.5" y1="426" x2="1270.5" y2="564" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1673.5" y1="426" x2="1673.5" y2="564" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="48" y1="495" x2="1872" y2="495" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.5"/>
+
+  <rect x="48" y="564" width="200" height="98" rx="10" fill="#92400e" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="268" y="564" width="393" height="98" rx="10" fill="#be123c" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="671" y="564" width="393" height="98" rx="10" fill="#c2410c" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="1074" y="564" width="393" height="98" rx="10" fill="#a16207" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="1477" y="564" width="393" height="98" rx="10" fill="#3f6212" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <text x="148" y="598.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fffbeb">4 CẤP</text>
+  <text x="148" y="626.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#fde68a">(Điều 6.4.2)</text>
+  <text x="464.5" y="584.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CẤP 1</text>
+  <text x="464.5" y="612.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fecdd3">Mốc định tâm bắt buộc</text>
+  <text x="464.5" y="640.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#fda4af">(Điều 6.4.6)</text>
+  <text x="867.5" y="584.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CẤP 2</text>
+  <text x="867.5" y="612.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#ffedd5">Độ chính xác cao</text>
+  <text x="867.5" y="640.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#fed7aa">Máy ≥ 3 tần số (Bảng 5)</text>
+  <text x="1270.5" y="584.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CẤP 3</text>
+  <text x="1270.5" y="612.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#fef9c3">Quan trắc thường</text>
+  <text x="1270.5" y="640.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#fde047">Sai số cạnh &lt; (5 mm + 1 mm·D)</text>
+  <text x="1673.5" y="584.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">CẤP 4</text>
+  <text x="1673.5" y="612.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#ecfccb">Quan trắc mức độ thấp hơn</text>
+  <text x="1673.5" y="640.2" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#d9f99d">Liên kết MP 1,5 cm (Điều 6.3.4)</text>
+  <line x1="464.5" y1="662" x2="1070" y2="800" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="867.5" y1="662" x2="1070" y2="800" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="1270.5" y1="662" x2="1070" y2="800" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="1673.5" y1="662" x2="1070" y2="800" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrD)" stroke-dasharray="7 5"/>
+  <line x1="48" y1="731" x2="1872" y2="731" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.5"/>
+
+  <rect x="48" y="800" width="200" height="98" rx="10" fill="#92400e" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <rect x="268" y="800" width="1604" height="98" rx="10" fill="#581c87" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <text x="148" y="834.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fffbeb">QUAN TRẮC</text>
+  <text x="148" y="862.25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#fde68a">(Điều 6.4.1)</text>
+  <text x="1070" y="820.1" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">MỐC QUAN TRẮC TRÊN CÔNG TRÌNH</text>
+  <text x="1070" y="848.1" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#e9d5ff">Mốc chuẩn + điểm cơ sở trung gian + mốc gắn trực tiếp trên CT</text>
+  <text x="1070" y="876.1" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#ddd6fe">Bậc 2: lưới quan trắc nối mốc chuẩn ↔ mốc trên công trình (Điều 6.4.5)</text>
+
+  
+  <rect x="48" y="922" width="1824" height="110" rx="8" fill="#292018" stroke="rgba(251,191,36,0.16)" stroke-width="1"/>
+  <text x="68" y="960" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#fef3c7"><tspan font-weight="700" fill="#fb923c">Cấu trúc (Điều 6.4.5):</tspan> 1–2 bậc — bậc 1: lưới cơ sở; bậc 2: lưới quan trắc. Độ chính xác cao (cấp 1–2): có thể thiết kế 1 bậc.</text>
+  <text x="68" y="994" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#a8a29e">Nguồn: TCVN 9401:2024 — Điều 6.4, Bảng 4–5; tham chiếu TCVN 9399 (mốc QT).</text>
+</svg>

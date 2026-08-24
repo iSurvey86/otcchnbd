@@ -1,0 +1,2133 @@
+===== TRANG 1 / 60 =====
+TCVN TIÊU CHUẨN QUỐC GIA
+TCVN 9401:2024
+Xuất bản lần 2
+KỸ THUẬT ĐO VÀ XỬ LÝ SÓ LIỆU GNSS
+TRONG TRÁC ĐỊA CÔNG TRÌNH
+Measuring and processing techniques for GNSS data in engineering survey
+HÀ NỘI — 2024
+
+===== TRANG 2 / 60 =====
+TCVN 9401:2024
+Mục lục
+Trang
+[ôi nôi đAU: +... 22 21112312212 22112520524..4...41020-3n005505.20009002009920000-2062095000005 926
+ee ee oer |
+ri nhe... ..ˆ..ˆ....................
+3 Thuật ngữ và định nghĨa..........................-----¿- +: 2: 222v Server
+6 Thiết kế kỹ thuật lưới GNSS ...........................--- 5stieetrirrrrirrrrrrrrrrrrerrreverae 12
+7 Yêu cầu kỹ thuật đối với máy móc thiết bị.........................- 5-5 sms 18
+8 Công tác chuẩn bị đo GNSS .....ss.scccvssssccssesseesssnsvsssdeosenreansssoscecnsssesssscronsasesssssnnsseoeeessorsssorsssonsoorssnse 19
+8: Gôhg 146 Go’ GNSSItffis:::.:::z:-:iciicoccc2tittiticii010 2 00018i0ã1ã.8070018514338ua635i56i61aa88845883.a8805ãd8g1ass LO
+TỊ SEN Me senescent SNA ase adel a a sce
+11 Ghi số đo ngoại ngQhigp .........eseeccsssescsssseccsssescesssseeccenseccsessueccensusesasureessneesesnneesessneeceussesssnuneesssees 20
+43) BAG cáo Lót CRIA G0 srxcessceserscrss. 201 022000108116 ng nnareioroaimragnsersrmndsssu Od
+Phụ lục A (tham khảo) Quy cách và dau mốc GNSS .............................. ..--- oi. BZ
+Phụ lục B (tham khảo) Bảng điều độ do GNSS (ca do thiết ké)......................... coi... OO
+Phụ lục C (tham khảo) Mẫu bảng thóng kê số liệu đo GNSS........................ .......- oi... BO
+Phụ lục D (tham khảo) Phương pháp kiểm định độ ổn định của máy bằng cách đo trên chiều dài chuẩn. 37
+Phụ lục E (tham khảo) Kiểm định độ 6n định của tâm pha ăng-ten..........................-.-......--scccc.es....e BB
+Phụ lục F (tham khảo) Kiểm nghiệm và hiệu chỉnh doi tâm quang học ............................---....---‹....-.... OD
+Phụ lục G (tham khảo) Yêu cầu và phương pháp đo độ cao ăng-ten...........................-.--ccoscccc-...... 40
+Phụ lục H (tham khảo) Kết quả đo thực nghiệm và xử lý số liệu lưới đo vẽ cấp 1 trong khảo sát công
+trình bằng công nghệ GNSS tĩnh ............................ ii 44
+Phụ lục I (tham khảo) Quy trình xử lý số liệu lưới GNSS một cấp quan trắc chuyển dịch ngang công trình. 52
+Thư mục tài liệu tham khảo..........................-. óc eekissrrrerrrrrrrrrrdrrrrrrrrrrsrrrrrerere OF
+
+===== TRANG 3 / 60 =====
+TCVN 9401:2024
+
+Lời nói đầu
+
+TCVN 9401:2024 thay thế TCVN 9401:2012.
+
+TCVN 9401:2024 do Viện Khoa học công nghệ xây dựng (Bộ Xây dựng)
+biên soạn, Bộ Xây dựng đề nghị, Tổng cục Tiêu chuẩn Bo lường Chat
+lượng thẩm định, Bộ Khoa học và Công nghệ công bó.
+
+===== TRANG 4 / 60 =====
+TIEU CHUAN QUÓC GIA TCVN 9401:2024
+Kỹ thuật đo và xử lý số liệu GNSS trong trắc địa công trình
+
+Measuring and processing techniques for GNSS data in engineering survey
+
+1 Phạm vi áp dụng
+
+Tiêu chuẩn này quy định các yêu cầu kỹ thuật về việc đo và xử lý số liệu GNSS khi thành lập lưới khảo
+sát công trình, lưới khống chế mặt bằng phục vụ thi công công trình, lưới quan trắc chuyển dịch ngang
+công trình, chuyển điểm thiết kế ra thực địa và trong công tác đo vẽ bản đồ địa hình tỉ lệ lớn phục vụ thiết
+kế công trình xây dựng.
+
+2 Tài liệu viện dẫn
+
+Các tài liệu viện dẫn sau cần thiết cho việc áp dụng tiêu chuẩn này. Đối với các tài liệu viện dẫn ghi năm
+công bố thì áp dụng phiên bản được nêu. Đối với các tài liệu viện dẫn không ghi năm công bố thì áp
+dụng phiên bản mới nhất, bao gồm cả các sửa đổi, bd sung (nếu có).
+
+TCVN 9398, Công tác trắc địa trong xây dựng công trình - Yêu câu chung;
+
+TCVN 9399, Nhà và công trình xây dựng - Xác định chuyén dịch ngang bằng phương pháp trắc địa.
+
+3 Thuật ngữ và định nghĩa
+
+Trong tiêu chuẩn này sử dụng các thuật ngữ và định nghĩa sau:
+
+3.1
+
+Công nghệ GNSS (global navigation sattelite system - GNSS)
+
+Công nghệ định vị, dẫn đường bằng hệ thống vệ tinh toàn cầu (tên dùng chung cho tat cả các hệ thống
+định vị toàn cầu sử dụng vệ tinh).
+
+3.2
+
+Công nghệ đo GNSS tĩnh (static GNSS)
+
+Phương pháp định vị tương đối, sử dụng đồng thời 2 hoặc nhiều máy thu tin hiệu vệ tinh GNSS đặt có
+định trên 2 hoặc nhiều điểm cần đo để thu trị đo Code (Coarse/Acquisition Code) và trị đo Phase (Carrier
+phase) từ các vệ tinh trong khoảng thời gian đủ dài phục vụ cho việc đo đạc lưới khống chế trắc địa.
+
+===== TRANG 5 / 60 =====
+TCVN 9401:2024
+
+3.3
+
+Kỹ thuật đo GNSS động (kinematic GNSS)
+
+Phương pháp đo có bản chất như do GNSS tĩnh với 1 máy đặt có định (Base station) và một hoặc nhiều
+máy di động (Rover stations). Sau khi thực hiện kỹ thuật khởi do tại trạm có định, máy di động chuyển
+đến đặt tại các điểm cần đo, thực hiện việc thu tín hiệu vệ tinh trong thời gian một vài s (một vài trị đo)
+nhưng vẫn đạt được độ chính xác về tọa độ, độ cao cỡ xentimet (cm).
+
+3.4
+
+Kỹ thuật đo GNSS động thời gian thực (real time kinematic GNSS)
+
+Phương pháp đo trong đó số liệu được xử lý, tính được tọa độ, độ cao trong hệ tọa độ địa phương ngay
+tại thực địa.
+
+3.5
+
+Kỹ thuật đo GNSS động xử lý sau (post processing kinematic GNSS)
+
+Phương pháp trong đó tọa độ, độ cao trong hệ tọa độ địa phương của điểm đo được tính toán sau khi
+xử lý số liệu đo trong phòng.
+
+3.6
+
+Ca đo (observation session)
+
+Quang thời gian thu tín hiệu liên tục trên các trạm đo từ lúc bật máy đến lúc tắt máy.
+
+3.7
+
+Bo đồng bộ (simultaneous observation)
+
+Thời lượng do của hai máy thu trở lên thu tin hiệu của cùng một vệ tinh.
+
+3.8
+
+Vòng đo đồng bộ (simultaneous observation loop)
+
+Vòng khép của các véc-tơ do 3 máy thu cùng ca do trở lên hợp thành.
+
+3.9
+
+Véc-tơ cạnh đơn (single baseline)
+
+Véc-tơ cạnh tính từ một cặp máy thu ở hai điểm bắt kỳ cùng ca đo.
+
+3.10
+
+Cạnh độc lập (independent baseline)
+
+Trong cùng một ca đo có n máy thu tín hiệu vệ tinh tham gia, tổng số cạnh (Baselines) có thể tính được
+là nx(n-1)/2 nhưng chỉ có n-1 các cạnh này là độc lập, các cạnh còn lại được gọi là các cạnh thường
+
+===== TRANG 6 / 60 =====
+TCVN 9401:2024
+được tạo ra từ các tổ hợp của dữ liệu pha được dùng để tính các cạnh độc lập. Một cạnh được đo trong
+2 ca do khác nhau là độc lập.
+
+3.11
+
+Vòng khép độc lập (independent observation loop)
+
+Vòng khép của các véc-tơ cạnh độc lập hợp thành.
+
+3.12
+
+Độ cao ăng-ten (antenna height)
+
+Độ cao tinh từ vị trí quy ước của ăng-ten thu đến tâm mốc,
+
+3.13
+
+Lịch vệ tỉnh (ephemeris)
+
+Giá trị tọa độ trên quỹ đạo của vệ tinh ở các thời điểm khác nhau. Lịch vệ tinh được phat dưới hai loại:
+lịch vệ tinh quảng bá và lịch vệ tinh chính xác.
+
+3.14
+
+Lịch vệ tỉnh quảng bá (broadcast ephemeris)
+
+Tép dữ liệu chứa thông tin dự báo tham số quỹ đạo của vệ tinh ở một quãng thời gian nào đó được phát
+cùng với tín hiệu vệ tỉnh mà máy thu có thể thu được.
+
+3.15
+
+Lịch vệ tinh chính xác (precise ephemeris)
+
+Tệp dữ liệu chứa thông tin tham số quỹ đạo chính xác của vệ tinh do các trạm theo dõi vệ tinh trên mặt dat
+xác định thông qua việc xử lý tổng hợp và được cung cấp trên mạng sau một khoảng thời gian nhất định.
+3.16
+
+Sai phân don (single difference, first difference)
+
+Hiệu các trị do pha thu được tai hai may thu đồng thời đến từ cùng một vệ tinh.
+
+3.17
+
+Sai phân kép (double difference, second difference)
+
+Hiệu của hai sai phân đơn thu được tại hai máy thu đồng thời đến từ hai vệ tinh.
+
+3.18
+
+Sai phân bội (triple difference)
+
+Hiệu của hai sai phân kép của hai trạm đo đến một cặp vệ tinh ở hai thời điểm khác nhau.
+
+3.19
+
+Ty lệ loại bỏ số liệu (percentage of data rejection)
+
+===== TRANG 7 / 60 =====
+TCVN 9401:2024
+
+Tỷ lệ giữa số lượng trị đo loại bỏ và số lượng trị đo cần có.
+
+3.20
+
+Geoid
+
+Mặt đẳng thế không nhiễu, được xác định là mặt phù hợp nhất với mặt nước biển trung bình.
+
+3.21
+
+Mô hình Geoid (geoid model)
+
+Tập hợp số liệu biểu thị vị trí không gian của mặt đẳng thé gốc (Wo) so với mặt Ellipsoid tham chiếu trong
+hệ quy chiếu Trái đất. Mô hình Geoid được sử dụng để xác định độ cao thủy chuẩn của các điểm khi đo
+bằng công nghệ GNSS.
+
+3.22
+
+Độ cao Geoid (geoid height, geoid undulation)
+
+Khoảng cách giữa Ellipsoid tham chiếu va Geoid.
+
+3.23
+
+Độ cao trắc địa (ellipsoid height)
+
+Khoảng cách theo phương pháp tuyến từ điểm đang xét đến Ellipsoid tham chiếu.
+
+3.24
+
+Độ cao thủy chuẩn (level height)
+
+Độ cao theo phương dây dọi từ điểm đang xét so với Geoid.
+
+3.25
+
+Hệ tọa độ quốc gia (national coordinate system)
+
+Hệ tọa độ toán học trong không gian và trên mặt phẳng được thiết lập theo móc thời gian xác định và sử
+dụng thống nhát trong cả nước để biểu thị kết quả đo đạc và bản đồ.
+
+CHU THICH: Hệ tọa độ quốc gia hiện hành của Việt Nam là hệ VN-2000.
+
+3.26
+
+Hệ độ cao quốc gia (national altitude system)
+
+Hệ độ cao được thiết lập theo mốc thời gian xác định và sử dụng thống nhất trong cả nước dé xác định
+giá trị độ cao của đối tượng địa lý.
+
+CHÚ THÍCH: Hệ độ cao quốc gia hiện hành của Việt Nam có điểm gốc độ cao tại Đồ Sơn - Hải Phòng.
+
+3.27
+
+Lưới tọa độ quốc gia (national coordinate network)
+
+===== TRANG 8 / 60 =====
+TCVN 9401:2024
+Lưới khống chế bao gồm các điểm có tọa độ thống nhát trong toàn quốc phục vụ đo vẽ bản đồ địa hình,
+bản đồ địa chính, thành lập cơ sở dữ liệu nền địa lý và các loại bản đồ chuyên đề khác và nghiên cứu
+khoa học. Lưới tọa độ quốc gia bao gồm: Lưới tọa độ cấp “0”, lưới tọa độ hạng |, II và Ill.
+3.28
+Lưới độ cao quốc gia (national altitude network)
+Lưới khống chế bao gồm các điểm có độ cao thống nhát trong toàn quốc, được đo theo phương pháp
+đo cao hình học, là cơ sở để xác định độ cao phục vụ đo vẽ bản đồ địa hình, nghiên cứu khoa học. Ludi
+độ cao quốc gia bao gồm lưới độ cao hạng I, II, Ill và IV.
+3.29
+Ngoại nghiệp (field-work)
+Gồm toàn bộ các công việc thực hiện ở ngoài trời.
+3.30
+Nội nghiệp (office-work)
+Gồm toàn bộ các công việc thực hiện trong nhà.
+4 Từ viết tắt
+Từ viết tắt Ý nghĩa
+ASCII (American Standard Code for Mã tiêu chuẩn trao đổi thông tin của Mỹ
+Information Interchange
+BDS (BeiDou Navigation Satellite System) Hệ thống dẫn đường bằng vệ tinh toàn cầu của
+Trung Quốc:
+Fixed Lời giải cố định
+Galileo Hệ thống vệ tinh dẫn đường toàn cầu của các nước
+thuộc Tổ chức liên minh Châu Âu (EU)
+GLONASS (Global Navigation Satellite Hệ thống dẫn đường bằng vệ tinh toàn cầu của cơ
+System) quan hàng không vũ trụ Nga
+GNSS (Global Navigation Satellite System) Hệ thống vệ tinh dẫn đường toàn cầu
+GPS (Global Positioning System) Hệ thống định vị toàn cầu của cơ quan hàng không
+vũ trụ Mỹ
+HDOP (Horizontal Dilusion of Precision) Hệ số suy giảm độ chính xác phương nằm ngang
+MAC (Master-Auxiliary Concept) Tram chính - phụ
+
+===== TRANG 9 / 60 =====
+TCVN 9401:2024
+Từ viết tắt Ý nghĩa
+PDOP (Position Dilusion of Precision) Hệ số suy giảm độ chính xác vị trí vệ tinh
+PPK (Post Processing Kinematic) Do động xử lý sau
+PPP (Precise Point Positioning) Định vị điểm chính xác
+Ratio Tỷ số phương sai
+RINEX (Receiver INdependent EXchange Chuẩn dữ liệu trị đo GNSS theo khuôn dang dữ liệu
+format) ASCII được sử dụng để thuận tiện cho việc xử lý
+không phụ thuộc máy thu hoặc phần mềm
+RMS (Root Mean Square) Sai số trung phương
+RTK (Real-Time Kinematic) Do động thời gian thực
+Single Base Dịch vụ cải chính sử dụng giải pháp công nghệ trạm
+đơn
+UTM (Universal Transverse Mercator) Lưới chiếu hình trụ ngang đồng góc
+VDOP (Vertical Dilution of Position) Hệ số suy giảm độ chính xác độ cao
+VN-2000 Tên Hệ quy chiếu và Hệ tọa độ quốc gia hiện hành
+của Việt Nam
+VRS (Virtual Reference Station) Tram tham chiếu ảo
+WGS - 84 (World Geodetic System - 1984) Hệ tọa độ trắc địa thé giới - 1984
+§ Quy định chung
+5.1 Do GNSS trong trắc địa công trình cần được tiền hành theo một phương án kỹ thuật đã được phê
+duyệt nhằm xác định chính xác các giá trị tọa độ điểm GNSS phục vụ cho việc thành lập các mạng lưới
+khảo sát công trình, lưới khống chế mặt bằng phục vụ thi công và lưới quan trắc chuyển dịch ngang công
+trình.
+5.2 Do GNSS trong trắc địa công trình được tiền hành theo các trình tự sau:
+— Lap phương án kỹ thuật và trình duyệt,
+— Chon điểm, xây dựng mốc;
+~ Chuan bị máy móc và thiết bị;
+— _ Đo ngắm ngoài thực địa;
+— _ Ghi sổ đo ngoại nghiệp;
+— Xử lý số liệu;
+
+===== TRANG 10 / 60 =====
+TCVN 9401:2024
+~ Bao cáo tổng kết và nộp thành quả.
+5.3 Các cấp do và phương pháp do GNSS nêu trong phương án kỹ thuật được chọn tuỳ thuộc vào yêu
+cầu tỉ lệ bản đồ cần thành lập, quy mô công trình, độ chính xác xác định đại lượng cần bố trí, đại lượng
+dịch chuyển và đặc điểm của từng đối tượng công trình.
+5.4 Do GNSS sử dụng hệ tọa độ trắc địa thé giới WGS-84 (hệ toa độ trắc địa Quốc té) khi có yêu cầu sử
+dụng hệ tọa độ VN-2000 hoặc hệ tọa độ nào khác thì phải tính chuyển đổi tọa độ. Các tham số hình học
+cơ bản của Ellipsoid toàn cầu được thể hiện trong Bảng 1. Hệ tọa độ VN-2000 có các tham số hình học
+cơ bản của Ellipsoid hoàn toàn giống với hệ tọa độ trắc địa Quốc tế WGS-84.
+Bảng 1 - Tham số hình học cơ bản của Ellipsoid toàn cầu
+Tham số hình học Ellipsoid toàn cầu (Ellipsoid WGS-84)
+
+1. Bán trục lớn a (m) 6378 137
+
+2. Bán trục nhỏ b (m) 6 356 752,3142
+
+3. Độ dẹt f 1/298,257 223 563
+
+4. Bình phương độ lệch tâm thứ nhất e? 0,006 694 379 990 13
+
+5. Bình phương độ lệch tâm thứ hai e2 0,006 739 496 742 227
+
+8.5 Khi đo GNSS có yêu cầu sử dụng hệ tọa độ địa phương hoặc hệ tọa độ độc lập thì phải tính chuyển
+đổi tọa độ và cần phải có các tham số kỹ thuật sau:
+— Tham số hình học của Ellipsoid tham khảo;
+- 86 kinh của kinh tuyến giữa múi chiếu;
+~ Hang số cộng vào tung độ, hoành độ;
+— 6 cao chuẩn của mat chiếu;
+
+— Toa độ điểm khởi tính và phương vị khởi tính.
+
+5.6 Khi tính chuyển từ hệ tọa độ trắc địa Quốc té của lưới GNSS sang hệ tọa độ VN-2000, cần phải đảm
+bảo yêu cầu: Nếu sử dụng phép chiếu UTM 6° (Ko = 0,999 6) thì kinh tuyến trục cách khu đo trong giới
+hạn từ 160 km đến 200 km. Nếu sử dụng phép chiếu UTM 3° (Ko = 0,999 9) thì kinh tuyến trục cách khu
+đo trong giới hạn từ 70 km đến 110 km. Khi dùng phép chiếu UTM thì sử dụng Ellipsoid WGS-84.
+
+5.7 Khi tính chuyển đổi độ cao đo GNSS thành độ cao thường thì cần phải sử dụng hệ độ cao quốc gia
+với điểm gốc là điểm độ cao quốc gia kết hợp với mô hình geoid.
+
+8.8 Thời gian trong đo GNSS được sử dụng là thời gian quốc tế UTC. Khi muốn dùng giờ Việt Nam thì
+phải tiến hành chuyển đổi (giờ Hà Nội bằng giờ GMT cộng bảy).
+
+5.9 Máy đo và thiết bị sử dụng phải được kiểm nghiệm, hiệu chỉnh theo quy định tại 7.2.
+
+===== TRANG 11 / 60 =====
+TCVN 9401:2024
+
+5.10 Công tác kiểm tra, nghiệm thu kỹ thuật phải tiến hành chặt chẽ, kịp thời và thường xuyên từ khi bắt
+
+đầu thi công đến khi kết thúc.
+
+6 Thiết kế kỹ thuật lưới GNSS
+
+6.1 Nguyên tắc thành lập và thiết kế lưới
+
+6.1.1 Việc thiết kế kỹ thuật lưới GNSS nhằm đảm bảo các yêu cầu về kỹ thuật và đảm bảo tính thống
+
+nhất cho toàn bộ mạng lưới đồng thời là cơ sở cho việc lập dự toán kinh phí triển khai.
+
+6.1.2 Trước khi lập thiết kế kỹ thuật phải tiền hành điều tra, thu thập, nghiên cứu và phân tích các tài liệu
+
+có liên quan trong phạm vi khu đo, bao gồm:
+
+— Ban đồ địa hình tỷ lệ lớn nhất đã có trong khu vực xây dựng công trình;
+
+— _ Hiện trạng mạng lưới tọa độ, độ cao có trong khu đo: sơ đồ lưới, ghi chú điểm, giá trị tọa độ, độ cao;
+
+— Các tài liệu về địa chất công trình, địa chất thuỷ văn, giao thông, thuỷ hệ và các tài liệu liên quan đến
+quy hoạch phát triển của khu đo.
+
+6.1.3 Lưới khảo sát công trình, lưới khống chế thi công công trình và lưới quan trắc chuyển dịch ngang
+
+công trình thành lập bằng công nghệ GNSS tĩnh được thiết kế dạng lưới tam giác dày đặc, chuỗi tam
+
+giác, chuỗi tứ giác. Lưới khảo sát công trình được thiết kế phủ kín khu đo, lưới khống ché thi công công
+
+trình và lưới quan trắc chuyển dịch ngang công trình được thiết kế tạo thành các vòng khép có số cạnh
+
+không lớn hơn quy định tại Bảng 2, Bảng 3 và Bảng 4.
+
+6.1.4 Thiết kế kỹ thuật lưới GNSS được thực hiện tuần tự theo các bước: thiết kế sơ bộ, khảo sát thực
+
+địa, thiết ké chỉ tiết.
+
+6.1.4.1 Thiết kế sơ bộ:
+
+Trên cơ sở các tài liệu thu thập được tại 6.1.2, tiền hành thiết kế sơ bộ mạng lưới. Nguyên tắc cơ bản
+
+nhát của bước này là sử dụng tat cả các điểm tọa độ hạng cao hon, độ cao hạng cao hơn có trong khu
+
+đo kết hợp với các tài liệu về giao thông, thủy hệ, chất dat dé tiền hành thiết kế sơ bộ lưới theo các chỉ
+
+tiêu kỹ thuật cơ bản đối với từng cấp hạng.
+
+6.1.4.2 Khảo sát thực địa:
+
+Việc khảo sát thực địa được tiền hành sau bước thiết kế sơ bộ. Trên cơ sở thiết kế sơ bộ tiến hành khảo
+
+sát toàn bộ khu vực cần thiết ké trong đó đặc biệt lưu ý tới các thông tin về sự tồn tại của các điểm tọa độ
+
+hạng cao, độ cao hạng cao ở thực địa cũng như khả năng sử dụng các điểm này cho đo ngắm. Đối với
+
+các mốc thiết ké mới, phải lưu ý khả năng chọn điểm ở các khu vực địa hình khó khăn, dân cư đông đúc.
+
+Kết thúc quá trình khảo sát phải lập báo cáo khảo sát phục vụ cho việc thiết kế chỉ tiết.
+
+6.1.4.3 Thiết kế chỉ tiết:
+
+a) Trên cơ sở thiết kế sơ bộ kết hợp với báo cáo khảo sát tiền hành thiết kế chỉ tiết. Kết thúc bước công
+
+việc này phải thể hiện sơ đồ mạng lưới đã thiết kế trên máy vi tính kèm theo các thuộc tính cơ bản; số
+
+===== TRANG 12 / 60 =====
+TCVN 9401:2024
+hiệu điểm, tọa độ gần đúng của điểm trên hệ tọa độ VN-2000. Trên sơ đồ thiết ké chỉ tiết phải sử dụng
+các ký hiệu rõ rang và thống nhát dé thé hiện các điểm tọa độ hạng cao, các điểm độ cao hang cao có
+sử dụng và các điểm tọa độ có đo nối độ cao.
+
+b) Trong thiết kế chỉ tiết phải tính toán ca đo để thi công lưới đạt được các yêu cầu kinh tế kỹ thuật. Tùy
+
+thuộc vào số lượng máy thu GNSS sử dụng, số lần đo lặp tại mỗi điểm dé có phương án tạo các ca đo
+
+phù hợp. Số lượng ca đo tối thiểu được xác định theo công thức sau:
+m-s
+-=-= 4
+n=— (1)
+
+trong đó:
+
+s laténg số điểm trong lưới,
+
+r_ là số máy thu sử dụng để do;
+
+m là giá trị trung bình số lần đo lặp tại các điểm của mang lưới;
+
+n. là số lượng ca đo tối thiểu, nếu giá trị n tính theo công thức (1) bị lẻ thi phải làm tròn thành số
+
+nguyên lớn hơn.
+
+6.2 Thiết kế lưới khống chế khảo sát công trình
+
+6.2.1 Lưới khống chế khảo sát công trình được thành lập để đo vẽ trực tiếp bản đồ địa hình công trình tỉ
+
+lệ 1:500, 1:1 000, 1:2 000, 1:5 000, lưới được chia thành 2 cắp:
+
+a) Lưới khống chế cơ sở;
+
+b) Lưới khống chế đo vẽ;
+
+— Lưới khống chế cơ sở là lưới khống ché tọa độ, độ cao, được phát triển từ lưới tọa độ, độ cao quốc
+gia phục vụ lập lưới khống chế đo vẽ và đo đạc chỉ tiết một khu vực cụ thể. Lưới khống chế cơ sở
+gồm lưới cơ sở cấp 1 và lưới cơ sở cắp 2. Về độ cao, có 01 cáp là lưới độ cao kỹ thuật;
+
+~— _ Lưới khống chế đo vẽ là lưới khống ché toa độ, độ cao được phát triển từ lưới khống chế cơ sở hoặc
+lưới cắp cao hơn phục vụ cho việc đo đạc chỉ tiết khu do. Lưới khống ché đo vẽ gồm lưới đo vẽ cáp
+1 và lưới đo vẽ cấp 2.
+
+6.2.2 Lưới khống chế khảo sát công trình được xây dựng theo nguyên tắc từ cấp cao đến cấp thấp, từ
+
+tổng thể đến cục bộ. Khi lập lưới bằng công nghệ GNSS có thể bỏ qua các cap trung gian khi xây dựng
+
+lưới tọa độ cấp tháp hơn.
+
+6.2.3 Trường hợp có yêu cầu kỹ thuật đặc biệt, có thể xây dựng lưới khống chế khảo sát công trình theo
+
+phương án riêng hoặc lưới tọa độ, độ cao tự do và phải được nêu rõ trong thiết kế kỹ thuật.
+
+6.2.4 Lưới khảo sát công trình thành lập bằng công nghệ GNSS tĩnh được thiết kế phải đảm bảo các yêu
+
+cầu kỹ thuật chủ yếu như quy định nêu trong Bảng 2.
+
+===== TRANG 13 / 60 =====
+TCVN 9401:2024
+Bảng 2 - Yêu cầu kỹ thuật chủ yếu của lưới khảo sát công trình
+thành lập bằng công nghệ GNSS tĩnh
+Chỉ tiêu kỹ thuật - -
+ee ee
+1. Khoảng cách giữa các 1+5 Tăng dày | Tăng dày điểm | Tăng dày điểm
+điểm lưới, km (tùythuộcvào | điểm khống khống chế khống chế
+hình dạng khu đo chế
+và điều kiện địa
+hình)
+2. Sai số trung phương vị trí 0,02 0,03
+>> | | TT
+3. Sai số trung phương độ 0,03 0,03
+` Sam | | | |
+4. Sai số trung phương 1/100 000 1/20 000 1/10 000 1/5 000
+tương đối cạnh yếu nhất
+5. Giá trị trung bình số lần 21,6
+đo lặp tại các điểm của
+mạng lưới
+6. Số lượng cạnh trong 10 10
+vòng do độc lập và tuyến
+phù hợp
+7. Số điểm khống chế tọa 03 điểm gốclà | 03 điểm gốc | 03 điểm gốc | 03 điểm gốc
+độ tối thiểu điểm tọa độ quốc | thuộc lưới cơ | tọa độthuộc | tọa độ thuộc
+gia sở cấp 1 trở | lưới cơ sở cấp | lưới đo vẽ cấp
+lên ® 2 trở lên ®) 1 trở lên ®)
+8. Số điểm khống ché độ 03 điểm gốc độ | 03 điểm gốc | 02 điểm có độ | 02 điểm gốc
+cao tối thiểu cao hạng IVtrở | độ cao hạng | caocápkỹ | độ cao là điểm
+lên IV trở lên thuật trở lên Đ | thuộc lưới đo
+vẽ cấp 1 trở
+lên Ð
+®) Trong trường hợp lưới có số điểm mới không lớn hơn 3 được phép sử dụng 02 điểm gốc tọa độ hạng cao.
+6.2.5 Khi thành lập lưới khảo sát công trình bằng công nghệ GNSS tĩnh, các điểm gốc tọa độ và độ cao
+được chọn là các điểm có vị trí gần lưới nhát.
+6.2.6 Lưới cơ sở cấp 1 được phát triển từ các điểm gốc thuộc lưới tọa độ quốc gia. Lưới cơ sở cấp 2
+được xây dựng với mục đích tăng dày điểm khống chế phục vụ cho xây dựng lưới đo vẽ cấp 1, lưới đo
+
+===== TRANG 14 / 60 =====
+TCVN 9401:2024
+vẽ cấp 2 và sử dụng trực tiếp đo vẽ chi tiết trên toàn khu do. Lưới cơ sở cấp 2 được phát triển từ các
+điểm gốc tọa độ thuộc lưới cơ sở cấp 1 trở lên.
+
+6.2.7 Lưới khống chế đo vẽ được thành lập nhằm tăng dày điểm khống chế phục vụ đo đạc trực tiếp tọa
+độ, độ cao các điểm địa hình, địa vật. Lưới khống ché đo vẽ được kết hợp xác định đồng thời tọa độ va
+độ cao. Lưới khống ché đo vẽ chia làm 2 cấp: lưới đo vẽ cấp 1 và lưới đo vẽ cấp 2.
+
+6.2.8 Vị trí điểm lưới cơ sở cấp 1, lưới cơ sở cấp 2 phải được chọn ở nơi có nền đất vững chắc, dn định,
+thuận lợi cho việc thu tín hiệu từ vệ tinh, có góc quan sát bầu trời không bị che chắn không nhỏ hơn
+150°. Trường hợp đặc biệt thì cũng phải có góc quan sát bầu trời không nhỏ hơn 120° và chỉ được phép
+che khuất về một phía. Vị trí điểm chọn phải cách xa trạm phát sóng ít nhất 200 m, cách các vật có khả
+năng làm nhiễu tín hiệu vệ tinh như đường dây điện cao thế, mái nhà kim loại v.v. 50 m trở lên.
+
+6.2.9 Điểm của lưới cơ sở cấp 1, lưới cơ sở cấp 2 được chôn mốc bê tông, có gắn tâm mốc, phải được
+chôn chìm dưới mặt đất hoặc khoan gắn dấu mốc trên nền đá, nền bê tông, trên vật kiến trúc. Quy định
+về số hiệu điểm phải được nêu trong thiết kế kỹ thuật. Nếu có yêu cầu làm tường vây bảo vệ lâu dài thì
+phải nêu trong thiết kế kỹ thuật. Quy cách và dau mốc GNSS tham khảo Phụ lục A.
+
+6.2.10 Các mốc thuộc lưới cơ sở cấp 1, cấp 2 phải được lập sơ đồ vị trí mốc và ghi chú điểm.
+
+6.2.11 Tùy theo yêu cầu cụ thể điểm lưới khống chế đo vẽ có thể chôn mốc cố định hoặc tạm thời ở thực
+địa. Nếu chôn mốc cố định thì quy cách mốc tham khảo Phụ lục A. Nếu làm mốc tạm thời thì phải đảm
+bảo mốc tồn tại đến kết thúc việc đo đạc và phục vụ kiểm tra, nghiệm thu công trình.
+
+6.2.12 Lưới khống chế đo vẽ phải thiết kế trên bản đồ tỷ lệ lớn nhất có trên khu đo trước khi thi công.
+6.2.13 Công nghệ GNSS tĩnh có thể sử dụng dé xác định tọa độ, độ cao lưới đo vẽ cấp 1 đồng thời.
+6.2.14 Lưới đo vẽ cấp 2 là cấp lưới khống chế cuối cùng được phép phát triển nêu mật độ điểm khống
+chế thuộc lưới cắp cao hơn chưa đủ để đo vẽ hết khu đo.
+
+6.2.15 Phương pháp phát triển lưới đo vẽ cắp 2 là sử dụng công nghệ đo GNSS tinh, kỹ thuật đo GNSS
+động hoặc dạng đường chuyền đo góc, cạnh. Khi phát triển lưới đo vẽ cắp 2 là lưới đường chuyền đo
+góc cạnh thì phải chọn vị trí điểm của lưới bậc cao hơn sao cho tạo thành từng cặp điểm thông hướng
+ngang hoặc thông hướng ngang với điểm cắp cao hơn để phát triển lưới theo dạng đường chuyền.
+
+6.3 Thiết kế lưới khống chế mặt bằng phục vụ thi công công trình
+
+6.3.1 Lưới khống chế mặt bằng phục vụ thi công công trình là một mạng lưới gồm các điểm có tọa độ
+được xác định chính xác, được đánh dấu bằng các mốc kiên có trên mặt bằng xây dựng và được sử
+dụng làm cơ sở để bố trí các hạng mục công trình từ bản vẽ thiết kế ra thực địa cũng như việc tiền hành
+các công tác đo đạc khác với độ chính xác cần thiết. Tùy thuộc vào quy mô và yêu cầu của công trình,
+lưới khống ché thi công có hai cấp lưới là lưới độ chính xác cấp 1 và lưới độ chính xác cắp 2.
+
+6.3.2 Lưới khống chế phục vụ thi công công trình thành lập bằng công nghệ GNSS tĩnh được thiết ké
+phải dam bảo các yêu cầu kỹ thuật chủ yếu như quy định nêu trong Bảng 3.
+
+===== TRANG 15 / 60 =====
+TCVN 9401:2024
+Bảng 3 — Yêu cầu kỹ thuật chủ yếu của lưới khống chế mặt bằng phục vụ thi công
+thành lập bằng công nghệ GNSS tĩnh
+Lưới độ chính xác
+Chỉ tiêu kỹ thuật
+1.. Khoảng cách trung bình giữa các điểm lưới, m 300 + 500 | t00+300 |
+2. Sai số trung phương vị trí điểm yếu nhất, m
+3. Sai số trung phương tương đối cạnh yếu nhát 1/40 000 1/20 000
+4. Giá trị trung bình số lần đo lặp tại các điểm của a8
+mạng lưới ,
+6.3.3 Đối với hạng mục công trình có diện tích xây dựng lớn hơn 1 km? hoặc khu công nghiệp quan
+trọng, cần thành lập lưới khống chế mặt bằng có độ chính xác cấp 1 hoặc cao hơn cấp 1; đối với hạng
+mục công trình có diện tích xây dựng nhỏ hơn 1 km? hoặc khu xây dựng thông thường thành lập lưới
+khống chế mặt bằng có độ chính xác cấp 2.
+6.3.4 Lưới khống chế mặt bằng phục vụ thi công công trình là lưới cạnh ngắn, trong một số trường hợp
+chất lượng của lưới khống chế có thể được đánh giá dựa vào sai số trung phương vị trí điểm yếu nhất
+của lưới, giá trị này được xác định dựa vào dung sai cho phép về bố trí công trình. Trong trường hợp
+yêu cầu độ chính xác vị trí điểm yếu nhất của lưới lần lượt là:
+— _ 2,0 cm thì áp dụng các quy định đối với thiết kế và đo đạc lưới cơ sở cấp 2 trong lưới khảo sát công
+trình trở lên để thành lập lưới khống ché mặt bằng phục vụ thi công;
+— 1,5 cm thì áp dụng các quy định đối với thiết kế và đo đạc lưới quan trắc chuyển dịch ngang công
+trình độ chính xác cấp 4 như nêu ở Bảng 4;
+— Nhỏ hơn hoặc bằng 0,5 cm thì áp dụng các quy định đối với thiết kế và đo đạc lưới quan trắc chuyển
+dịch ngang công trình độ chính xác cấp 2 và độ chính xác cấp 1 như nêu ở Bảng 4.
+6.3.5 Đối với lưới khống chế thi công cần phải ước tính độ chính xác các yếu tố cần xét của lưới GNSS
+thiết ké theo phương pháp ước tinh chặt chẽ trên cơ sở thuật toán bình sai gián tiếp và phải đảm bảo
+độ chính xác yêu cầu.
+6.3.6 Vị tri các điểm mốc khống chế được chọn phải đảm bảo đo được GNSS, yêu cầu quy định vị trí
+điểm như quy định tại 6.2.8. Mốc có thể đúc sẵn bằng bê tông cốt thép rồi đem chôn, hoặc có thé đúc ở
+hiện trường, hoặc có thể lợi dụng nền đá, nền bê tông khoan gắn thêm dấu mốc ở hiện trường. Quy
+cách và dầu mốc GNSS tham khảo Phụ lục A.
+6.3.7 Để tinh tọa độ các điểm GNSS của lưới khống chế mặt bằng phục vụ thi công trong hệ tọa độ quốc
+gia thi cần phải có số liệu khởi tinh trong hệ tọa độ quốc gia va đo nói với điểm tọa độ quốc gia hoặc đo
+nỗi với điểm tọa độ đã có trong giai đoạn khảo sát. Số điểm đo nối tối thiểu là 3 điểm cho mạng lưới có số
+
+===== TRANG 16 / 60 =====
+TCVN 9401:2024
+điểm mới lớn hơn 3 điểm và số điểm đo nối là 2 điểm khi số điểm mới trong mạng lưới nhỏ hơn hoặc bằng
+3 điểm.
+
+6.3.8 Khi thành lập lưới khống ché thi công có hiệu số độ cao mặt đất và mặt chiếu lớn hơn 32 m thì phải
+tinh số hiệu chỉnh do độ cao mặt đất và mặt chiếu, mặt chiếu trong đo đạc công trình được chọn theo quy
+định nêu trong TCVN 9398.
+6.4 Thiết kế lưới quan trắc chuyển dịch ngang công trình
+6.4.1 Lưới quan trắc chuyển dịch ngang công trình là mạng lữới được tạo thành từ các mốc khống chế
+cơ sở (các mốc chuẩn), các điểm cơ sở trung gian (néu có) và các mốc quan trắc chuyển dịch ngang
+gắn trực tiếp trên công trình.
+6.4.2 Công nghệ GNSS được áp dụng dé quan trắc chuyển dịch ngang đối với công trình khi tại các vị
+trí quan trắc có tầm thông thoáng tốt, đảm bảo đủ điều kiện thu tín hiệu vệ tinh như quy định tại 6.2.8.
+Lưới quan trắc chuyển dịch ngang công trình bằng GNSS gồm lưới độ chính xác cắp 1, 2, 3 và 4.
+6.4.3 Lưới quan trắc chuyển dịch ngang công trình bằng công nghệ GNSS tinh được thiết ké phải đảm
+bảo các yêu cầu kỹ thuật chủ yếu như quy định nêu trong Bảng 4.
+Bàng 4 - Yêu cầu kỹ thuật chủ yếu của lưới quan trắc chuyển dịch ngang công trình
+thành lập bằng công nghệ GNSS tinh
+Lưới độ chính xác
+2. Giá trị trung bình số lần đo lặp tại các điểm
+. R 22,0 22,0
+của mang lưới
+6.4.4 Hệ tọa độ dùng quan trắc chuyển dịch ngang công trình bằng GNSS là hệ tọa độ độc lập. Khi cần
+tính tọa độ các điểm quan trắc chuyển dịch ngang công trình bằng GNSS trong hệ tọa độ quốc gia thi
+cần phải đo nối với một số điểm tọa độ quốc gia.
+6.4.5 Mạng lưới GNSS quan trắc chuyển dịch ngang công trình nên được thiết kế từ 1 đến 2 bậc lưới:
+bậc 1 là lưới cơ sở và bậc 2 là lưới quan trắc. Lưới cơ sở bao gồm các mốc chuẩn đo nối với nhau, lưới
+quan trắc bao gồm các mốc chuẩn và móc quan trắc đo nối với nhau. Khi quan trắc chuyển dịch ngang
+công trình đòi hỏi độ chính xác cao như lưới độ chính xác cấp 1 và lưới độ chính xác cắp 2 thì mạng lưới
+GNSS nên được thiết kế gồm 1 bậc lưới.
+6.4.6 Quy cách của dấu mốc và mốc GNSS quan trắc chuyển dịch ngang các cắp phải phù hợp với các
+quy định hiện hành hoặc tham khảo thêm TCVN 9399. Riêng đối với quan trắc chuyển dịch ngang công
+trình bằng lưới độ chính xác cấp 1 thi kết cấu mốc phải là mốc định tâm bắt buộc.
+
+===== TRANG 17 / 60 =====
+TCVN 9401:2024
+6.4.7 Đối với lưới GNSS quan trắc chuyển dịch ngang công trình, cần phải ước tính độ chính xác các
+yếu tố cần xét của lưới GNSS thiết kế theo phương pháp ước tinh chặt chẽ trên cơ sở thuật toán bình
+sai gián tiếp và phải đảm bảo độ chính xác yêu cau.
+7 Yêu cầu kỹ thuật đối với máy móc thiết bị
+7.1 Chọn máy thu
+Việc lựa chọn máy thu GNSS được thực hiện theo các quy định trong Bảng 5.
+Bang 5 - Lựa chọn máy thu GNSS trong do GNSS tinh và tinh nhanh
+Dạng lưới khống chế Loại máy thu Số lượng máy thu
+~— Thu được trị đo Code và trị đo Phase Lưới cơ sở
+1. Lưới khảo sat công — Một hoặc da tan số các cấp 1 và 2
+trình ~ Sai số đo cạnh < (10 mm + 1 mm x D) _ | Lưới đo vẽ các =
+cấp 1 và 2
+— Thu được trị đo Code và trị do Phase
+2. Lưới khống chế mặt . ae 7
+š ¬ — Một hoặc da tan số
+bằng phục vụ thì công š
+— Sai sô đo cạnh < (5 mm + 1 mm x D)
+3. Lưới | Lưới độ ~— Thu được trị đo Code và trị do Phase
+quan | chính xác các | - Hai hoặc đa tan số >3
+trắc | cấp1và2 _ | — Sai số đo cạnh < (3 mm + 1 mm x D)
+chuyển
+dịch Lưới độ — Thu được trị đo Code và trị đo Phase
+ngang | chính xác các | - Một hoặc đa tần số
+công | cấp3và4 | - Sai số đo cạnh < (5 mm + 1 mm x D)
+trình
+Các ký hiệu trong Bảng 5:
+D là chiều dài cạnh đo tinh bằng kilômét (km).
+7.2 Kiểm nghiệm máy thu
+Trước và trong khi thực hiện công trình, máy thu GNSS sử dụng trong công trình đều phải kiểm tra, kiểm
+nghiệm theo chỉ dẫn kèm theo thiết bị.
+7.3 Bảo trì máy thu
+7.3.1 Trong thời gian đo ở ngoại nghiệp máy thu GNSS phải có người chuyên bảo quản. Khi vận chuyển
+máy cần có biện pháp phòng chắn động, phòng nắng, gió, bụi, ẩm ướt, ăn mòn. Máy điều khiển với các
+phim bắm, khi vận chuyển cần để trong hộp vận chuyển.
+7.3.2 Các đầu cắm, chỗ tiếp nối của máy và dây dẫn cần giữ gìn sạch sẽ, khi nối máy với nguồn điện
+bên ngoài cần kiểm tra kỹ điện áp có phù hợp với điện áp của máy không. Khi lắp pin đo, cần chú ý lắp
+
+===== TRANG 18 / 60 =====
+TCVN 9401:2024
+đúng cực. Dây dẫn của ăng-ten thu không để vặn xoắn, không kéo dây dẫn trên bè mặt có độ cứng cao
+hoặc bề mặt thô, nửa năm kiểm tra lại độ bền của dây một lần.
+
+7.3.3 Khi không sử dụng máy thu cần để trong hòm vận chuyển có đệm mút. Hòm máy cần để chỗ thông
+
+thoáng, khô ráo. Khi túi chống 4m chuyển sang màu hồng, đỏ, cần thay thé ngay.
+
+7.3.4 Máy thu dé trong phòng lâu ngày thì một đến hai tháng phải cắm điện kiểm tra hoạt động một lần.
+
+Các pin được bảo quản nơi khô ráo tránh mắt điện, từ một đến hai tháng phải nạp điện lại một lần và
+
+kiểm tra lại điện dung.
+
+7.3.5 Nghiêm cắm tháo rời tuỳ tiện các bộ phận của may thu, nếu có sự cố cần lập biên bản giao cho
+
+người có chuyên môn sửa chữa, bảo trì.
+
+8 Công tác chuẩn bị đo GNSS
+
+8.1 Chuẩn bị máy và phụ kiện
+
+8.1.1 Công tác chuẩn bị kỹ lưỡng trước khi đo là điều kiện để tránh các trục trac có thé xảy ra trong quá
+
+trình đo. Công tác chuẩn bị bao gồm các nội dung chính sau:
+
+— _ Trước khi đo cần kiểm tra máy thu GNSS và các thiết bị kèm theo (chân máy, định tâm quang học,
+ốc nối, thước đo cao ăng-ten, v.v.);
+
+— _ Kiểm tra dung lượng bộ nhớ trong của máy còn đủ chỗ dung nạp không;
+
+— Chuan bị phương tiện đi lại, để di chuyển máy đúng lich đo;
+
+— Chuan bị nguồn điện, ác quy hoặc pin đủ dùng có dự trữ, pin có chất lượng tốt;
+
+~ Chuan bị phương tiện liên lạc (bộ đàm hoặc điện thoại di động, v.v.);
+
+— Có phương án phối hợp nếu không liên lạc được bằng bộ đàm hoặc điện thoại động (thống nhất theo
+thời gian đã dự kiến);
+
+— Chuẩn bị sé do, bút ghi chép, sơ đồ lưới và lịch đo đã lập cho các ca đo, v.v.
+
+8.1.2 Lưới khống chế mặt bằng phục vụ thi công công trình và lưới quan trắc chuyển dịch ngang công
+
+trình đòi hỏi độ chính xác cao nên cần phải kiểm nghiệm lệch tâm pha ăng-ten máy thu và kiểm tra định
+
+tâm quang học trước khi đo. Phương pháp kiểm nghiệm lệch tâm pha ăng-ten và kiểm tra định tâm
+
+quang học tham khảo các Phụ lục E và F.
+
+8.2 Lập kế hoạch đo
+
+8.2.1 Để đảm bảo thành công cho công tác đo GNSS cần phải tiến hành lập lịch đo và cần lập bảng dự
+
+báo các vệ tinh có thể quan sát được. Trong bảng có: số hiệu vệ tinh, độ cao vệ tinh và góc phương vị,
+
+thời gian quan sát tốt nhất để quan sát nhóm vệ tinh tốt nhất, hệ số suy giảm độ chính xác vị trí không
+
+gian ba chiều. Số vệ tinh quan sát lớn hơn hoặc bằng 6.
+
+8.2.2 Khi xung quanh điểm đo có nhiều địa vật che chắn phải lập lịch đo theo điều kiện che chắn thực tế
+
+tại các điểm đo. Trong các phần mềm xử lý số liệu GNSS hiện nay đã có sẵn mô đun để người sử dụng
+
+lập kế hoạch do hoặc lập kế hoạch đo trực tuyến thông qua trang web gnssplanning.com.
+
+===== TRANG 19 / 60 =====
+TCVN 9401:2024
+
+8.2.3 Tọa độ dùng để lập bảng dự báo cho các vệ tinh là độ kinh, độ vĩ trung bình của khu do. Thời gian
+dự báo nên dùng thời gian trung bình khi đo ngắm. Khi khu đo lớn thời gian đo kéo dài thì cần lập bảng
+dự báo cho từng phân khu với thời gian đo khác nhau và dùng lịch vệ tinh quảng bá có tuổi không quá
+20 ngày.
+
+8.2.4 Căn cứ vào số lượng máy thu, đồ hình lưới GNSS đã thiết kế và bảng dự báo vệ tinh. Lập bảng
+điều độ đo ngắm với nội dung: thời gian đo, số liệu trạm đo, tên trạm đo, số liệu máy thu v.v. như yêu
+cầu của Phụ lục B.
+
+9 Công tac đo GNSS tinh
+
+9.1 Các yêu cầu kỹ thuật cơ bản
+
+9.1.1 Sau khi đến trạm đo, phải đặt máy thu dn định sau đó mới đặt ăng-ten (trường hợp máy thu và
+ăng-ten tách rời nhau);
+
+9.1.2 Khi đo trên mốc có định tâm bắt buộc, phải tháo nắp bảo vệ tâm mốc rồi mới lắp ăng-ten;
+
+9.1.3 Vạch định hướng ăng-ten phải luôn luôn hướng về phía Bắc với sai số + 5°. Những chỗ khó định
+hướng cần đặt trước cọc định hướng, mỗi lần đo dựa vào cọc định hướng dé định hướng ăng-ten.
+9.1.4 Công tác đo ngắm trong lưới GNSS bao gồm các thao tác: khởi động máy thu GNSS tại trạm đo
+và quy trình thu tín hiệu ghi vào bộ nhớ của máy.
+
+9.1.5 Máy thu GNSS phải có định tâm quang hoc dé đo lưới GNSS, định tâm quang học của may thu
+GNSS cần được kiểm nghiệm trước khi sử dụng, bảo đảm sai số định tâm nhỏ hơn hoặc bằng + 1 mm.
+9.1.6 Tổ đo phải nghiêm chỉnh tuân theo thời gian quy định trong bảng điều độ công tác, đảm bảo quan
+trắc đồng bộ cùng một nhóm các vệ tinh. Khi có sự thay đổi so với bảng điều độ phải được sự đồng ý
+của người phụ trách. Tổ đo không được tuỳ tiện thay đổi ké hoạch đo ngắm.
+
+9.1.7 Các dây dẫn ni từ ăng-ten đến máy thu và các thiết bị phụ trợ được kiểm tra không có sai sót, mới
+được tiến hành thu tín hiệu.
+
+9.1.8 Trước khi mở máy cho một ca đo phải đo chiều cao ăng-ten bằng thước chuyên dùng đọc số đến
+1 mm, ghi tên tram máy, ngày tháng năm, số hiệu ca đo, chiều cao ăng-ten. Sau khi tắt máy, tiền hành
+đo lại chiều cao ăng-ten dé kiểm tra, chênh lệch chiều cao ăng-ten giữa hai lần đo không được vượt quá
++ 2 mm đối với lưới khống chế mặt bằng phục vy thi công và lưới quan trắc chuyển dịch ngang công
+trình, lấy giá trị trung bình ghi vào sé đo. Nếu như chênh lệch vượt quá hạn sai cho phép, thì phải tim
+hiểu nguyên nhân, đề xuất ý kiến xử lý và ghi vào cột ghi chú trong sé do.
+
+9.1.9 Sau khi máy thu bắt đầu ghi nhận số liệu, người đo có thể sử dụng các chức năng của bàn phím,
+chọn menu, tìm thông tin trạm do, số vệ tinh thu được tín hiệu, số hiệu vệ tinh, tỷ số nhiễu tín hiệu, kết
+quả định vị tức thời, tình trạng ghi, giữ số liệu (đối với máy thu có bàn phím điều khiển).
+
+9.1.40 Khi may thu đang ghi kết quả, người đo ghi lần lượt các nội dung theo quy định trong sổ đo. Khi
+thời gian đo quá 60 min thì cứ 30 min lại ghi một lần.
+
+===== TRANG 20 / 60 =====
+TCVN 9401:2024
+9.1.11 Trong quá trình đo của một ca đo không được tiền hành các thao tác sau: tắt máy thu và khởi
+động lại; tiền hành tự đo thử (trừ khi phát hiện có sự có); thay đổi góc cao của vệ tinh; thay đổi tan suất
+thu tín hiệu; thay đổi vị trí ăng-ten; ấn phim đóng và xoá thông tin.
+9.1.12 Trong thời gian đo người đo không được rời máy, thường xuyên theo dõi tình trạng làm việc của
+máy thu, theo dõi nguồn điện, tình hình vệ tinh và ghi số liệu; đồng thời đề phòng máy bị chắn động làm
+chuyển dịch, đề phòng người và vật thể khác gần ăng-ten che chắn tín hiệu vệ tinh.
+9.1.13 Trong khi máy thu đang làm việc không được dùng bộ đàm hoặc điện thoại di động ở gần máy
+thu. Khi có sam chớp, mưa to phải tat máy, ngừng đo và thu cất ăng-ten dé phòng sét đánh.
+9.1.14 Trong khi đo phải bảo dam máy thu hoạt động bình thường, ghi số liệu chính xác. Sau mỗi ngày
+đo nên kịp thời trút số liệu vào máy tính để tránh mắt số liệu.
+9.2 Do đạc lưới khảo sát công trình bằng công nghệ GNSS tinh
+9.2.1 Ngoài các yêu cầu quy định tại 9.1, lưới khảo sát công trình được đo đạc phải đảm bảo các quy
+định trong Bảng 6, thiết bị dùng để đo đạc là các máy GNSS nêu trong Bảng 5.
+Bang 6 — Các yêu cầu khi đo đạc lưới khảo sát công trình bằng công nghệ GNSS tinh
+i tiêu kỹ thu
+- cépt | cép2 | cấp! | cấp? |
+a. thotgian | Méyt 1 tn ob | >90 | >80 | | 230 |
+| Thhunh| - | >4 | 230 | 220 |
+thu tín hiệu
+(mạ  |Mávhu2tns6tờ [Tih | 260 | 245 | 290 | 225 |
+_..aaahn 4,5,15 | 1,5,15 | 1,5,15 | 1,5, 15
+. Tân suất thu tín hiệu vệ tinh (s
+k Tĩnh nhanh | - | 15515) 1,5,15 | 1,5,15
+5. Hệ số suy gảm độchính xácvjtí [Tim | <4 | sẽ | sp | se -
+6. Tam pha ăng-ten máy thu GNSS được định tâm
+với sai số, mm
+Trước và
+Đọc số 2 | Đọc số 2 | Đọc số 2
+7. Đo chiều cao ăng-ten 2 sau ca 7 bo
+lần lần lần
+đo
+®) Đọc số đến milimét, chênh lệch giữa hai lần đọc số không quá 2 mm.
+
+===== TRANG 21 / 60 =====
+TCVN 9401:2024
+9.2.2 Nếu ca đo có cạnh dài lớn hơn nhiều lần cạnh trung bình thì phải kéo dài thời gian ca đo có cạnh
+đó thêm 10 min cho mỗi 5 km kéo dài so với cạnh trung bình. Không sử dụng máy thu tín hiệu vệ tinh
+loại 1 tần số đo cạnh có chiều dài lớn hơn 15 km.
+9.2.3 Số lần đo lặp trung bình tại trạm máy trong đo đạc lưới khảo sát công trình theo quy định tại Bảng 2.
+9.3 Do đạc lưới khống chế mặt bằng phục vụ thi công công trình
+9.3.1 Ngoài các yêu cầu quy định tại 9.1, lưới khống chế mặt bằng phục vụ thi công công trình được do
+đạc phải đảm bảo các yêu cầu quy định chủ yếu như quy định ở Bảng 7, thiết bị dùng để đo đạc là các
+máy GNSS nêu trong Bảng 5.
+Bảng 7 — Các yêu cầu khi đo đạc lưới khống chế mặt bằng phục vụ thi công bằng GNSS tĩnh
+Lưới độ chính xác
+|
+2. Số vệ tinh tdi thiểu trong thời gian đo
+mm j szm | >9 |
+Máy thu 1 tần số
+Máy thu 2 tần số trở lên
+4. Tần suất thu tín hiệu vệ tinh (s)
+Tĩnh nhanh 1,5, 15 1,5, 15
+5. Hệ số suy giảm độ chính xác vị trí vệ tinh mẽ | s5 | s5 |
+6. Tâm pha ăng-ten máy thu GNSS được định tâm với sai số, <4
+mm
+= Trước và sau | Trước va sau
+7. Bo chiều cao ăng-ten ®
+ca do ca đo
+®) Đọc số đến milimét, chênh lệch giữa hai lần đọc số không quá 2 mm.
+9.3.2 Số lần đo lặp trung bình tại trạm máy khi đo đạc lưới khống chế mặt bằng phục vụ thi công theo
+quy định tại Bảng 3.
+9.4 Do đạc lưới khống chế phục vụ quan trắc chuyển dịch ngang công trình
+9.4.1 Ngoài các yêu cầu quy định tại 9.1, lưới khống chế phục quan trắc chuyển dịch ngang công trình
+được đo đạc phải đảm bảo các yêu cầu quy định như quy định ở Bảng 8, thiết bị dùng dé đo đạc là các
+máy GNSS nêu ở Bảng 5.
+
+===== TRANG 22 / 60 =====
+TCVN 9401:2024
+Bảng 8 — Các yêu cầu khi đo đạc lưới quan trắc chuyển dịch ngang công trình
+bằng công nghệ GNSS tĩnh
+Chỉ tiêu kỹ thuật Lưới độ chính xác
+1. Góengưởng thutintigucai {Tah | + [ +0 | tots | +0+18
+3. Thờigen | wa mu +ạngg[ nh | - | - | xa | >m |
+hệu ÍMaymuzunaálTmh | ziso | 2120 | xao | zeo |
+
+4, Tần suấtthutín hiệu vệtỉnh [Tinh | 1516 | 1,516 | 1,518 | 1,515
+
+5. Hệsốsuygảmđộchính |Th | s4 | s4 | sẽ [| 58 |
+
+6. Tâm pha ăng-ten máy thu GNSS được Định tâm <1 “1
+
+định tâm với sai số, mm bắt buộc 7
+Trước và | Trước và | Trvdcva | Trước và
+7. Bo chiều cao ăng-ten Ð) m moe
+sau ca đo | sau ca đo | sau ca đo | sau ca đo
+
+®) Khuyến khích cài đặt góc ngưỡng thu tín hiệu trong máy thu là 10° cho tắt cả các trường hợp [2].
+
+Ð) Đọc số đến milimét, chênh lệch giữa hai lần đọc số không quá 2 mm.
+9.4.2 Số lần đo lặp trung bình tại tram máy khí đo đạc lưới khống ché quan trắc chuyển dịch ngang công
+trình theo quy định tại Bảng 4.
+9.5 Do đạc lưới độ cao kỹ thuật bằng công nghệ GNSS tinh
+9.5.1 Công nghệ GNSS tĩnh sử dụng để truyền độ cao cấp kỹ thuật theo lưới riêng hoặc kết hợp đồng
+thời trong quá trình đo lưới khống chế tọa độ bằng công nghệ GNSS tĩnh.
+9.5.2 Các yêu cầu kỹ thuật đo đạc lưới độ cao kỹ thuật bằng công nghệ GNSS tĩnh như đối với đo lưới
+cơ sở cấp 1, lưới cơ sở cắp 2 trong lập lưới khảo sát công trình.
+9.5.3 Lưới độ cao kỹ thuật sử dụng công nghệ GNSS tĩnh còn phải tuân thủ về điểm gốc độ cao, mô
+hình Geoid, xử lý số liệu và tính toán bình sai theo quy định tại 12.4.7.
+10 Công tác đo GNSS động
+10.1 Đo lưới đo vẽ cắp 2 trong thành lập lưới khảo sát công trình bằng kỹ thuật đo GNSS động xử lý sau
+và kỹ thuật đo GNSS động thời gian thực.
+
+===== TRANG 23 / 60 =====
+TCVN 9401:2024
+
+10.1.1 Khi đo lưới đo vẽ cắp 2 bằng kỹ thuật do GNSS động phải sử dụng thiết bị do các hãng chuyên
+dụng ché tạo và được kiểm nghiệm thực tế ở Việt Nam. Bộ thiết bị đo bao gồm các máy thu tín hiệu
+vệ tinh GNSS loại thu được trị đo Code và trị do Phase, 1 tan số hoặc da tần sé, có sai số đo cạnh
+nhỏ hơn hoặc bằng (10 mm + 1 ppm x D), D là chiều dài cạnh đo tính bằng kilômét (km) và các thiết
+bị điều khiển có chức năng đo GNSS động.
+
+10.1.2 Kỹ thuật đo GNSS động xử lý sau tại mỗi trạm đo yêu cầu phải sử dụng 2 máy thu tín hiệu vệ tinh
+tại 02 trạm gốc để cùng với các điểm trạm động tại các điểm đo mới tạo thành các tam giác khép kín.
+10.1.3 Kỹ thuật đo GNSS động thời gian thực sử dụng 1 trạm gốc, trong quá trình đo tại mỗi trạm phải
+đo nối vào ít nhất 2 điểm gốc tọa độ và độ cao thuộc lưới đo vẽ cấp 1 trở lên, phân bố cân đối ở vị trí
+khống chế khu vực trạm do theo ché độ đo điểm khống chế ít nhất 20 trị đo trong điều kiện được phép
+đo để quy chuẩn về hệ tọa độ địa phương néu không có trước các tham sé tính chuyển chính xác giữa
+hệ tọa độ thế giới (WGS-84) và hệ tọa độ địa phương.
+
+10.1.4 Điểm trạm gốc phải là điểm tọa độ, độ cao có độ chính xác từ điểm lưới đo vẽ cấp 1 trở lên, có
+điều kiện thông thoáng bau trời đảm bảo có khả năng thu được tín hiệu của hầu hét các vệ tinh có tại
+thời điểm đo tại khu vực đặt trạm gốc.
+
+10.1.5 Nếu không có đủ điểm gốc có điều kiện thu tín hiệu vệ tinh tốt, được phép đặt trạm gốc tại điểm
+chưa có tọa độ nhưng có điều kiện thu tín hiệu vệ tỉnh tốt và phải đo trùng vào các điểm gốc trong khu
+đo dé đảm bảo trạm đo có it nhất 3 điểm gốc thuộc lưới đo vẽ cấp 1 trở lên, phân bố đều ở các vị trí
+khống chế toàn bộ trạm đo để bình sai lưới (đối với đo động xử lý sau) và để quy chuẩn về hệ thống tọa
+độ địa phương (đối với đo động thời gian thực). Việc đo tại các điểm phải được tiền hành trong điều kiện
+được phép đo, theo ché độ đo điểm khống ché ít nhất 20 trị đo. Ang-ten tại trạm gốc và ăng-ten trạm
+động phải được định tâm có sai số nhỏ hơn hoặc bằng 5 mm, chiều cao ăng-ten xác định đến milimét.
+10.1.6 Các điểm mới của lưới đo vẽ cấp 2 phải được thiết ké và đo theo từng cặp thông hướng hoặc
+thông hướng với 1 điểm cấp cao hơn, có quy tắc đặt tên điểm thống nhát, được đánh dau bằng cọc gỗ,
+đóng đinh, sơn để đảm bảo nhận dạng đúng và định tâm chính xác, có khoảng cách giữa 2 điểm phù
+hợp đảm bảo đo đạc chỉ tiết bằng phương pháp toàn đạc hiệu quả nhát.
+
+10.1.7 Khoảng cách lớn nhát từ trạm gốc đến điểm lưới đo vẽ cắp 2 không quá 5 km đối với đo vẽ bản đồ
+tỷ lệ 1:500, 1:1 000 và không quá 10 km đối với đo vẽ bản đồ địa hình tỷ lệ 1:2 000, 1:5 000. Chỉ được
+phép tiến hành đo trong điều kiện được phép do và đo theo ché độ đo điểm khống chế ít nhất 20 trị đo.
+10.1.8 Sau khi hoàn thành việc đo đạc thực địa, kết quả đo lưới đo vẽ cấp 2 bằng kỹ thuật đo GNSS
+động xử lý sau được xử lý, tính toán bình sai với các chỉ tiêu kỹ thuật như đối với lưới đo vẽ cấp 2 sử
+dụng kỹ thuật đo GNSS tĩnh. Kết quả đo lưới đo vẽ cắp 2 bằng kỹ thuật đo GNSS động thời gian thực
+được lập thành báo cáo trong đó bao gồm danh mục điểm, các thông số chính của trạm đo: điểm trạm
+gốc, các điểm quy chuẩn, sai số tại các điểm quy chuẩn phục vụ cho việc lập báo cáo kỹ thuật.
+
+10.1.9 Kỹ thuật đo GNSS động xử lý sau và đo GNSS động thời gian thực được áp dụng cho đo chỉ tiết
+địa hình, địa vật, chuyển điểm thiết kế ra thực địa tại những khu vực không bị che khuất bầu trời và luôn
+ở chế độ được phép đo. Khoảng cách từ trạm gốc đến điểm đo không quá 5 km đối với đo vẽ bản đồ tỷ
+
+===== TRANG 24 / 60 =====
+TCVN 9401:2024
+lệ 1:500, 1:1 000 và không quá 10 km đối với đo vẽ bản đồ địa hình tỷ lệ 1:2 000, 1:5 000 và chỉ đo trong
+vùng khống chế của các điểm gốc.
+
+10.2 Do vẽ chỉ tiết thành lập bản đồ địa hình tỉ lệ lớn phục vụ thiết kế công trình xây dựng sử dụng mang
+lưới trạm định vị vệ tinh quốc gia (lưới trạm CORS).
+10.2.1 Mạng lưới trạm định vị vệ tinh quốc gia cung cấp dịch vụ đo động thời gian thực trong hệ tọa độ
+quốc gia VN-2000, hệ độ cao quốc gia thông qua việc ứng dụng các giải pháp công nghệ mạng như:
+VRS hoặc theo trạm đơn Single Base v.v. cho người sử dụng.
+10.2.2 Dịch vụ đo động thời gian thực được sử dụng trong đo đạc thành lập bản đồ địa hình tỉ lệ lớn
+phục vụ thiết kế công trình xây dựng. Khi sử dụng dịch vụ đo động thời gian thực, các phương tiện đo
+GNSS di động phải thỏa mãn các yêu cầu cơ bản sau:
+— Là phương tiện do GNSS động da tần, thu được day đủ tín hiệu từ các hệ thống định vị vệ tinh phd
+biến như GPS, GLONASS, Galileo, BDS;
+~ Thu được tin hiệu từ các hệ thống định vị vệ tinh ở điều kiện thông thoáng.
+10.2.3 Độ chính xác khi sử dụng dịch vụ đo động thời gian thực được cung cấp bởi mạng lưới trạm định
+vị vệ tinh quốc gia nêu trong Bảng 9.
+Bảng 9 - Độ chính xác khi sử dụng dich vụ đo động thời gian thực
+được cung cấp bời mạng lưới trạm định vị vệ tinh quốc gia
+về độ cao
+Geoid theo [1])
+meacrren|eeneren an | mera |
+Khu vực k s 80 km | Khu vực k > 80 km ' l :
+đồng bằng miền núi
+1. Trạm tham chiếu ảo, dịch
+
+vụ cải chính sử dụng giải
+
+pháp công nghệ trạm
+
+chính - phụ, dịch vụ cải >3;<5 >4,<7
+
+chính sử dụng giải pháp <10 <17
+
+công nghệ tram chính -
+
+phụ có điều chỉnh
+
+S<25 km)
+
+Các ký hiệu trong Bảng 9:
+k là khoảng cách giữa các trạm định vị vệ tinh tham gia xử lý trong mạng lưới đễ cung cắp dịch vụ đo động thời gian thực;
+
+===== TRANG 25 / 60 =====
+TCVN 9401:2024
+
+11 Ghi sổ đo ngoại nghiệp
+
+11.1 Nội dung ghi sé
+
+Nội dung ghi sổ bao gồm các mục sau:
+
+— Tên dự án;
+
+~ _ Tên trạm do, số hiệu trạm do;
+
+— _ Ngày tháng và số hiệu ca đo;
+
+- _ Thời gian bắt đầu đo, thời gian kết thúc đo (ghi đến giờ (h), phút (min));
+
+— _ Số hiệu máy thu và loại ăng-ten;
+
+— _ Độ cao ăng-ten và độ lệch vị trí (nêu có);
+
+— _ Chiều cao ăng-ten ghi kết quả đo trung bình của lần đo trước và lần đo sau khi thu tín hiệu, lầy đến
+0,001 m.
+
+11.2 Các yêu cầu khi ghi sổ đo ngoại nghiệp
+
+~_ Các số liệu gốc và các mục ghi chép theo quy định phải ghi ngay tại hiện trường thật rõ ràng, sạch
+sẽ, không được tẩy xoá hoặc chép lại;
+
+— Kết quả thu tín hiệu vệ tinh của các ca đo sau mỗi ngày làm việc phải trút số liệu vào bộ nhớ ngoài
+hoặc máy tính;
+
+— Cac số liệu trút từ máy thu ra không được có bat kỳ một sự can thiệp hoặc xử lý nào.
+
+12 Xử lý số liệu
+
+12.1 Tính véc-tơ cạnh
+
+12.1.1 Việc xử lý số liệu đo GNSS được thực hiện bằng các phần mềm chính hãng của các hãng sản
+
+xuất thiết bị công nghệ GNSS của thế giới, được phép phân phối tại Việt Nam. Phải nghiên cứu kỹ hướng
+
+dẫn sử dụng của phần mềm và đặc biệt lưu ý đến các khuyến cáo của hãng xây dựng phần mềm cho
+
+các trường hợp cụ thể khi xử lý trị đo.
+
+12.1.2 Việc xử lý số liệu đo lưới GNSS phải thực hiện theo phương pháp xử lý tương đối từng cạnh đo
+
+với số liệu thu đồng thời từ hai máy thu tín hiệu vệ tinh như sau:
+
+12.1.2.1 Trước khi xử lý khái lược cạnh phải kiểm tra kỹ toàn bộ số liệu đo, sổ đo, kiểm tra sự phù hợp
+
+giữa tên điểm, loại ăng-ten, kiểu đo ăng-ten, độ cao ăng-ten, thời gian do;
+
+12.1.2.2 Phải tận dụng tối đa số lượng trị đo trong các tệp số liệu đo GNSS khi tính toán. Không được
+
+tự ý loại bỏ trị đo khi kết quả tính vẫn đảm bảo các chỉ tiêu kỹ thuật mà phần mềm chấp nhận. Trong
+
+trường hợp đặc biệt được phép loại bỏ tối đa 25 % tổng số trị đo GNSS thu nhận được, bao gồm loại bỏ
+
+một phần hoặc hoàn toàn số liệu của một hay một số vệ tinh, hạn ché khoảng thời gian, nâng cao góc
+
+ngưỡng loại bỏ tín hiệu thu được ở vệ tinh thấp nhưng không được sử dụng góc ngưỡng qua 20°;
+
+===== TRANG 26 / 60 =====
+TCVN 9401:2024
+12.1.2.3 Trong mọi trường hợp, các cạnh được xử lý phải có lời giải được số nguyên đa trị và đạt các
+chỉ tiêu kỹ thuật quy định của phần mềm xử lý;
+2.1.2.4 Được phép loại bỏ một số cạnh sau tính toán khái lược trong trường hợp có các chỉ tiêu không
+đảm bảo độ tin cậy theo quy định riêng của phần mềm. Cạnh bị loại bỏ phải là cạnh không làm mát tính
+liên kết chặt chẽ của đồ hình lưới.
+
+12.2 Kiểm tra kết quả tính véc-tơ cạnh
+
+12.2.1 Trong khi chọn mô hình xử lý từng véc-†ơ cạnh, đối với cùng một mô hình giải cạnh trong một ca
+đo thì sai số khép tương đối chiều dài cạnh của bắt kỳ hình khép nào cũng không được vượt quá quy
+định nêu trong Bảng 10.
+
+Bang 10 — Sai số khép tương đối giới han
+ieee ery eae
+3 | 1:8 100 | 1:12 200 | 1:16 300 | 1:40 600 | 1:80 000 | 1:151 600 | 1:210 000 | 1:255 000
+[4| 1:9 400 | 1:14 100 | 1:18 800 | 1:46 900 | 1:92400 | 1:175 000 | 1:242 500 | 1:294 500
+|8 | #10500] 1:15 800 | 1:21 000 | 1:52 400 | 1:103 400 | 1:195 700 | 1:271 200 | 1:329 200
+[6 | 1:11 500} 1:17 300 | 1:23 000 | 1:57 400 | 1:113 200 | 1:214 400 | 1:297 000 | 1:360 700
+Các ký hiệu trong Bảng 10:
+
+D là chiều dài trung bình các cạnh trong hình;
+n là số cạnh trong hình khép.
+12.2.2 Khi dùng phương thức xử lý riêng từng cạnh hay xử lý nhiều cạnh trong toàn lưới GNSS cũng
+đều phải chọn các cạnh độc lập tạo thành các vòng đo độc lập; sai số khép tương đối tọa độ thành phần
+và sai số khép tương đối chiều dài của các vòng đo độc lập phải phù hợp với các quy định sau đây:
+@,< 2Vn-o
+a, S$ 2Nn-o @)
+œ;< 2Ín-ø
+ø < 2jần-ơ
+trong đó:
+ơ_ là độ chính xác chiều dài: ø = fa?+(b-10* - D)? ;
+@ là sai số khép vòng đo: » = jo + +a% ;
+n là sỗ cạnh trong vòng đo độc lập.
+
+===== TRANG 27 / 60 =====
+TCVN 9401:2024
+12.2.3 Chênh lệch chiều dài của véc-tơ cạnh đo (d;) không được vượt quá quy định:
+
+d.<2J2ø @)
+12.3 Do bé sung và đo lại
+12.3.1 Bat kỳ nguyên nhân nào tạo thành một điểm khống ché không thể liên kết bởi hai véc-tơ cạnh độc
+lập đạt yêu cầu thì tại điểm đó phải đo bổ sung hoặc đo lại ít nhất một véo-tơ cạnh độc lập.
+12.3.2 Có thể loại bỏ véc-tơ cạnh mà chênh lệch chiều dài của véc-tơ cạnh đo lại, sai số khép vòng đo
+đồng bộ, sai số khép vòng đo độc lập vượt quá hạn sai khi kiểm tra, nhưng phải bảo đảm vòng đo độc
+lập sau khi loại bỏ véc-tơ cạnh vẫn có số cạnh không vượt quá quy định tại 6.2.4, 6.3.2, 6.4.3 néu vượt
+quá quy định đó thì phải đo lại véc-tơ cạnh ấy hoặc hình đồng bộ có liên quan.
+42.3.3 Nếu do vị trí điểm không thoả mãn các yêu cầu do GNSS mà tại trạm máy đo lại nhiều lần vẫn
+không thé bảo đảm han sai quy định thì có thể dựa vào yêu cầu kỹ thuật chọn thêm điểm mới để tiến
+hành đo lại.
+12.4 Bình sai lưới GNSS
+12.4.1 Khi các khoản kiểm tra chất lượng đã phù hợp với yêu cầu thì lấy tất cả các véc-to cạnh độc
+lập tạo thành hình khép kin, lầy véc-tơ 3 chiều của các cạnh và ma trận phương sai - hiệp phương sai
+của chúng làm thông tin trị đo, lầy tọa độ 3 chiều trong hệ WGS-84 của một điểm làm số liệu khởi tinh
+và tiền hành bình sai lưới GNSS tự do. Kết quả bình sai lưới tự do sẽ cho tọa độ các điểm trong hệ
+tọa độ WGS-84, số hiệu chỉnh trị đo của 3 số gia tọa độ của véc-tơ cạnh, chiều dài cạnh và thông tin
+về độ chính xác vị trí điểm. Quá trình này phải tính chuyển từ tọa độ vuông góc không gian (XYZ) về
+tọa độ và độ cao trắc địa sau đó chuyển về tọa độ vuông góc phẳng X, Y.
+12.4.2 Có thé sử dụng tat cả các cạnh đo ké cả các cạnh phụ thuộc để bình sai lưới néu khẳng định tat cả
+các cạnh không có sai số thô (sai số do đo độ cao ăng-ten, sai số nhiễu tín hiệu hoặc đa đường dẫn).
+12.4.3 Trên cơ sở giá trị của các đại lượng đo đã được xác định qua bình sai lưới tự do, tiền hành bình sai
+phụ thuộc trong không gian 3 chiều hoặc 2 chiều, trong hệ tọa độ quốc gia hoặc hệ tọa độ khu vực.
+Trong bình sai phụ thuộc, trị tuyệt đối của số hiệu chỉnh (Vix, Vay, Vaz) của vectơ cạnh phải thoả mãn các
+yêu cầu sau đây:
+
+Vi, < 3ơ
+
+V„ < 30 (4)
+
+V,, < 3ơ
+Khi vượt hạn sai có thể thấy rằng véc-tơ cạnh áy hoặc lân cận có chứa sai số thô, cần phải dùng phương
+pháp đã có trong phần mềm hoặc phương pháp tự đưa ra dé loại trừ véc-tơ cạnh có chứa sai số thô cho
+đến khi thoả mãn yêu cầu trên.
+
+===== TRANG 28 / 60 =====
+TCVN 9401:2024
+12.4.4 Chênh lệch của số hiệu chỉnh (dV„„, dV„y, dV„:) của véc-tơ cạnh cùng tên trong bình sai ràng buộc
+và trong bình sai lưới tự do sau khi đã loại trừ sai số thô phải thoả mãn yêu cầu sau đây:
+dV„ < 20
+Wy < 20 6)
+dV,„ < 20
+12.4.5 Sử dụng điểm khởi tinh tọa độ phải phù hợp với hệ quy chiếu sử dung (về hệ tọa độ và múi chiếu).
+Đổi với lưới GNSS chỉ cần sử dụng một điểm khởi tinh là đủ. Nếu sử-dụng từ 2 điểm khởi tính trở lên
+cần xem xét kỹ lưỡng chất lượng của các điểm khởi tính và thực hiện theo các bước bình sai như sau:
+12.4.5.1 Phải tiến hành bình sai sơ bộ bằng việc xác định tọa độ và độ cao của tất cả các điểm trong
+lưới dựa vào 1 điểm gốc khởi tính về tọa độ và 1 điểm gốc khởi tính về độ cao ở khu vực gần lưới nhất.
+So sánh giá trị tọa độ, độ cao nhận được sau bình sai sơ bộ tại các điểm gốc khác còn lại với giá trị tọa
+độ, độ cao gốc của các điểm đó để tìm ra các điểm có giá trị sai khác bat thường.
+12.4.5.2 Trường hợp khi bình sai sơ bộ phat hiện tồn tại các điểm có sự sai khác bất thường về tọa độ,
+độ cao phải thực hiện tiếp các bước sau cho đến khi xác định được nguyên nhân:
+a) Kiểm tra và xác minh lại gốc về tính chính xác của số liệu gốc;
+b) Thay thế điểm gốc được dùng làm khởi tinh bằng một điểm gốc khác,
+c) Lập các vòng khép mới đi qua điểm gốc được dùng làm khởi tính và điểm có sự sai khác lớn,
+d) Xử lý lại các cạnh trong lưới có liên quan;
+e) Kiểm tra lại hiện trạng điểm gốc ở thực địa để tránh trường hợp mốc bị biến động hoặc đo nhằm mốc;
+f) Trong trường hợp đặc biệt, khi đã tiền hành các biện pháp trên nhưng không đạt yêu cầu thì được
+phép loại bỏ điểm gốc khi bình sai lưới néu số điểm gốc còn lại trong lưới vẫn thỏa mãn yêu cầu quy
+định về số lượng điểm gốc tối thiểu và phải được nêu rõ trong báo cáo kỹ thuật.
+12.4.6 Bình sai chính thức lưới GNSS chỉ thực hiện khi đã giải quyết triệt để các tồn tại trong quá trình
+bình sai sơ bộ. Kết quả bình sai chính thức trong hệ tọa độ vuông góc phẳng cần thoả mãn yêu cầu đã
+nêu ở 6.2.4, 6.3.2, 6.4.3 đối với các loại lưới cụ thé.
+12.4.7 Xử lý độ cao thủy chuẩn các điểm trong do GNSS tĩnh
+12.4.7.1 Độ cao thủy chuẩn của các điểm trong lưới GNSS được tinh từ độ cao trac địa xác định bằng
+do GNSS tĩnh kết hợp với mô hình Geoid và các điểm gốc độ cao quốc gia theo công thức:
+h=H-N (6)
+trong đó:
+h_ là độ cao thủy chuẩn;
+H là độ cao trắc địa đo được bằng công nghệ GNSS;
+N' là giá trị xác định từ mô hình Geoid.
+
+===== TRANG 29 / 60 =====
+TCVN 9401:2024
+12.4.7.2 Tùy thuộc vào mô hình Geoid sử dụng, độ cao thủy chuẩn đạt độ chính xác khác nhau. Phải sử
+dụng mô hình geoid có độ chính xác cao nhát hiện có trong khu vực do cơ quan quản lý nhà nước về đo
+đạc bản đồ Việt Nam cung cáp. Độ cao thủy chuẩn các điểm trong lưới đạt độ chính xác cấp độ cao kỹ
+thuật nếu lưới được đo nối vào 3 điểm gốc độ cao hạng IV quốc gia trở lên và sử dụng mô hình Geoid
+toàn cầu EGM2008 hoặc mô hình Geoid địa phương có độ chính xác phủ hợp do cơ quan quản lý về
+đạc bản đồ Việt Nam công bố.
+12.4.7.3 Được phép xây dựng các mô hình Geoid địa-phương phủ trùm khư đo để truyền độ cao khi sử
+dụng công nghệ GNSS. Độ chính xác mô hình Geoid này phải nêu rõ trong thiết kế kỹ thuật.
+12.4.7.4 Đối với lưới GNSS ở đồng bằng, trong phạm vi kích thước lưới không quá 2 km và có ít nhất 3
+điểm độ cao khởi tính bó trí về các phía khác nhau của mạng lưới, độ chính xác xác định độ cao cho các
+điểm còn lại trong lưới sẽ đạt độ chính xác tương đương thuỷ chuẩn hạng IV nếu các điểm khởi tính độ
+cao được đo nối với độ chính xác thuỷ chuẩn hạng Ill.
+12.4.8 Trong kết quả bình sai phải đầy đủ các thông tin sau:
+— Thông tin về các véc-tơ cạnh (baselines) AX, AY, AZ;
+~ _ Sai số khép hình và sai số khép hình yếu nhat; .
+— _ Các phương vị cạnh, chiều dài cạnh, hiệu số độ cao và các số hiệu chỉnh tương ứng;
+— Toa độ vuông góc không gian XYZ;
+— Toa độ và độ cao trắc địa B, L, H;
+— Toa độ vuông góc phẳng và độ cao sau bình sai;
+— Đánh giá sai số cạnh, sai số tương đối cạnh và sai số phương vị cạnh sau bình sai.
+12.4.9 Trong trường hợp hệ tọa độ công trình không theo hệ tọa độ quốc gia, tọa độ sau bình sai bằng
+phần mềm xử lý lưới GNSS cần chuyển về hệ tọa độ công trình theo phương pháp định vị tối ưu nhờ ít
+nhất 3 điểm song trùng (là các điểm có tọa độ trong cả hai hệ). Các điểm song trùng cần bố trí đều về
+các phía trên vùng biên của mạng lưới.
+— Toa độ các điểm lưới GNSS sau bình sai chuyển về hệ tọa độ của công trình theo phương pháp định
+vị tối ưu, có thé sử dụng công thức chuyển đổi tọa độ phẳng bón tham số có dạng:
+X, =X, +m-x, cosg—m-y, sing 7)
+Ÿ; = Yạ +m- ÿ,COSø+ m: X, sing
+— Dé xác định các tham số chuyển đổi Xo, Yo, g và m trong công thức (7) phải sử dụng phương pháp
+số bình phương nhỏ nhát.
+— C6 thể sử dụng công thức afin bậc nhất để chuyển đổi tọa độ giữa hai hệ toa độ vuông góc phẳng.
+Công thức có dạng:
+Xp = + AX, + AY,
+(8)
+Y2= by+ bx, + by,
+
+===== TRANG 30 / 60 =====
+TCVN 9401:2024
+
+Các tham số ao, a1, a2, bọ, b+, ba trong công thức (8) cần phải xác định theo phương pháp số bình phương
+
+nhỏ nhát dựa vào các điểm song trùng.
+
+13 Báo cáo kết quả đo
+
+13.1 Sau khi đã kết thúc toàn bộ công tác đo GNSS cần viết báo cáo tổng kết kỹ thuật với nội dung bao
+
+gồm:
+
+— _ Phần l: Nội dung công việc và biện pháp thực hiện;
+
+— Phan Il: Các kết quả xử ly số liệu GNSS;
+
+— Phan Ill: Kết luận và kiến nghị.
+
+13.2 Trong phần nội dung công việc và biện pháp thực hiện cần nêu rõ các điểm sau đây:
+
+—_ Mục đích, yêu cầu do GNSS;
+
+— Tinh hình khu đo, điều kiện địa lý, tự nhiên;
+
+— Nhiém vụ được giao, tài liệu trắc địa đã có của khu đo, mục đích do và yêu cầu độ chính xác;
+
+~— Bon vị thi công đo đạc, thời gian bắt đầu đo, luận cứ kỹ thuật, tình hình đội ngũ cán bộ kỹ thuật, loại
+hình và số lượng máy thu, tỉnh trạng kiểm nghiệm, phương pháp đo, số ca đo, số điểm góc, tình
+trạng do bd sung, đo lại, hoàn cảnh đo, các điểm trùng và khối lượng công việc đã thực hiện;
+
+~— Tinh trạng kiểm tra số liệu ngoại nghiệp, số liệu gốc, nội dung phương pháp và phan mềm hậu xử lý
+số liệu;
+
+~ Phan tích số liệu đo ngoại nghiệp và tính toán kiểm tra tại thực địa;
+
+— _ Tình hình thực hiện phương án và chap hành quy trình kỹ thuật.
+
+13.3 Trong phần các kết quả xử lý số liệu GNSS cần phải thể hiện đầy đủ các nội dung sau:
+
+Kết quả bình sai lưới được phép sử dụng mẫu các báo cáo (Report) của các phần mềm xử ly GNSS sử
+
+dụng hoặc được biên tập, tổ chức thành các nhóm thông tin sau:
+
+— Cac thông số cơ bản về lưới;
+
+— _ Kết quả xử lý cạnh;
+
+~ Sai số khép hình;
+
+— _ Kết quả bình sai chiều dài cạnh, phương vị, chênh cao;
+
+— _ Kết quả bình sai tọa độ, độ cao.
+
+13.4 Kết luận và kiến nghị
+
+— Phan kết luận: Phải đánh giá được chat lượng công việc đo GNSS, mức độ hoàn thành công việc đề
+ra.
+
+- Phần kiến nghị: Trên cơ sở các kết luận đã nêu cần kiến nghị với cơ quan chủ quản về khả năng
+khai thác các tài liệu đo GNSS và các công việc cần làm tiếp theo (nếu có).
+
+===== TRANG 31 / 60 =====
+TCVN 9401:2024
+Phụ lục A
+(tham khảo)
+Quy cách và dấu mốc GNSS
+Kích thước tính bằng milimét
+L~- L#.J—
+In In &
+pm ]201 F §
+| |
+®j
+200
+{400
+600
+1000
+Hinh A.1 - Cấu tạo mốc GNSS
+Kích thước tính bằng milimét
+18201
+Hình A.2— Dấu mốc GNSS bằng thép
+
+===== TRANG 32 / 60 =====
+TCVN 9401:2024
+Kích thước tính bằng milimét
+Ø16
+⁄/
+yy
+| t
+4 o
+7
+| 400 |
+600
+Hình A.3 — Cấu tạo mốc GNSS cấp 1, cấp 2
+Kích thước tính bằng milimét
+——300 —,
+r—200 —¬
+Lena
+n
+300
+Hình A.4 — Cấu tạo mốc GNSS gắn vào núi đá
+
+===== TRANG 33 / 60 =====
+TCVN 9401:2024
+Kích thước tính bằng milimét
+1 400
+230
+aif CD
+2 rT; :
+a | 5
+: 55_110_55 : FPT 58 140 55
+° ` E3% ; ai : : Y
+1000
+CHÚ DĂN:
+1 Mặt bích dày 18, D = 230 2 Ong thép ©219 day 10, L = 500 3 3014 CB300V, L= 1700
+4 Bê tông B12,5 (M150) 5 Bê tông B7,5 (M100) dày 100, phủ lớp vữa xi măng day 30;
+GẮT 1-1
+1
+3
+li i ES
+J| (4À El gg
+1870 64
+Tủ F rr
+m5.
+CHÚ DAN:
+1 Trụ xây 220x220 2 Ong thoátnướcPVC@®40 3 Tườngxây 4 Lỗ hình côn: trên ®16, dưới 018
+Hình A.5 ~ Cấu tạo mốc GNSS dùng làm mốc chuẩn quan trắc chuyển dịch ngang
+(mốc dạng định tâm bắt buộc)
+
+===== TRANG 34 / 60 =====
+TCVN 9401:2024
+Phụ lục B
+(tham khảo)
+Bảng điều độ đo GNSS (ca đo thiết kế)
+Bảng B.1- Điều độ đo GNSS
+Tên và | Tênvà | Tênvà | Tên và | Tên và | Tên và
+Lần - số hiệu | số hiệu | số hiệu | số hiệu | số hiệu | số hiệu
+do | Thời điểm đo từ.... đến ... | điềm đo | điểm đo | điểm do | điểm đo | điểm do | điểm đo
+tn | ang |simg | gen sóng mg]
+| | | | | | —
+7 | | | | |_| |
+
+===== TRANG 35 / 60 =====
+TCVN 9401:2024
+Phụ lục C
+(tham khảo)
+Mẫu bảng thống kê số liệu đo GNSS
+MAU BANG THONG KE SÓ LIEU ĐO
+Khu GO? .............................
+Loại | Loại ăng- | Chiều | Phương
+điểm/ Tên trạm đo Bắt đầu Kết máy thu | ten (part cao | pháp do
+number) (m) cao
+ăng-ten
+1. GPS-01 97723255 | 21-11- | 14h00m | 15h04m | Trimble Zephyr 1.510 Đo
+2019 5700 | Geodetic nghiéng
+đến
+mép
+dưới
+2. GPS-02 |76303251| 21-11- | 14h08m | 16h41m | Trimble P/N Đo
+đến đáy
+ăng-ten
+(ARP)
+pees se l“l |
+2019 5700
+4. Il-1 76303261 | 22-11- | 07h33m | 08h04m | Trimble | Zephyr | 1.486
+NI a ed
+5. Il-2 97723262| 22-11- | 07h34m | 08h05m | Trimble | Compact | 1.550
+2019 4000 L1/L2
+SSE
+6. II-3 76233260 | 22-11- | 07h31m | 09h07m | Trimble P/N 1.499
+NI ee
+eee ml ml |
+2019 5700
+97723263 | 22-11- | 08h26m | 09h06m | Trimble | Zephyr | 1.530
+pe reese ee ||
+
+===== TRANG 36 / 60 =====
+TCVN 9401:2024
+Phụ lục D
+(tham khảo)
+Phương pháp kiểm định độ ổn định của máy bằng cách đo trên chiều dài chuẩn
+D.1 Nội dung phương pháp
+Khi kiểm nghiệm.có máy chia đều công suất (gọi tat là máy chia công suất) để tách tín hiệu thu được
+của 1 ăng-ten thành hai hoặc nhiều đường có công suất pha như nhau, sau đó dùng cách xử lý sai
+phân bậc hai để xử lý số liệu tính ra gia số tọa độ, tính ra chiều dài cạnh so với chiều dài chuẩn đã có
+để phát hiện ra sai số trong nội bộ máy thu. Với cách đo như vậy đã loại trừ sai số đồ hình vệ tinh, độ
+lệch của tâm ăng-ten, sai số trễ thời gian của tín hiệu, sai số của tín hiệu thứ phát, sai số dọi tâm máy
+v.v. vi vậy cũng là phương pháp kiểm nghiệm sai số đồng hồ của máy thu, độ tré thời gian của tín hiệu
+trong nội bộ máy và các sai số liên quan đến đường điện trong máy.
+D.2 Cách bé tri đo
+Ăng-ten thu
+GNSS
+Máy chia
+công suất
+Máy thu GNSS Máy thu GNSS
+[2]
+Hình D.1 - Sơ đồ chia công suất
+
+D.2.1 Chọn nơi có góc cao của vệ tinh lớn hơn 15°, không có vat che khuất dé đặt ăng-ten. Ndi giữa
+ăng-ten và máy chia công xuất như Hình D.1.
+D.2.2 Nối điện hai máy thu ở hai đầu chiều dài chuẩn, cùng thu tín hiệu của bốn vệ tinh trở lên trong
+vòng 1h đến 1,5 h.
+D.2.3 Đổi vị trí, nối điện từ máy chia công suất đến máy thu, đo một lần nữa.
+D.2.4 Dùng phần mềm chuyên dùng tính ra tọa độ, chiều dài của cạnh chuẩn, số chênh phải nhỏ hơn
+mm nếu lớn hơn đưa về xưởng sửa chữa hoặc hạ cấp dùng.
+
+===== TRANG 37 / 60 =====
+TCVN 9401:2024
+Phụ lục E
+(tham khảo)
+Kiểm định độ ồn định của tâm pha ăng-ten
+
+E.1 Nội dung này thực hiện trên bãi có chiều dài chuẩn.
+E.2 Khi kiểm định dùng hai máy và ăng-ten đặt ở hai đầu cạnh chuẩn. Dọi tâm chính xác, vạch mốc của
+ăng-†en hướng về phía Bắc. Do một đoạn thời gian sau đó đổi may và ăng-ten đo một lần nữa. Nếu bãi
+chuẩn có chiều dài vuông góc với chiều dài đã đo, đo một lần nữa như trên. Nếu không có chiều dài thứ
+hai như trên thì một ăng-ten cố định chỉ hướng bắc, ăng-ten thứ hai lần lượt thuận chiều kim đồng hồ
+quay 90°, 180°, 270° đo như trên.
+E.3 Dùng phần mềm chuyên dùng tính ra các thành phần tọa độ ba chiều, gia số tọa độ và chiều dài
+cạnh, số chênh không được vượt quá hai lần sai số tiêu chuẩn của máy. Nếu vượt quy định đưa về
+xưởng sửa chữa hoặc hạ cấp sử dụng.
+
+===== TRANG 38 / 60 =====
+TCVN 9401:2024
+Phụ lục F
+(tham khảo)
+Kiểm nghiệm và hiệu chỉnh dọi tâm quang học
+
+F.1 Phương pháp kiểm nghiệm
+Dem đề máy đặt lên đế 3 chân, cân bằng. Dùng bút chì vẽ đường viền của máy lên trên mat.gia 3 chân.
+Trên nền đất để 1 tờ giấy kẻ li, đọc ra vị trí của trục quang học máy doi điểm. Nới ốc hãm chuyển đế máy
+xuống vị trí khác sao cho đường viền trên giá 3 chân vẫn bao đề máy, cân lại máy, đọc ra vị trí trục quang
+học, chuyển đế máy đến vị trí thứ 3 làm như trên. Nếu ba vị trí trục quang học trùng nhau là được, nều
+có tam giác sai số phải hiệu chỉnh.
+F.2 Phương pháp hiệu chỉnh
+Xác định tâm của tam giác sai số, vặn hai ốc giữa chữ thập của bộ phận dọi tâm, xê dịch nhẹ cho tâm
+chữ thập trùng với tâm tam giác sai số, làm đi làm lại cho tới khi chuẩn xác.
+
+===== TRANG 39 / 60 =====
+TCVN 9401:2024
+Phụ lục G
+(tham khảo)
+Yêu cầu và phương pháp đo độ cao ăng-ten
+G.1 Khi đặt ăng-ten lên bệ máy dùng thước thép đã kiểm định do hai lần khoảng cách từ tâm mốc đến
+mặt của bệ máy, hai lần đo chênh nhau 2 mm thì lấy trung bình được hy, đo độ dày của ăng-ten hạ, và
+do từ cạnh phía trên ăng-ten đến đỉnh cao nhất của ăng-ten hs, độ cao ăng-ten là:
+h=hị+hạ+ha (G.1)
+G.2 Khi lắp ăng-ten lên giá 3 chân đo bằng sào đo
+G.2.1 Khi có sào đo chuyên dùng trực tiếp đo chiều cao ăng-ten từ tâm mốc đến vạch chỉ định trên
+ăng-ten.
+G.2.2 Có thể dùng sào đo, đo ba vị trí cách nhau 120° khoảng cách từ tâm mốc đến vạch chỉ định trên
+ăng-ten, ba lần đo chênh nhau nhỏ hơn 2 mm lay trung bình được L, biết bán kính của ăng-ten là R, độ
+cao ăng-ten là:
+h=JE-R? (G.2)
+G.2.3 Khi không có thước chuyên dùng dùng thước thép nhỏ đo khoảng cách từ tâm mốc đến ba vị trí
+thành 120° trên giá ba chân chênh nhau nhỏ hơn 2 mm lây trung bình được L, đo độ cao từ đáy ăng-ten
+đến đỉnh ăng-ten là hs biết bán kính ăng-ten R thì độ cao ăng-ten là:
+h=J2-R? +h, (G.3)
+G.3 Khi dat ăng-ten trên bệ đo, dùng thước thép nhỏ do khoảng cách từ tam mốc đến phía dưới ăng-ten
+là h, sau đó cộng thêm độ dày của ăng-ten là h" và có:
+h=h'+h" (G.4)
+
+===== TRANG 40 / 60 =====
+TCVN 9401:2024
+Phụ lục H
+(tham khảo)
+Kết quả đo thực nghiệm và xử lý số liệu lưới đo vẽ cấp 1
+trong khảo sát công trình bằng công nghệ GNSS tinh
+H.1 Sơ đồ mạng lưới đo GNSS
+IV-1
+S957
+GPS-01 ZO
+GPS-02
+IV-2
+| 0
+GPS-03 lÑ MÃ
+| ⁄
+| Z GPS-04
+IV-3
+IV-4
+Hình H.1 - Sơ đồ mạng lưới đo GNSS.
+
+H.2 Công tác đo đạc thực địa
+Các điểm IV-1, IV-2, IV-3, IV-4 là các điểm khống chế cơ sở cấp 2 đã có ở khu vực đo đạc khảo sát địa
+hình, tọa độ của chúng được cho trong hệ tọa độ VN-2000, phép chiếu UTM, múi chiếu 3°, kinh tuyến
+trục 107°45'. Các điểm này được đo dẫn thủy chuẩn Hang IV quốc gia đến. Tọa độ và độ cao của các
+điểm IV-1, IV-2, IV-3, IV-4 được thể hiện trong Bảng H.1.
+
+===== TRANG 41 / 60 =====
+TCVN 9401:2024
+Bảng H.1 ~ Tọa độ và độ cao các điểm gốc
+Tọa độ, độ cao
+
+Số hiệu điểm
+2 315 726,884 421 567,535 2,862
+2 315 495,119 421425,271 2,110
+2 315 122,763 421 063,709 2,153
+2 314 858,285 421 000,576 2,118
+Việc đo các điểm lưới đo vẽ cấp 1 được thực hiện vào ngày 26 tháng 06 năm 2020 bằng bốn máy thu
+loại một tần số TRIMBLE R3 có sé hiệu 4611106487; 4618107429; 4618107440 và 4618107431. Việc
+quan trắc các vệ tinh được thực hiện trong điều kiện thời tiết tốt, tắt cả các cạnh được đo trong bốn ca
+đo theo sơ đồ mạng lưới đã được lập.
+H.3 Kết quả tính toán và bình sai lưới
+H.3.1 Tính cạnh
+Các cạnh đo được xử lý bằng mô đun Process Baselines trong phần mềm Trimble Business Center 5.2.
+Trước hết sử dụng chế độ xử lý mặc định, đối với những cạnh không đạt mới thực hiện tính toán can
+thiệp nâng cao.
+Sau khi tính cạnh nhận được 23 cạnh, tat cả đều cho lời giải FIXED.
+RMS lớn nhát là 0,015 m, PDOP lớn nhất là 5,989.
+H.3.2 Tính kiểm tra
+Việc kiểm tra kết quả đo được thực hiện qua việc tính sai số khép của các hình khép kín. Kết quả tính
+sai số khép tọa độ fx, fy, fe cho các hình tam giác được trình bay trong Bảng H.3. Sai số khép hình tương
+đối lớn nhất là 1:21 532, như vậy tat cả các trị đo cạnh có chất lượng rất tốt, được chap nhận dé bình
+sai lưới.
+H.3.3 Bình sai lưới
+Công tác bình sai lưới được thực hiện bằng mô đun Adjust Network thuộc phần mềm Trimble Business
+Center 5.2. Lưới được bình sai trong hệ tọa độ VN-2000, phép chiều UTM, múi chiếu 3° (mo = 0,999 9),
+trên Ellipsoid WGS-84, kinh tuyến trục là 107°45'. Tọa độ và độ cao của các điểm khống chế cơ sở cấp
+2 thể hiện trong Bảng H.1 được sử dụng làm các điểm khống chế tọa độ, độ cao gốc để tính toán bình
+sai lưới.
+
+===== TRANG 42 / 60 =====
+TCVN 9401:2024
+Trọng số được tính đối với tất cả các trị đo GNSS (All GPS Solution) theo phương pháp lựa chọn
+(alternative). Sau khi tinh nhận được sai số trung phương đơn vị trọng số (Network Reference Factor) là
+1,0 và kết quả thử y? (Chi - Square) với œ = 95 % là PASS.
+Kết quả xử lý sơ đồ mạng lưới do GNSS ở Hình H.1 bằng phần mềm Trimble Business Center 5.2 được
+thống kê tử bảng H.2 đến bảng H.8 theo phần mềm biên tập chuyên dụng.
+Kết quả đánh giá độ chính xác
+— _ Sai số trung phương trong số đơn vị: 1,0;
+—_ Cạnh ngắn nhất: 122,320 m; Cạnh (IV-2 - GPS-05);
+— Cạnh dài nhất: 677,459 m; Cạnh (IV-4 - GPS-02);
+— _ Chiều dài cạnh trung bình: 293,015 m;
+— _ Sai số tương đối cạnh nhỏ nhất: 1: 225 534; Cạnh (IV-4 - GPS-02):
+- _ Sai số tương đối cạnh lớn nhất: 1: 33 495; Cạnh (GPS-04 - GPS-03);
+- Sai số phương vị nhỏ nhất: 1,007"; Cạnh (IV-4 - GPS-02);
+— _ Sai số phương vị lớn nhất: 6,406"; Cạnh (IV-2 - GPS-05).
+
+Bang H.2 ~ Bảng trị đo gia số tọa độ và các chỉ tiêu sai số
+
+Hệ tọa độ vuông góc không gian Ellipsoid qui chiếu: WGS-84
+mm" 1781 | v2] pss | 20,148 -63,749 177,653 | 0,010 3,464
+man cesae| cares] ene] 3I288s00| 335
+mm 1781 -110,944| -120,014| 217,365 | 0,011 3,464
+1782 Jcrsos] M+| -131,065 -56,272 39,702 | 0,009 3,037
+Am 1782 |GPS-06 GPS-01 151,062 87,232 -99,981 | 0,008 2,755
+
+===== TRANG 43 / 60 =====
+TCVN 9401:2024
+Bảng H.2 (kết thúc)
+
+Hệ tọa độ vuông góc không gian Ellipsoid qui chiếu: WGS-84
+EEI==bEIEISIIE
+[a ee] ae] a aa am] mn] a
+[| ee en ae sa] ar
+[| ei aera care oe
+[| [cree omar
+[| ee) oo aan se
+[|e sse| ee ce sex| sam| sm| se|
+5| ee oe] mỊ | arse sae ane se
+[=| ee seemme| se] ne oa] sei
+[| es] Se Sai ver aan oo) s=
+Các ký hiệu trong Bảng H.2: .
+ICHU THICH:
+
+RMS lớn nhất: (IV-3 - IV-4) RMS = 0,015
+
+RMS nhỏ nhát: (GPS-06 - GPS-01) RMS = 0,008
+
+Max PDOP lớn nhát: (GPS-03— GPS-04) Max PDOP = 5,989
+
+Max PDOP nhỏ nhát: (IV-2 - GPS-04) Min PDOP = 2,404
+
+===== TRANG 44 / 60 =====
+TCVN 9401:2024
+Bảng H.3 ~ Bảng sai số khép hình tam giác
+
+Hệ tọa độ vuông góc không gian Ellipsoid qui chiếu: WGS-84
+Gr — Smeneewe —Jsm]rmlsm] 5x [8m] map
+ rỊ w2[Ssw[ vont | on [aor [aes] one rạn
+__ SỈ v2 sai cesar] ear] ams] aon] ome] oa] xem
+[3| al  wa|ess| aan ese| amr sas| sors tang
+a] was] ors san] san sam [oer eas | toan
+Bd sma| sea| smx|sgm[ ti ram
+BHINGIEIE-IE-IE-IEID-INGIEEGI
+[wal sem|— wi|ssml oom son [aaa] sia| caeem
+Pd a dd
+[aa] a] sae] ssm| saei| on | ae] 05 | nev
+[ SỈ I sam| sen sam| mas] tense
+awa orsae] orem | om ooe| one oes | rear
+ed dd
+| BỊ  ws|eres| em sen] søn| oi [aam | sss| serae
+a
+[5 ersor| orsar| croma|oom oar onm|oon | weal 77
+[| crear] rear] crea] mr] or] or [one] eno | Fre
+[7 [erser[ersen| se san] oom] oon [ae] si erie
+BHIGIEEEIESSIEIE-IEGIDSIRGIIKE.-.I
+ge od
+|Các ký hiệu trong Bang H.3:
+
+fy, fy, fz! sai số khép các gia số tọa độ không gian, sai số này có được từ việc giải các cạnh tham gia vào vòng khép kin;
+
+D là khoảng cách cạnh đo.
+
+CHÚ THÍCH:
+
+Vong khép tốt nhất: IV-2 IV-3 GPS-04 đạt  1:745289
+
+===== TRANG 45 / 60 =====
+TCVN 9401:2024
+Bảng H.4a ~ Bảng trị đo, số hiệu chỉnh và trị bình sai góc phương vị
+Hệ tọa độ trắc địa Ellipsoid qui chiều: WGS-84
+man an.
+
+Wa sos] sow sae | se | ae soi
+Ed
+[sere | œsg|zstas| SH [ ms a3]
+[ees area as or ae [are | — | ot oro |
+P| wa | arses | os ore | ieee | — 20 moor 2 |
+awa SE] aa ios [ese | ae] 0 |
+3 | SG] va tewi| tm | — ssm| ooo 0 |
+8 wa ores aire [ie [aoe] ar
+THỊ ssø| sa | es 82 a8 [aa] eo er |
+8a [ern ae me [is [nae mm an
+[2 [orem] ssm|tews2| sm | — noes) oso |
+[2 [orem] ml mem as [ae [ee cn a |
+5| Sm| ua ooo ia | ae [a] oe nae |
+
+CHU THICH:
+
+Sai số đo phương vị lớn nhất: IV-2 - GPS-05 Ma (max) = 6,536”
+
+Sai số do phương vị nhỏ nhất: IV-2 — IV-3 Ma (min) = 1,015"
+
+Số hiệu chỉnh phương vị lớn nhất: IV-2 - GPS-06 Va (max) = 7,524"
+
+Số hiệu chỉnh phương vị nhỏ nhất: GPS-06 — IV-1 Va (min) = -0,193"
+
+===== TRANG 46 / 60 =====
+TCVN 9401:2024
+Bang H.4b — Bảng trị đo, số hiệu chỉnh và trị bình sai cạnh
+
+Hệ tọa độ trắc địa Ellipsoid qui chiếu: WGS-84
+PL... ẽ:-
+
+Thứ tự
+_— 1| eres] efsm| ess] wm| — oma sar
+L 2| wal sem| tan] mm] — TMmỊ mem
+— 3| —WA| GPSE| sms] oan] — T38] anon
+[1| wa] Ma] steams [oma] oa mem
+[ 3| wa| œm| ĐH sơn ome) 1893
+| efem| area] tam] oma TMm| tem
+L IỊ vai œsm| tạm CmmỊ moa ana
+L SỊ wal SSm| %83| BỊ — T9] tang
+[ lỊ wal SE] 2m] ome] oma sim
+[ THỊ eSm] Mái ®Sm| oma con aaa
+[ THỈ wa] em] tes] BỊ — “Smm| naa
+[ 5| area] esm| smom[ 9a — Tam 2mam|
+THỊ esm| wal errarr| omen] — “ml ora
+_ THỊ efem| G798] 28M] oma] — 8m] sea
+THỊ wal œSm] SHam| SwBỊ — “swm| san
+[ THỊ eESm| @Rem| sHSH| 9m] — Tswe|  smsm|
+THỊ wal varias [ono | — 8B] mm
+[| areca] em] zmom[ 9a von] — zmesl
+[ail wal wal mem aor] oom] error
+[a2] arses] erecr| sssH| oma] — Tsmm| - sssm
+za] em] wi] tmom| 9ƠỊ — T9m| tn
+
+CHÚ THÍCH:
+
+Sai số đo cạnh lớn nhất: GPS-04  GPS-05 Ms (max) = 0,004
+
+Sai số đo cạnh nhỏ nhất: IV-2 — IV-1 ms (min) = 0,001
+
+Số hiệu chỉnh cạnh lớn nhát: IV-3 - GPS-04 Vs (max) = 0,005
+
+Số hiệu chỉnh cạnh nhỏ nhất: GPS-03 — IV-4 Vs (min) = 0,001
+
+===== TRANG 47 / 60 =====
+TCVN 9401:2024
+Bảng H.4c — Bảng trị đo, số hiệu chỉnh và trị bình sai chênh cao
+
+Hệ tọa độ trắc địa Ellipsoid qui chiếu: WGS-84
+P| TM MA ao] ome [08 | a
+I) BỊ — wø
+_— 9| em| œm| tam, com] — am — tạ
+[7Ì 2| œsm 2e aos] — Tạ] — 2m
+[= 3[ a] eSm am oom] am | aoe
+[ TSỊ wa em] aoe] omnes |
+[SỈ areca Ws] sem| oo] aor] aor
+HỆ M2 œ%Sm] aon] con | aor] a9
+[2 [reo | œsm| sm| nor] tom] aoe
+[ BỊ wsø| va] 3mm ao] aor] sass
+[THỊ œsm| œeø| wmi ngmị ao] a
+BỊ M2 wsm| Sam com] anes] — 38m
+[| em] œse| 33B] mm] — BỊ — 3m]
+— | weø| orem] 2m com] — am] — 3mm
+| Ma[ M4| sƠ| THỊ — Tem — em
+2| sem| œsm| tmỊ oom] | — 0m
+[2] ssm| TM] 2] ome] aa
+
+CHU THICH:
+
+Sai số đo chênh cao lớn nhất: GPS-02 ~ IV-4 mu (max)= 0,012
+
+Sai số đo chênh cao nhỏ nhất: IV-2 = IV-01 mu (min)= 0,004
+
+Số hiệu chỉnh chênh cao lớn nhất: IV-2~ GPS-06 Vụ (max)= 0,019
+
+Số hiệu chỉnh chênh cao nhỏ nhất: GPS-01 ~ GPS-02 Vu (min)= -0,001
+
+===== TRANG 48 / 60 =====
+TCVN 9401:2024
+Bảng H.5 — Bang tọa độ vuông góc không gian sau bình sai
+Hệ tọa độ vuông góc không gian Ellipsoid qui chiếu: WGS-84
+| @s%| 47483440 | 56638387 | 228430081 |
+Bảng H.6 ~ Bảng tọa độ trắc địa sau bình sai
+
+Hệ tọa độ trắc địa Ellipsoid qui chiếu: WGS-84
+
+mem Ft TTRẬ
+
+|} rẻ | m_—|
+
+| 6P | 2055 56,12126 | 1095828208 | - t@m |
+
+| 6P | 20548 | lQ0s27588. | 085 |
+
+| cess | 20555320 | 0868388883. | 1,605 |
+
+|  W3| 25346843 | 958278885 | - x14 |
+
+|Các ký hiệu trong Bảng H.6:
+
+L là kinh độ trắc địa;
+H là độ cao trắc địa.
+
+===== TRANG 49 / 60 =====
+TCVN 9401:2024
+Bảng H.7 - Bảng thành quả tọa độ phẳng và độ cao bình sai
+Hệ tọa độ VN-2000, Kinh tuyến trục: 107°48' - Múi chiếu: 3 độ (k=0,9999), Ellipsoid qui chiếu: WGS-84
+Tọa độ, Độ cao Sai số vị trí điểm
+Số hiệu điểm
+GPS-01 | 2315 578,324 | 421 255,087| 4,120 | 0002| 0002| 0016| 0,003
+| APs0| 2 315 531,646 | 421 074,980 | 5,498 | 0003| 0008) 0022| 0,004.
+GPS-03 | 2 315 309,586 | 421 054/144|_ 3021
+GPS-04 | 2315 226,057 | 421 161,187| 2108| 0,003 | 000] 0,007
+GPS-05 | 2 315 440,723 | 421315,712] 2/107| 0/004| 0/003 0,007 | 00]
+GPS-06 | 2 315 684,932 | 421 425,550 | 3,158 | 0,002 | 0,003] 0,011
+CHU THICH:
+Điểm có sai số trung phương vị trí điểm lớn nhất: GPS-05 mp (max)= 0,005 m
+Điểm có sai số trung phương vị trí điểm nhỏ nhất: GPS-01 me (max)= 0,003 m
+Điểm có sai số trung phương độ cao lớn nhất. GPS-02 im (max)= 0,022 m
+Điểm có sai số trung phương độ cao điểm nhỏ nhất: GPS-05 Mn (max)= 0,007 m
+Bảng H.8 — Bảng chiều dài cạnh, phương vị và sai số tương hỗ
+Hệ tọa độ phẳng UTM Ellipsoid qui chiếu: WGS-84
+sale [Ree] | |
+Thứ tự|Điểm đầu | Điểm cuối >
+a GAG
+m GPS-01| GPS-02 | 186,057 1:45 252 |255 28 13,57| 3,368 | 1,3771 |0,013
+m GPS-01 | GPS-03 | 335,576 1:91 181 |216 47 27,66] 2,095 | -1,0997 | 0,008
+| 3 GPS-01| GPS-04 | 364,567 1::103 800 | 194 55 32,40| 1,814 | -2,0140 |0,015
+4| GPS-01 | ePs0| 201,054 1: 52 048 |057 58 40,92| 2,752 | -0,9623 |0,009
+m GPS-01 345,968 9.002) 1: 142 303 | 064 34 12,94 | 1,303 | -1,2578 | 0,016
+| 9| ePsø| GPS-03 | 223,038 0004 1: 54300 185 22 07,81] 3,126 | -2,4768 oor
+
+===== TRANG 50 / 60 =====
+TCVN 9401:2024
+Bảng H.8 (kết thúc)
+Hệ tọa độ phẳng UTM Ellipsoid qui chiếu: WGS-84
+Chiều dài | mp Phương vị | mm | dh | man |
+Thứ tự |Điểm đầu
+| 7| GPS0| GPS-02 317,516 1: 77 148 |344 14 46,25|2,475 | 3,391 0.025
+8] GPS-04| GPS-03| 135,803 1: 33 495 |307 57-26,87|4,975 | 0,9142 |0,016
+| %| GPS-04| GPS-05| 264,499 0.005 1: 57 786 |035 44 52,15|3,072 | 0,0005 |0,008
+GPS-06 148,053 0.003 4: 45 900 |073 32 21,43 3.265 |.0,2955 | 0,011
+GPS-01] 189,435 0,002 | 1: 78 022 |296 03 16,43|2,372 | 2,0102 |0,016
+| 12) v2] GPS-04 | 377,008 |0,003 |1: 137 025 |224 27 54,16|1,583 |-0,0038 |0,007
+GPS-05 | 122,320 |0,003 | 1: 37 364 [243 35 44,23|6,406 |-0,0033 |0,007
+GPS-06 | 189,813 0.002 1: 86 279 |000 05 03,18|3,628. 1,0479 |0,011
+GPS-02 | 409,038 0.003 1: 136 335 |001 34 44,32 1,663 | 3,3449 |0,027
+| 18} M3| GPS-03| 187,089 |0,003 | 1: 66 791 |357 03 32,49|3,438 | 0,8681 |0,017
+_ 19 W3#| GPS-04| 142,027 1: 51 583 |043 20 26,554,198 |-0,0462 |0,007
+GPS-05| 405,714 1: 112 311 |038 23 56,42|1,765 |-0,0457 |0,007
+GPS-02| 677,459 0.003 1: 225 534 |006 18 19,45|1,007 | 3,3791 |0,027
+GPS-03| 454,465 0.003 1: 162 055 |006 45 54,09| 1,430  0,9023 | 0,017
+Cac ký hiệu trong Bảng H.8:
+dh là chênh cao giữa điểm đầu và điểm cuối của cạnh đo;
+mo là sai s6 đo cạnh;
+ma là sai số đo phương vị;
+ma là sai số đo chênh cao.
+CHÚ THÍCH:
+Cạnh ngắn nhất: 122,320 m; Cạnh (IV-2 - GPS-05)
+Cạnh dài nhất: 677,459 m; Cạnh (IV-4 - GPS-02)
+Chiều dài cạnh trung bình: 293,015m
+Sai số tương đối cạnh nhỏ nhất: 1: 225 534; Cạnh (IV-4 - GPS-02)
+Sai số tương đối cạnh lớn nhất: 1: 33 495; Cạnh (GPS-04 - GPS-03)
+Sai số phương vị nhỏ nhất: 1,007"; Cạnh (IV-4 - GPS-02)
+Sai số phương vị lớn nhất: 6,406"; Cạnh (IV-2 - GPS-05)
+
+===== TRANG 51 / 60 =====
+TCVN 9401:2024
+Phụ lục |
+(tham khảo)
+Quy trình xử lý số liệu lưới GNSS một cấp quan trắc chuyển dịch ngang công trình
+
+1.1 Tính véc-tơ cạnh
+Kết quả tính véc-tơ cạnh được thực hiện theo quy định 12.1.
+1.2 Kiểm tra kết quả tính véc-tơ cạnh
+Kiểm tra kết quả tính véc-tơ cạnh được thực hiện theo quy định 12.2.
+1.3 Binh sai lưới GNSS
+Sau khi xử lý cạnh, kết quả kiểm tra véc-tơ cạnh đạt yêu cầu thi tiến hành bình sai lưới theo các bước sau:
+Bước 1: Dựa vào các cạnh đo GNSS để xác lập đồ hình mạng lưới.
+Bước 2: Lựa chọn và thiết lập các thông số của Ellipsoid.
+Bước 3: Định nghĩa phép chiếu trong hệ tọa độ phẳng (hệ tọa độ VN-2000 hoặc hệ tọa độ độc lập).
+Bước 4: Bình sai lưới với 1 điểm gốc (coi lưới GNSS quan trắc là lưới tự do bậc 0). Điểm FIX tọa độ có
+thể được chọn là một điểm bát kỳ trong tập hợp điểm khống chế cơ sở (điểm mốc chuẩn) của mạng lưới,
+như vậy thực chất mạng lưới đã được coi là lưới tự do bậc 0 và bước thực hiện này là quá trình “định vị
+tạm thời" mạng lưới. Đối với lưới GNSS quan trắc biến dạng công trình cần phải thực hiện phân tích độ
+én định của các điểm cơ sở và định vị lại mang lưới, quy trình phân tích độ ổn định của mốc chuẩn được
+trình bày trong mục 1.4.
+1.4 Phân tích độ ổn định mốc cơ sở trong mạng lưới GNSS quan trắc chuyển dịch ngang công trình
+1.4.1 Tiêu chuẩn định vị lưới và tiêu chuẩn ồn định của các mốc cơ sở
+Trong chu kỳ đang khảo sát, sau khi đã thực hiện bình sai lưới GNSS quan trắc ở chế độ FIX tọa độ 1
+điểm như đã nêu ở trên thì còn cần phải kiểm tra độ 6n định của các điểm cơ sở và định vị lại mạng lưới
+đó. Việc định vị hệ thống lưới quan trắc trong từng chu kỳ đo được thực hiện theo tiêu chuẩn:
+a) Lưới được định vị vào vị trí trung bình các điểm khống chế ổn định. Điều kiện này được cụ thể hoá
+bằng cách lựa chọn ma trận định vị C như sau:
+
+G=B,
+
+G0 | (1)
+trong đó:
+
+C¡=B, adi với các điểm cơ sở ỗn định;
+Ci=0 đối với các điểm khác.
+
+b) Tiêu chuẩn đánh giá độ én định của điểm cơ sở:
+Điểm khống ché cơ sở được coi là ồn định nếu chênh lệch tọa độ của điểm ở chu kỳ đang xét so với chu
+kỳ đầu không vượt quá sai số giới hạn xác định độ chênh lệch đó.
+
+===== TRANG 52 / 60 =====
+TCVN 9401:2024
+Tiêu chuẩn nêu trên được cụ thể hóa bằng biểu thức:
+q< t-m, (1.2)
+trong đó:
+q, _ là giá trị chênh lệch tọa độ ở chu ky đang xét so với chu ky đầu;
+ím,, tà sai số trung phương xác định q, ;
+t là hệ số xác định tiêu chuẩn sai số giới hạn (f = 2).
+Việc đánh giá độ én định của các điểm mốc cơ sở được dựa trên công thức (1.2). Tuy nhiên đối với các
+mạng lưới trắc địa, do cấu trúc đồ hình mà sau khí bình sai giá trị sai số vị trí của các điểm (mp) thường
+có giá trị khác nhau, dẫn đến sai số xác định chuyển dịch (mạ) cũng khác nhau. Do vậy, có thể dựa vào
+sai số trung phương cần thiết để xác định chuyển dịch ngang đối với các điểm khống chế cơ sở (™,_ )
+để làm tiêu chuẩn thống nhất chung cho toàn mạng lưới, khi đó tiêu chuẩn (I.2) được viết lại là:
+q, $2m,, (1.3)
+Khi xây dựng lưới một cấp thì:
+ng
+M,., 2
+Không thể triển khai tính toán đồng thời với 2 biểu thức (1.1) va (1.3) do giữa 2 công thức đó có mối rang
+buộc về điều kiện áp dụng. Giải pháp hợp lý trong trường hợp này là áp dụng phương pháp lặp nhích
+dần.
+1.4.2 Quy trình phân tích độ én định của các mốc cơ sở
+Khi bình sai lưới GNSS trong mỗi chu kỳ quan trắc cần chọn xử lý ở ché độ FIX tọa độ 1 điểm (coi lưới
+GNSS là lưới tự do bậc 0) để tránh ảnh hưởng của sai số số liệu gốc, sau đó cần định vị lại mạng lưới
+ở chu kỳ đang xét về vị trí trung bình của các điểm khống ché.én định. Quá trình định vị lại này được
+thực hiện thông qua việc áp dụng công thức chuyển đổi tọa độ: :
+X®) =X —B(CTB)'C75X (L4)
+trong đó:
+ðX là véc-tơ chuyển dịch của các điểm cơ sở trong chu kỷ khảo sát so với chu kỷ đầu (chu kỳ 0);
+Xf? là véc-tơ tọa độ bình sai lưới ở chu kỳ đang xét ứng với chế độ FIX 1 điểm gốc;
+X®) là véc-tơ toa độ bình sai của lưới đó ứng với ma trận định vị C.
+Đối với lưới GNSS tự do ma trận B có dạng:
+10
+a-[ i= (1.5)
+Từ đó thu được biểu thức tính chuyển tọa độ bình sai giữa các phương án chon điều kiện định vị khác
+nhau như sau:
+
+===== TRANG 53 / 60 =====
+TCVN 9401:2024
+1- Tính chuyển tọa độ của các điểm trong lưới (gồm n điểm cơ sở) từ chế độ FIX 1 điểm gốc về lưới tự
+do với C = B:
+(8)
+6
+yp? = yj - [ey]
+n
+2- Khi cần bớt đi 1 điểm định vị (ký hiệu là điểm £) trong tập hợp K điểm định vi:
+k
+YX prety
+xP) = x! a :
+có (7)
+: ' YY mm.
+y?=y)- a
+Trong trường hợp việc định vị lưới được thực hiện dựa trên công thức (1.1), néu tla điểm không ổn định
+và cần phải loại bỏ khỏi quá trình định vị lưới (bằng cách gán cho điểm đó giá tri C = 0) thì tọa độ các
+điểm trong lưới sẽ được tính theo công thức:
+yl) = y(t) } 5x,
+K-1
+by (1.8)
+(2) 5 Ve
+sili? 4 K-1
+Xét đặc điểm của việc tính toán xử lý số liệu lưới GNSS và trên cơ sở các công thức chuyển đổi tọa độ
+trong mạng lưới như ở trên, thực hiện một quy trình phân tích độ ổn định lưới GNSS cơ sở trong quan
+trắc chuyển dịch ngang công trình theo phương pháp lặp nhích dần như sau:
+Bước 1: Trong chu kỳ đang khảo sát, thực hiện bình sai lưới khống chế cơ sở như mạng lưới tự do với
+1 điểm FIX tọa độ.
+Bước 2: Tính chuyển tọa độ bình sai của các điểm trong mạng lưới về hệ tọa độ mới với điều kiện định
+vị C = B (công thức I.1).
+Bước 3: Tính độ lệch tọa độ của tất cảc các điểm trong lưới so với tọa độ các điểm đó ở chu kỳ đầu và
+áp dụng tiêu chuẩn (1.3) để kiểm tra, đánh giá độ ổn định của các điểm mốc có C = B trong lưới.
+Bước 4: Có thé xảy ra một trong hai kha năng:
+— _ Nếu phát hiện một (hoặc một só) điểm mốc không ổn định thì sẽ loại một điểm có độ lệch tọa độ lớn
+nhất ra khỏi nhóm mốc én định bằng cách tính chuyển tọa độ theo công thức (I.8) và gan cho mốc
+đó giá trị C = 0.
+— _ Nếu các điểm mốc còn lại (có giá trị C = B) đều thoả mãn tiêu chuẩn (1.3) thì kết thúc quá trình kiểm
+tra. Việc định vị lưới được thực hiện gần đúng nhất so với các điểm ổn định.
+
+===== TRANG 54 / 60 =====
+TCVN 9401:2024
+Quy trình phân tích độ ổn định của các mốc cơ sở quan trắc chuyển dịch ngang công trình nêu trên được
+thể hiện một cách trực quan thông qua sơ đồ ở hình I.1:
+
+Bắt đầu
+| m h h h H 7
+Binh sai lưới GNSS Tính chuyển tọa độ Tính độ lệch tọa độ
+FiX 1 diém gốc | (C =B) (ax, Gy, q)
+Chọn Ci=0 =
+(Điểm i không ổn định)
+Đúng
+Hình 1.1 - Sơ đồ phân tích độ dn định mốc cơ sở quan trắc chuyển dịch ngang công trình bằng
+công nghệ GNSS tĩnh
+Vi DỤ: Xử lý số liệu lưới GNSS một cắp quan trắc chuyển dịch ngang công trình
+Quá trình xử lý số liệu quan trắc chuyển dịch ngang tường chắn X thuộc dự án A bằng công nghệ GNSS
+tĩnh theo sơ đồ lưới 1 cấp. Hình I.2 là sơ đồ lưới GNSS quan trắc chuyển dịch ngang tường chắn X.
+art
+⁄ QT2
+LZ xử
+Zz 2V ®Ằ QT4
+tego
+—— M LEE ES are
+<<==———— QT7
+wea
+Hình 1.2 ~ Sơ đồ lưới GNSS quan trắc chuyển dịch ngang
+— Mốc chuẩn (mốc cơ sở): 04 mốc (MC1, MC2, MC3, MC4)
+— Mốc quan trắc: 07 mốc (QT1, QT2, QT3, QT4, QT5, QT6, QT7)
+~ _ Yêu cầu độ chính xác quan trắc: m, = 5,0mm, tính được m,_= 3,5 mm
+~ Mạng lưới quan trắc được thiết ké và đo đạc gồm một cắp lưới với yêu cầu là sai số trung phương
+vị trí điểm (mp) của các điểm trong lưới sau bình sai phải nhỏ hơn hoặc bằng 3,5 mm.
+
+===== TRANG 55 / 60 =====
+TCVN 9401:2024
+Xử lý số liệu quan trắc:
+Quá trình xử lý số liệu được thực hiện với 3 chu kỳ quan trắc (chu kỳ 0, 1, 2). Trên cở sở dữ liệu đo của
+3 chu kỳ, tiền hành xử lý cạnh và bình sai lưới bằng phần mềm TBC 3.5, các cạnh đo của 3 chu kỳ sau
+khi xử lý đều đạt lời giải FIX và đồ hình lưới của 3 chu kỳ được xác lập như Hình I.2.
+Kết quả bình sai lưới chu ky 0, 1, 2 trong hệ tọa độ phẳng (hệ tọa độ VN-2000, múi chiếu 3°, kinh tuyến
+trục 106°00'00") ở chế độ FIX 1 điểm gốc (FIX điểm M€1) được đưa ra trong Bảng I.1. Sai số trung
+phương vị trí điểm trong chu kỳ 0, 1 và 2 đều đạt yêu cầu nhỏ hơn hoặc bằng 3,5 mm.
+
+Bang I.1 — Kết quả bình sai lưới chu ky 1, 2, 3 trong hệ tọa độ phẳng ở ché độ FIX 1 điểm gốc
+
+(FIX điểm MC1)
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 1 Tọa độ chu kỳ 2
+
+Tên | (Binh sai FIX 1 điểm MC1) (Bình sai FIX 1 điểm MC1) (Binh sai FIX 1 điểm MC1)
+
+mốc (10/10/2017) (15/12/2047) (15/03/2018)
+| noni | | oan [ i na | aon la tg
+Tiến hành phân tích độ ổn định của mốc chuẩn và tinh toán thông số chuyển dịch chu ky 1:
+Dựa vào tọa độ các mốc chuẩn MC1, MC2, MC3, MC4 ở chu kỳ 0 và chu kỳ 1 tiền hành phân tích độ dn
+định của các móc chuẩn. Tiêu chuẩn dn định của các mốc chuẩn lầy A =2xm,_ =2x3,5=7,0(mm). Kết
+quả tính toán và phân tích độ én định của các mốc chuẩn được thé hiện trong Bang I.2 và 1.3.
+
+===== TRANG 56 / 60 =====
+TCVN 9401:2024
+Bảng l.2 — Tham sé tính chuyển chu kỳ 1
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 1
+(Bình sai FIX 1 điểm MC1) (Bình sai FIX 1 điểm MC1)
+Tên mốc
+(10/10/2017) (15/12/2017)
+2 300 836,196 | 591 738,978 | 2 300 836,196 | 591 738,978 0,000
+2 300 890,827 | 593 357,108 | 2 300 890,831 | 593 357,106 | 0.004 | -0002 |
+2 300 786,840 | 593 102,011 | 2 300 786,842 | 593 102,010 | 0,002 | -0,001 |
+2 300 569,658 | 582 851,441 | 2 300 569,658 | 592 851,439 | 0,000 | -0002 |
+Bang I.3 — Kết quả đánh giá độ ổn định các mốc chuẩn ở chu ky 1
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 1 na ieee
+an - NV Độ lệch tọa độ | hạn dn
+Tên | (Bình sai FIX 1 điểm MC1) (sau điêu chỉnh) quả
+' (mm) định
+mốc (10/10/2017) (15/12/2017) đánh
+(mm)
+giá
+| xm | vm | xe | vm |e |w |a | & |
+2 300 836,196| 591 738,978 | 2 300 836,194| 591 738,979 2nselzz| 20] am
+On
+MC2 | 2 300 890,827) 593 357,108] 2 300 890,829] 593 357,107 | 2,0 }-4,0)2.2} 7.0 | 5
+fia)
+2 300 786,840| 593 102,011 | 2 300 786,840| 593 102,011 eo |o0}o0) 7® | am
+Ôn
+MC4 | 2 300 569,658| 592 851,441 | 2 300 569,656| 592 851,440 -1,0 7Ó | an
+Ha)
+Từ kết quả ở Bang 1.3 nhận thấy các mốc cơ sở ở chu ky 1 đều ổn định nên lấy tham số tính chuyển ở
+Bảng I.2 để điều chỉnh tọa độ của các điểm quan trắc ở chu kỳ 1. Tọa độ sau điều chỉnh ở chu kỳ 1 và
+các thông số chuyển dich tại các điểm quan trắc được đưa trong trong Bang I.4.
+
+===== TRANG 57 / 60 =====
+TCVN 9401:2024
+
+Bảng I.4— Kết quả tính toán thông số chuyển dịch (chu kỳ 1 so với chu kỳ 0)
+
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 1
+Thông sé chuyển dịch
+(10/10/2017) (15/12/2017)
+
+[| xm [ve peeps
+aa rar 9 ar [sears] s6 | 16 | |
+ese 0 ease 2a | 18 | 2 |
+arses esesu|2m80s8|sesesgl s6 | 1a | 6 |
+_— Sm.|siongans|saimmn|230w8s0|368688] 28 | 95 | 02 |
+are sis sears zs [srorame| 3Ø | sa | 68 |
+_——SB|sseseoe|sisens|2sowssasemm] 10 | em | 1 |
+a sin aia eras era 18 | 18 [14 |
+Tinh toán phân tích độ ỗn định của mốc chuẩn và tinh toán thông sé chuyén dich chu ky 2:
+Dựa vào tọa độ các mốc chuẩn MC1, MC2, MC3, MC4 ở chu kỳ 0 và chu kỳ 2 tiền hành phân tích độ ổn
+định của các mốc chuẩn. Tiêu chuẩn ổn định của các mốc chuẩn lấy A =2x m,, =2x3,5=7,0(mm). Kết
+quả tính toán và phân tích độ ỗn định của các mốc chuẩn được thể hiện trong các bảng 1.5, 1.6 và 1.7.
+
+Bảng I.5 - Tham số tính chuyển chu kỳ 2
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 2
+ee
+Tén méc
+(10/10/2017) (15/3/2018)
+
+Cease
+TT TT Tam | 0m [| am.
+
+===== TRANG 58 / 60 =====
+TCVN 9401:2024
+Bảng I.6 — Kết quả đánh giá độ 4n định các mốc chuẩn ở chu kỳ 2 (lần 1)
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 2 ii”
+- "mạ a Độ lệch tọa độ |han dn| Kết
+Tên | (Bình sai FIX 1 điểm MC1) (sau điêu chỉnh) (mm) định quả
+£ mi
+môc (10/10/2017) (15/3/2018) đánh
+(mm)}
+gia
+er ye | xm | vm |#|s|sị |
+5 ' Khôn
+2 300 836,196] 591 738,978] 2 300 836,190| 591 738,983 80] 50) 78) 7E | j te
+n
+Òi
+2 300 890,827 | 593 357,108| 2 300 890,831| 593 357,110 4020] 45] 70 | am,
+in
+: Không
+MC3 | 2 3007786,840| 593 102,011| 2 300 786,846| 593 102,007 -4,0| 7,2) 7,0
+én dinh
+Ôi
+2 300 569,658 592 851,441| 2 300 569,655} 592 851,439 L0 |L20|58| 78 | mm,
+(ni
+Từ kết quả ở Bang 1.6 nhận thay chu ky 2 có mốc chuẩn MC1 và MC3 là không dn định. Mốc chuẩn MC1
+có độ lệch lớn nhất nên loại điểm này ra khỏi nhóm mốc én định bằng cách tính chuyển tọa độ theo công
+thức (1.8) va gan cho mốc đó giá trị C = 0, kết quả tính toán được thé hiện trong Bảng I.7.
+Bang I.7 - Kết quả đánh giá độ én định các mốc chuẩn ở chu kỳ 2 (lần 2)
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 2 Giới
+a sa : mm Độ lệch tọa độ | hạn ổn| Kết quả
+Tên | (Binh sai FIX 1 điểm MC1) (sau điêu chỉnh) .
+(mm) định | đánh
+mốc (10/40/2017) (15/3/2018) .
+(mm) gia
+| xm | vm | xm | vm |s|w|a | |
+Khon
+2 300 836,196] 591 738,978 | 2 300 836,188| 591 738,984 29] 60] 09) 70 | in anh
+2 300 890,827| 593 357,108 | 2 300 890,829| 593 357,111 |20|3/0|3@[ 70 |Ônđmh|
+2 300 786,840] 593 102,011 | 2 300 786,844 | 593 102,008 |40|-3/0| 5,0] 7,0 |On dint]
+2 300 569,658] 592 851,441 | 2 300 569,653] 592 851,440 |-50|-10| 54| 7,0 [On inh
+Từ kết quả ở Bang 1.7 nhận thấy các điểm mốc cơ sở còn lại là MC2, MC3, MC4 đều ổn định nên tiến
+hành định vị lại mạng lưới vào vị trí trung bình của các mốc chuẩn ổn định bằng cách tinh lại tham số
+tinh chuyển theo các mốc chuẩn ổn định (MC2, MC3, MC4), các tham số tính được là:
+Ys /3=0,008 (m)
+Ysy/3 =-0,006 (m)
+Sử dung các tham số tinh chuyển nay để điều chỉnh toa độ của các điểm quan trắc ở chu kỳ 2 và tính
+toán thông số chuyển dịch ở chu kỳ 2. Kết quả tính toán được thé hiện trong Bảng I.8 va 1.9.
+
+===== TRANG 59 / 60 =====
+TCVN 9401:2024
+Bảng I.8 ~ Kết quả tính toán thông số chuyển dịch (chu kỳ 2 so với chu kỳ 0)
+Tọa độ chu kỳ 0 Tọa độ chu kỳ 2 -
+Tên (Bình sai FIX 1 điểm MC1) (sau điều chỉnh) phòng — “_
+méc (10/10/2017) (15/3/2018)
+xm | vm | xm [vm [ofa] a
+Lam [wer aran [avers | aararae [essere | 46 | 30 | sa.
+Lo [aan eae | 2416228 tt [sores 6| s8 | a |
+rare [580M [sass [aaron | 888m 40 | 60 | 72
+ars [asi | s80 088401 | 48830 | 30 | to | 163.
+Lam [aamoisae sai |2w00030.| 903088 09 | 60 | sẽ,
+are [zener | vse | 2809| s8e@80 so | T8 | 76
+EIET17 1i. | 60 | 20 | 64
+Bang I.9 — Kết quả tinh toán thông số chuyển dich (chu ky 2 so với chu ky 1)
+Tọa độ chu kỳ 1 Tọa độ chu kỳ 2
+mốc (15/12/2017) (15/3/2018)
+| xi | Ym | xm | Ym | a | s | a |
+| QT2 |230117404| s34192429| 2301178401| se4 102404] ‹30| 50] s8
+| ra |230t08s4te| 594 246.516] 230:08s#t5| so4246521/ -10/ 50] 5|
+| ars | 2300993800| 594300684| 2300883901| 594200900] 10] 6ø] e#|
+[ars | 2300915497] s84347679| 2300015404] 586347679] 30] 00] 30
+ars | 2200816040] se4406783| 2300816051| 5944067g0| 20| 7o| rã|
+
+===== TRANG 60 / 60 =====
+TCVN 9401:2024
+Thư mục tài liệu tham khảo
+[1] Thông tư 03/2020/TT-BTNMT Quy định kỹ thuật về mạng lưới trạm định vị vệ tinh quốc gia.
+[2] QCVN 04:2009/BTNMT, Quy chuẩn kỹ thuật quốc gia về Xây dựng lưới tọa độ.
+[3] GB50026-2007, Code for engineering surveying (Tiêu chuẩn trắc địa công trình).
+

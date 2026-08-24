@@ -26,3 +26,8 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+# OCR TCVN temp
+docs/tcvn/_tessdata/
+docs/tcvn/_ocr_9401/
+
