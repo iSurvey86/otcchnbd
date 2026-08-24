@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import html2canvas from 'html2canvas'
 import {
   bankFullTitleForScope,
@@ -128,7 +129,14 @@ export function Certificate({ attempt, passed, scope }: Props) {
         className={passed ? 'certificate certificate-pass' : 'certificate certificate-practice'}
         ref={cardRef}
       >
-        <img className="certificate-plate" src={plate} alt="" />
+        <Image
+          className="certificate-plate"
+          src={plate}
+          alt=""
+          fill
+          sizes="(max-width: 900px) 100vw, 900px"
+          priority
+        />
         {!passed ? (
           <>
             <span className="certificate-hoa-mask" aria-hidden />
@@ -137,10 +145,12 @@ export function Certificate({ attempt, passed, scope }: Props) {
                 <span className="certificate-mark">ÔN</span>
                 <strong>ONTHICCHN.ORG</strong>
               </div>
-              <img
+              <Image
                 className="certificate-hoa"
                 src="/certificates/hoa-chua-dat.png"
                 alt=""
+                width={86}
+                height={86}
               />
             </div>
           </>

@@ -1,3 +1,4 @@
+import { AppLink } from '../components/AppLink'
 import { Certificate } from '../components/Certificate'
 import { QuestionCard } from '../components/QuestionCard'
 import { lawSectionLabel, questionsForScope, sectorTitle, skillSectionLabel, bankFullTitleForScope } from '../lib/bank'
@@ -15,15 +16,14 @@ import {
   sectionMax,
 } from '../lib/exam'
 import { getAttempt } from '../lib/storage'
-import type { AppView, StudyScope } from '../types'
+import type { StudyScope } from '../types'
 
 interface Props {
   attemptId: string
   scope: StudyScope
-  onNavigate: (view: AppView) => void
 }
 
-export function Result({ attemptId, scope, onNavigate }: Props) {
+export function Result({ attemptId, scope }: Props) {
   const attempt = getAttempt(attemptId)
 
   if (!attempt) {
@@ -31,9 +31,9 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
       <section className="panel empty">
         Không tìm thấy bài thi. Có thể dữ liệu trình duyệt đã bị xóa.
         <div className="actions">
-          <button className="btn primary" onClick={() => onNavigate({ name: 'exam', scope })}>
+          <AppLink className="btn primary" view={{ name: 'exam', scope }}>
             Thi lại
-          </button>
+          </AppLink>
         </div>
       </section>
     )
@@ -142,18 +142,18 @@ export function Result({ attemptId, scope, onNavigate }: Props) {
               </div>
             </div>
             <div className="actions">
-              <button
+              <AppLink
                 className="btn primary"
-                onClick={() => onNavigate({ name: 'exam', scope: resultScope })}
+                view={{ name: 'exam', scope: resultScope }}
               >
                 Thi đề khác
-              </button>
-              <button
+              </AppLink>
+              <AppLink
                 className="btn ghost"
-                onClick={() => onNavigate({ name: 'practice', scope: resultScope })}
+                view={{ name: 'practice', scope: resultScope }}
               >
                 Ôn lại
-              </button>
+              </AppLink>
               <button className="btn copper" type="button" onClick={printPaper}>
                 In / PDF đề
               </button>

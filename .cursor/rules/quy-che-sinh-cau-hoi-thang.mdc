@@ -1,0 +1,26 @@
+---
+description: Quy chế đã chốt — sinh câu hỏi tháng, CSPL, pack, thi thử (onthicchn)
+alwaysApply: true
+---
+
+# Quy chế vận hành sinh câu hỏi tháng (ĐÃ CHỐT)
+
+Khi thiết kế / code / tư vấn liên quan **CSPL**, **pack câu hỏi tháng**, **sinh đề AI**, **thi thử / ôn theo tháng**, **upload văn bản Admin**: tuân thủ quy chế đã chốt.
+
+**Nguồn đầy đủ:**
+- `docs/Quy-che-van-hanh-sinh-cau-hoi-thang.md` (chuẩn vận hành)
+- `docs/Quy-che-van-hanh-sinh-cau-hoi-thang.docx` (bản Word)
+
+## Checklist bắt buộc
+
+1. Pack tháng = **100% câu mới**; cùng điều được nếu **góc hỏi khác** (gồm **định-lượng**).
+2. **Không bịa** điều khoản — chỉ cite chunk CSPL `active`.
+3. Giải thích **đúng 4 mục** mẫu Đấu thầu; **một template cố định** (AI chỉ điền).
+4. Đáp án **kiểm chứng được** — cấm câu mơ hồ / nhiều cách hiểu đều đúng.
+5. Chỉ **Admin** upload CSPL qua **form web có phân loại** (lĩnh vực + loại VB + số hiệu + file). Không nhồi file lớn vào Git.
+6. Ưu tiên **đơn nguồn**; đa nguồn = AI đề xuất + Admin tick.
+7. Pack min = số câu đề chuẩn; thi thử mỗi lần = đúng số câu đề, **trộn**; pack lớn hơn → **phủ đều** câu theo user trong tháng.
+8. Publish **01 00:00 GMT+7**; cảnh báo **T-1** (popup Admin ± Telegram/Zalo); quá 01 chưa duyệt → **khóa thi thử**.
+9. Không tự publish draft; không hạ chuẩn để cho đủ số.
+
+Không triển khai lệch quy chế. Đổi quy chế chỉ khi chủ sản phẩm cập nhật file `docs/Quy-che-van-hanh-sinh-cau-hoi-thang.md` (và đồng bộ Word).

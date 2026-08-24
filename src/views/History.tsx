@@ -1,15 +1,15 @@
+import { AppLink } from '../components/AppLink'
 import { resolveDdBankId } from '../data/dd/banks'
 import { questionsForScope, sectorTitle } from '../lib/bank'
 import { examConfigFor, examTotalMax, formatTime, isExamPassed } from '../lib/exam'
 import { loadAttempts } from '../lib/storage'
-import type { AppView, StudyScope } from '../types'
+import type { StudyScope } from '../types'
 
 interface Props {
   scope: StudyScope
-  onNavigate: (view: AppView) => void
 }
 
-export function History({ scope, onNavigate }: Props) {
+export function History({ scope }: Props) {
   const attempts = loadAttempts().filter((item) => {
     if (scope.sector === 'xay-dung') {
       return item.sector === 'xay-dung' && item.trackId === scope.trackId
@@ -53,16 +53,14 @@ export function History({ scope, onNavigate }: Props) {
             const totalMax = examTotalMax(exam)
             const passed = isExamPassed(item.lawScore, item.skillScore, exam)
             return (
-              <button
+              <AppLink
                 key={item.id}
                 className="history-item topic-card"
-                onClick={() =>
-                  onNavigate({
-                    name: 'result',
-                    scope: itemScope,
-                    attemptId: item.id,
-                  })
-                }
+                view={{
+                  name: 'result',
+                  scope: itemScope,
+                  attemptId: item.id,
+                }}
               >
                 <span>
                   <strong>
@@ -77,7 +75,7 @@ export function History({ scope, onNavigate }: Props) {
                 <span className={passed ? 'pass' : 'fail'}>
                   {item.score}/{totalMax} điểm {passed ? '· Đạt' : '· Chưa đạt'}
                 </span>
-              </button>
+              </AppLink>
             )
           })}
         </div>

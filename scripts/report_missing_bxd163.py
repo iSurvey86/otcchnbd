@@ -7,8 +7,8 @@ from pathlib import Path
 
 import parse_bxd163 as p
 
-OUT_MD = Path(r"d:\AIPoject\otcchnbd\src\data\xd\missing-questions.md")
-OUT_JSON = Path(r"d:\AIPoject\otcchnbd\src\data\xd\missing-questions.json")
+OUT_MD = Path(__file__).resolve().parents[1] / "src" / "data" / "xd" / "missing-questions.md"
+OUT_JSON = Path(__file__).resolve().parents[1] / "src" / "data" / "xd" / "missing-questions.json"
 
 KIND_ORDER = ("Pháp luật chung", "Pháp luật riêng", "Chuyên môn")
 

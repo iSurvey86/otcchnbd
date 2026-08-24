@@ -14,7 +14,7 @@ Nguồn câu hỏi: Quyết định 308/QĐ-ĐĐBĐVN ngày 29/12/2020 của C�
 
 - **Vercel** — host Next.js
 - **Firebase Auth** — đăng nhập Google
-- **Supabase (Postgres)** — users / nhật ký / góp ý
+- **Supabase (Postgres)** — users / nhật ký / góp ý / CSPL (pilot Đo đạc)
 
 ## Chạy local
 
@@ -30,7 +30,7 @@ Mở `http://localhost:3000`.
 1. Copy `.env.example` → `.env.local`.
 2. **Firebase Auth:** bật Google Sign-in; Authorized domains gồm `localhost`, `onthicchn.org`.
 3. **Firebase Admin:** Project settings → Service accounts → Generate private key → điền `FIREBASE_ADMIN_*`.
-4. **Supabase:** tạo project → SQL Editor chạy file `supabase/schema.sql` → lấy Project URL + `service_role` key.
-5. Vercel: khai báo cùng biến env (Production), rồi Redeploy.
+4. **Supabase:** tạo project → SQL Editor chạy lần lượt `supabase/schema.sql` rồi `supabase/schema-cspl.sql` (kho CSPL + bucket `cspl`) → lấy Project URL + `service_role` key.
+5. Vercel: khai báo cùng biến env (Production), gồm `GEMINI_API_KEY` nếu dùng Quét AI CSPL, rồi Redeploy.
 
 Admin: Gmail trong `NEXT_PUBLIC_ADMIN_EMAILS` (mặc định có `minhphuong.npsc@gmail.com`).

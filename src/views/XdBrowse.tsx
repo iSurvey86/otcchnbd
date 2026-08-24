@@ -1,10 +1,9 @@
-import { useMemo, useState } from 'react'
-import { XD_FIELDS, XD_GROUPS, XD_HANGS, getXdTrack, trackIdFor } from '../data/xd/tracks'
-import type { AppView, HangId, XdGroupId } from '../types'
+'use client'
 
-interface Props {
-  onNavigate: (view: AppView) => void
-}
+import { useMemo, useState } from 'react'
+import { AppLink } from '../components/AppLink'
+import { XD_FIELDS, XD_GROUPS, XD_HANGS, getXdTrack, trackIdFor } from '../data/xd/tracks'
+import type { HangId, XdGroupId } from '../types'
 
 function hangTone(hang: HangId): 'i' | 'ii' | 'iii' {
   if (hang === 'I') return 'i'
@@ -12,7 +11,7 @@ function hangTone(hang: HangId): 'i' | 'ii' | 'iii' {
   return 'iii'
 }
 
-export function XdBrowse({ onNavigate }: Props) {
+export function XdBrowse() {
   const [hang, setHang] = useState<HangId>('I')
   const [group, setGroup] = useState<XdGroupId | 'all'>('all')
   const tone = hangTone(hang)
@@ -100,16 +99,13 @@ export function XdBrowse({ onNavigate }: Props) {
           }
 
           return (
-            <button
+            <AppLink
               key={id}
-              type="button"
               className="topic-card"
-              onClick={() =>
-                onNavigate({
-                  name: 'home',
-                  scope: { sector: 'xay-dung', trackId: id },
-                })
-              }
+              view={{
+                name: 'home',
+                scope: { sector: 'xay-dung', trackId: id },
+              }}
             >
               <span className="count">{count} câu</span>
               <h3>
@@ -119,7 +115,7 @@ export function XdBrowse({ onNavigate }: Props) {
                 {groupTitle} · Hạng {hang}. Pháp luật chung, pháp luật riêng và
                 chuyên môn.
               </p>
-            </button>
+            </AppLink>
           )
         })}
       </div>

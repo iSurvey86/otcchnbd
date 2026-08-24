@@ -28,9 +28,3 @@ export function getFirebaseAuth(): Auth | null {
   }
   return auth
 }
-
-/** @deprecated use getFirebaseAuth */
-export function getFirebase(): { auth: Auth } | null {
-  const a = getFirebaseAuth()
-  return a ? { auth: a } : null
-}
