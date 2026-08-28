@@ -3,6 +3,7 @@ import { requireAdmin, verifyBearerUser } from '@/lib/firebaseAdmin'
 import {
   CSPL_BUCKET,
   CSPL_SELECT,
+  findCsplDuplicateBySoHieu,
   mapCsplRow,
   type CsplDbRow,
   type CsplDocType,
@@ -79,6 +80,44 @@ export async function PATCH(request: Request, ctx: Ctx) {
 
     const title = String(body.title || '').trim() || null
     const notes = String(body.notes || '').trim() || null
+
+    const { data: current, error: currentErr } = await db
+      .from('cspl_documents')
+      .select('id, sector')
+      .eq('id', id)
+      .maybeSingle()
+    if (currentErr) {
+      return NextResponse.json({ error: currentErr.message }, { status: 500 })
+    }
+    if (!current) {
+      return NextResponse.json({ error: 'Không tìm thấy văn bản.' }, { status: 404 })
+    }
+
+    const { data: existingRows, error: existingErr } = await db
+      .from('cspl_documents')
+      .select('id, so_hieu, title')
+      .eq('sector', current.sector)
+      .limit(500)
+    if (existingErr) {
+      return NextResponse.json({ error: existingErr.message }, { status: 500 })
+    }
+    const dup = findCsplDuplicateBySoHieu(
+      (existingRows ?? []).map((r) => ({
+        id: String(r.id),
+        soHieu: String(r.so_hieu || ''),
+        title: r.title ? String(r.title) : null,
+      })),
+      soHieu,
+      id,
+    )
+    if (dup) {
+      return NextResponse.json(
+        {
+          error: `Số hiệu «${dup.soHieu}» đã gắn với văn bản khác${dup.title ? ` — ${dup.title}` : ''}.`,
+        },
+        { status: 409 },
+      )
+    }
 
     const { data, error } = await db
       .from('cspl_documents')

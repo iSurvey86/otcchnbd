@@ -89,6 +89,11 @@ body::before {
   padding: 20px 0 72px;
 }
 
+.app-shell.app-shell-admin {
+  width: calc(100% - 32px);
+  max-width: none;
+}
+
 .topbar {
   display: flex;
   align-items: center;
@@ -2380,6 +2385,21 @@ a.btn.primary {
   margin-bottom: 14px;
 }
 
+.admin-toolbar-logs {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1080px) {
+  .admin-toolbar-logs {
+    flex-wrap: nowrap;
+  }
+}
+
+.admin-toolbar .btn.compact {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .admin-search {
   flex: 1 1 220px;
   min-width: 200px;
@@ -2389,6 +2409,12 @@ a.btn.primary {
   padding: 10px 12px;
   background: #fff;
   font: inherit;
+}
+
+.admin-toolbar-logs .admin-search {
+  flex: 0 1 140px;
+  min-width: 110px;
+  max-width: 180px;
 }
 
 .admin-select {
@@ -2602,6 +2628,23 @@ a.btn.primary {
   outline-offset: 1px;
 }
 
+.admin-cspl-input-dup,
+.admin-cspl-input-dup:focus {
+  border-color: #dc2626;
+  outline: 2px solid rgba(220, 38, 38, 0.22);
+  outline-offset: 1px;
+  background: #fef2f2;
+}
+
+.admin-cspl-dup-warn {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #b91c1c;
+}
+
 .admin-cspl-input-muted {
   background: #f8fafc;
   color: #64748b;
@@ -2639,9 +2682,50 @@ a.btn.primary {
   color: var(--muted);
 }
 
-.admin-table th.admin-cspl-col-sohieu,
-.admin-table td.admin-cspl-col-sohieu {
+.admin-table th.admin-cspl-col-stt,
+.admin-table td.admin-cspl-col-stt {
   text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.admin-table th.admin-cspl-col-noidung,
+.admin-table td.admin-cspl-col-noidung {
+  vertical-align: middle;
+}
+
+.admin-cspl-sohieu {
+  display: block;
+  text-align: center;
+}
+
+.admin-cspl-vb-title {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--muted);
+  text-align: left;
+}
+
+.admin-table th.admin-cspl-col-hieuluc,
+.admin-table td.admin-cspl-col-hieuluc {
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.admin-table th.admin-cspl-col-file,
+.admin-table td.admin-cspl-col-file {
+  font-size: 12px;
+  word-break: break-all;
+  vertical-align: middle;
+}
+
+.admin-table th.admin-cspl-col-actions,
+.admin-table td.admin-cspl-col-actions {
+  text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
 }
 
@@ -2660,6 +2744,141 @@ a.btn.primary {
   flex-direction: column;
   gap: 12px;
   max-width: 480px;
+}
+
+/* Popup Sửa văn bản: rộng hơn form 4 cột + textarea cao hơn */
+.admin-cspl-edit-modal {
+  width: min(920px, calc(100vw - 32px));
+  max-width: none;
+  gap: 14px;
+  padding: 28px;
+}
+
+.admin-cspl-edit-modal .admin-cspl-textarea {
+  min-height: 128px;
+}
+
+.admin-cspl-chunks-modal {
+  width: min(960px, calc(100vw - 24px));
+  max-width: none;
+  max-height: calc(100vh - 32px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.admin-cspl-chunk-summary {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.admin-cspl-chunk-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px 10px;
+}
+
+.admin-cspl-chunk-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-left: auto;
+}
+
+.admin-cspl-chunk-filter .admin-cspl-input {
+  min-width: 140px;
+  font-weight: 600;
+}
+
+.admin-cspl-chunk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: min(58vh, 640px);
+}
+
+.admin-cspl-chunk-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.admin-cspl-chunk-item.status-approved {
+  border-color: #b7ddc4;
+  background: #f4fbf6;
+}
+
+.admin-cspl-chunk-item.status-rejected {
+  border-color: #fecaca;
+  background: #fff7f7;
+  opacity: 0.92;
+}
+
+.admin-cspl-chunk-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-bottom: 6px;
+}
+
+.admin-cspl-chunk-body {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink);
+  white-space: pre-wrap;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.admin-cspl-chunk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-cspl-chunk-chip-pending {
+  background: #fff7ed !important;
+  color: #c2410c !important;
+}
+
+.admin-cspl-chunk-chip-approved {
+  background: #dcfce7 !important;
+  color: #166534 !important;
+}
+
+.admin-cspl-chunk-chip-rejected {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+}
+
+.form-ok {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.form-error {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #b91c1c;
 }
 
 .admin-cspl-expire-help {
@@ -2697,11 +2916,11 @@ a.btn.primary {
 }
 
 .admin-cspl-row-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-flex;
+  flex-wrap: nowrap;
   gap: 6px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .admin-cspl-icon-btn {
@@ -2780,6 +2999,36 @@ a.btn.primary {
   padding: 0;
 }
 
+.admin-table-resizable {
+  table-layout: fixed;
+}
+
+.admin-table-resizable th {
+  position: relative;
+  overflow: hidden;
+}
+
+.col-resize-handle {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 2;
+}
+
+.col-resize-handle:hover,
+.col-resize-handle:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+body.col-resizing,
+body.col-resizing * {
+  cursor: col-resize !important;
+  user-select: none !important;
+}
+
 .admin-table {
   width: 100%;
   border-collapse: collapse;
@@ -2825,9 +3074,15 @@ a.btn.primary {
   background: #f8fafc;
 }
 
+.admin-table-logs .admin-col-stt,
 .admin-table-logs .admin-col-actor,
 .admin-table-logs .admin-col-action {
   text-align: center;
+}
+
+.admin-table-logs .admin-col-stt {
+  width: 3.2rem;
+  white-space: nowrap;
 }
 
 .admin-detail-stack {

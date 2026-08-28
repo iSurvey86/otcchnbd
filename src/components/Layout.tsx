@@ -45,7 +45,7 @@ export function Layout({ view, onNavigate, children }: Props) {
   const back = backNavFor(view)
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell${view.name === 'admin' ? ' app-shell-admin' : ''}`}>
       <header className="topbar">
         <div className="topbar-lead">
           <AppLink className="brand" view={{ name: 'catalog' }}>

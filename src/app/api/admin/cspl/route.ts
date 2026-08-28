@@ -8,6 +8,7 @@ import {
   CSPL_PILOT_SECTOR,
   CSPL_SELECT,
   extFromFilename,
+  findCsplDuplicateBySoHieu,
   mapCsplRow,
   type CsplDocType,
   type CsplDbRow,
@@ -155,6 +156,40 @@ export async function POST(request: Request) {
     )
   }
 
+  const db = getSupabaseAdmin()!
+
+  const { data: existingRows, error: existingErr } = await db
+    .from('cspl_documents')
+    .select('id, so_hieu, title')
+    .eq('sector', sector)
+    .limit(500)
+  if (existingErr) {
+    return NextResponse.json(
+      {
+        error: existingErr.message.includes('cspl_documents')
+          ? 'Chưa tạo bảng CSPL. Chạy supabase/schema-cspl.sql trên Supabase.'
+          : existingErr.message,
+      },
+      { status: 500 },
+    )
+  }
+  const dup = findCsplDuplicateBySoHieu(
+    (existingRows ?? []).map((r) => ({
+      id: String(r.id),
+      soHieu: String(r.so_hieu || ''),
+      title: r.title ? String(r.title) : null,
+    })),
+    soHieu,
+  )
+  if (dup) {
+    return NextResponse.json(
+      {
+        error: `Số hiệu «${dup.soHieu}» đã có trong kho${dup.title ? ` — ${dup.title}` : ''}.`,
+      },
+      { status: 409 },
+    )
+  }
+
   const docId = randomUUID()
   const year = issuedOn
     ? Number(issuedOn.slice(0, 4)) || new Date().getFullYear()
@@ -168,7 +203,6 @@ export async function POST(request: Request) {
     docId,
   })
 
-  const db = getSupabaseAdmin()!
   try {
     await ensureCsplBucket(db)
   } catch (e) {

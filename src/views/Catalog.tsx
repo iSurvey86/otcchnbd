@@ -37,8 +37,11 @@ export function Catalog() {
       <div className="catalog-head">
         <h1>Ôn thi sát hạch chứng chỉ hành nghề</h1>
         <p className="catalog-lead">
-          Luyện trắc nghiệm sát hạch CCHN trên ONTHICCHN: Đo đạc và Bản đồ, Xây dựng
-          và Đấu thầu — ôn tập, thi thử có chấm điểm.
+          Luyện trắc nghiệm ôn thi CCHN trên ONTHICCHN
+          <br />
+          Đo đạc và Bản đồ, Xây dựng, Đấu thầu …
+          <br />
+          Ôn tập, thi thử có chấm điểm
         </p>
         <p className="catalog-sub">Chọn ngành</p>
       </div>

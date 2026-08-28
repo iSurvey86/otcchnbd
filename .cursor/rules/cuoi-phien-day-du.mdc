@@ -1,0 +1,17 @@
+---
+description: Quy trình cuối phiên khi user nói "làm cuối phiên đầy đủ"
+alwaysApply: true
+---
+
+# Làm cuối phiên đầy đủ
+
+Khi user nói **「làm cuối phiên đầy đủ」**, thực hiện **đủ** các bước sau (không dừng ở HANDOFF):
+
+1. **HANDOFF** — cập nhật block mới đầu `docs/phien-lam-viec/HANDOFF.md`
+2. **File ngày** — thêm `docs/phien-lam-viec/YYYY-MM-DD-*.md` nếu phiên có thay đổi đáng ghi
+3. **Workflows + HDSD** — khi có đổi nghiệp vụ/UX, cập nhật `workflows/` và `docs/hdsd/` tương ứng
+4. **Commit + push** — gom thay đổi code/docs (bỏ `tmp-*`, `__pycache__`, secrets), commit message theo style repo, `git push`
+
+Trước commit: `git status`, `git diff`, `npm run build` nếu có thay đổi code lớn.
+
+Khác với commit thường: user chỉ nói "commit" thì không bắt buộc HANDOFF/workflows; user nói "làm cuối phiên đầy đủ" thì **luôn** làm cả chuỗi trên.

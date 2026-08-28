@@ -5,6 +5,46 @@
 
 ---
 
+## 2026-08-28 (tối) — CSPL chunk pipeline + TCVN Word + Admin CSPL UX
+
+### Đã làm
+
+- **Pipeline chunk MVP:** schema `cspl_chunks`; API tách/duyệt/activate; nút **Đoạn** + modal (Tách → Duyệt → Đưa vào dùng). Tách theo Điều/Khoản hoặc mục TCVN.
+- **Fix:** modal không còn load vòng lặp vô hạn.
+- **TCVN:** OCR/clean **9398:2012**; Word thống nhất `export_tcvn_clean_docx.js` → `TCVN-9398-2012.docx` + tái xuất `TCVN-9401-2024.docx`.
+- **CSPL kho:** 8 VB Đo đạc đã upload (Luật + 4 NĐ + TT 68 + 2 TCVN); còn Admin tách/duyệt → `active`.
+- **Admin UX:** popup Sửa rộng; cột CSPL kéo được; trùng số hiệu; Catalog lead; `pdf-parse` cho PDF có text layer.
+- **HDSD + workflow:** `docs/hdsd/admin-cspl.md`, `workflows/admin-cspl-chunks.md`.
+
+### File chính
+
+| File | Vai trò |
+|------|---------|
+| `supabase/schema-cspl-chunks.sql` | Bảng chunk (chạy trên Supabase) |
+| `src/lib/csplChunk.ts` / `csplExtract.ts` | Tách đoạn + đọc docx/pdf |
+| `src/app/api/admin/cspl/[id]/chunks/` | API list / ingest / activate |
+| `src/components/AdminCsplChunksModal.tsx` | UI duyệt đoạn |
+| `src/components/AdminCsplPanel.tsx` | Nút Đoạn + bảng CSPL |
+| `scripts/export_tcvn_clean_docx.js` | Xuất Word 9398 + 9401 |
+| `docs/hdsd/admin-cspl.md` | HDSD vận hành CSPL |
+| `workflows/admin-cspl-chunks.md` | Checklist test |
+
+### Việc tiếp
+
+- [ ] Admin: chạy SQL chunks (nếu chưa) → tách/duyệt 8 VB → `active`.
+- [ ] Sinh draft pack câu hỏi tháng từ chunk active (chưa code).
+- [ ] Soạn câu GNSS / so sánh lưới TT 68 vs 9401 (nội dung).
+- [ ] JSON + routing **ONTHICCHN Đấu thầu**.
+- [ ] Email template Supabase (Magic Link / OTP).
+
+### Câu mở phiên sau
+
+> Đọc HANDOFF mới nhất. CSPL đã có pipeline chunk (Đoạn → Tách → Duyệt → active). Word TCVN 9398/9401 sẵn. 8 VB đã upload; cần Admin tách hết rồi mới sinh pack tháng. HDSD: `docs/hdsd/admin-cspl.md`. Tiếp: activate CSPL hoặc code sinh câu tháng.
+
+Chi tiết: [2026-08-28-cspl-chunks-pipeline.md](./2026-08-28-cspl-chunks-pipeline.md)
+
+---
+
 ## 2026-08-28 — Gắn sơ đồ lưới UI + ôn theo phần + admin Ẩn admin
 
 ### Đã làm

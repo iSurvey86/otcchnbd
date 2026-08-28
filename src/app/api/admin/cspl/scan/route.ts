@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { GoogleGenAI } from '@google/genai'
 import { requireAdmin, verifyBearerUser } from '@/lib/firebaseAdmin'
 import { extFromFilename } from '@/lib/cspl'
+import { extractDocxPlainText } from '@/lib/csplExtract'
 import {
   buildCsplScanPrompt,
   buildScanErrorMessage,
@@ -19,21 +20,6 @@ function resolveMime(file: File, ext: string | null): string {
   }
   if (ext === 'doc') return 'application/msword'
   return 'application/pdf'
-}
-
-async function extractDocxPlainText(buffer: Buffer): Promise<string> {
-  const JSZip = (await import('jszip')).default
-  const zip = await JSZip.loadAsync(buffer)
-  const xml = await zip.file('word/document.xml')?.async('string')
-  if (!xml) return ''
-  return xml
-    .replace(/<w:tab\/>/gi, '\t')
-    .replace(/<\/w:p>/gi, '\n')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/[ \t]+\n/g, '\n')
-    .replace(/\n{3,}/g, '\n\n')
-    .replace(/[ \t]{2,}/g, ' ')
-    .trim()
 }
 
 function clipText(text: string, max = 120_000): string {

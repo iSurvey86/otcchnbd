@@ -1,6 +1,7 @@
 'use client'
 
-import { useCallback, useEffect, useId, useState, type FormEvent } from 'react'
+import { useCallback, useEffect, useId, useMemo, useState, type FormEvent } from 'react'
+import { useResizableColumns } from '../hooks/useResizableColumns'
 import { getFirebaseAuth } from '../lib/firebase'
 import {
   CSPL_DOC_TYPE_LABEL,
@@ -8,17 +9,50 @@ import {
   CSPL_MAX_BYTES,
   CSPL_PILOT_SECTOR,
   CSPL_SECTOR_LABEL,
+  CSPL_STATUS_LABEL,
   csplDocLabel,
+  findCsplDuplicateBySoHieu,
   type CsplDocType,
   type CsplDocument,
 } from '../lib/cspl'
 import { apiJson } from '../lib/apiClient'
 import type { CsplScanResult } from '../lib/csplScan'
+import { AdminCsplChunksModal } from './AdminCsplChunksModal'
 
 const DOC_TYPE_OPTIONS = Object.entries(CSPL_DOC_TYPE_LABEL) as [
   CsplDocType,
   string,
 ][]
+
+const CSPL_COL_DEFAULTS = {
+  stt: 56,
+  noidung: 551,
+  hieuluc: 88,
+  file: 469,
+  phuluc: 187,
+  ngay: 140,
+  actions: 220,
+}
+
+const CSPL_COL_MIN = {
+  stt: 44,
+  noidung: 200,
+  hieuluc: 72,
+  file: 100,
+  phuluc: 72,
+  ngay: 100,
+  actions: 180,
+}
+
+const CSPL_COL_KEYS = [
+  'stt',
+  'noidung',
+  'hieuluc',
+  'file',
+  'phuluc',
+  'ngay',
+  'actions',
+] as const
 
 function formatBytes(n: number | null): string {
   if (n == null || n <= 0) return '–'
@@ -100,6 +134,39 @@ export function AdminCsplPanel({
   const [editNotes, setEditNotes] = useState('')
   const [editBusy, setEditBusy] = useState(false)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [chunkTarget, setChunkTarget] = useState<CsplDocument | null>(null)
+
+  const onChunkDocumentUpdated = useCallback(
+    (updated: CsplDocument) => {
+      setRows((prev) => {
+        const next = prev.map((r) => (r.id === updated.id ? updated : r))
+        onDocumentsChange?.(next)
+        return next
+      })
+      setChunkTarget((prev) =>
+        prev?.id === updated.id && prev.status === updated.status ? prev : updated,
+      )
+    },
+    [onDocumentsChange],
+  )
+
+  const { widths, tableWidth, onResizeStart } = useResizableColumns(
+    'otcchnbd.admin.cspl.colWidths.v2',
+    CSPL_COL_DEFAULTS,
+    CSPL_COL_MIN,
+  )
+
+  const soHieuDup = useMemo(
+    () => findCsplDuplicateBySoHieu(rows, soHieu),
+    [rows, soHieu],
+  )
+  const editSoHieuDup = useMemo(
+    () =>
+      editTarget
+        ? findCsplDuplicateBySoHieu(rows, editSoHieu, editTarget.id)
+        : null,
+    [rows, editSoHieu, editTarget],
+  )
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -197,6 +264,13 @@ export function AdminCsplPanel({
     }
     if (!soHieu.trim()) {
       setError('Nhập số hiệu văn bản.')
+      return
+    }
+    const dup = findCsplDuplicateBySoHieu(rows, soHieu)
+    if (dup) {
+      setError(
+        `Số hiệu «${dup.soHieu}» đã có trong kho${dup.title ? ` — ${dup.title}` : ''}.`,
+      )
       return
     }
     if (file.size > CSPL_MAX_BYTES) {
@@ -385,6 +459,13 @@ export function AdminCsplPanel({
       setError('Nhập số hiệu văn bản.')
       return
     }
+    const dup = findCsplDuplicateBySoHieu(rows, editSoHieu, editTarget.id)
+    if (dup) {
+      setError(
+        `Số hiệu «${dup.soHieu}» đã gắn với văn bản khác${dup.title ? ` — ${dup.title}` : ''}.`,
+      )
+      return
+    }
     const auth = getFirebaseAuth()
     const user = auth?.currentUser
     if (!user) {
@@ -533,15 +614,23 @@ export function AdminCsplPanel({
             <label className="admin-cspl-field">
               <span>Số hiệu *</span>
               <input
-                className="admin-cspl-input"
+                className={`admin-cspl-input${soHieuDup ? ' admin-cspl-input-dup' : ''}`}
                 value={soHieu}
                 onChange={(e) => {
                   setSoHieu(e.target.value)
                   setOkMsg(null)
+                  setError(null)
                 }}
                 placeholder="96/2024/NĐ-CP"
                 required
+                aria-invalid={Boolean(soHieuDup)}
               />
+              {soHieuDup ? (
+                <span className="admin-cspl-dup-warn" role="alert">
+                  Số hiệu «{soHieuDup.soHieu}» đã có trong kho
+                  {soHieuDup.title ? ` — ${soHieuDup.title}` : ''}.
+                </span>
+              ) : null}
             </label>
 
             <label className="admin-cspl-field">
@@ -609,7 +698,7 @@ export function AdminCsplPanel({
             <button
               type="submit"
               className="btn primary"
-              disabled={uploading || scanning}
+              disabled={uploading || scanning || Boolean(soHieuDup)}
             >
               {uploading ? 'Đang tải lên…' : 'Lưu / Upload'}
             </button>
@@ -628,36 +717,112 @@ export function AdminCsplPanel({
           <p className="lead">Chưa có văn bản. Upload file đầu tiên ở form trên.</p>
         ) : (
           <div className="table-wrap">
-            <table className="admin-table admin-table-logs">
+            <table
+              className="admin-table admin-table-logs admin-table-resizable"
+              style={{ width: tableWidth }}
+            >
+              <colgroup>
+                {CSPL_COL_KEYS.map((key) => (
+                  <col key={key} style={{ width: widths[key] }} />
+                ))}
+              </colgroup>
               <thead>
                 <tr>
-                  <th className="admin-cspl-col-sohieu">Số hiệu</th>
-                  <th>Hiệu lực</th>
-                  <th>File gốc</th>
-                  <th>Phụ lục</th>
-                  <th>Ngày tải</th>
-                  <th>Thao tác</th>
+                  <th className="admin-cspl-col-stt">
+                    STT
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('stt', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột STT"
+                    />
+                  </th>
+                  <th className="admin-cspl-col-noidung">
+                    Nội dung
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('noidung', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột Nội dung"
+                    />
+                  </th>
+                  <th className="admin-cspl-col-hieuluc">
+                    Hiệu lực
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('hieuluc', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột Hiệu lực"
+                    />
+                  </th>
+                  <th className="admin-cspl-col-file">
+                    File gốc
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('file', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột File gốc"
+                    />
+                  </th>
+                  <th>
+                    Phụ lục
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('phuluc', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột Phụ lục"
+                    />
+                  </th>
+                  <th>
+                    Ngày tải
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('ngay', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột Ngày tải"
+                    />
+                  </th>
+                  <th className="admin-cspl-col-actions">
+                    Thao tác
+                    <span
+                      className="col-resize-handle"
+                      onPointerDown={(e) => onResizeStart('actions', e)}
+                      role="separator"
+                      aria-orientation="vertical"
+                      aria-label="Kéo để đổi độ rộng cột Thao tác"
+                    />
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {rows.map((row) => {
+                {rows.map((row, i) => {
                   const repl = row.replacedById
                     ? rows.find((r) => r.id === row.replacedById)
                     : undefined
                   return (
                     <tr key={row.id}>
-                      <td className="admin-cspl-col-sohieu">
-                        <strong>{row.soHieu}</strong>
+                      <td className="admin-cspl-col-stt">{i + 1}</td>
+                      <td className="admin-cspl-col-noidung">
+                        <strong className="admin-cspl-sohieu">{row.soHieu}</strong>
                         {row.title ? (
-                          <div className="admin-cspl-sub">{row.title}</div>
+                          <div className="admin-cspl-vb-title">{row.title}</div>
                         ) : null}
+                        <div className="admin-cspl-sub">
+                          Pipeline: {CSPL_STATUS_LABEL[row.status] || row.status}
+                        </div>
                         {row.legalStatus === 'het_hieu_luc' && repl ? (
-                          <div className="admin-cspl-sub">
+                          <div className="admin-cspl-vb-title">
                             Thay thế bởi: {repl.soHieu}
                           </div>
                         ) : null}
                       </td>
-                      <td>
+                      <td className="admin-cspl-col-hieuluc">
                         <span
                           className={`admin-chip ${
                             row.legalStatus === 'het_hieu_luc'
@@ -671,7 +836,7 @@ export function AdminCsplPanel({
                           <div className="admin-cspl-sub">Hết: {row.expiredOn}</div>
                         ) : null}
                       </td>
-                      <td>
+                      <td className="admin-cspl-col-file">
                         {row.originalFilename || '–'}
                         <div className="admin-cspl-sub">{formatBytes(row.byteSize)}</div>
                       </td>
@@ -692,8 +857,21 @@ export function AdminCsplPanel({
                         </button>
                       </td>
                       <td>{formatWhen(row.createdAt)}</td>
-                      <td>
+                      <td className="admin-cspl-col-actions">
                         <div className="admin-cspl-row-actions">
+                          <button
+                            type="button"
+                            className="btn ghost compact"
+                            title="Tách / duyệt đoạn"
+                            disabled={deletingId === row.id}
+                            onClick={() => {
+                              setChunkTarget(row)
+                              setError(null)
+                              setOkMsg(null)
+                            }}
+                          >
+                            Đoạn
+                          </button>
                           <button
                             type="button"
                             className="admin-cspl-icon-btn"
@@ -743,6 +921,14 @@ export function AdminCsplPanel({
         )}
       </section>
 
+      {chunkTarget ? (
+        <AdminCsplChunksModal
+          document={chunkTarget}
+          onClose={() => setChunkTarget(null)}
+          onDocumentUpdated={onChunkDocumentUpdated}
+        />
+      ) : null}
+
       {editTarget ? (
         <div
           className="modal-backdrop"
@@ -750,7 +936,7 @@ export function AdminCsplPanel({
           role="presentation"
         >
           <div
-            className="feedback-modal admin-cspl-expire-modal"
+            className="feedback-modal admin-cspl-expire-modal admin-cspl-edit-modal"
             role="dialog"
             onClick={(e) => e.stopPropagation()}
           >
@@ -763,11 +949,18 @@ export function AdminCsplPanel({
               <label className="admin-cspl-field">
                 <span>Số hiệu *</span>
                 <input
-                  className="admin-cspl-input"
+                  className={`admin-cspl-input${editSoHieuDup ? ' admin-cspl-input-dup' : ''}`}
                   value={editSoHieu}
                   onChange={(e) => setEditSoHieu(e.target.value)}
                   required
+                  aria-invalid={Boolean(editSoHieuDup)}
                 />
+                {editSoHieuDup ? (
+                  <span className="admin-cspl-dup-warn" role="alert">
+                    Số hiệu «{editSoHieuDup.soHieu}» đã gắn với văn bản khác
+                    {editSoHieuDup.title ? ` — ${editSoHieuDup.title}` : ''}.
+                  </span>
+                ) : null}
               </label>
               <label className="admin-cspl-field">
                 <span>Loại văn bản *</span>
@@ -809,7 +1002,7 @@ export function AdminCsplPanel({
                   className="admin-cspl-input admin-cspl-textarea"
                   value={editTitle}
                   onChange={(e) => setEditTitle(e.target.value)}
-                  rows={3}
+                  rows={5}
                 />
               </label>
               <label className="admin-cspl-field admin-cspl-field-half">
@@ -818,7 +1011,7 @@ export function AdminCsplPanel({
                   className="admin-cspl-input admin-cspl-textarea"
                   value={editNotes}
                   onChange={(e) => setEditNotes(e.target.value)}
-                  rows={3}
+                  rows={5}
                 />
               </label>
             </div>
@@ -835,7 +1028,7 @@ export function AdminCsplPanel({
               <button
                 type="button"
                 className="btn primary"
-                disabled={editBusy || !editSoHieu.trim()}
+                disabled={editBusy || !editSoHieu.trim() || Boolean(editSoHieuDup)}
                 onClick={() => void onEditSave()}
               >
                 {editBusy ? 'Đang lưu…' : 'Lưu'}

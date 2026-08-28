@@ -788,7 +788,6 @@ export function Admin() {
       <div className="admin-head">
         <div>
           <h1 className="admin-title">Quản lý hệ thống</h1>
-          <p className="admin-sub">Giám sát hoạt động, góp ý và kho CSPL (pilot Đo đạc)</p>
         </div>
         <div className="admin-tabs">
           <button
@@ -873,7 +872,7 @@ export function Admin() {
         <AdminCsplPanel onDocumentsChange={setCsplDocs} />
       ) : (
         <>
-      <div className="admin-toolbar">
+      <div className={`admin-toolbar${tab === 'logs' ? ' admin-toolbar-logs' : ''}`}>
         <input
           type="search"
           className="admin-search"
@@ -1006,7 +1005,7 @@ export function Admin() {
             <table className="admin-table admin-table-logs">
               <thead>
                 <tr>
-                  <th>STT</th>
+                  <th className="admin-col-stt">STT</th>
                   <th>Người thực hiện</th>
                   <th>Lĩnh vực</th>
                   <th>Phân hệ</th>
@@ -1024,7 +1023,7 @@ export function Admin() {
                   const field = linhVuc(row)
                   return (
                     <tr key={row.id}>
-                      <td>{(pageSafe - 1) * PAGE_SIZE + i + 1}</td>
+                      <td className="admin-col-stt">{(pageSafe - 1) * PAGE_SIZE + i + 1}</td>
                       <td className="admin-col-actor">
                         <strong>{row.displayName || row.email || '–'}</strong>
                         {row.email && row.displayName ? (
@@ -1075,7 +1074,7 @@ export function Admin() {
             <table className="admin-table admin-table-logs">
               <thead>
                 <tr>
-                  <th>STT</th>
+                  <th className="admin-col-stt">STT</th>
                   <th>Người gửi</th>
                   <th>Câu hỏi</th>
                   <th>Nội dung</th>
@@ -1086,7 +1085,7 @@ export function Admin() {
               <tbody>
                 {(pageRows as FeedbackRow[]).map((row, i) => (
                   <tr key={row.id}>
-                    <td>{(pageSafe - 1) * PAGE_SIZE + i + 1}</td>
+                    <td className="admin-col-stt">{(pageSafe - 1) * PAGE_SIZE + i + 1}</td>
                     <td>
                       <strong>{row.displayName || row.email || '–'}</strong>
                       {row.email ? <span className="admin-cell-sub">{row.email}</span> : null}

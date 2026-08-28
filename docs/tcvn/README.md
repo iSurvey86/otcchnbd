@@ -7,7 +7,7 @@ Thư mục: `docs/tcvn/` — cập nhật 2026-08-24.
 | File PDF | Loại | Trang | Text layer | Sẵn sàng hỏi–đáp / trích dẫn |
 |----------|------|------:|-----------|------------------------------|
 | `68_2015_TT-BTNMT(13437).pdf` | Thông tư 68/2015/TT-BTNMT | 70 | **Có** (~110k ký tự) | **Sẵn sàng** |
-| `TCVN 9398_2012 … Yeu cau chung.pdf` | TCVN 9398:2012 | 32 | Có nhưng **lỗi font CID** (chữ loạn) | Chưa — cần PDF text chuẩn hoặc OCR |
+| `TCVN 9398_2012 … Yeu cau chung.pdf` | TCVN 9398:2012 | 32 | **Đã OCR** → `TCVN-9398-2012.clean.txt` | **Sẵn sàng** (văn bản; bảng số liệu nên đối chiếu PDF) |
 | `Tiêu chuẩn Việt Nam-TCVN 9401_2024.pdf` | TCVN 9401:2024 | 60 | **Đã OCR** → `TCVN-9401-2024.clean.txt` | **Sẵn sàng** (văn bản; bảng số liệu nên đối chiếu PDF) |
 | `96 TCN 42-90_… trong nhà.pdf` | 96 TCN 42-90 | 55 | **Scan ảnh** | Chưa — cần OCR; phần lớn đã được TT 68 thay |
 | `96 TCN 43-90_… ngoài trời.pdf` | 96 TCN 43-90 | 101 | **Scan ảnh** | Chưa — cần OCR; phần lớn đã được TT 68 thay |
@@ -32,16 +32,17 @@ File `.extract.txt` cạnh mỗi PDF = kết quả `pdf-parse` (chỉ hữu ích
   - Phụ lục 1–3
 - **Vai trò với bộ 96 TCN:** đây là quy định **hiện hành** thay thế phần lớn quy phạm đo vẽ BDĐH 1:500–1:5000 kiểu 96 TCN 42/43-90 trong phạm vi đo đạc trực tiếp địa hình.
 
-### 2. TCVN 9398:2012 — nhận diện đúng, PDF chưa sạch chữ
+### 2. TCVN 9398:2012 — **đã OCR + Word sạch**
 - **Tên:** Công tác trắc địa trong xây dựng công trình — Yêu cầu chung.
-- **Phạm vi:** đo vẽ BDĐH tỷ lệ lớn + trắc địa công trình (thiết kế, thi công, kiểm định/giám sát).
-- **Khối nội dung điển hình:** khảo sát địa hình → lưới khống chế thi công → bố trí CT → hoàn công → quan trắc biến dạng / lún.
-- **Liên quan CCHN:** phần kinh nghiệm nghề nghiệp / trắc địa công trình.
+- **File dùng:** `TCVN-9398-2012.clean.txt`; Word upload CSPL: **`TCVN-9398-2012.docx`**.
+- **Script:** `node scripts/ocr_tcvn_tesseract.js "…pdf"` → `node scripts/clean_ocr_tcvn9398.js` → `node scripts/export_tcvn_clean_docx.js 9398`.
+- **Lưu ý:** Không có bản **9398:2024**; tiêu chuẩn hiện hành vẫn là **9398:2012**.
 
-### 3. TCVN 9401:2024 — **đã OCR + làm sạch**
+### 3. TCVN 9401:2024 — **đã OCR + Word sạch**
 - **Tên:** Kỹ thuật đo và xử lý số liệu **GNSS** trong trắc địa công trình.
 - **Thay thế:** TCVN 9401:2012.
-- **File dùng:** `TCVN-9401-2024.clean.txt`; Word biên tập: **`TCVN-9401-2024.docx`** (lề A4 kiểu TT 01/2011, Times New Roman, bảng kẻ viền Bảng 1/2/5).
+- **File dùng:** `TCVN-9401-2024.clean.txt`; Word: **`TCVN-9401-2024.docx`** (lề A4 kiểu TT 01/2011, Times New Roman; bảng 1/2/5 kẻ viền).
+- **Script:** `node scripts/export_tcvn_clean_docx.js 9401` (hoặc `all` cho cả 9398+9401).
 - **Phạm vi:** lưới khảo sát CT, lưới khống chế mặt bằng thi công, quan trắc chuyển dịch ngang, chuyển điểm thiết kế ra thực địa, đo vẽ BDĐH tỷ lệ lớn phục vụ thiết kế.
 - **Lưu ý:** đoạn văn đọc tốt; **bảng / phụ lục số** OCR kém hơn — tra PDF khi cần số chính xác.
 
@@ -54,12 +55,12 @@ File `.extract.txt` cạnh mỗi PDF = kết quả `pdf-parse` (chỉ hữu ích
 ## Sẵn sàng hỗ trợ ngay
 
 1. **Toàn văn TT 68/2015** — `68_2015_TT-BTNMT(13437).extract.txt`
-2. **Toàn văn TCVN 9401:2024 (OCR)** — `TCVN-9401-2024.clean.txt`
-3. **Metadata** TCVN 9398:2012 (chưa OCR sạch)
+2. **Toàn văn TCVN 9398:2012 (OCR)** — `TCVN-9398-2012.clean.txt`
+3. **Toàn văn TCVN 9401:2024 (OCR)** — `TCVN-9401-2024.clean.txt`
+4. **Metadata** TCVN 9398:2012 (đã OCR)
 
 ## Cần bạn bổ sung (tuỳ chọn)
 
-- OCR / PDF text sạch cho **TCVN 9398:2012**
 - OCR 96 TCN 42/43 nếu còn ôn câu cũ
 
 ---

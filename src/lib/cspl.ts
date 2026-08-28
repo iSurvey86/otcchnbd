@@ -87,6 +87,31 @@ export const CSPL_LEGAL_STATUS_LABEL: Record<CsplLegalStatus, string> = {
 
 export const CSPL_BUCKET = 'cspl'
 export const CSPL_PILOT_SECTOR: CsplSector = 'do-dac-ban-do'
+
+/** Chuẩn hóa số hiệu để so trùng (bỏ khoảng trắng, thống nhất dấu gạch). */
+export function normalizeSoHieu(value: string): string {
+  return value
+    .normalize('NFC')
+    .trim()
+    .replace(/[–—−]/g, '-')
+    .replace(/\s+/g, '')
+    .toUpperCase()
+}
+
+export function findCsplDuplicateBySoHieu(
+  docs: Array<Pick<CsplDocument, 'id' | 'soHieu' | 'title'>>,
+  soHieu: string,
+  excludeId?: string,
+): Pick<CsplDocument, 'id' | 'soHieu' | 'title'> | null {
+  const key = normalizeSoHieu(soHieu)
+  if (!key) return null
+  return (
+    docs.find(
+      (d) =>
+        d.id !== excludeId && normalizeSoHieu(d.soHieu) === key,
+    ) ?? null
+  )
+}
 export const CSPL_MAX_BYTES = 20 * 1024 * 1024
 
 export const CSPL_SELECT =

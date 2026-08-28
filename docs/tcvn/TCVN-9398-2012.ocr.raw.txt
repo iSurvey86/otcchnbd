@@ -1,0 +1,1174 @@
+===== TRANG 1 / 32 =====
+TJCVN TIEUCHUAN QUOC GIA
+TCVN 9398:2012
+Xuất bản lần 1
+CÔNG TAC TRAC PIA TRONG XÂY DỰNG CÔNG TRÌNH
+— YÊU CÀU CHUNG
+Surveying in construction — General requirements
+HÀ NỘI - 2012
+
+===== TRANG 2 / 32 =====
+TCVN 9398:2012
+Mục lục
+
+LOH NOT GAUL  xẼxX dh
+1 PRAM Vi AD GUNG. HO)
+ph TL Lê: D
+3 Ký hiệu dùng trong tiêu chuẩn..........................nnnnnnnn nen nnnnnn n n1 E1 1E n E1 E 16 D
+5 Khảo sát trắc địa địa hình phục vụ thiết kế công trình.........................nnnnnnnnnnnnnnnnn nen nen nen nen 7
+6 Lưới khống chế thi công........................nnnnnnnn nen nnnnnnEn n1 1E EE E n1 12
+7 Công tác bồ trí công trình.....................nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn n1 E6 nnnn Ennnn nen 15
+8 Kiểm tra kích thước hình học và đo vẽ hoàn công.....................nnnnnnnneneeneeeneneeeeseeee sen 18
+9 Công tác đo lún, đo chuyển dịch nhà và công trình................Gnnnnnn nen nnnnnnnn nen nen nen nen 19)
+10 Ghi chép lưu giữ hồ sơ.......................GGnnnnnnnnnnnnnn nh nen nnn 23)
+Phụ lục A (Tham khảo): Các sơ đồ lưới bồ trí công trình trên mặt bằng xây dựng............................24
+Phụ lục B (Tham khảo): Dung sai cho phép về trắc địa khi lắp ghép các kết cầu bê tông cốt thép đúc
+sẵn nhà công NGRIBP. +... e+e eects eee seers sees eee een 26
+Phụ lục C (Tham khảo): Dung sai cho phép về trắc địa khi lắp ghép các kết cầu thép......................28
+Phụ lục D (Tham khảo): Một số máy toàn đạc điện tử thông dụng tại Việt Nam..............................30
+Phụ lục E (Tham khảo): Phân cấp các máy thủy bình thông dụng ở Việt Nam................................31
+Thư mục tài liệu tham khảo.....................nnnnnnnn nen nen n nen nnnn n1 nnn E111 eee eee. 33
+3
+
+===== TRANG 3 / 32 =====
+TCVN 9398:2012
+
+Lời nói đầu
+
+TCVN 9398:2012 được chuyển đổi từ TCXDVN 309:2004 theo quy định
+tại khoản 1 Điều 69 của Luật Tiêu chuẩn và Quy chuẩn kỹ thuật và điểm a
+khoản 1 Điều 7 Nghị định số 127/2007/NĐ-CP ngày 01/8/2007 của Chính
+phủ quy định chi tiết thi hành một số điều của Luật Tiêu chuẩn và Quy
+chuẩn kỹ thuật.
+
+TCVN 9398:2012 do Viện Khoa học Công nghệ Xây dựng — Bộ Xây dựng
+biên soạn, Bộ Xây dựng đề nghị, Tổng cục Tiêu chuẩn Do lường Chất
+lượng thẳm định, Bộ Khoa học và Công nghệ công bồ.
+
+4
+
+===== TRANG 4 / 32 =====
+TIÊU CHUẢN QUÓC GIA TCVN 9398:2012
+Công tác trắc địa trong xây dựng công trình — Yêu cầu chung
+Surveying in construction - General requirements
+1 Phạm vi áp dụng
+Tiêu chuẩn này quy định các yêu cầu kỹ thuật về đo vẽ bản đồ địa hình tỷ lệ lớn và trắc địa công trình,
+dé cung cấp các dữ liệu chuẩn xác dùng trong thiết kế và thi công xây lắp, kiểm định, giám sát chất
+lượng các công trình xây dựng.
+2 Tài liệu viện dẫn
+Các tài liệu viện dẫn sau là cần thiết cho việc áp dụng tiêu chuẩn này. Đồi với các tài liệu viện dẫn ghi
+năm công bồ thì áp dụng phiên bản được nêu. Đồi với các tài liệu viện dẫn không ghi năm công bồ thì
+áp dụng phiên bản mới nhất, bao gồm cả các sửa đổi, bd sung (nếu có).
+TCVN 9360:2012, Quy trình kỹ thuật xác định độ lún công trình dân dụng và công nghiệp bằng phương
+pháp đo cao hình học.
+3 Ký hiệu
+GPS là hệ thống định vị toàn cầu.
+4S, là số hiệu chỉnh đo độ cao mặt đắt và mặt chiếu.
+m„ là sai số trung phương vị trí điểm.
+my là sai số trung phương đo độ cao.
+ñ là khoảng cao đều của đường đồng mức.
+ở là độ lệch giới han cho phép.
+¡ là hệ số đặc trưng cho cấp chính xác.
+m là sai số trung phương của một đại lượng đo.
+4v là dung sai của công tác trắc địa.
+Ay là dung sai của công tác xây lắp.
+5
+
+===== TRANG 5 / 32 =====
+TCVN 9398:2012
+
+4 Quy định chung
+
+4.1 Công tác trắc địa là một khâu công việc quan trọng trong toàn bộ các công tác khảo sát, thiết kế,
+thi công xây lắp công trình trên mặt bằng xây dựng. Chúng phải được thực hiện theo một đề cương
+hoặc phương án kỹ thuật đã được phê duyệt và phù hợp với tiền độ chung của các giai đoạn khảo sát,
+thiết kế, xây lắp, đánh giá độ ổn định và bảo trì công trình.
+
+4.2 Công tác trắc địa phục vụ xây dựng công trình gồm 3 giai đoạn chính:
+
+a) Công tác khảo sát trắc địa và địa hình phục vụ thiết kế công trình, bao gồm: Thành lập lưới khống
+chế mặt bằng và độ cao phục vụ cho việc đo vẽ bản đồ tỷ lệ lớn, lập báo cáo nghiên cứu khả thi và
+thiết kế kỹ thuật thi công.
+
+b) Công tác trắc địa phục vụ thi công xây lắp công trình, bao gồm: Thành lập lưới khống chế mặt bằng
+và độ cao phục vụ bồ trí chỉ tiết và thi công xây lắp công trình. Kiểm tra kích thước hình học và căn
+chỉnh các kết cầu công trình, đo vẽ hoàn công công trình.
+
+¢) Công tác trắc địa phục vụ quan trắc biến dạng công trình, bao gồm: thành lập lưới khống chế cơ sở,
+lưới mốc chuẩn và móc kiểm tra nhằm xác định đầy đủ, chính xác các giá trị chuyển dịch phục vụ cho
+việc đánh giá độ ồn định và bảo trì công trình.
+
+Ba công đoạn trên có liên quan mật thiết với nhau và phải được thực hiện theo một trình tự quy định.
+4.3 Nội dung, quy mô của công tác khảo sát đo đạc địa hình, yêu cầu độ chính xác thành lập lưới
+khống chế thi công, quan trắc chuyển dịch công trình và biện pháp, kế hoạch thực hiện can được nêu
+rõ trong đề cương hoặc phương án kỹ thuật và phải được phê duyệt trước khi thi công.
+
+4.4 Toa độ và độ cao dùng để đo đạc khảo sát trắc địa, địa hình, thiết kế, thi công xây lắp công trình
+phải nằm trong củng một hệ thống nhất. Nếu sử dụng hệ tọa độ giả định thì gốc tọa độ phải được chọn
+sao cho tọa độ của tất cả các điểm trên mặt bằng xây dựng đều có dau dương. Nếu sử dụng tọa độ
+quốc gia thì phải sử dụng hệ tọa độ VN - 2000 và kinh tuyến trục được chọn sao cho biến dạng chiều
+dài của các cạnh không vượt quá 1/50 000, nếu vượt quá thì phải tính chuyển . Mặt chiều được chọn
+trong đo đạc xây dựng công trình là mặt có độ cao trung bình của khu vực xây dựng công trình. Khi
+hiệu số độ cao mặt dat và mặt chiều nhỏ hơn 32 m thì có thé bỏ qua số hiệu chỉnh 45, nếu lớn hơn thì
+phải tính số hiệu chỉnh do độ cao.
+
+4.5 Tiêu chuẩn để đánh giá độ chính xác của các đại lượng đo trong xây dựng là sai số trung phương.
+Sai số giới hạn được lấy bằng hai lan sai số trung phương.
+
+4.6 Để phục vụ xây dựng các công trình lớn, phức tạp và các nhà cao tang đơn vi thi công phải lập
+phương án kỹ thuật bao gồm các nội dung chính như sau:
+
+- Giới thiệu chung về công trình, yêu cầu độ chính xác của công tác trắc địa phục vụ thi công xây dựng
+công trình, các tài liệu trắc địa địa hình đã có trong khu vực.
+
+6
+
+===== TRANG 6 / 32 =====
+TCVN 9398:2012
+- Thiết kế lưới khống chế mặt bằng và độ cao, đưa ra các phương án và chọn phương án tối ưu.
+- Tổ chức thực hiện đo đạc.
+- Phương án xử lý số liệu đo đạc.
+- Phương án xử lý các vấn đề phức tạp như căn chỉnh độ phẳng, độ thẳng đứng của các thiết bị, đo
+kiểm tra các khu vực quan trọng...
+- Sơ đồ bb trí và cầu tạo các loại dầu mốc.
+4.7 Trước khi tiền hành các công tác trắc địa trên mặt bằng xây dựng cần nghiên cứu tổng bình đồ
+công trình, kiểm tra các bản vẽ chi tiết sẽ sử dụng cho việc bồ trí các công trình như: khoảng cách giữa
+các trục, khoảng cách tổng thể, tọa độ và độ cao của các điểm và được sự phê duyệt của bộ phận
+giám sát kỹ thuật.
+4.8 Đối với các công trình lớn có dây chuyền công nghệ phức tạp và công trình cao tằng cần phải sử
+dụng các máy móc thiết bị hiện đại có độ chính xác cao như máy toàn đạc điện tử, máy thuỷ chuẩn tự
+cân bằng có bộ đo cực nhỏ và mia invar, máy chiều đứng ...Để thành lập lưới khống chế có thé sử
+dụng công nghệ GPS kết hợp với máy toàn đạc điện tử. Tất cả các thiết bị sử dụng đều phải được
+kiểm tra, kiểm nghiệm và hiệu chỉnh theo đúng các yêu cầu trong tiêu chuẳn hoặc quy phạm chuyên
+ngành trước khi đưa vào sử dụng.
+5 Khảo sát trắc địa địa hình phục vụ thiết kế công trình
+5.1 Đặc điểm và yêu cầu chung về bản đồ tỉ lệ lớn
+5.1.1 Trên khu vực xây dựng hoặc quy hoạch xây dựng thường đo vẽ bản đồ tỉ lệ từ 1: 200; 1: 500 đền
+1:5 000.
+5.1.2 Dựa vào ý nghĩa và mục đích sử dụng bản đồ tỉ lệ lớn có thể phân chia thành hai loại:
+- Bản đồ địa hình tỉ lệ lớn cơ bản: Thành lập theo các quy định chung của cơ quan quản lý Nhà nước
+để giải quyết những nhiệm vụ địa hình cơ bản. Nội dung được thể hiện theo quy định Nhà nước hiện
+hành.
+- Bản đồ địa hình chuyên ngành: Chủ yếu là loại bản đồ địa hình công trình. Loại bản đồ này được
+thành lập dưới dạng bản đồ và mặt cắt có độ chỉ tiết cao, dùng làm tài liệu cơ sở về địa hình, địa vật
+phục vụ cho khảo sát, thiết kế xây dựng và sử dụng công trình.
+5.1.3 Các phương pháp chủ yếu được sử dụng dé thành lập bản đồ địa hình:
+- Do vẽ lập thé và đo vẽ tổng hợp bằng ảnh.
+- Do vẽ trực tiếp ngoài thực địa bằng phương pháp toàn đạc, toàn đạc điện tử hoặc kinh vĩ kết hợp đo
+cao bề mặt.
+
+7
+
+===== TRANG 7 / 32 =====
+TCVN 9398:2012
+- Bản đồ địa hình có thể vẽ trên giấy hoặc thể hiện dưới dạng bản đồ số. Nội dung của bản đồ này
+được lưu giữ dưới dạng tệp dữ liệu về dáng địa hình, địa vật, tọa độ, độ cao.
+5.1.4 Nội dung của ban đồ địa hình tỉ lệ lớn cần thể hiện các yếu tố sau:
+- Đường đồng mức và độ cao của tất cả các điểm đặc trưng, yếu tố địa hình;
+- Nhà cửa và các công trình xây dựng, giao thông, hệ thống thuỷ lợi, đường ống, đường dây cao thé,
+điện thoại, hồ ao, sông ngòi ...và các hiện tượng địa chất quan sát được như các hiện tượng đứt gãy,
+sụt lở, cáctơ ... Mức độ chỉ tiết của bản đồ tuỳ thuộc vào mức độ khái quát hóa theo từng tỉ lệ.
+5.1.5 Độ chính xác, độ chỉ tiết và độ đầy đủ của bản đồ địa hình tỉ lệ lớn được quy định như sau:
+- Độ chính xác của bản đồ địa hình được đặc trưng bởi sai số trung phương tổng hợp của vị trí mặt
+bằng và độ cao của điểm địa vật và địa hình và được quy định là:
+m,=0,3mmxM (đối với khu vực xây dựng);
+m, = 0,4 mm x M (đối với khu vực ít xây dựng);
+Ñ „4 5 41
+
+my trong khoảng từa h đến 2h
+trong do:
+
+ñ là khoảng cao đều của đường đồng mức;
+- Đối với công tác thiết kế, sai số vị trí điểm tương hỗ giữa các địa vật quan trọng không được vượt quá
+0,2 mm x M (M là mẫu số tỷ lệ bản đồ).
+- Độ chỉ tiết của bản đồ địa hình được đặc trưng bởi mức độ đồng dạng của các yếu tố biểu diễn trên
+bản đồ so với hiện trạng của chúng ở trên mặt đất.
+- Bản đồ tỉ lệ càng lớn, mức độ chỉ tiết đòi hỏi càng cao. Sai số do khái quát địa vật rõ nét đối với bản
+đồ tỉ lệ lớn không được vượt quá 0,5 mm x M (M là mẫu số tỷ lệ bản đồ).
+- Độ đầy đủ của bản đồ được đặc trưng bởi mức độ dày đặc của các đối tượng cần đo và có thể biểu
+diễn được trên bản đồ, nó được biểu thị bằng kích thước nhỏ nhất của đối tượng và khoảng cách nhỏ
+nhất giữa các đối tượng ở thực địa can được biểu diễn trên bản đồ.
+5.1.6 Việc lựa chọn tỉ lệ bản đồ để đo vẽ cho khu vực xây dựng được quy định như sau:
+- Tỉ lệ bản đồ địa hình công trình được xác định tuỳ thuộc vào các yếu tố như:
+a) Nhiệm vụ thiết kế phải giải quyết trên bản đồ;
+b) Giai đoạn thiết kế;
+c) Mức độ phức tap của địa vật, địa hình;
+d) Mật độ của các đường ống dây dẫn...
+8
+
+===== TRANG 8 / 32 =====
+TCVN 9398:2012
+Trong đó có tính đến yêu cầu về độ chính xác, độ chỉ tiết và độ đầy đủ của bản đồ, các phương pháp
+thiết kế và bồ trí công trình.
+- Giai đoạn lập luận chứng kinh tế kỹ thuật và thiết kế sơ bộ cần có bản đồ tỉ lệ 1: 10 000, hoặc
+1:5 000.
+Giai đoạn thiết kế quy hoạch chỉ tiết, thiết kế kỹ thuật, cần sử dụng các loại bản đồ sau:
+a) Bản đồ tỉ lệ 1: 5 000, / trong khoảng từ 0,5 m đến 1,0 m được dùng đề thành lập bản đồ cơ sở, tổng
+bình đồ khu vực thành phố, công nghiệp, thiết kế đồ án khu vực xây dựng;
+b) Bản đồ tỉ lệ 1: 2 000, / trong khoảng từ 0,5 m đến 1,0 m được dùng dé thiết kế kỹ thuật công trình
+công nghiệp, dân dụng, thuỷ lợi, hệ thống ống dẫn, bản vẽ thi công tưới tiêu.
+- Giai đoạn thiết kế kỹ thuật thi công can các loại bản đồ sau:
+a) Bản đồ tỉ lệ 1: 1 000, / = 0,5 m được dùng dé thiết kế thi công công trình ở khu vực chưa xây dựng,
+tổng bình đồ khu vực xây dựng thành phó, thiết kế chỉ tiết công trình ngằm, thiết kế quy hoạch, san lắp
+mặt bằng;
+b) Bản đồ tỉ lệ 1: 500, # = 0,5 m được dùng để thiết kế thi công công trình ở thành phố, khu công
+nghiệp, đo vẽ hoàn công các công trình;
+c) Bản đồ tỉ lệ 1: 200, / trong khoảng từ 0,2 m đến 0,5 m được dùng dé thiết kế thi công công trình có
+điện tích nhỏ nhưng đòi hỏi độ chính xác cao, đo vẽ hoàn công công trình.
+5.1.7 Khoảng cao đều của bản đồ địa hình được xác định dựa vào các yếu tb sau:
+- Yêu cầu thiết kế và đặc điểm công trình;
+- Độ chính xác cần thiết về độ cao và độ dốc của công trình;
+- Mức độ phức tạp và độ dốc của địa hình;
+- Trong trường hợp thông thường khoảng cao đều được chọn như sau:
+a) 1 = 0,2m, hoặc ñ = 0,5 m cho tỉ lệ 1: 200 ; 1: 500, ở vùng đồng bằng;
+b) 1 = 0,5 m; cho tỉ lệ 1: 500, 1: 1 000 ở vùng núi;
+c) h trong khoảng từ 0,5 m đến 1,0 m cho tỉ lệ 1: 500, 1: 1 000, ở vùng đồng bằng; 1: 2 000, 1: 5 000 ở
+vùng núi;
+d) 1 = 2,0 m cho tỉ lệ 1: 2 000; 1: 5 000 ở vùng núi.
+5.1.8 Ngoài việc thể hiện nội dung bản đồ trên giấy để mô phỏng hiện trạng bề mặt đất theo các
+phương pháp truyền thống như đã nói ở trên, các nội dung của bản đồ còn được thể hiện dưới dạng
+tệp dữ liệu trong đó các thông tin về mặt đất như tọa độ, độ cao của các điểm khóng chế, điểm chỉ tiết
+địa hình, dia vật được biểu diễn dưới dạng số và thuật toán xử lý chúng dé giải quyết các yêu cầu cụ
+thể. Loại bản đồ này được gọi là bản đồ số.
+
+9
+
+===== TRANG 9 / 32 =====
+TCVN 9398:2012
+
+5.1.9 Để thành lập bản đồ số cần có hai phần chủ yếu:
+
+- Phần cứng gồm các máy toàn đạc điện tử, máy tính điện tử và máy vẽ bản đồ.
+
+- Phan mềm chuyên dùng dé thành lập bản đồ được cài đặt vào máy tính điện tử.
+
+5.1.10 Các số liệu ban đầu dé thành lập bản đồ số có thể được đo đạc trực tiếp trên mặt đắt, thu thập
+dữ liệu bằng phương pháp đo ảnh hoặc đo trên bản đồ.
+
+- Phương pháp đo đạc trực tiếp trên mặt dat dé thu thập dữ liệu về tọa độ, độ cao các điểm chỉ tiết
+bằng máy toàn đạc điện tử tự ghi chép số liệu, sau đó trút vào máy tính để biên vẽ bản đồ bằng các
+phần mềm chuyên dùng. Đây là phương pháp có hiệu quả kinh tế và đạt được độ chính xác cao.
+
+- Phương pháp đo ảnh để thu thập được các dữ liệu ban đầu là phương pháp có hiệu quả kinh tế cao
+nhất. Sau khi chỉnh lý cặp ảnh, tiền hành đo các điểm đặc trưng của địa hình, địa vật, tự động xác định
+tọa độ, độ cao và mã hoá đặc trưng của các điểm đó. Trong máy vi tính các số liệu đặc trưng sẽ được
+xử lý và đưa về hệ tọa độ thống nhất theo yêu cầu. Độ chính xác của bản đồ số gần như phụ thuộc
+hoàn toàn vào độ chính xác của số liệu ban đầu. Vì vậy khi sử dụng phương pháp này thì. độ chính
+xác của bản đồ số phụ thuộc vào độ chính xác đo ảnh và tỷ lệ ảnh.
+
+- Phương pháp đo trên bản đồ thường được sử dụng trong giai đoạn lập luận chứng kinh tế kỹ thuật
+hoặc thiết kế sơ bộ công trình có yêu cầu không cao về độ chính xác thành lập bản đồ. Do vậy có thé
+thành lập bản đồ số dựa vào số liệu đo trên bản đồ địa hình tỷ lệ lớn nhất đã có. Cách làm như vậy gọi
+là số hoá bản đồ.
+
+5.1.11 Hệ thong phan mềm chuyên dùng dé thành lập bản đồ số bao gồm:
+
+- Phần mềm xử lý số liệu lưới khống chế khu vực đo vẽ: Phần mềm này dùng dé xử lý số liệu đo ngoại
+nghiệp, bao gồm giải mã, hiệu chỉnh trị đo, bình sai trạm máy, tự động xắp xếp điểm và thành lập cấu
+trúc số liệu mạng lưới, tính số hiệu chỉnh chiều hình cho các trị đo, tính tọa độ gần đúng cho các điểm,
+tính toán bình sai...
+
+- Phần mềm biên tập đồ họa.
+
+- Các số liệu sau khi đã trút vào máy tính thì căn cứ vào các loại mã của nó có thể tự động hình thành
+bản đồ, nhưng do tính chất phức tạp của bản đồ địa hình, bản đồ mới hình thành không thể tránh khỏi
+sai sót. Do đó cần phải dùng hình thức giao diện giữa người và máy để tiền hành gia công, biên tập.
+Phần mềm biên tập đồ hình bao gồm: hình thành bản đồ, biên tập, chuyển sang máy vẽ bản đồ,
+chuyển sang máy in.
+
+- Phần mềm biên vẽ các ký hiệu và ghi chú trên bản đồ địa hình: Phan mềm nay bảo đảm chế hình và
+vẽ các ký hiệu, đường nét và các kiểu số, kiểu chữ.
+
+- Phần mềm vẽ các đường đồng mức: Căn cứ vào các điểm địa hình tự động nội suy, vẽ đường đồng
+mức và tự động ghi chú độ cao.
+
+10
+
+===== TRANG 10 / 32 =====
+TCVN 9398:2012
+- Phần mềm số hoá bản đồ địa hình: phần mềm nay bảo đảm việc. chuyển bản đồ địa hình tỷ lệ lớn
+qua máy số hoá thành bản đồ số, bao gồm đọc tọa độ điểm các yếu tố của bản đồ, chuyển đồi và lưu
+tọa độ, biểu thị đồ hình, tạo sự thống nhất giữa số liệu đo ở thực địa và số liệu số hoá ban đồ cũ dé
+thành lập bản đồ số.
+5.2 Lưới khống chế đo vẽ bản đồ tỉ lệ lớn
+5.2.1 Cơ sở trắc địa để đo vẽ bản đồ tỉ lệ lớn là lưới trắc địa nhà nước các cấp hạng và lưới khống chế
+đo vẽ. Trên khu vực thành phố và công nghiệp lưới trắc địa được thiết kế phải đảm bảo các chỉ tiêu
+sau:
+- Độ chính xác của mạng lưới khống chế. ở cấp trên phải đảm bảo cho việc tăng dầy cho cấp dưới
+nhằm thoả mãn yêu cầu đo vẽ bản đồ tỉ lệ lớn nhất và các yêu cầu của công tác bồ trí công trình.
+- Mật độ điểm khống chế phải thoả mãn các yêu cầu của tỉ lệ can đo vẽ.
+- Đồi với khu vực nhỏ nên sử dụng hệ tọa độ độc lập (giả định);
+5.2.2 Số cấp hạng của mạng lưới tuỳ thuộc vào diện tích khu vực đo vẽ và được quy định theo Bảng 1,
+hoặc đảm bảo độ chính xác tương đương.
+
+Bảng 1 - Diện tích khu vực đo vẽ và các cấp hạng của mạng lưới khống chế
+Diện tích đo vẽ Khéng chế cơ sở Khéng chế đo vẽ
+km?
+Mat bang Độ cao Mặt bằng Độ cao
+Lớn hơn 200 II, II, IV II, 111, IV
+50 den 200 I, Iv I, 1, Iv
+10 đến 50 1, Iv Tam giác nhỏ, | Thuỷ chuẩn
+5.2.3 Mật độ điểm khống chế gồm các điểm tam giác hạng IV, đường chuyền cấp 1, đường chuyền
+cấp 2, để đo vẽ bản đồ địa hình tỷ lệ 1/1 000 dén 1/2 000 ít nhất là 4 điểm trên 1 km, trung bình từ
+8 điểm đến 12 điểm trên 1 km? để đo vẽ bản đồ tỷ lệ 1/500 mật độ điểm khống chế co thể lên tới từ 15
+điểm trên 1 km? đến 18 điểm trên 1 km? tuỳ theo mức độ xây dựng của khu vực.
+5.2.4 Cơ sở độ cao được xây dựng dưới dạng độ cao hạng II, Ill, IV. Lưới hạng II được thành lập ở
+khu vực rộng, có chu vi lớn hơn 40 km, chiều dài tuyến giữa các điểm nút không lớn hơn 10 km. Lưới
+được tăng dày bằng các tuyến độ cao hạng III. Chiều dài tuyến hạng Ill được bố trí giữa các điểm hạng
+11
+
+===== TRANG 11 / 32 =====
+TCVN 9398:2012
+
+II không được vượt quá 15 km; chiều dài giữa các. điểm nút không vượt quá 5 km. Lưới hang Ill được
+tăng day bằng các tuyến độ cao hạng IV. Chiều dài tuyến bố trí giữa các điểm hạng II và Ill không
+được quá 5 km. Chiều dài tuyến giữa các điểm nút không được quá 2 km đền 3 km. Các điểm hạng IV
+cách nhau từ 400 m đến 500 m ở khu vực xây dựng và 1 km ở khu vực chưa xây dựng.
+
+5.2.5 Lưới khống chế đo vẽ mặt bằng thường được thành lập dưới dạng các tam giác nhỏ, đường
+chuyền kinh vĩ hoặc giao hội góc - cạnh. Đồi với khu vực chưa xây dựng, khi thực hiện đo vẽ bản đồ tỉ
+lệ 1:1 000 và 1:2 000 cần thành lập từ 12 điểm dén 16 điểm khống chế đo vẽ cho 1 km? diện tích. Ở
+những khu vực đã xây dựng cần tiền hành khảo sát thực địa để xác định số lượng điểm khống chế cho
+phù hợp. Sai số vị trí điểm khống chế đo vẽ so với điểm khống chế cơ sở gần nhất không được vượt
+quá 0,1 mm trên bản đồ đối với vùng quang đãng; 0,15 mm trên bản đồ đối với vùng rập rạp. Chiều dài
+cạnh của lưới khống chế đo vẽ có thể thay đổi theo yêu cầu về mật độ điểm và khả năng thông thường
+giữa các điểm khống chế liên quan. Sai số trung bình vị tri mặt bằng của các vật có định, quan trọng so
+với điểm khống chế đo vẽ gần nhất không vượt quá 0,3 mm trên bản đồ; đồi với dia vật không quan
+trọng không vượt quá 0,4 mm trên bản đồ.
+
+5.2.6 Độ cao của các điểm thuộc lưới khống chế đo vẽ thường được xác định bằng phương pháp thuỷ
+chuẩn kĩ thuật dưới dạng đo cao hình học hoặc đo cao lượng giác. Sai số độ cao của điểm khống chế
+đo vẽ so với điểm độ cao cơ sở gần nhất không được vượt quá 1/10 khoảng cao đều ở vùng đồng
+bằng và 1/6 khoảng cao đều ở vùng núi.
+
+5.2.7 Khi đo vẽ ở khu vực đã xây dựng cần sử dụng bản đồ các loại tỉ lệ 1: 200; 1:500; 1:1 000 và sử
+dụng các phương pháp sau đây dé đo vẽ chỉ tiết:
+
+- Phương pháp tọa độ cực;
+
+- Phương pháp giao hội góc, cạnh;
+
+- Phương pháp tọa độ vuông góc.
+
+5.2.8 Khi thực hiện đo vẽ ở khu vực chưa xây dựng cần sử dụng các bản đồ tỉ lệ 1: 500; 1: 1 000;
+1:2 000; 1: 5 000 va sử dụng các phương pháp sau đây dé đo vẽ chi tiết:
+
+- Phương pháp toàn đạc;
+
+- Phương pháp đo cao bề mặt.
+
+5.2.9 Các chỉ tiêu kĩ thuật cụ thể về việc lập lưới khống chế, đo vẽ chỉ tiết và thành lập bản đồ các loại
+tỉ lệ được tham khảo trong các văn bản Nhà nước hiện hành.
+
+6 Lưới khống chế thi công
+
+6.1 Lưới khống chế thi công là một mạng lưới gồm các điểm có tọa độ được xác định chính xác và
+được đánh dấu bằng các mốc kiên có trên mặt bằng xây dựng và được sử dụng làm cơ sở để bố trí
+12
+
+===== TRANG 12 / 32 =====
+TCVN 9398:2012
+các hạng mục công trình từ bản vẽ thiết kế và thực địa. Lưới khống chế thi công được xây dựng sau
+khi đã giải phóng và san lắp mặt bằng.
+
+6.2 Trước khi thiết kế lưới khống chế thi công cần nghiên cứu kỹ bản thuyết minh về nhiệm vụ của
+
+công tác trắc địa, yêu cầu độ chính xác cần thiết đồi với việc bồ trí công trình. Phải nghiên cứu kỹ tổng
+
+mặt bằng công trình để chọn vị trí đặt các mốc khống chế sao cho chúng thuận tiện tối đa trong quá
+
+trình sử dụng và ồn định lâu dài trong suốt quá trình thi công xây lắp công trình.
+
+6.3 Hệ tọa độ của lưới khống chế thi công phải thống nhất với hệ tọa độ đã dùng trong các giai đoạn
+
+khảo sát và thiết kế công trình. Tốt nhất đối với các công trình có qui mô nhỏ hơn 100 ha nên sử dụng
+
+hệ tọa độ giả định, đối với công trình có quy mô lớn phải sử dụng hệ tọa độ nhà nước và phải chọn
+
+kinh tuyến trục hợp lý để độ biến dạng chiều dài không vượt quá 1/50 000 (tức là nhỏ hơn 2 mm trên
+
+100 m), nếu vượt quá thì phải tính chuyển.
+
+6.4 Khi điểm khống chế của lưới đã có trên khu vực xây dựng không đáp ứng được yêu cầu thì có thể
+
+chon tọa độ một điểm và phương vị một cạnh của lưới đã có làm số liệu khởi tính cho lưới khống chế
+
+mặt bằng thi công công trình.
+
+6.5 Tuy thuộc vào mật độ xây dựng các hạng mục công trình và điều kiện trang thiết bị trắc địa của
+
+các đơn vị thi công lưới khống chế phục vụ thi công có thể có các dạng chính như sau:
+
+a) Lưới ô vuông xây dựng: Là một hệ thống lưới gồm các đỉnh tạo nên các hình vuông hoặc các hình
+
+chữ nhật mà cạnh của chúng song song với các trục tọa độ và song song với các trục chính của công
+
+trình. Chiều dài cạnh hình vuông hoặc hình chữ nhật có thể từ 50 m đến 100 m; từ 100 m đến 200 m;
+
+từ 200m đến 400 m.
+
+b) Lưới đường chuyền đa giác;
+
+c) Lưới tam giác đo góc cạnh kết hợp.
+
+6.6 Số bậc phát triển của lưới khóng chế mặt bằng thi công nên bó trí là hai bậc: Bậc một là lưới tam
+
+giác hoặc đường chuyền hạng IV. Bậc hai là lưới đường chuyền cấp 1. Đối với các hạng mục công
+
+trình lớn và đối tượng xây lắp có nhiều cấp chính xác khác nhau có thé phát triển tồi đa là bồn bậc: Bậc
+
+1 là lưới tam giác hoặc đường chuyền hạng IV. Bậc 2 là lưới đường chuyền cấp 1. Bậc 3 là lưới đường
+
+chuyền cấp 2 và bậc 4 là lưới đường chuyền toàn đạc.
+
+6.7 Can cứ vào yêu cầu độ chính xác bố trí công trình để chọn mật độ các điểm của lưới khống chế.
+
+Đồi với các công trình xây dựng công nghiệp mật độ của các điểm nên chọn là 1 điểm trên 2 ha đến 3
+
+ha. Cạnh trung bình của đường chuyền hoặc tam giác từ 200 m đến 300 m. Đối với lưới mặt bằng
+
+phục vụ xây dựng nha cao tang, mật độ các điểm phải dày hơn. Số điểm khống chế mặt bằng tối thiểu
+
+là bồn điểm.
+
+6.8 Lưới khống chế độ cao phục vụ thi công các công trình lớn có diện tích lớn hơn 100 ha được
+
+thành lập bằng phương pháp đo cao hình học với độ chính xác tương đối với thuỷ chuẩn hạng III Nhà
+13
+
+===== TRANG 13 / 32 =====
+TCVN 9398:2012
+nước. Đồi với các mặt bằng xây dựng có diện tích nhỏ hơn 100 ha lưới khống chế độ cao được thành
+lập bằng phương pháp đo cao hình học với độ chính xác tương đương với thuỷ chuẩn hạng IV Nhà
+nước. Lưới độ cao được thành lập dưới dạng tuyến đơn dựa vào ít nhất hai mốc độ cao cấp cao hơn
+hoặc tạo thành các vòng khép kín. Các tuyến độ cao phải được dẫn đi qua tất cả các điểm của lưới
+khống chế mặt bằng. Lưới khống chế mặt bằng và độ cao cần phải được ước tính độ chính xác một
+cách chặt chẽ theo nguyên lý số bình phương nhỏ nhất. Trình tự đánh giá và kết quả đánh giá được
+nêu trong đề cương hoặc phương án kỹ thuật và phải được phê duyệt trước khi thi công.
+6.9 Đặc trưng về độ chính xác của lưới khống chế mặt bằng và độ cao phục vụ xây lắp công trình
+được ghi trong Bảng 2; các mốc phải được đặt ở vị trí thuận lợi cho việc đặt máy và thao tác đo đạc và
+được bảo quản lâu dài để sử dụng trong suốt một thời gian thi công xây lắp cũng như sửa chữa và mở
+rộng sau này. Khi đặt mốc nên tránh các vị trí có điều kiện địa chất không ồn định, các vi trí yêu cầu
+các thiết bị có tải trọng động lớn, các vị trí gần các nguồn nhiệt. Vị tri các mốc của lưới khống chế mặt
+bằng phục vụ thi công phải được đánh dầu trên tổng bình đồ xây dựng.
+Bảng 2 - Sai số trung phương khi lập lưới khống chế thi công
+xác Đo góc Đo cạnh | Độ chênh cao
+©) (tie) trén 1 km
+FEE
+mm
+1 Xí nghiệp, các cụm nhà và công trình xây dựng 3 1/25 000 4
+trên phạm vi lớn hơn 100 ha, từng ngôi nhà và
+công trình riêng biệt trên diện tích lớn hơn 10 ha.
+2 Xí nghiệp, các cụm nhà và công trình xây dựng 5 1/10 000
+trên phạm vi nhỏ hơn 100 ha, từng ngôi nhà và
+công trình riêng biệt trên diện tích từ 1 ha đến 10
+ha
+3 Nhà và công trình xây dựng trên diện tích nhỏ hơn 10 1/5 000 10
+1 ha, đường trên mặt đắt và các đường ống ngằm
+trong phạm vi xây dựng.
+
+4 Đường trên mặt đất và các đường ống ngằm 30 1/2 000 15
+mm
+6.10 Việc thành lập lưới khống chế mặt bằng phục vụ thi công xây lắp công trình là trách nhiệm của
+Chủ đầu tư. Việc thành lập lưới phải được hoàn thành và bàn giao cho các nhà thầu chậm nhất là hai
+
+tuần trước khi khởi công xây dựng công trình. Hồ sơ bàn giao gồm:
+
+- Sơ đồ lưới khống chế mặt bằng và lưới khóng chế độ cao (vẽ trên nền tổng bình đồ mặt bằng của
+công trình xây dựng);
+
+- Kết quả tính bình sai lưới khống chế mặt bằng;
+
+14
+
+===== TRANG 14 / 32 =====
+TCVN 9398:2012
+- Kết quả tính bình sai lưới khống chế độ cao;
+- Bảng thống kê tọa độ và độ cao của các điểm trong lưới;
+Sơ họa vị trí các mốc của lưới khống chế khi bàn giao phải lập biên bản và có chữ ký của cả bên giao
+và bên nhận.
+7 Công tác bố trí công trình
+7.1 Công tác bb trí công trình nhằm mục đích đảm bảo cho các hạng mục oông trình hoặc các kết cầu
+riêng biệt được xây dựng đúng theo vị trí thiết kế. Tuy theo điều kiện cụ thé và lưới khống chế phục vụ
+bb trí và trang thiết bị của nhà thầu, có thể sử dụng phương pháp tọa độ vuông góc, phương pháp toa
+độ cực, phương pháp đường chuyền toàn đạc, phương pháp giao hội hoặc phương pháp tam giác
+khép kín để thực hiện việc bố trí công trình. Các sơ đồ của lưới bd trí công trình trên mặt bằng xây
+dựng và nhà cao tang có thể tham khảo Phụ lục A.
+7.2 Trước khi tiền hành bồ trí công trình cần phải kiểm tra lại các mốc của lưới khống chế mặt bằng và
+độ cao.
+7.3 Trình tự bồ trí công trình cần được tiền hành theo các nội dung sau:
+- Lập lưới bồ trí trục công trình;
+- Định vị công trình;
+- Chuyển trục công trình ra thực địa và giác móng công trình;
+- Bố trí các trục phụ của công trình dựa trên cơ sở các trục chính đã được bố trí;
+- Bồ trí chi tiết các trục dọc và trục ngang của các hạng mục công trình;
+- Chuyển trục và độ cao lên các tang xây lắp;
+- B trí các điểm chi tiết của công trình dựa vào bản vẽ thiết kề;
+- Đo vẽ hoàn công.
+7.4 Tổ chức thiết kế can giao cho Nhà thầu các bản vẽ cần thiết, gồm:
+- Bản vẽ tổng mặt bằng công trình;
+- Bản vẽ bồ trí các trục chính của công trình, có ghi chú kích thước, tọa độ giao điểm giữa các trục;
+- Bản vẽ móng của công trình, các trục móng kích thước móng và độ sâu;
+- Bản vẽ mặt cắt công trình, có các kích thước và độ cao cần thiết.
+Trước khi tiền hành bồ trí công trình phal kiểm tra can thận các sé liệu thiết kế giữa các bản vẽ chỉ tiết
+so với mặt bằng tổng thể, kích thước từng phan và kích thước toàn thể. Mọi sai lệch can phải được
+báo cáo cho cơ quan thiết kế để xem xét và chỉnh sửa.
+7.5 Yêu cầu độ chính xác bb trí công trình tuỳ thuộc vào:
+
+15
+
+===== TRANG 15 / 32 =====
+TCVN 9398:2012
+- Kích thước của hạng mục;
+- Vật liệu xây dựng;
+- Tính chất;
+- Hình thức kết cấu;
+- Trình tự và phương pháp thi công xây lắp.
+7.6 Để bố trí công trình can phải sử dụng các máy móc, thiết bị có độ chính xác phù hợp. Tính năng kỹ
+thuật của một số máy móc thông dụng được nêu trong Phụ lục D và Phụ lục E. Trước khi đưa vào sử
+dụng các máy cần phải được kiểm nghiệm theo đúng yêu cầu của quy phạm và tiêu chuẩn hiện hành .
+7.7 Các sai số đo đạc khi lập lưới bố trí trục ở bên ngoài và bên trong toà nhà hoặc công trình và sai
+số của các công tác bồ trí khác được chia thành sáu cấp chính xác tuỳ thuộc vào chiều cao và số tng
+của toà nhà, các đặc điểm về kết cầu, vật liệu xây dựng, trình tự và phương pháp thi công công trình.
+Sai số trung phương cho phép khi lập lưới bồ trí công trình được nêu ở Bảng 3.
+Bảng 3 - Sai số trung phương khi lập lưới bố trí công trình
+Cấp Đặc điểm Sai số trung phương
+chính của các toà nhà, khi lập các lưới bb trí trục và sai số
+xác các công trình và của các công tác bồ trí khác
+kết cầu xây dựng
+Đo Xác định chênh
+góc cao tại trạm máy
+g mm
+
+Cấp 1 | Các kết cấu kim loại có phay các bề 1/15 000 5 1
+
+mặt tiếp xúc; các ket cau bê tông cot
+
+thép được lắp ghép băng phương
+
+pháp tự định vị tại các điểm chịu lực;
+
+các công trình cao từ 100 m đến 120 m
+
+hoặc có khẩu độ từ 30 m đến 36 m.
+Cấp 2 | Các toà nhà cao hơn 15 tang; các 1/10 000 10 2
+
+công trình có chiều cao từ 60 đền 100
+
+m hoặc có khẩu độ từ 18 m đến 30 m.
+Cép 3 | Các toà nhà cao từ 5 tằng đền 15 tang; 1/5 000 20 25
+
+các công trình có chiều cao từ 15m
+
+đến 60 m hoặc có khẩu độ dưới 18 m.
+Cấp 4 | Các toà nhà cao dưới 5 tầng; các công 1/5 000 30 3
+
+trình có chiêu cao nhỏ hơn 15 mhoặc
+
+có khẩu độ nhỏ hơn 6m.
+Cấp 5. | Các kết cầu gỗ, các lưới công trình, 1/2 000 30 5
+
+các đường xá, các đường dân ngâm.
+Cấp 6 | Các công trình bằng đắt trong đó kể cả 1/1000 45 10
+
+công tác quy hoạch đứng.
+16
+
+===== TRANG 16 / 32 =====
+TCVN 9398:2012
+7.8 Sai số chuyển tọa độ và độ cao từ các điểm của lưới trục cơ sở lên các tang thi công được nêu ở
+Bảng 4.
+7.9 Để chuyển tọa độ từ mặt bàng cơ sở lên các mặt bằng lắp ráp ở trên cao có thể sử dụng các
+phương pháp:
+- Sử dụng máy kinh vĩ. đối với các nhà nhỏ hơn 5 tang;
+- Sử dụng máy chiều đứng; phương pháp tọa độ bằng máy toàn đạc điện tử;
+- Sử dụng công nghệ GPS.
+Việc chuyển tọa độ từ mặt bằng cơ sở lên các mặt bằng lắp ráp ít nhất phải được thực hiện từ ba điểm
+tạo thành một góc vuông hoặc một đường thẳng để có thể kiểm tra kết quả chuyển tọa độ. Nếu sử
+dụng các loại máy chiều đứng thì phải dé các lỗ chờ có kích thước lớn hơn hoặc bằng 150 mm x 150
+mm. Tại mỗi vị trí phải thực hiện việc chiều từ ba hoặc bồn vị trí ban độ ngang của máy cách nhau 120°
+hoặc 90° và lấy vị trí trung bình của các Ian chiếu (trọng tâm của tam giác đều hoặc của hình vuông)
+tạo thành được chọn làm vị trí cuối cùng để sử dụng. Nếu Đơn vị thi công có máy kinh vĩ điện tử và
+kính ngắm vuông góc thì có thé sử dụng chúng như máy chiều đứng dé chuyển tọa độ từ mặt bằng cơ
+sở lên các mặt bằng lắp ráp ở trên cao.
+7.10 Trong quá trình thi công cần phải tiền hành kiểm tra độ chính xác của công tác bb trí công trình
+dựa vào các điểm cơ sở trắc địa. Các độ lệch giới hạn cho phép. của công tác bố trí công trình được
+tính bằng công thức:
+Sd =txm G)
+trong đó:
+£ có giá trị bằng 2; 2,5; 3 và được án định trước trong bản thiết kế xây dựng hoặc thiết kế các
+công tác trắc địa, tuy thuộc vào tinh chất quan trọng và mức độ phức tạp của từng công trình.
+m là sai số trung phương được lay theo Bang 3 và Bảng 4.
+Bảng 4 - Sai số trung phương chuyển trục và độ cao lên các mặt bằng xây lắp
+Các sai số Chiêu cao mặt bằng thi công xây dựng
+m
+Nhỏ hơn 15 15 đến dưới | 60 đến dưới | 100 đến dưới
+60 100 120
+Sai số trung phương chuyển các
+điểm, các trục theo phương thẳng 2 2,5 3
+đứng, mm
+Sai số trung phương xác định độ cao
+trên mặt bằng thi công xây dựng so 3 4 5 5
+với mặt bằng gốc, mm
+17
+
+===== TRANG 17 / 32 =====
+TCVN 9398:2012
+7.11 Khi biết được giá trị dung sai xây lắp cho phép của từng hạng mục công trình có thể xác định
+được dung sai của công tác trắc địa theo nguyên tắc cân bằng sai số:
+- 4
+Au= Z1 2)
+1d V3
+trong do:
+4u là dung sai của công tác trắc địa;
+4w là dung sai của công tác xây lắp.
+Số 3 là chỉ nguồn sai số trong xây lắp: sai số do trắc địa, sai số do chế tạo, thi công cầu kiện, sai số do
+biến dạng.
+Đồi với các công trình xây dựng đòi hỏi độ chính xác cao cần có phương án riêng để tính dung sai về
+công tác trắc địa.
+8 Kiểm tra kích thước hình học và đo vẽ hoàn công
+8.1 Trong quá trình thi công xây lắp công trình các Nhà thầu (Tổng thầu và các Nhà thầu phụ) phải tiền
+hành đo đạc kiểm tra vị trí và kích thước hình học của các hạng mục xây dựng. Đây là công đoạn bắt
+buộc của quá trình xây dựng và kiểm tra chất lượng sản phẩm.
+8.2 Công tác kiểm tra các yếu tố hình học bao gồm:
+a) Kiểm tra vị trí của các hạng mục, các kết cấu riêng biệt và hệ thống kỹ thuật so với các tham số
+trong hồ sơ thiết kế.
+b) Do vẽ hoàn công vị trí mặt bằng, độ cao, kích thước hình học của các hạng mục, các kết cầu sau khi
+đã hoàn thành giai đoạn lắp ráp.
+c) Do vẽ hoàn công hệ thống kỹ thuật ngằm (thực hiện trước khi lắp).
+8.3 Việc đo đạc kiểm tra và đo vẽ hoàn công phải được thực hiện bằng các máy móc, thiết bị có độ
+chính xác tương đương với các thiết bị dùng trong giai đoạn thi công. Tất cả máy móc này đều phải
+được kiểm nghiệm đảm bảo yêu cầu về chất lượng theo yêu cầu của các quy phạm, tiêu chuẩn hiện
+hành.
+8.4 Các yếu tố cần kiểm tra trong quá trình thi công xây lắp, phương pháp, trình tự và khối lượng công
+tác kiểm tra phải được xác định trước trong phương án kỹ thuật thi công các công tác trắc địa phục vụ
+xây lắp công trình.
+8.5 Danh sách các hạng mục quan trọng, các kết cầu và các khu vực cần đo vẽ hoàn công khi kiểm tra
+nghiệm thu do đơn vị, cơ quan có thẳm quyền xác định.
+8.6 Vị trí mặt bằng và độ cao của các hạng mục, các cấu kiện hoặc của các phần của toà nhà hay
+công trình và độ thẳng đứng của chúng, vị trí các bu lông neo, các bản mã cần phải được xác định từ
+18
+
+===== TRANG 18 / 32 =====
+TCVN 9398:2012
+các điểm cơ sở bồ trí hoặc các điểm định hướng nội bộ. Trước khi tiền hành công việc cần kiểm tra lại
+xem các điểm này có bị xê dịch hay không.
+
+8.7 Độ chính xác của công tác đo đạc kiểm tra kích thước hình học và đo vẽ hoàn công không được
+
+lớn hơn 20 % dung sai cho phép của kích thước hình học được cho trong các tiêu chuẩn chuyên
+
+ngành hoặc trong hồ sơ thiết kế. Trong trường hợp công trình được xây dựng theo các tài liệu thiết kề
+
+có các dung sai xây dựng và ché tạo không có trong quy phạm hoặc tiêu chuẩn chuyên ngành thì trong
+
+phương án kỹ thuật về công tác trắc địa cần phải tiền hành ước tính độ chính xác theo các công thức
+
+có cơ sở khoa học.
+
+8.8 Kết quả kiểm tra kích thước hình học của các công trình và đo vẽ hoàn công phải được đưa vào
+
+hồ sơ lưu trữ phục vụ cho công tác nghiệm thu, sử dụng và bảo trì công trình.
+
+8.9 Dựa vào kết quả đo vẽ hoàn công công trình và hệ thống công trình ngằm của công trình để lập
+
+bản vẽ hoàn công. Tỷ lệ của bản vẽ hoàn công được lấy bằng tỷ lệ của tổng bình đồ hoặc tỷ lệ bản vẽ
+
+thi công tương ứng. Trong trường hợp cần thiết phải lập bảng kê tọa độ của các yếu tố của công trình.
+
+8.10 Các sơ đồ và các bản vẽ hoàn công lập ra theo kết quả đo vẽ hoàn công sẽ được sử dụng trong
+
+quá trình bàn giao và nghiệm thu công trình và là một phần của hồ sơ tài liệu bắt buộc phải có để đánh
+
+giá chất lượng xây lắp công trình.
+
+8.11 Dung sai cho phép về trắc địa khi lắp ráp các kết cầu bê tông cốt thép đúc sẵn nhà công nghiệp
+
+và dung sai cho phép khi lắp ghép các kết cầu thép nêu ở Phụ lục B và Phụ lục C.
+
+9 Công tác đo lún, đo chuyển dịch nhà và công trình
+
+9.1 Những quy định chung về đo độ lún và đo chuyển dịch
+
+9.1.1 Việc đo độ lún, đo chuyển dịch nền nhà và công trình, can được tiền hành theo một chương trình
+
+cụ thể nhằm các mục đích sau:
+
+- Xác định các giá trị độ lún, độ chuyển dịch tuyệt đối và tương đối của nền nhà và công trình so với
+
+các giá trị tính toán theo thiết kế của chúng;
+
+- Cung cấp thông tin nhằm tìm ra những nguyên nhân gây lún, chuyển dịch và mức độ nguy hiểm của
+
+chúng đồi với quá trình làm việc bình thường của nhà và công trình, trên cơ sở đó đơn vị thiết kế đưa
+
+ra các giải pháp phù hợp nhằm phòng ngừa các sự cố có thể xảy ra;
+
+- Cung cấp số liệu để xác định các thông số đặc trưng cần thiết về độ ổn định của nền và công trình;
+
+- Làm chính xác thêm các số liệu đặc trưng cho tính chất cơ lý của nền đất;
+
+- Dùng làm số liệu kiểm tra các phương pháp tính toán, xác định các giá trị độ lún, độ chuyển dịch giới
+
+hạn cho phép đối với các loại nền dat và các công trình khác nhau.
+
+9.1.2 Công việc đo độ lún và đo chuyển dịch nền móng của nhà và công trình được tiền hành trong
+
+thời gian xây dựng và sử dụng cho đến khi đạt được độ ổn định về độ lún và chuyển dịch. Việc đo
+19
+
+===== TRANG 19 / 32 =====
+TCVN 9398:2012
+chuyển dịch trong thời gian sử dụng công trình còn được tiền hành khi phát hiện thầy công trình xuất
+hiện các vết nứt lớn hoặc có sự thay đồi rõ nét về điều kiện làm việc của nhà và công trình.
+9.1.3 Trong quá trình đo chuyển dịch nhà và công trình cần phải xác định độc lập hoặc đồng thời các
+đại lượng sau:
+- Chuyển dịch thẳng đứng: độ lún, độ võng, độ trồi;
+- Chuyển dịch ngang: độ chuyển dịch;
+- Độ nghiêng;
+- Vết nứt.
+9.1.4 Việc đo độ lún và chuyển dịch công trình được tiền hành theo các trình tự sau:
+- Lập đề cương hoặc phương án kỹ thuật;
+- Lựa chọn thiết kế cấu tạo các loại mốc chuẩn và mốc quan trắc;
+- Phân bố vị trí đặt mốc cơ sở mặt bằng va độ cao;
+- Gắn các mốc đo lún và đo chuyển dịch cho nhà và công trình;
+- Sử dụng máy đo các giá trị độ lún, độ chuyển dịch ngang và độ nghiêng;
+- Tính toán xử lý số liệu và phân tích kết quả đo.
+9.1.5 Các phương pháp đo độ lún, độ chuyển dịch ngang và độ nghiêng nêu trong đề cương hoặc
+phương án kỹ thuật, được chọn tuỳ thuộc vào yêu cầu độ chính xác của phép đo, đặc điểm cấu tạo
+của móng, đặc điểm về địa chất công trình, địa chất thuỷ văn của đất nền, khả năng ứng dụng và hiệu
+quả kinh tế của phương pháp.
+Bảng 5 - Sai số cho phép đo chuyển dịch ngang đói với các giai đoạn
+xây dựng và sử dụng công trình
+
+Đơn vị tính bằng milimét
+
+Giá trị tính toán độ lún và độ chuyên Giai đoạn xây dựng Giai đoạn sử dụng
+dịch ngang dự tính theo thiết kế công trình
+Loại đất nền Loại dat nền
+[ Cát | Đấtsét | Cát | Đấtsét |
+
+20
+
+===== TRANG 20 / 32 =====
+TCVN 9398:2012
+Bảng 6 - Sai số giới hạn đo chuyển dịch và độ chính xác của các cấp đo
+Đơn vị tính bằng milimét
+Độ chính xác Sai số giới hạn đo chuyển dịch
+của các cấp đo
+CHÚ THÍCH:
+- Cấp 1: Do độ lún và độ chuyển dịch ngang của nhà và công trình được xây dựng trên nền đất cứng và nửa cứng, thời gian
+sử dụng trên 50 năm, các công trình quan trọng, các công trình có ý nghĩa đặc biệt.
+- Cấp 2: Do độ lún và độ chuyển dịch ngang của nhà và công trình được xây dựng trên nền cát, đất sét và trên nền dat có
+tính biến dạng cao, các công trình được đo để xác định nguyên nhân hư hỏng.
+- Cấp 3: Do độ lún và độ chuyển dịch ngang của nha và công trình được xây dựng trên nền đắt đắp, nền đất yếu và trên nền
+đắt bị nén mạnh.
+9.1.6 Việc xác định sơ bộ độ chính xác đo độ lún, đo chuyển dịch ngang được thực hiện phù hợp với
+các giá trị độ lún và độ chuyển dịch ngang dự tính theo thiết kế được nêu ở Bảng 5. Dựa trên cơ sở sai
+số cho phép đo chuyển dịch ngang ở Bảng 5 để xác định độ chính xác của các cấp đo; khi không có
+các số liệu dự tính theo thiết kế thì việc lựa chọn các cấp đo dựa vào đặc điểm của nền đất và tam
+quan trọng của công trình theo Bảng 6;
+9.2 Công tác chuẩn bị trước khi đo
+9.2.1 Công tác chuẩn bị trước khi đo độ lún bằng phương pháp đo cao hình học được nêu trong
+TCVN 9360:2012.
+9.2.2 Công tác chuẩn bị trước khi đo chuyển dịch ngang và đo nghiêng: Trước khi đo chuyển dịch
+ngang và đo nghiêng nhà hoặc công trình cần xây dựng lưới các mốc chuẩn. Các mốc chuẩn này
+được coi là ồn định so với mặt phẳng nằm ngang của các chân cột và có thé sử dụng các điểm này dé
+đặt chân máy chiếu ngược theo từng độ cao của các điểm cần đo. So sánh sự chênh lệch giữa các
+khoảng cách ngang của các điểm đo sẽ xác định được giá trị chuyển dịch ngang hoặc độ nghiêng của
+công trình theo từng hướng ở các độ cao khác nhau.
+9.2.3 Trong quá trình đo chuyển dịch ngang và đo nghiêng cần phải tiền hành đánh giá độ ổn định của
+lưới mốc chuẩn theo mỗi chu kỳ.
+9.3 Các phương pháp đo độ lún, đo chuyển dịch nhà và công trình
+9.3.1 Các phương pháp đo độ lún công trình
+9.3.1.1 Khi đo độ lún của nhà và công trình có thé sử dụng một trong các phương pháp sau:
+- Phương pháp đo cao hình học;
+21
+
+===== TRANG 21 / 32 =====
+TCVN 9398:2012
+
+- Phương pháp đo cao lượng giác;
+
+- Phương pháp đo cao thuỷ tĩnh;
+
+- Phương pháp chụp ảnh.
+
+9.3.1.2 Phương pháp sử dụng phổ biến để đo độ lún nhà và công trình là phương pháp đo cao hình
+học. Quy trình kỹ thuật để đo và xác định độ lún theo phương pháp này đã được nêu trong
+TCVN 9360:2012.
+
+9.3.2 Các phương pháp đo chuyển dịch ngang của công trình.
+
+9.3.2.1 Để đo chuyển dịch ngang nhà và công trình có thể sử dụng riêng biệt một trong các phương
+pháp sau hoặc sử dụng kết hợp một số phương pháp sau:
+
+- Phương pháp hướng chuẩn;
+
+- Phương pháp đo góc - cạnh.
+
+9.3.2.2 Po chuyển dịch ngang theo phương pháp hướng chuẩn thực chất là đo khoảng cách từ các
+điểm kiểm tra đến mặt phẳng thẳng đứng (hướng chuẩn) tại các thời điểm khác nhau bằng phương
+pháp đo góc nhỏ hoặc phương pháp bảng ngắm di động.
+
+9.3.2.3 Trong trường hợp không thé thành lập được hướng chuẩn dé quan trắc chuyển dịch ngang can
+sử dụng một số phương pháp sau:
+
+- Phương pháp giao hội góc, giao hội cạnh hoặc giao hội góc - cạnh;
+
+- Phương pháp tam giác;
+
+- Phương pháp đường chuyền đa giác.
+
+9.3.2.4 Sai số giới hạn cho phép khi đo chuyển dịch ngang được quy định như sau: + 1 mm đồi với
+công trình xây dựng trên nền đá gốc; + 3 mm đồi với công trình xây dựng trên nền đắt cát, dat sét và
+các loại đắt đá chịu nén khác; + 5 mm đồi với các loại đập đất đá chịu áp lực cao; + 10 mm đồi với
+công trình xây dựng trên nền đắt đắp, dat bùn chịu nén kém và + 15 mm đồi với công trình bằng đất
+đắp.
+
+- Yêu cầu độ chính xác khi đo chuyển dịch ngang đối với các công trình đặc biệt được tính toán riêng
+trên cơ sở thiết kế kỹ thuật và công nghệ của từng công trình;
+
+- Trong trường hợp chưa xác định trước được hướng chuyển dịch của công trình thì phải quan trắc
+theo hai hướng vuông góc với nhau.
+
+9.3.3 Phương pháp đo độ nghiêng công trình
+
+9.3.3.1 Độ chính xác cần thiết khi đo độ nghiêng công trình phụ thuộc vào loại công trình, chiều cao,
+chiều dài của công trình. Sai số cho phép đo độ nghiêng của các công trình không được vượt quá quy
+định sau đây:
+
+22
+
+===== TRANG 22 / 32 =====
+TCVN 9398:2012
+- Đồi với nền bệ móng lớn, máy liên hợp: 0,000 01 x L
+- Đối với tường của các công trình công nghiệp và dân dụng : 0,000 1 x H;
+- Đồi với ống khói, tháp, cột cao:0,000 5 x H.
+trong đó:
+
+L là chiều dài của nền bệ;
+là chiều cao của công trình.
+9.3.3.2 Tuỳ theo điều kiện cụ thể của khu vực, chiều cao của công trình và độ chính xác cần thiết để
+lựa chọn các phương pháp đo độ nghiêng sau đây:
+- Phương pháp tọa độ;
+- Phương pháp đo góc ngang;
+- Phương pháp đo góc nhỏ;
+- Phương pháp chiều đứng;
+- Phương pháp đo khoảng thiên đỉnh nhỏ.
+9.3.4 Đo vết nứt công trình
+9.3.4.1 Việc đo có hệ thống sự phát triển của các vết nứt ngay từ khi chúng xuất hiện trên kết cầu nhà
+và công trình nhằm đánh giá các đặc trưng về biến dạng và mức độ nguy hiểm đối với quá trình sử
+dụng công trình.
+9.3.4.2 Khi đo vết nứt theo chiều dài cần tiền hành theo các chu kỳ cố định, đánh dấu vị trí và ngày
+quan trắc.
+9.3.4.3 Khi đo vết nứt theo chiều rộng cần phải sử dụng các dụng cụ hoặc thiết bị chuyên dùng, đánh
+dầu vị trí và ngày quan trắc của các chu kỳ.
+9.3.4.4 Khi chiều rộng của vết nứt lớn hơn 1 mm cần phải đo chiều sâu của nó.
+10 Ghi chép lưu trữ hồ sơ
+10.1 Các tài liệu đo đạc, tính toán và bản đồ địa hình tỷ lệ lớn phục vụ cho quy hoạch thiết kế kỹ thuật
+thi công xây lắp công trình phải được lưu trữ dưới dạng báo cáo kỹ thuật, bản đồ địa hình in trên giấy
+và bản đồ số.
+10.2 Các tài liệu hồ sơ về lưới khống chế thi công, lưới bồ trí công trình và các công tác trắc địa công
+trình khác phục vụ cho thi công, xây lắp, đo vẽ hoàn công và quan trắc chuyển dịch công trình phải
+được tổng hợp, báo cáo nghiệm thu, bàn giao cho chủ đầu tư lưu giữ trong quá trình xây dựng và sử
+dụng công trình.
+23
+
+===== TRANG 23 / 32 =====
+TCVN 9398:2012
+mo
+Các sơ đồ lưới bồ tri công trình trên mặt bằng xây dựng
+"`ZZ#ZZZZØ
+\ y 7
+\ 2 Z
+
+===== TRANG 24 / 32 =====
+PN
+WH;
+ZZ
+a oT
+ds
+NL] l
+
+===== TRANG 25 / 32 =====
+TCVN 9398:2012
+Phụ lục B
+(Tham khảo)
+Dung sai cho phép về trắc địa khi lắp ghép các kết cau bê tông
+cốt thép đúc sẵn nhà công nghiệp
+Bảng B.1- Các dung sai cho phép về trắc địa khi lắp ghép các kết cầu
+bê tông cốt thép đúc sẵn nhà công nghiệp
+Dung sai
+mm
+Nhà một tầng | Nhà nhieu tang
+
+Độ lệch của trục chân móng đồi với trục thiết kế
+Sai về độ cao của đáy móng đối với thiết kế
+Sai về kích thước bên trong: Chiều dài, chiều rộng của chân 20 15
+móng.
+Sai về vị trí các bu lông giằng trên mặt bằng -„ o0. l0. |
+Sai về độ cao ở đầu trên bu lông giằng so với thiết kế
+Độ lệch của đường tim cột tại tiết diện dưới so với trục bồ trí
+Độ lệch của đường tim cột so với đường thẳng đứng ở tiết diện
+trên, khi chiều cao # của cột:
+
+Trên 15m 0,001 x H nhwng
+
+nhỏ hơn 35 mm
+Sai về độ cao ở đỉnh cột của mỗi đợt lắp (12+12xn)
+n là thứ tự của
+đợt lắp
+
+Sai về độ cao các mặt tựa khác trên cột như của gối ty, của
+công son hàn vào cột trước khi lắp cột, nều chiều cao cột:
+
+Dưới 10m 15 10
+
+Trên 10m 25 15
+26
+
+===== TRANG 26 / 32 =====
+TCVN 9398:2012
+Bảng B.1- Các dung sai cho phép về trắc địa khi lắp ghép các kết cầu
+bê tông cốt thép đúc sẵn nhà công nghiệp (két thúc)
+Dung sai
+mm
+Sai về độ cao của gồi ty của công son hàn sau khi lắp cột, néu
+chiều cao cột:
+Dưới 10m 5 5
+Trên 10m 8 8
+Độ lệch trục panen tường vách ở tiết diện dưới đối với trục thiết 5 5
+ch HS HH
+Độ nghiêng của mặt phẳng panen tường vách so với đường 5 5
+mm
+Chênh lệch về độ cao mặt tựa của panen tường và vách trên 10
+ST mg
+Sai về độ cao trên mặt dam cầu chạy tai hai cột gần nhau trên 15
+mu
+Sai về khoảng cách giữa các trục của đường ray trong một khẩu 10
+mm
+Ss ey ae ney ||
+Sai lệch của trục đường ray so với đường thẳng trên một đoạn 15 15
+nơi U
+Sai về độ cao của đỉnh đường ray trong mặt cắt ngang khẩu độ:
+Tại gối tựa.
+Tại giữa khẩu độ. 15
+20
+Sai lệch về độ cao đường ray đặt trên các cột lân cận trong 0,001xZ
+cùng một hàng (L là khoảng cách giữa các cột). nhưng không
+quá 10 mm
+Sai lệch tương hỗ của các đầu đường ray kề nhau theo chiều 2
+= TE Net
+27
+
+===== TRANG 27 / 32 =====
+TCVN 9398:2012
+Phụ lục C
+(Tham khảo)
+Dung sai cho phép về trắc địa khi lắp ghép các kết cau thép
+Bảng C.1 - Các dung sai cho phép về trắc địa khi lắp ghép các kết cầu thép
+Dung sai
+mm
+LL RR EE
+Độ lệch của trục so với đường thang đứng, ở tiết diện trên,
+khi cột:
+Dưới hoặc bằng 15m 15
+Trên 15m 1/1 000 chiều cao
+của cột, nhưng
+không
+lớn quá 35 mm
+Độ võng của cột (độ cong của cột). 1/750 chiều cao
+của cột, nhưng
+không quá 15 mm
+SnmsissomgwaoacisvismemgM' EL ER
+Geman |_| |
+Độ cong (võng) của các đoạn thẳng trong cánh chịu nén so 1/750 chiều dài
+với mặt phẳng của dàn hoặc dam. đoạn, nhưng
+không quá 15 mm
+Sai phạm về khoảng cách giữa hai đường trục của hai dàn 15
+mm
+[San we wh gaa | 5 | |
+28
+
+===== TRANG 28 / 32 =====
+TCVN 9398:2012
+Phụ lục D
+(Tham khảo)
+Một số máy toàn đạc điện tử thông dụng ở Việt Nam
+D.1 Các máy toàn đạc điện tử độ chính xác trung bình sử dụng dé bó trí công trình ra thực địa, đo
+kiểm tra vị trí và kích thước hình học, đo vẽ hoàn công.
+Bảng D.1 - Các máy toàn đạc điện tử độ chính xác trung bình
+máy và nước lượng
+chế tạo Độ Sai số Saisố | Tầm hoạt kích
+phân trung trung động xa thước
+giải phương phương nhất
+bàn độ đo góc đo cạnh m kg
+ngang/đứng
+“ ae
+TC 307 Leica 1 77 - Ché do 3000 TCR 307 có
+Thụy Sỹ chuẩn: | 44 với che do do
+#+(2mm+ | thời tiết gương dưới
+2 ppm) trung binh 80 m va do
+- Chế độ lazer có
+nhanh: gương xấp
+(Emm + xỉ 5 000 m
+2 ppm)
+TC 305 Leica 1 5/5 + (2mm + 3000
+Thụy Sỹ 2PPm) | đối với
++(65 mm + | thời tiết
+2 ppm) trung binh
+SET5E Sokkia 1 5/5 +5 mm + 2000 55 Mới san xuất
+Ar Bà 3 ppm) Power
+(F,S) Nhật Bản 3gương | 236x193x SE1100 có
+150 h x
+tinh nang
+tương tự
+DTM Nikon 1 5/5 +(5 mm + 2000 3,5
+350 | Nhật Bản 5Ppm) 156 x 160 x
+350
+GTS6E | Topcon 1 5/5 +3 mm + 2000 5,9
+Nhật Bản 3 ppm) 3 gương
+29
+
+===== TRANG 29 / 32 =====
+TCVN 9398:2012
+D.2 Các máy toàn đạc điện tử độ chính xác cao sử dụng dé đo các lưới khống chế mặt bằng
+Bảng D.2 - Các máy toàn đạc điện tử chính xác
+Tên Hãng Đo góc Trọng
+máy và nước lượng
+chế kích
+tạo Độ Sai số Sai số Tầm thước
+phân | trung phương trung hoạt động kg
+giải đo góc phương xa nhất
+bàn độ | ngang/đứng đo cạnh m
+w ope
+TC 303 | Leica 1 3/3 +(2mm + 3000 TCR 303 có
+Thụy Sỹ 2 ppm) ché do
+khong
+gương
+SET Sokkia 1 2/2 +(2 mm 4200 10
+2B Nhật Bản +2 ppm)
+DTM Nikon 1 2/2 +(2 mm 3500 10
+750 Nhat Ban +2 ppm
+GTS-4 | Topcon 1 2/2 +2 mm 3700 59
+Nhat Ban +2 ppm
+D.3 Cac máy toàn đạc điện tử độ chính xác cao (sử dụng dé đo các lưới khống chế có độ chính xác
+cao và quan trắc biến dạng công trình).
+Bảng D.3 - Các máy toàn đạc điện tử chính xác cao
+Tên | Hãng Đo góc
+máy và
+nước
+chế Độ Sai số Sai số Tầm hoạt
+tạo phân trung trung động xa
+giải phương phương nhất
+bàn độ đo góc đo cạnh km
+lạ ngang/đứng
+ape
+TCA Leica 0,1 1/1 +(1mm 25 Đo tự động Đo
+2003 | Thụy +1ppm đến 3,5 500 m chính tự động
+Sỹ xác từ 2 mm 200m
+đến 3 mm chính xác
+đến 1mm
+TC Leica 0,1 1/1 +(1mm + 25 Đo tự động Đo tự
+2003 | Thuy 1 ppm đến 3,5 500 m chính động 200m
+Sỹ xác từ 2 mm chính xác
+đến 3 mm đến 1 mm
+30
+
+===== TRANG 30 / 32 =====
+TCVN 9398:2012
+Phụ lục E
+(Tham khảo)
+Phân cấp các máy thuỷ bình thông dụng ở Việt Nam
+E.1 Các máy thuỷ bình có độ chính xác trung bình sử dụng để bố trí các điểm theo độ cao trên các
+công trình xây dựng, đo thuỷ chuẩn hạng IV trở xuống.
+Bảng E.1 - Các máy thuỷ bình có độ chính xác trung bình
+Tên Hãng Ó Giá trị phân khoảng Sai so
+máy và nước bọt thuỷ trung
+chế tạo Độ Khoảng | Bọtthuỷ | Bọt thuỷ phương
+phóng cách đo dài tròn đo chênh
+đại ngăn nhất (/mm) cao 1km
+(x) m (đi và về)
+mm/km
+Ni025 Carl 20 15 Tự dong 8/2 Tự dong
+Zeiss Jena can bang dieu chinh
+Đức
+NhậtBản | 28 18 | - | . .  ÚỨ  . |
+AXA Nikon 18 Tự động 10/2 5 Tự động
+Nhật Bản cân bằng điều chỉnh
+trong
+phạm vi 12”
+Bảng E.2 - Các máy thuỷ bình chính xác
+Tên Hãng Giá trị phân khoảng Sai số trung
+máy và nước bọt thuỷ phương đo
+chê tạo Độ | Khoảng Bọtthuỷ dài | Bọtthuỷ | chênh cao 1
+phóng | cách đo (“/mm) tron km (di va ve)
+dai ngắn nhất (/mm) mm
+x) (m)
+NI030 Carl 25 1,8 30/2 8/2
+25 Zeiss Jena
+Đức
+K00NI Carl 32 2,2 Tự động cân 8/2
+007 Zeiss Jena bằng
+Đức
+AZ- Nikon 24 0,75 Tw dong can 10/2 +2
+2/28 Nhat Ban bang
+AP-7 Nikon 28 0,75 Tự động cân 10/2 +2
+Nhật Bản bằng
+AT-G4 Topcon 26 1,60 Tự động cân 10/2 +2
+Nhật Bản bằng
+AT-M3 Topcon 26 Tự động cân 10/2 +2
+Nhật Bản bằng
+E.2 Các máy thuỷ bình chính xác (sử dụng để đo dẫn các tuyến thuỷ chuẩn từ hạng Ill trở xuống,
+dùng để bố trí các công trình về độ cao đòi hỏi độ chính xác cao).
+31
+
+===== TRANG 31 / 32 =====
+TCVN 9398:2012
+E.3 Các máy thuỷ bình có độ chính xác cao (sử dụng dé đo dẫn các tuyến thuỷ chuẩn có độ chính xác
+cao).
+Bảng E.3 - Các máy thuỷ bình có độ chính xác cao
+Tên Hãng Giá trị Sai số
+máy và nước phân khoảng trung
+chế tạo bọt thuỷ phương
+Độ Khoảng | Bọtthuỷ | Bot thuỷ đo chênh
+phóng cách dài tròn cao 1km
+đại đo ngắn (/mm) (đi và về)
+(x) nhat mm
+m
+NI004 Carl 44 3,0 10"/2 2/2 +0,5
+Zeiss
+Jena
+Đức
+NAK2 Leica 40 Tự động 8/2 +07 Không có
+Thụy Sỹ cân băng Micrometer
++0,3 Có Micrometer
+AS-2 Nikon 34/43 1,0 Tự động 10/2 +0,8 Không có
+Nhật Bản cân băng Micrometer
++04 Có Micrometer
+AT- G1 Topcon 32 1,0 Tự động 8/2 +0,7 Không có
+(G2) Nhật Bản cân băng Micrometer
++04 Có Micrometer
+32
+
+===== TRANG 32 / 32 =====
+TCVN 9398:2012
+Thư mục tài liệu tham khảo
+1. 98 TCN 43 — 90, Quy phạm đo vẽ bản dé tỷ lệ 1:500; 1:1 000; 1:2 000; 1:5 000; (phần ngoài trời).
+2. 96 TCN 42 — 90, Quy phạm đo vẽ bản đồ ty lệ 1:500; 1:1 000; 1:2 000; 1:5 000; 1: 10 000; 1:25 000;
+(phần trong nhà).
+3. Trắc địa công trình. Nhà xuất bản Giao thông vận tải - Hà Nội 1999.
+4. Báo cáo đề tài 46A - 05 - 01 Quy trình công nghệ trắc địa trong đo vẽ công trình ngầm, trong thi
+công, trong quan trắc chuyền dịch biến dạng các công trình quan trọng và khả năng đảm bảo trắc địa,
+bản đồ trên khu vực xây dựng, điều tra khai thác tài nguyên khoáng sản. Hà Nội 1991.
+5. Báo cáo dé tai cấp Bộ mã số B2000 - 36 - 14 "Nghiên cứu quy trình công nghệ công tác quan trắc
+biến dang công trình thuỷ điện”. Bộ Giáo dục và Đào tạo Hà Nội 2003. Chủ nhiệm đề tài TS. Trần
+Khánh.
+6. Báo cáo tổng kết dé tài: "Nghiên cứu ứng dụng công nghệ GPS trong trắc địa công trình công nghiệp
+và nhà cao tằng” (mã số: RD - 02), Hà Nội - 2003; Báo cáo tông kết đề tài cấp Bộ (Bộ Xây dựng).
+7. Báo cáo tong kết đề tài cáp bộ (Bộ Giáo dục và Đào tạo; đề tai:"Nghién cứu ứng dụng công nghệ
+GPS trong trắc địa công trình”, mã sé B2001 - 36 - 23. Hà Nội - 2003.
+8. Technical Specification for Urban Surveying Using Global Positioning System - CJJ 73 - 97. NXB
+Công nghiệp xây dựng Trung Quốc, Bắc Kinh, 10/1997.
+33
