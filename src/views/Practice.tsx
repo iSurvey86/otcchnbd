@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
 import { useAuth } from '../context/AuthContext'
 import { dtRandCount } from '../data/dt/groups'
+import { DD_SECTION_TOPICS } from '../data/topics'
 import { questionsByTopicForScope, topicsForScope } from '../lib/bank'
 import {
   markDtPracticeAnswer,
@@ -43,7 +44,9 @@ export function Practice({ scope, topicId }: Props) {
   const [answers, setAnswers] = useState<PracticeAnswer[]>([])
   const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong'>('all')
 
-  const topic = topicsForScope(scope).find((t) => t.id === topicId)
+  const topic =
+    topicsForScope(scope).find((t) => t.id === topicId) ??
+    DD_SECTION_TOPICS.find((t) => t.id === topicId)
   const topicTitle =
     topic?.title ??
     (topicId === 'dt-sai'

@@ -1,5 +1,21 @@
 import type { Topic } from '../types'
 
+/** Ôn theo cả phần — hiển thị trước các chuyên đề con. */
+export const DD_SECTION_TOPICS: Topic[] = [
+  {
+    id: 'dd-phap-luat',
+    section: 'phap-luat',
+    title: 'Kiến thức pháp luật',
+    blurb: 'Ôn toàn bộ câu hỏi phần pháp luật trong ngân hàng.',
+  },
+  {
+    id: 'dd-kinh-nghiem',
+    section: 'kinh-nghiem',
+    title: 'Kiến thức chuyên môn',
+    blurb: 'Ôn toàn bộ câu hỏi phần kinh nghiệm nghề nghiệp / chuyên môn.',
+  },
+]
+
 export const TOPICS: Topic[] = [
   {
     id: 'luat-chung',

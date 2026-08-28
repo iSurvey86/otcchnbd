@@ -1520,6 +1520,152 @@ a.btn.primary {
   font-size: 0.92rem;
 }
 
+.dd-section-topic-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.topic-card-section {
+  min-height: 148px;
+}
+
+/* Ôn theo phần — palette riêng, không trùng stat/topic-tone KPI */
+.dd-section-tone-law {
+  --topic-accent: #7c3aed;
+  --topic-ink: #4c1d95;
+  --topic-glow: rgba(124, 58, 237, 0.28);
+  border-color: rgba(124, 58, 237, 0.32);
+  background: linear-gradient(160deg, rgba(237, 233, 254, 0.98) 0%, #fff 58%);
+}
+
+.dd-section-tone-skill {
+  --topic-accent: #db2777;
+  --topic-ink: #9d174d;
+  --topic-glow: rgba(219, 39, 119, 0.26);
+  border-color: rgba(219, 39, 119, 0.3);
+  background: linear-gradient(160deg, rgba(252, 231, 243, 0.98) 0%, #fff 58%);
+}
+
+@media (max-width: 720px) {
+  .dd-section-topic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dd-diagrams-intro {
+  margin: -0.25rem 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 52rem;
+}
+
+.dd-diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dd-diagram-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dd-diagram-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.dd-diagram-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #0f172a;
+}
+
+.dd-diagram-caption {
+  padding: 14px 16px 16px;
+}
+
+.dd-diagram-source {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.dd-diagram-caption h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.dd-diagram-caption p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.dd-diagram-modal {
+  width: min(960px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.dd-diagram-modal-cap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.dd-diagram-modal-cap strong {
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.dd-diagram-modal img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #0f172a;
+}
+
+.dd-diagram-modal .btn {
+  margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+  .dd-diagram-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .dd-bank-banner {
   margin-bottom: 1rem;
   border-color: rgba(47, 143, 127, 0.35);

@@ -575,9 +575,11 @@ export function Admin() {
   const [customTo, setCustomTo] = useState('')
   const [hideAdmin, setHideAdmin] = useState(() => {
     try {
-      return localStorage.getItem('otcchnbd.admin.hideAdmin') === '1'
+      const stored = localStorage.getItem('otcchnbd.admin.hideAdmin')
+      if (stored === null) return true
+      return stored === '1'
     } catch {
-      return false
+      return true
     }
   })
   const [feedbackStatus, setFeedbackStatus] = useState<'all' | FeedbackStatus>('all')

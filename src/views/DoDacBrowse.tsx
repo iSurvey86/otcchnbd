@@ -1,6 +1,7 @@
 'use client'
 
 import { AppLink } from '../components/AppLink'
+import { DdGridDiagrams } from '../components/DdGridDiagrams'
 import {
   EXAM_DO_DAC,
   examPassSummary,
@@ -192,6 +193,8 @@ export function DoDacBrowse() {
           ) : null}
         </div>
       ) : null}
+
+      <DdGridDiagrams />
     </>
   )
 }

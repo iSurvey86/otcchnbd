@@ -58,10 +58,23 @@ export function questionsByTopicForScope(
   }
   if (scope.sector === 'do-dac-ban-do') {
     const pool = ddQuestions(resolveDdBankId(scope.bankId))
+    if (topicId === 'dd-phap-luat') {
+      return pool.filter((q) => q.section === 'phap-luat')
+    }
+    if (topicId === 'dd-kinh-nghiem') {
+      return pool.filter((q) => q.section === 'kinh-nghiem')
+    }
     if (!topicId) return pool
     return pool.filter((q) => q.topic === topicId)
   }
   return questionsByTopic(topicId)
+}
+
+export function countBySectionForScope(
+  scope: StudyScope,
+  section: 'phap-luat' | 'kinh-nghiem',
+): number {
+  return questionsForScope(scope).filter((q) => q.section === section).length
 }
 
 export function topicsForScope(scope: StudyScope): Topic[] {
@@ -78,6 +91,9 @@ export function countByTopicForScope(scope: StudyScope, topicId: TopicId): numbe
     return dtCountByTopic(scope.trackId ?? '', topicId)
   }
   if (scope.sector === 'do-dac-ban-do') {
+    if (topicId === 'dd-phap-luat' || topicId === 'dd-kinh-nghiem') {
+      return questionsByTopicForScope(scope, topicId).length
+    }
     return questionsByTopicForScope(scope, topicId).length
   }
   return countByTopic(topicId)

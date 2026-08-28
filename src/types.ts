@@ -22,6 +22,8 @@ export type TopicId =
   | 'dt-rand-10'
   | 'dt-rand-20'
   | 'dt-rand-30'
+  | 'dd-phap-luat'
+  | 'dd-kinh-nghiem'
 
 export interface Topic {
   id: TopicId

@@ -1,5 +1,7 @@
 import { AppLink } from '../components/AppLink'
+import { DdGridDiagrams } from '../components/DdGridDiagrams'
 import { RelatedLinks } from '../components/RelatedLinks'
+import { DD_SECTION_TOPICS } from '../data/topics'
 import {
   countByTopicForScope,
   lawSectionLabel,
@@ -140,6 +142,26 @@ export function Home({ scope }: Props) {
           Ôn tất cả
         </AppLink>
       </div>
+      {scope.sector === 'do-dac-ban-do' ? (
+        <div className="topic-grid dd-section-topic-grid">
+          {DD_SECTION_TOPICS.map((topic) => {
+            const n = countByTopicForScope(scope, topic.id)
+            if (n <= 0) return null
+            return (
+              <AppLink
+                key={topic.id}
+                className={`topic-card topic-card-section ${topic.id === 'dd-phap-luat' ? 'dd-section-tone-law' : 'dd-section-tone-skill'}`}
+                view={{ name: 'practice', scope, topicId: topic.id }}
+              >
+                <span className="topic-card-bar" aria-hidden />
+                <span className="count">{n} câu</span>
+                <h3>Ôn {topic.title.toLowerCase()}</h3>
+                <p>{topic.blurb}</p>
+              </AppLink>
+            )
+          })}
+        </div>
+      ) : null}
       <div className="topic-grid">
         {topics.map((topic, index) => (
           <AppLink
@@ -154,6 +176,8 @@ export function Home({ scope }: Props) {
           </AppLink>
         ))}
       </div>
+
+      {scope.sector === 'do-dac-ban-do' ? <DdGridDiagrams /> : null}
 
       <RelatedLinks scope={scope} />
     </>
