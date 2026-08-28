@@ -77,4 +77,4 @@ Thiết kế chung: **1920×1080** ngang, nền tối, cột trái (SỞ), hàng
 
 Word minh họa TT 68: `so-do-luoi-tt68-2015.docx`.
 
-Tiếp theo có thể: soạn câu hỏi GNSS theo 9401, so sánh lưới TT 68 vs 9401, gắn sơ đồ vào màn ôn Đo đạc.
+Tiếp theo có thể: soạn câu hỏi GNSS theo 9401, so sánh lưới TT 68 vs 9401. **Sơ đồ đã gắn UI** — xem `public/tcvn/`, `DdGridDiagrams`, HDSD `docs/hdsd/do-dac-on-tap.md`.

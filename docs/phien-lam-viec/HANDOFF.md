@@ -5,6 +5,46 @@
 
 ---
 
+## 2026-08-28 — Gắn sơ đồ lưới UI + ôn theo phần + admin Ẩn admin
+
+### Đã làm
+
+- **`git pull`** (fast-forward), đọc HANDOFF 2026-08-24, tiếp tục gắn UI sơ đồ.
+- **Sơ đồ lưới trên web:** 4 PNG trong `public/tcvn/`; `DdGridDiagrams` (gallery + modal) trên hub `/do-dac-ban-do` và trang bộ `/do-dac-ban-do/[bankId]`.
+- **Ôn theo phần:** 2 card KPI — **100 câu** PL (`dd-phap-luat`), **293 câu** chuyên môn (`dd-kinh-nghiem`); palette tím/hồng riêng, trước 8 chuyên đề con.
+- **Admin nhật ký:** mặc định **Ẩn admin** (chưa có `localStorage` → ẩn).
+- **Bump** `0.1.0` · **commit + push** `464b9bf`.
+- **HDSD + workflow:** `docs/hdsd/do-dac-on-tap.md`, `workflows/do-dac-on-tap-ux.md`.
+
+### File chính
+
+| File | Vai trò |
+|------|---------|
+| `src/components/DdGridDiagrams.tsx` | Gallery sơ đồ + modal |
+| `src/data/dd/diagrams.ts` | Metadata 4 sơ đồ |
+| `public/tcvn/so-do-luoi-*.png` | Asset web |
+| `src/data/topics.ts` | `DD_SECTION_TOPICS` |
+| `src/lib/bank.ts` | Lọc ôn theo phần |
+| `src/views/Home.tsx` / `DoDacBrowse.tsx` | UI ôn + sơ đồ |
+| `src/views/Admin.tsx` | Default Ẩn admin |
+| `docs/hdsd/do-dac-on-tap.md` | HDSD ôn Đo đạc |
+| `workflows/do-dac-on-tap-ux.md` | Workflow kiểm tra UX |
+
+### Việc tiếp
+
+- [ ] OCR / PDF sạch **TCVN 9398:2012**; tuỳ chọn OCR 96 TCN 42/43.
+- [ ] Soạn câu hỏi GNSS theo 9401; so sánh lưới TT 68 vs 9401.
+- [ ] JSON + routing **ONTHICCHN Đấu thầu** (07/2026, 06/2026).
+- [ ] Cập nhật **email template Supabase** (Magic Link / OTP).
+
+### Câu mở phiên sau
+
+> Đọc HANDOFF mới nhất. Đo đạc đã có sơ đồ lưới TT68 + TCVN9401 trên web. Ôn theo phần 100 PL + 293 chuyên môn (card tím/hồng). Admin log mặc định Ẩn admin. Đã push `464b9bf`. Tiếp: OCR 9398, câu hỏi GNSS, hoặc ONTHICCHN Đấu thầu.
+
+Chi tiết: [2026-08-28-do-dac-ui-admin-handoff.md](./2026-08-28-do-dac-ui-admin-handoff.md)
+
+---
+
 ## 2026-08-24 — Sơ đồ lưới TT 68/2015 + TCVN 9401 (6.2–6.4)
 
 ### Đã làm
