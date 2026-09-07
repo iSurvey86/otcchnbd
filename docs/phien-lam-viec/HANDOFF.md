@@ -13,6 +13,7 @@
 - **Xem như người dùng:** `useAdminViewAsUser` + nút topbar **Xem như NG** / **Thoát xem như NG**; nút trên trang Admin → về `/` ẩn **Quản lý**.
 - **Sơ đồ lưới:** accordion thu gọn — `1. Tiêu đề (căn cứ)`; bấm mở ảnh; bỏ intro.
 - **Admin UX:** pager trang cuối hiện **Hết**; hàng tìm Kho câu hỏi; chỉnh CSS tab/search.
+- **Bump** `0.1.2` · **commit + push** `1cd9005`.
 
 ### Đã ship trước (cùng nhánh `main`, commit `0399c67`)
 
