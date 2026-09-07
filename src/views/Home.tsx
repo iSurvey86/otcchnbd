@@ -1,5 +1,6 @@
 import { AppLink } from '../components/AppLink'
 import { DdGridDiagrams } from '../components/DdGridDiagrams'
+import { QuestionSearch } from '../components/QuestionSearch'
 import { RelatedLinks } from '../components/RelatedLinks'
 import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { DD_SECTION_TOPICS } from '../data/topics'
@@ -141,6 +142,8 @@ export function Home({ scope }: Props) {
           </AppLink>
         </div>
       </section>
+
+      <QuestionSearch scope={scope} questions={questions} />
 
       <div className="section-head">
         <h2>Ôn theo chuyên đề</h2>

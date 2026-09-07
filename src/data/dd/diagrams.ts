@@ -11,7 +11,7 @@ export const DD_GRID_DIAGRAMS: DdGridDiagram[] = [
   {
     id: 'tt68',
     source: 'TT 68/2015',
-    title: 'Hệ thống lưới tọa độ và độ cao',
+    title: 'Hệ thống lưới tọa độ, độ cao',
     blurb: 'Lưới khống chế đo vẽ BDĐH tỷ lệ 1:500–1:5000',
     src: '/tcvn/so-do-luoi-tt68-2015.png',
   },

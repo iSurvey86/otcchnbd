@@ -1,9 +1,12 @@
 'use client'
 
+import { useMemo } from 'react'
 import { AppLink } from '../components/AppLink'
+import { QuestionSearch } from '../components/QuestionSearch'
 import { DT_DOC_GROUPS, DT_ONTHICCHN_SETS } from '../data/dt/groups'
-import { dtCountByTopic, openDtQuestionTotal } from '../data/dt/questions'
+import { allDtQuestions, dtCountByTopic, openDtQuestionTotal } from '../data/dt/questions'
 import { useDtBank } from '../hooks/useDtBank'
+import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { examConfigFor, examPassSummary, examQuestionCount } from '../lib/exam'
 import { readDtCursor, readDtWrongIds } from '../lib/dtPractice'
 import type { AppView, TopicId } from '../types'
@@ -35,11 +38,19 @@ function PracticeCard({
 
 export function DtBrowse() {
   const { status } = useDtBank(true)
+  const { applyToList } = useQuestionOverrides()
   const total = openDtQuestionTotal()
   const exam = examConfigFor(DT_SCOPE)
   const totalQ = examQuestionCount(exam)
   const wrongCount = status === 'ready' ? readDtWrongIds().length : 0
   const cursor = status === 'ready' ? readDtCursor() : 0
+  const searchPool = useMemo(
+    () =>
+      status === 'ready'
+        ? applyToList(allDtQuestions(), DT_SCOPE)
+        : [],
+    [status, applyToList],
+  )
 
   return (
     <>
@@ -83,6 +94,8 @@ export function DtBrowse() {
               </AppLink>
             </div>
           </section>
+
+          <QuestionSearch scope={DT_SCOPE} questions={searchPool} />
 
           <div className="dd-browse-columns dt-browse-columns">
             <section className="dd-browse-col">

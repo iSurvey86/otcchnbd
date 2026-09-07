@@ -147,21 +147,16 @@ export function AdminQuestionPanel({
             {loading ? 'Đang nạp…' : `${index.length} câu`}
           </span>
         </header>
-        <p className="admin-cspl-expire-help">
-          Tìm theo id / đề / nguồn. Sửa = override DB (áp dụng ngay). Có badge khi đã
-          override.
-        </p>
-        <div className="admin-cspl-pack-toolbar">
+        <div className="admin-q-search-row">
           <input
             type="search"
-            className="admin-cspl-input"
-            style={{ flex: 1, minWidth: 200 }}
+            className="admin-cspl-input admin-q-search-input"
             placeholder="Tìm: pl-093 · hành lang · viễn thám…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
           <select
-            className="admin-cspl-input"
+            className="admin-cspl-input admin-q-search-filter"
             value={sectorFilter}
             onChange={(e) => setSectorFilter(e.target.value as SectorId | 'all')}
           >

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import type { ReactNode } from 'react'
 import { AppLink } from './AppLink'
 import { useAuth } from '../context/AuthContext'
+import { useAdminViewAsUser } from '../hooks/useAdminViewAsUser'
 import { getViewScope, isStudyView, type AppView } from '../types'
 
 interface Props {
@@ -124,6 +125,7 @@ function AuthBar({
   onNavigate: (view: AppView) => void
 }) {
   const { user, isAdmin, isConfigured, openLogin, signOutUser } = useAuth()
+  const { viewAsUser, enterViewAsUser, exitViewAsUser } = useAdminViewAsUser()
 
   if (!isConfigured) return null
 
@@ -139,13 +141,41 @@ function AuthBar({
 
   return (
     <div className="auth-bar">
-      {isAdmin ? (
-        <AppLink
-          className={view.name === 'admin' ? 'btn primary compact' : 'btn ghost compact'}
-          view={{ name: 'admin' }}
+      {isAdmin && viewAsUser ? (
+        <button
+          type="button"
+          className="btn copper compact"
+          title="Quay lại quyền Admin (hiện nút Quản lý)"
+          onClick={() => {
+            exitViewAsUser()
+            onNavigate({ name: 'admin' })
+          }}
         >
-          Quản lý
-        </AppLink>
+          Thoát xem như NG
+        </button>
+      ) : null}
+      {isAdmin && !viewAsUser ? (
+        <>
+          <button
+            type="button"
+            className="btn ghost compact"
+            title="Ẩn Quản lý — xem site như người dùng thường"
+            onClick={() => {
+              enterViewAsUser()
+              if (view.name === 'admin') onNavigate({ name: 'catalog' })
+            }}
+          >
+            Xem như NG
+          </button>
+          <AppLink
+            className={
+              view.name === 'admin' ? 'btn primary compact' : 'btn ghost compact'
+            }
+            view={{ name: 'admin' }}
+          >
+            Quản lý
+          </AppLink>
+        </>
       ) : null}
       <span className="user-chip">
         {user.photoURL ? (
@@ -157,7 +187,9 @@ function AuthBar({
             referrerPolicy="no-referrer"
           />
         ) : (
-          <span className="user-fallback">{(user.displayName ?? 'U').slice(0, 1)}</span>
+          <span className="user-fallback">
+            {(user.displayName ?? 'U').slice(0, 1)}
+          </span>
         )}
         <span className="user-name">{user.displayName ?? user.email}</span>
       </span>

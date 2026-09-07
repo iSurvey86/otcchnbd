@@ -28,7 +28,11 @@ export function pathForView(view: AppView): string {
       return scopeBasePath(view.scope)
     case 'practice': {
       const base = `${scopeBasePath(view.scope)}/practice`
-      return view.topicId ? `${base}?topic=${encodeURIComponent(view.topicId)}` : base
+      const params = new URLSearchParams()
+      if (view.topicId) params.set('topic', view.topicId)
+      if (view.questionId) params.set('q', view.questionId)
+      const qs = params.toString()
+      return qs ? `${base}?${qs}` : base
     }
     case 'exam':
       return `${scopeBasePath(view.scope)}/exam`

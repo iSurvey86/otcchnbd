@@ -876,7 +876,22 @@ export function Admin() {
         <div>
           <h1 className="admin-title">Quản lý hệ thống</h1>
         </div>
-        <div className="admin-tabs">
+        <div className="admin-head-actions">
+          <button
+            type="button"
+            className="btn ghost compact"
+            onClick={() => {
+              try {
+                localStorage.setItem('otcchnbd.admin.viewAsUser', '1')
+              } catch {
+                /* ignore */
+              }
+              window.location.href = '/'
+            }}
+          >
+            Xem như người dùng
+          </button>
+          <div className="admin-tabs">
           <button
             type="button"
             className={`admin-tab admin-tab-logs${tab === 'logs' ? ' active' : ''}`}
@@ -913,6 +928,7 @@ export function Admin() {
           >
             Kho câu hỏi
           </button>
+        </div>
         </div>
       </div>
 
@@ -1239,14 +1255,19 @@ export function Admin() {
           >
             Trước
           </button>
-          <button
-            type="button"
-            className="btn ghost compact"
-            disabled={pageSafe >= totalPages}
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-          >
-            Tiếp
-          </button>
+          {pageSafe >= totalPages ? (
+            <span className="admin-pager-end" aria-current="page">
+              Hết
+            </span>
+          ) : (
+            <button
+              type="button"
+              className="btn ghost compact"
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            >
+              Tiếp
+            </button>
+          )}
         </div>
       </div>
         </>

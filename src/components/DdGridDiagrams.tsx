@@ -4,63 +4,80 @@ import { useCallback, useEffect, useState } from 'react'
 import { DD_GRID_DIAGRAMS, type DdGridDiagram } from '../data/dd/diagrams'
 
 export function DdGridDiagrams() {
-  const [open, setOpen] = useState<DdGridDiagram | null>(null)
+  const [expandedId, setExpandedId] = useState<string | null>(null)
+  const [lightbox, setLightbox] = useState<DdGridDiagram | null>(null)
 
-  const close = useCallback(() => setOpen(null), [])
+  const closeLightbox = useCallback(() => setLightbox(null), [])
 
   useEffect(() => {
-    if (!open) return
+    if (!lightbox) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') close()
+      if (e.key === 'Escape') closeLightbox()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [open, close])
+  }, [lightbox, closeLightbox])
 
   return (
     <section className="related-block dd-diagrams" aria-label="Sơ đồ lưới tham khảo">
       <div className="section-head">
         <h2>Sơ đồ lưới tham khảo</h2>
       </div>
-      <p className="muted dd-diagrams-intro">
-        Hệ thống lưới tọa độ, độ cao và lưới GNSS theo TT 68/2015 và TCVN 9401:2024 — minh
-        họa ôn phần kinh nghiệm nghề nghiệp.
-      </p>
-      <div className="dd-diagram-grid">
-        {DD_GRID_DIAGRAMS.map((diagram) => (
-          <button
-            key={diagram.id}
-            type="button"
-            className="dd-diagram-card"
-            onClick={() => setOpen(diagram)}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={diagram.src} alt="" loading="lazy" />
-            <div className="dd-diagram-caption">
-              <span className="dd-diagram-source">{diagram.source}</span>
-              <h3>{diagram.title}</h3>
-              <p>{diagram.blurb}</p>
-            </div>
-          </button>
-        ))}
-      </div>
+      <ul className="dd-diagram-list">
+        {DD_GRID_DIAGRAMS.map((diagram, index) => {
+          const open = expandedId === diagram.id
+          return (
+            <li key={diagram.id} className={`dd-diagram-item${open ? ' is-open' : ''}`}>
+              <button
+                type="button"
+                className="dd-diagram-toggle"
+                aria-expanded={open}
+                onClick={() => setExpandedId(open ? null : diagram.id)}
+              >
+                <span className="dd-diagram-toggle-title">
+                  {index + 1}. {diagram.title}{' '}
+                  <span className="dd-diagram-source">({diagram.source})</span>
+                </span>
+                <span className="dd-diagram-chevron" aria-hidden>
+                  {open ? '▾' : '▸'}
+                </span>
+              </button>
+              {open ? (
+                <div className="dd-diagram-panel">
+                  <p className="dd-diagram-blurb">{diagram.blurb}</p>
+                  <button
+                    type="button"
+                    className="dd-diagram-preview"
+                    onClick={() => setLightbox(diagram)}
+                    aria-label={`Phóng to: ${diagram.title}`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={diagram.src} alt="" loading="lazy" />
+                  </button>
+                  <p className="muted dd-diagram-hint">Bấm ảnh để phóng to</p>
+                </div>
+              ) : null}
+            </li>
+          )
+        })}
+      </ul>
 
-      {open ? (
-        <div className="modal-backdrop" onClick={close} role="presentation">
+      {lightbox ? (
+        <div className="modal-backdrop" onClick={closeLightbox} role="presentation">
           <figure
             className="dd-diagram-modal"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
-            aria-label={open.title}
+            aria-label={lightbox.title}
           >
             <figcaption className="dd-diagram-modal-cap">
-              <span>{open.source}</span>
-              <strong>{open.title}</strong>
+              <span>{lightbox.source}</span>
+              <strong>{lightbox.title}</strong>
             </figcaption>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={open.src} alt={open.title} />
-            <button type="button" className="btn ghost compact" onClick={close}>
+            <img src={lightbox.src} alt={lightbox.title} />
+            <button type="button" className="btn ghost compact" onClick={closeLightbox}>
               Đóng
             </button>
           </figure>

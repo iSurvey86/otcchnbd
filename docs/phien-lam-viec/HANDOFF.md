@@ -5,6 +5,46 @@
 
 ---
 
+## 2026-09-07 — Tìm câu hỏi, Xem như NG, sơ đồ thu gọn (+ pack/override đã ship)
+
+### Đã làm (phiên này)
+
+- **Tìm câu hỏi (user):** `QuestionSearch` trên trang bộ Đo đạc / XD (`Home`) và Đấu thầu (`DtBrowse`); deep-link `practice?q=`; không lộ ghi chú Admin.
+- **Xem như người dùng:** `useAdminViewAsUser` + nút topbar **Xem như NG** / **Thoát xem như NG**; nút trên trang Admin → về `/` ẩn **Quản lý**.
+- **Sơ đồ lưới:** accordion thu gọn — `1. Tiêu đề (căn cứ)`; bấm mở ảnh; bỏ intro.
+- **Admin UX:** pager trang cuối hiện **Hết**; hàng tìm Kho câu hỏi; chỉnh CSS tab/search.
+
+### Đã ship trước (cùng nhánh `main`, commit `0399c67`)
+
+- Pack tháng CSPL (draft Gemini, duyệt/từ chối; chưa auto-publish 01:00).
+- Question overrides DB + Admin Kho câu hỏi / từ góp ý.
+
+### File chính
+
+| File | Vai trò |
+|------|---------|
+| `src/components/QuestionSearch.tsx` | Ô tìm câu end-user |
+| `src/hooks/useAdminViewAsUser.ts` | Flag localStorage xem như NG |
+| `src/components/DdGridDiagrams.tsx` | Accordion sơ đồ lưới |
+| `src/components/Layout.tsx` / `src/views/Admin.tsx` | Nút Xem như NG |
+| `docs/hdsd/do-dac-on-tap.md` | HDSD tìm câu + sơ đồ + xem như NG |
+| `workflows/do-dac-on-tap-ux.md` | Checklist UX |
+
+### Việc tiếp
+
+- [ ] Publish pack **01 00:00 GMT+7**, cảnh báo T-1, khóa thi thử khi quá hạn chưa duyệt (theo quy chế).
+- [ ] Gắn ôn/thi thử với pack tháng đã publish.
+- [ ] Admin: SQL chunks/pack/overrides trên Supabase nếu môi trường chưa chạy; activate CSPL còn lại.
+- [ ] JSON + routing **ONTHICCHN Đấu thầu**; email template Supabase.
+
+### Câu mở phiên sau
+
+> Đọc HANDOFF 2026-09-07. User đã có tìm câu + sơ đồ accordion; Admin có Xem như NG. Pack tháng + overrides đã có (`0399c67`) nhưng chưa publish lịch. Tiếp: lịch publish pack / gắn thi thử, hoặc ONTHICCHN Đấu thầu.
+
+Chi tiết: [2026-09-07-tim-cau-xem-nhu-ng-so-do.md](./2026-09-07-tim-cau-xem-nhu-ng-so-do.md)
+
+---
+
 ## 2026-08-28 (tối) — CSPL chunk pipeline + TCVN Word + Admin CSPL UX
 
 ### Đã làm

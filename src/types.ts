@@ -107,7 +107,7 @@ export type AppView =
   | { name: 'xd-browse' }
   | { name: 'dt-browse' }
   | { name: 'home'; scope: StudyScope }
-  | { name: 'practice'; scope: StudyScope; topicId?: TopicId }
+  | { name: 'practice'; scope: StudyScope; topicId?: TopicId; questionId?: string }
   | { name: 'exam'; scope: StudyScope }
   | { name: 'result'; scope: StudyScope; attemptId: string }
   | { name: 'history'; scope: StudyScope }

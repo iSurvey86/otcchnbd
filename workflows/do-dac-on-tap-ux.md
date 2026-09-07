@@ -1,19 +1,21 @@
-# Workflow — UX ôn Đo đạc (sơ đồ + ôn theo phần)
+# Workflow — UX ôn Đo đạc (sơ đồ + tìm câu + xem như NG)
 
-> 2026-08-28 · commit `464b9bf`
+> 2026-09-07 · app `0.1.2`
 
 ## Phạm vi thay đổi
 
-- Gallery sơ đồ lưới TT 68 / TCVN 9401 trên hub và trang bộ đề Đo đạc.
-- Hai entry ôn theo cả phần PL / chuyên môn.
-- Admin log: default Ẩn admin.
+- Gallery sơ đồ lưới → **accordion** (tên + căn cứ; bấm mở ảnh).
+- Ô **Tìm câu hỏi** trên trang bộ đề (Đo đạc / XD / Đấu thầu).
+- Admin **Xem như người dùng** / topbar **Xem như NG**.
+- (Nền) Ôn theo phần PL / chuyên môn; Admin log default Ẩn admin.
 
 ## Kiểm tra sau deploy
 
-1. `/do-dac-ban-do` — cuối trang có 4 sơ đồ; bấm mở modal, đóng được.
-2. `/do-dac-ban-do/official-2020` — hero 393 / 100 / 293; 2 card tím/hồng; 8 chuyên đề; sơ đồ lưới.
-3. Bấm **Ôn kiến thức pháp luật** → practice 100 câu; **Kiến thức chuyên môn** → 293 câu.
-4. Admin → Nhật ký: lần đầu vào thấy **Hiện admin** (tức đang ẩn log admin).
+1. `/do-dac-ban-do/official-2020` — ô tìm ≥ 2 ký tự → tối đa 20 kết quả; bấm → `practice?q=…`; không lộ ghi chú Admin.
+2. Cuối trang — 4 dòng sơ đồ dạng `1. … (TT 68/2015)`; mặc định thu gọn; bấm mở ảnh; phóng to / Esc / Đóng.
+3. Admin → **Xem như người dùng** → về `/`, không còn **Quản lý**; topbar **Thoát xem như NG** → Admin lại.
+4. Admin Kho câu hỏi — hàng tìm; nhật ký trang cuối hiện **Hết**.
+5. (Regression) 2 card tím/hồng ôn theo phần; Admin log mặc định Ẩn admin.
 
 ## Tái xuất sơ đồ (dev)
 
@@ -36,9 +38,10 @@ Copy lại 4 PNG thường (không `-4k`) vào `public/tcvn/`:
 
 | Layer | File |
 |-------|------|
-| UI | `src/components/DdGridDiagrams.tsx`, `src/views/Home.tsx`, `src/views/DoDacBrowse.tsx` |
-| Data | `src/data/dd/diagrams.ts`, `src/data/topics.ts` (`DD_SECTION_TOPICS`) |
-| Routing ôn | `src/lib/bank.ts` (`dd-phap-luat`, `dd-kinh-nghiem`) |
-| Style | `src/app/globals.css` (`.dd-section-tone-*`, `.dd-diagram-*`) |
+| UI | `DdGridDiagrams.tsx`, `QuestionSearch.tsx`, `Home.tsx`, `DoDacBrowse.tsx`, `DtBrowse.tsx` |
+| Admin preview | `useAdminViewAsUser.ts`, `Layout.tsx`, `Admin.tsx` |
+| Data | `src/data/dd/diagrams.ts`, `src/data/topics.ts` |
+| Routing | `src/lib/paths.ts`, `src/types.ts` (`practice.questionId`) |
+| Style | `src/app/globals.css` (`.dd-diagram-*`, `.q-search-*`, `.admin-q-search-*`) |
 | Static | `public/tcvn/*.png` |
 | HDSD | `docs/hdsd/do-dac-on-tap.md` |
