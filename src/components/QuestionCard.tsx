@@ -72,8 +72,15 @@ export function QuestionCard({
             <div className="explain-body muted">Chưa có giải thích chi tiết cho câu này.</div>
           )}
           <div className="explain-foot">
-            <div className="explain-source muted">
-              Nguồn: {normalizeLegalCaps(question.source)}
+            <div className="explain-meta">
+              <div className="explain-source muted">
+                Nguồn: {normalizeLegalCaps(question.source)}
+              </div>
+              {question.adminNote ? (
+                <div className="explain-admin-note">
+                  Ghi chú: {question.adminNote}
+                </div>
+              ) : null}
             </div>
             <button
               type="button"
@@ -91,6 +98,7 @@ export function QuestionCard({
         question={question}
         sector={scope?.sector}
         trackId={scope?.trackId}
+        bankId={scope?.bankId}
         onClose={() => setFeedbackOpen(false)}
       />
     </article>

@@ -10,6 +10,7 @@ interface Props {
   question: Question
   sector?: string
   trackId?: string
+  bankId?: string
   onClose: () => void
 }
 
@@ -18,6 +19,7 @@ export function FeedbackModal({
   question,
   sector,
   trackId,
+  bankId,
   onClose,
 }: Props) {
   const { user, isConfigured, openLogin } = useAuth()
@@ -46,6 +48,7 @@ export function FeedbackModal({
       questionPrompt: question.prompt,
       sector,
       trackId,
+      bankId,
       topicId: question.topic,
     })
     setSending(false)

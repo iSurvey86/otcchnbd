@@ -927,12 +927,26 @@ a.btn.primary {
   margin-top: 12px;
 }
 
+.explain-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
 .explain-source {
   margin: 0;
   padding-bottom: 4px;
   font-size: 13px;
-  flex: 1;
   min-width: 0;
+}
+
+.explain-admin-note {
+  margin: 0;
+  font-size: 13px;
+  color: #9a3412;
+  font-weight: 500;
 }
 
 .explain-feedback.explain-callout {
@@ -2956,6 +2970,136 @@ a.btn.primary {
   background: #fee2e2;
   color: #dc2626;
   border-color: #f87171;
+}
+
+.admin-cspl-pack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-cspl-pack-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.admin-cspl-pack-filter {
+  max-width: 160px;
+}
+
+.admin-cspl-pack-row-active td {
+  background: #eff6ff;
+}
+
+.admin-cspl-pack-q-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-cspl-pack-q {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 12px;
+}
+
+.admin-cspl-pack-q-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.admin-cspl-pack-q-toggle {
+  flex: 1;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+}
+
+.admin-cspl-pack-q-toggle .admin-cspl-sub {
+  margin-top: 4px;
+}
+
+.admin-cspl-pack-q-body {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.admin-cspl-pack-options {
+  margin: 0 0 10px;
+  padding-left: 1.2rem;
+}
+
+.admin-cspl-pack-opt-correct {
+  color: #047857;
+  font-weight: 600;
+}
+
+.admin-cspl-pack-expl {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0 0 8px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  max-height: 280px;
+  overflow: auto;
+}
+
+.admin-cspl-pack-tick {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.admin-q-edit-modal {
+  max-width: 720px;
+  width: min(720px, 96vw);
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.admin-q-override-chip {
+  background: #ffedd5 !important;
+  color: #c2410c !important;
+  font-size: 11px;
+}
+
+.admin-q-id-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.admin-q-answer-field {
+  border: 1px solid #fdba74;
+  background: #fff7ed;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.admin-q-answer-badge {
+  display: inline-block;
+  margin-left: 6px;
+  color: #c2410c;
 }
 
 @media (max-width: 900px) {

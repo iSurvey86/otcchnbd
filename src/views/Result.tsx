@@ -1,6 +1,7 @@
 import { AppLink } from '../components/AppLink'
 import { Certificate } from '../components/Certificate'
 import { QuestionCard } from '../components/QuestionCard'
+import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { lawSectionLabel, questionsForScope, sectorTitle, skillSectionLabel, bankFullTitleForScope } from '../lib/bank'
 import {
   examConfigFor,
@@ -16,6 +17,7 @@ import {
   sectionMax,
 } from '../lib/exam'
 import { getAttempt } from '../lib/storage'
+import { useMemo } from 'react'
 import type { StudyScope } from '../types'
 
 interface Props {
@@ -25,6 +27,23 @@ interface Props {
 
 export function Result({ attemptId, scope }: Props) {
   const attempt = getAttempt(attemptId)
+  const { applyToList } = useQuestionOverrides()
+
+  const resultScope: StudyScope = {
+    sector: attempt?.sector ?? scope.sector,
+    trackId: attempt?.trackId ?? scope.trackId,
+    bankId: attempt?.bankId ?? scope.bankId,
+  }
+  const pool = useMemo(
+    () => applyToList(questionsForScope(resultScope), resultScope),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- scope key fields
+    [
+      applyToList,
+      resultScope.sector,
+      resultScope.trackId,
+      resultScope.bankId,
+    ],
+  )
 
   if (!attempt) {
     return (
@@ -39,12 +58,6 @@ export function Result({ attemptId, scope }: Props) {
     )
   }
 
-  const resultScope: StudyScope = {
-    sector: attempt.sector ?? scope.sector,
-    trackId: attempt.trackId ?? scope.trackId,
-    bankId: attempt.bankId ?? scope.bankId,
-  }
-  const pool = questionsForScope(resultScope)
   const exam = examConfigFor(resultScope, pool.length || attempt.questionIds.length)
   const paper = questionsByIds(attempt.questionIds, pool)
   const choiceById = new Map(attempt.answers.map((a) => [a.questionId, a.choice]))

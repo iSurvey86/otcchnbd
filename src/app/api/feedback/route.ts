@@ -17,6 +17,7 @@ export async function POST(request: Request) {
     questionPrompt?: string
     sector?: string | null
     trackId?: string | null
+    bankId?: string | null
     topicId?: string | null
   }
 
@@ -45,6 +46,7 @@ export async function POST(request: Request) {
     question_prompt: String(body.questionPrompt ?? '').slice(0, 300),
     sector: body.sector ?? null,
     track_id: body.trackId ?? null,
+    bank_id: body.bankId ?? null,
     topic_id: body.topicId ?? null,
     status: 'moi',
     admin_reply: null,

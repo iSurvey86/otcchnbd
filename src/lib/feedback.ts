@@ -9,6 +9,7 @@ export interface FeedbackInput {
   questionPrompt: string
   sector?: string
   trackId?: string
+  bankId?: string
   topicId?: string
 }
 
@@ -22,6 +23,7 @@ export interface FeedbackRow {
   questionPrompt: string
   sector?: string
   trackId?: string
+  bankId?: string
   topicId?: string
   status: FeedbackStatus
   adminReply: string | null
@@ -46,6 +48,7 @@ type FeedbackDbRow = {
   question_prompt: string | null
   sector: string | null
   track_id: string | null
+  bank_id: string | null
   topic_id: string | null
   status: FeedbackStatus
   admin_reply: string | null
@@ -64,6 +67,7 @@ function mapFeedback(row: FeedbackDbRow): FeedbackRow {
     questionPrompt: row.question_prompt ?? '',
     sector: row.sector ?? undefined,
     trackId: row.track_id ?? undefined,
+    bankId: row.bank_id ?? undefined,
     topicId: row.topic_id ?? undefined,
     status: row.status || 'moi',
     adminReply: row.admin_reply,
@@ -93,6 +97,7 @@ export async function submitFeedback(
       questionPrompt: input.questionPrompt,
       sector: input.sector ?? null,
       trackId: input.trackId ?? null,
+      bankId: input.bankId ?? null,
       topicId: input.topicId ?? null,
     }),
   })

@@ -21,7 +21,14 @@ import {
   type FeedbackStatus,
 } from '../lib/feedback'
 import { AdminCsplPanel } from '../components/AdminCsplPanel'
+import { AdminCsplPackPanel } from '../components/AdminCsplPackPanel'
+import { AdminQuestionPanel } from '../components/AdminQuestionPanel'
+import { AdminQuestionEditorModal } from '../components/AdminQuestionEditorModal'
 import type { CsplDocument } from '../lib/cspl'
+import { DD_BANKS, DD_DEFAULT_BANK_ID, resolveDdBankId } from '../data/dd/banks'
+import { loadDdBank } from '../data/dd/questions'
+import { pathForView } from '../lib/paths'
+import type { Question, SectorId, StudyScope } from '../types'
 
 interface LogRow {
   id: string
@@ -95,6 +102,53 @@ const TOPIC_TITLE = new Map<string, string>(
   [...TOPICS, ...XD_TOPICS, ...DT_TOPICS].map((t) => [t.id, t.title]),
 )
 const SECTOR_TITLE = new Map<string, string>(SECTORS.map((s) => [s.id, s.title]))
+
+async function resolveFeedbackQuestion(
+  row: FeedbackRow,
+): Promise<{ question: Question; scope: StudyScope } | null> {
+  const sector = (row.sector || 'do-dac-ban-do') as SectorId
+  const scope: StudyScope = {
+    sector,
+    bankId:
+      row.bankId ||
+      (sector === 'do-dac-ban-do' ? DD_DEFAULT_BANK_ID : undefined),
+    trackId: row.trackId,
+  }
+
+  if (sector === 'do-dac-ban-do') {
+    const bankId = resolveDdBankId(scope.bankId)
+    const qs = await loadDdBank(bankId)
+    const hit = qs.find((q) => q.id === row.questionId)
+    if (hit) return { question: hit, scope: { ...scope, bankId } }
+    for (const bank of DD_BANKS.filter((b) => b.ready && b.id !== bankId)) {
+      const more = await loadDdBank(bank.id)
+      const found = more.find((q) => q.id === row.questionId)
+      if (found) {
+        return {
+          question: found,
+          scope: { sector: 'do-dac-ban-do', bankId: bank.id },
+        }
+      }
+    }
+  }
+
+  const local = QUESTION_BY_ID.get(row.questionId)
+  if (local) {
+    return {
+      question: local,
+      scope: {
+        sector: 'do-dac-ban-do',
+        bankId: DD_DEFAULT_BANK_ID,
+      },
+    }
+  }
+  return null
+}
+
+function practiceUrlFor(scope: StudyScope, questionId: string): string {
+  const base = pathForView({ name: 'practice', scope })
+  return `${base}${base.includes('?') ? '&' : '?'}q=${encodeURIComponent(questionId)}`
+}
 
 function asRecord(value: unknown): Record<string, unknown> {
   if (value && typeof value === 'object' && !Array.isArray(value)) {
@@ -563,7 +617,9 @@ export function Admin() {
   const { isAdmin, isConfigured } = useAuth()
   const [logs, setLogs] = useState<LogRow[]>([])
   const [feedback, setFeedback] = useState<FeedbackRow[]>([])
-  const [tab, setTab] = useState<'logs' | 'feedback' | 'cspl'>('logs')
+  const [tab, setTab] = useState<'logs' | 'feedback' | 'cspl' | 'pack' | 'questions'>(
+    'logs',
+  )
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [search, setSearch] = useState('')
@@ -585,6 +641,11 @@ export function Admin() {
   const [feedbackStatus, setFeedbackStatus] = useState<'all' | FeedbackStatus>('all')
   const [page, setPage] = useState(1)
   const [selectedFeedback, setSelectedFeedback] = useState<FeedbackRow | null>(null)
+  const [editFromFeedback, setEditFromFeedback] = useState<{
+    question: Question
+    scope: StudyScope
+  } | null>(null)
+  const [feedbackJumpBusy, setFeedbackJumpBusy] = useState(false)
   const [reply, setReply] = useState('')
   const [savingFeedback, setSavingFeedback] = useState(false)
   const [csplDocs, setCsplDocs] = useState<CsplDocument[]>([])
@@ -761,6 +822,32 @@ export function Admin() {
     setReply('')
   }
 
+  async function openFeedbackQuestion(mode: 'practice' | 'edit') {
+    if (!selectedFeedback) return
+    setFeedbackJumpBusy(true)
+    setError(null)
+    try {
+      const resolved = await resolveFeedbackQuestion(selectedFeedback)
+      if (!resolved) {
+        setError(
+          `Không tìm thấy câu ${selectedFeedback.questionId} trong ngân hàng đã nạp.`,
+        )
+        return
+      }
+      if (mode === 'practice') {
+        window.open(
+          practiceUrlFor(resolved.scope, resolved.question.id),
+          '_blank',
+          'noopener,noreferrer',
+        )
+        return
+      }
+      setEditFromFeedback(resolved)
+    } finally {
+      setFeedbackJumpBusy(false)
+    }
+  }
+
   if (!isConfigured) {
     return (
       <section className="panel">
@@ -812,6 +899,20 @@ export function Admin() {
           >
             CSPL Đo đạc
           </button>
+          <button
+            type="button"
+            className={`admin-tab admin-tab-cspl${tab === 'pack' ? ' active' : ''}`}
+            onClick={() => setTab('pack')}
+          >
+            Pack tháng
+          </button>
+          <button
+            type="button"
+            className={`admin-tab admin-tab-cspl${tab === 'questions' ? ' active' : ''}`}
+            onClick={() => setTab('questions')}
+          >
+            Kho câu hỏi
+          </button>
         </div>
       </div>
 
@@ -843,7 +944,7 @@ export function Admin() {
             <span>Khác</span>
           </div>
         </div>
-      ) : (
+      ) : tab === 'pack' || tab === 'questions' ? null : (
         <div className="stats admin-stats">
           <div className="stat stat-law">
             <span className="stat-bar" aria-hidden />
@@ -870,6 +971,10 @@ export function Admin() {
 
       {tab === 'cspl' ? (
         <AdminCsplPanel onDocumentsChange={setCsplDocs} />
+      ) : tab === 'pack' ? (
+        <AdminCsplPackPanel />
+      ) : tab === 'questions' ? (
+        <AdminQuestionPanel />
       ) : (
         <>
       <div className={`admin-toolbar${tab === 'logs' ? ' admin-toolbar-logs' : ''}`}>
@@ -1164,13 +1269,42 @@ export function Admin() {
               {formatWhen(selectedFeedback.createdAt)}
             </p>
             <p className="feedback-modal-meta">
-              Câu <code>{selectedFeedback.questionId}</code>
+              Câu{' '}
+              <button
+                type="button"
+                className="admin-q-id-link"
+                disabled={feedbackJumpBusy}
+                onClick={() => void openFeedbackQuestion('practice')}
+              >
+                <code>{selectedFeedback.questionId}</code>
+              </button>
+              {selectedFeedback.bankId ? (
+                <span className="admin-cspl-sub"> · bank {selectedFeedback.bankId}</span>
+              ) : null}
             </p>
             <p className="feedback-modal-prompt">{selectedFeedback.questionPrompt}</p>
             <p className="feedback-kicker">Góp ý người dùng</p>
             <p className="feedback-modal-prompt feedback-modal-message">
               {selectedFeedback.message}
             </p>
+            <div className="feedback-actions feedback-actions-wrap">
+              <button
+                type="button"
+                className="btn primary"
+                disabled={feedbackJumpBusy}
+                onClick={() => void openFeedbackQuestion('practice')}
+              >
+                {feedbackJumpBusy ? 'Đang mở…' : 'Mở câu trong ôn'}
+              </button>
+              <button
+                type="button"
+                className="btn copper"
+                disabled={feedbackJumpBusy}
+                onClick={() => void openFeedbackQuestion('edit')}
+              >
+                Sửa câu (override)
+              </button>
+            </div>
             <label className="feedback-label">
               Phản hồi admin
               <textarea
@@ -1216,6 +1350,20 @@ export function Admin() {
             </div>
           </div>
         </div>
+      ) : null}
+
+      {editFromFeedback ? (
+        <AdminQuestionEditorModal
+          open
+          base={editFromFeedback.question}
+          scope={editFromFeedback.scope}
+          noteHint={
+            selectedFeedback?.message
+              ? `Góp ý: ${selectedFeedback.message.slice(0, 200)}`
+              : undefined
+          }
+          onClose={() => setEditFromFeedback(null)}
+        />
       ) : null}
     </>
   )

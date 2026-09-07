@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { QuestionCard } from '../components/QuestionCard'
 import { useAuth } from '../context/AuthContext'
+import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { dtRandCount } from '../data/dt/groups'
 import { DD_SECTION_TOPICS } from '../data/topics'
 import { questionsByTopicForScope, topicsForScope } from '../lib/bank'
@@ -15,6 +16,8 @@ import type { Question, StudyScope, TopicId } from '../types'
 interface Props {
   scope: StudyScope
   topicId?: TopicId
+  /** Mở đúng câu (từ Admin góp ý / tìm kiếm). */
+  focusQuestionId?: string
 }
 
 interface PracticeAnswer {
@@ -23,16 +26,21 @@ interface PracticeAnswer {
   index: number
 }
 
-export function Practice({ scope, topicId }: Props) {
+export function Practice({ scope, topicId, focusQuestionId }: Props) {
   const { tryRecordAnswer, notifyPracticeStarted, notifyPracticeFinished } = useAuth()
+  const { applyToList } = useQuestionOverrides()
   const continueMode = scope.sector === 'dau-thau' && !topicId
   const randN = dtRandCount(topicId)
   const pool = useMemo(() => {
-    const raw = questionsByTopicForScope(scope, topicId)
+    const raw = applyToList(questionsByTopicForScope(scope, topicId), scope)
+    if (focusQuestionId) {
+      const hit = raw.find((q) => q.id === focusQuestionId)
+      if (hit) return [hit, ...raw.filter((q) => q.id !== focusQuestionId)]
+    }
     if (continueMode) return raw
     if (randN != null) return shuffle(raw).slice(0, randN)
     return shuffle(raw)
-  }, [scope, topicId, continueMode, randN])
+  }, [scope, topicId, continueMode, randN, applyToList, focusQuestionId])
 
   const [index, setIndex] = useState(() => {
     if (!continueMode || pool.length === 0) return 0

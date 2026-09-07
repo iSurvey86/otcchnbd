@@ -25,6 +25,21 @@ Cột **Pipeline** trên bảng: Đã tải lên → Chờ duyệt đoạn → �
 - TCVN kiểu `4.2`, `5.1.1` → cite `Mục …`.
 - Không nhận cấu trúc → cắt khối ~1500 ký tự (fallback).
 
+## Pack câu hỏi tháng (MVP)
+
+1. Tab **Pack tháng** → tạo pack `YYYY-MM`.
+2. **Sinh +5 câu AI** (lặp đến đủ buffer). Chỉ dùng chunk đã duyệt của VB đang dùng.
+3. Duyệt / loại từng câu; tick đa nguồn nếu AI đề xuất.
+4. Publish 01 00:00 và khóa thi thử — chưa bật (xem quy chế).
+
+SQL thêm: `supabase/schema-cspl-monthly-pack.sql`.
+
+## Override câu hỏi (sửa nóng)
+
+1. Tab **Kho câu hỏi** hoặc từ góp ý → **Sửa câu (override)**.
+2. Lưu Supabase — ôn/thi đọc JSON ⊕ override ngay.
+3. SQL: `supabase/schema-question-overrides.sql`.
+
 ## Sửa / phụ lục / hết HL
 
 - **Sửa**: metadata (số hiệu, ngày, trích yếu…); file gốc giữ nguyên — đổi file: xóa upload lại hoặc thêm phụ lục.

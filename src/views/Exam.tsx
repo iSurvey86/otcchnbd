@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { ConfirmDialog } from '../components/ConfirmDialog'
 import { QuestionCard } from '../components/QuestionCard'
 import { useAuth } from '../context/AuthContext'
+import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { lawSectionLabel, questionsForScope, scopeKey, skillSectionLabel } from '../lib/bank'
 import {
   examConfigFor,
@@ -70,7 +71,11 @@ function isValidName(name: string): boolean {
 }
 
 export function Exam({ scope, onFinish }: Props) {
-  const pool = useMemo(() => questionsForScope(scope), [scope])
+  const { applyToList } = useQuestionOverrides()
+  const pool = useMemo(
+    () => applyToList(questionsForScope(scope), scope),
+    [scope, applyToList],
+  )
   const exam = useMemo(() => examConfigFor(scope, pool.length), [scope, pool.length])
   const totalQ = examQuestionCount(exam)
   const storageKey = scopeStorageKey(scope)

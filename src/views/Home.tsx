@@ -1,6 +1,7 @@
 import { AppLink } from '../components/AppLink'
 import { DdGridDiagrams } from '../components/DdGridDiagrams'
 import { RelatedLinks } from '../components/RelatedLinks'
+import { useQuestionOverrides } from '../context/QuestionOverrideContext'
 import { DD_SECTION_TOPICS } from '../data/topics'
 import {
   countByTopicForScope,
@@ -19,6 +20,7 @@ import {
   examTotalMax,
   sectionMax,
 } from '../lib/exam'
+import { useMemo } from 'react'
 import type { StudyScope } from '../types'
 
 interface Props {
@@ -26,7 +28,11 @@ interface Props {
 }
 
 export function Home({ scope }: Props) {
-  const questions = questionsForScope(scope)
+  const { applyToList } = useQuestionOverrides()
+  const questions = useMemo(
+    () => applyToList(questionsForScope(scope), scope),
+    [scope, applyToList],
+  )
   const topics = topicsForScope(scope).filter(
     (topic) => countByTopicForScope(scope, topic.id) > 0,
   )

@@ -41,6 +41,8 @@ export interface Question {
   answer: 0 | 1 | 2 | 3
   explanation: string
   source: string
+  /** Ghi chú Admin từ override DB — chỉ có khi đã sửa nóng. */
+  adminNote?: string
 }
 
 export interface ExamConfig {

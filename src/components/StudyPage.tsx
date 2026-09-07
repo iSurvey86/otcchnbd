@@ -54,6 +54,7 @@ function StudyBody({
 }) {
   const searchParams = useSearchParams()
   const topicId = (searchParams.get('topic') as TopicId | null) ?? undefined
+  const focusQuestionId = searchParams.get('q')?.trim() || undefined
 
   if (mode === 'home') {
     return (
@@ -67,9 +68,10 @@ function StudyBody({
     return (
       <TrackBankGate scope={scope}>
         <Practice
-          key={`${scope.sector}:${scope.trackId ?? ''}:${scope.bankId ?? ''}:${topicId ?? 'all'}`}
+          key={`${scope.sector}:${scope.trackId ?? ''}:${scope.bankId ?? ''}:${topicId ?? 'all'}:${focusQuestionId ?? ''}`}
           scope={scope}
           topicId={topicId}
+          focusQuestionId={focusQuestionId}
         />
       </TrackBankGate>
     )
